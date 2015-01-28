@@ -1,0 +1,52 @@
+<html>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <!--script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.3.16/p5.js"></script-->
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="p5.min.js"></script>
+  <script src="p5.dom.js"></script>
+  <script type="text/javascript">
+  var dancingWords = [];
+
+  function DanceSpan(element, x, y) {
+    element.position(x, y);
+    
+    this.brownian = function() {
+      x += random(-2, 2);
+      y += random(-2, 2);
+      element.position(x, y);
+    };
+  };
+
+  function setup() {
+    // This paragraph is created aside of the main block of code.
+    // It's to differentiate the creation of an element from its 
+    // selection. Selected elements doesn't need to be created by 
+    // p5js, they can be just plain HTML.
+    createP('happiness, sorrow, despair, meaning, reason, good, bad').addClass('text');
+
+    // This line grabs the paragraph just created, but it would 
+    // also grab any other elements with class 'text' in the HTML
+    // page.
+    var texts = getElements('text');
+
+    for (var i=0; i<texts.length; i++) {
+      var paragraph = texts[i].html();
+      var words = paragraph.split(', ');
+      for (var j=0; j<words.length; j++) {   
+        var spannedWord = createSpan(words[j]);
+        var dw = new DanceSpan(spannedWord, random(600), random(300));
+        dancingWords.push(dw);
+      };
+    };
+  }
+
+  function draw() {
+    for (var i=0; i<dancingWords.length; i++) {
+      dancingWords[i].brownian();
+    };
+  }
+
+  </script>
+</html>

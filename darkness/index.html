@@ -1,0 +1,104 @@
+<html>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<!--script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.3.16/p5.js"></script-->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="p5.min.js"></script>
+	<script src="p5.dom.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+	$(function (){
+		$(window).mousemove(function(event) {
+			$('.mouse-div').css({
+				'top' : event.pageY + 'px',
+				'left' : event.pageX + 'px'
+			});
+		});
+		/*$(".words").mouseover(function(){
+			console.log("wat");
+			$(this).css("opacity", "1");
+		});*/
+	});
+	</script>
+	<script type="text/javascript">
+	var text;
+	var canvas;
+	var rect;
+
+	function viewport()
+	{
+	var e = window,
+	 a = 'inner';
+	if ( !( 'innerWidth' in window ) )
+	{
+	a = 'client';
+	e = document.documentElement || document.body;
+	}
+	return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+	}
+
+	function setup() {
+	  // We are still calling createCanvas like in the past, but now 
+	  // we are storing the result as a variable. This way we can 
+	  // call methods of the element, to set the position for instance.
+	  canvas = createCanvas(viewport().width-30, viewport().height-30); //window.innerWidth, window.innerHeight); // 600, 400
+	  text = createDiv("Search for all goodness in the world with your hope...");
+	  createP('happiness, joy, good, meaning, reason, sorrow, despair, bad').addClass('words');
+
+	  var texts = getElements('words');
+
+	  for (var i=0; i<texts.length; i++) {
+	    var paragraph = texts[i].html();
+	    var words = paragraph.split(', ');
+	    for (var j=0; j<words.length; j++) {   
+	      var spannedWord = createSpan(words[j]);
+	      spannedWord.position(random(width), random(height));
+	    }
+	  }
+
+	  // Here we call methods of each element to set the position 
+	  // and id, try changing these values.
+	  // Use the inspector to look at the HTML generated from this 
+	  // code when you load the sketch in your browser.
+	  text.position(50, 50);
+	  text.class("textcss");
+	}
+
+	function draw() {
+	  // These commands are applied to the graphics canvas as normal.
+	  // rectangle
+	  stroke(100);
+	  fill(302);
+	  rect = rect(410, 10, 60, 60);
+	  
+	  background(0, 20, 20); //220, 180, 200);
+	  /*
+	  r1 = 50,
+	  r2 = 50;
+	  stroke(50);
+	  fill(100);
+	  push();
+	  translate(width*0.2, height*0.5);
+	  rotate(frameCount / 100.0);
+	  ellipse(50, 50, r1, r2);
+	  pop(); */
+	  //console.log(mouseX, mouseY, pmouseX, pmouseY);
+	  /*textTopPos = $(".textcss").position().top;
+	  if (mouseX < textTopPos && textTopPos < mouseX + 10) {
+	  	console.log("near!", mouseX, textTopPos);
+	  	text.style("opacity: 0.8;");
+	  }*/
+	}
+	function mouseMoved() {
+		$("span").mouseover(function(){
+			$(this).css("opacity", "1");
+		});
+	}
+
+	</script>
+
+	<!--script src="sketch.js"></script-->
+	<div class="mouse-div"></div>
+
+</html>
