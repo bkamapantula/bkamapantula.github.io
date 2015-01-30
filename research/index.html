@@ -10,16 +10,36 @@
 
     <title>Bhanu Kamapantula - Research Portfolio</title>
 
-    <!-- Bootstrap core CSS >
-    <link href="css/bootstrap.min.css" rel="stylesheet"-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-bs3patch.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-modal.css">
 
     <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
     <!-- Latest compiled and minified JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#id_mirnas").focus().attr("rows", "5");
+        $(".btn-methods").on("click", function() {
+            $("#helpModal").modal("show");
+        });
+        $(".btn-dismira").on("click", function() {
+            $("#dismiraModal").modal("show");
+        });
+        $(".btn-team").on("click", function() {
+            $("#teamModal").modal("show");
+        });
+        $(".btn-bict").on("click", function() {
+        	alert("clicked!");
+        })
+    });
+</script>
 
   </head>
 
@@ -33,9 +53,6 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="../">Home</a></li>
-                <!--li><a href="#research">Research</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Other Projects</a></li-->
                 <li><a href="https://github.com/bkamapantula" target="_blank">Code<span class="glyphicon glyphicon-new-window"></span></a></li>
               </ul>
             </div> <!--navbar-collapse-->
@@ -48,10 +65,13 @@
           <div class="col-lg-4">
 	          <img class="img-rounded" src="ecoli-bict.jpg" alt="Generic placeholder image" style="width: 360px; height: 240px;">
 	          <h3>BICT 2014</h3>
-	          <p>Feature ranking in transcriptional networks: Packet receipt as a dynamical metric</p>
+	          <p>Feature ranking in transcriptional networks: Packet receipt as a dynamical metric <a href="http://bionetics.org/2014/show/exhibit-and-demo" target="_blank"><span class="label label-primary">Best paper</span></a></p>
 	          <p><b>B. Kamapantula</b>, M. Mayo, E. Perkins, A. Abdelzaher and P. Ghosh</p>
-	          <p>December 2014</p>
-	          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+	          <p>December 2014.</p>
+	          <p>
+	          	<!--a class="btn btn-default" href="#" role="button">View details »</a-->
+	          	<button class="btn btn-bict">View details</button>
+	          </p>
           </div><!--end of col-lg-4-->
 
           <div class="col-lg-4">
@@ -60,7 +80,9 @@
 	          <p>Dynamical impacts from structural redundancy of transcriptional motifs in gene-regulatory networks.</p>
 	          <p><b>B. K. Kamapantula</b>, M. Mayo, E. Perkins and P. Ghosh</p>
 	          <p>December 2014</p>
-	          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+	          <p>
+	          	<button class="btn btn-emnet">View details</button>
+	          </p>
 	      </div>
 
 	      <div class="col-lg-4">
@@ -69,16 +91,41 @@
 	          <p>Prioritization of disease candidates in miRNA-disease associations based on maximum weighted matching inference model and motif-based analysis</p>
 	          <p>Joseph J Nalluri, <b>Bhanu K Kamapantula</b>, Debmalya Barh, Neha Jain, Antaripa Bhattacharya, Sintia Silva de Almeida, Rommel Thiago Juca Ramos, Artur Silva, Vasco Azevedo, and Preetam Ghosh</p>
 	          <p>November 2014</p>
-	          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-	      </div>
-        
-        </div><!--end of col-lg-4-->
+	          <p>
+	          	<button class="btn btn-dismira">View details</button>
+	          </p>
+	      </div> <!--end of col-lg-4-->
+        </div> <!--end of row-->
+        <div class="row">
+        	<div class="col-lg-4">
+        		<img class="img-rounded" src="miregulome.png" alt="Generic placeholder image" style="width: 360px; height: 240px;">
+	          <h3>miRegulome</h3>
+	          <p>Under submission</p>
+	          <p><a href="https://github.com/bkamapantula/miRegulome" target="_blank">Code on GitHub</a></p>
+	          <p><a class="btn btn-default" href="http://bnet.egr.vcu.edu/miRegulome" role="button" target="_blank">Website <span class="glyphicon glyphicon-new-window"></span></a></p>
+        	</div>
+        </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script-->
+	<div id="dismiraModal" class="modal fade" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+	    <h3 id="myModalLabel">DISMIRA - Abstract</h3>
+	  </div>
+	  <div class="modal-body">
+	  	<h3>Prioritization of disease candidates in miRNA-disease associations based on maximum weighted matching inference model and motif-based analysis</h3>
+	  	<p><b>Background</b>: MicroRNAs (miRNAs) have increasingly been found to regulate diseases at a significant level. The interaction of miRNA and diseases is a complex web of multilevel interactions, given the fact that a miRNA regulates upto 50 or more diseases and miRNAs/diseases work in clusters. The clear patterns of miRNAs regulating a disease and vice-versa are still elusive.</p>
+
+		<p><b>Methods</b>: In this work, we approach the miRNA-disease interactions from a network scientific perspective and devise two approaches - maximum weighted matching model (a graph theoretical algorithm which provides the result by solving an optimization equation of selecting the most prominent set of diseases) and motif-based analyses (which investigates the motifs of the miRNA-disease network and selects the most prominent set of diseases based on their maximum number of  participation in motifs, thereby revealing the miRNA-disease interaction dynamics) to determine and prioritize the set of diseases which are most certainly impacted upon the activation of a group of queried miRNAs, in a miRNA-disease network.</p>
+
+		<p><b>Results and Conclusion</b>: Our tool, DISMIRA implements the above mentioned approaches and presents an interactive visualization which helps the user in exploring the networking dynamics of miRNAs and diseases by analyzing their neighbors, paths and topological features. A set of miRNAs can be used in this analysis to get the associated diseases for the input group of miRs with ranks and also further analysis can be done to find key miRs or diseases, shortest paths etc. DISMIRA can be accessed online for free at http://bnet.egr.vcu.edu:8080/dismira.</p>
+
+		<p>URL: <a href="http://bnet.egr.vcu.edu:8080/dismira" target="_blank">http://bnet.egr.vcu.edu:8080/dismira</a></p>
+	  </div><!--end of modal-body-->
+	</div><!--end of dismiraModal-->
+
   </body>
 </html>
 
