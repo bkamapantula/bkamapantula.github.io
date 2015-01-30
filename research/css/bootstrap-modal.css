@@ -43,6 +43,9 @@
 	margin-top: 0;
 	top: 50%;
 	overflow: visible; /* allow content to popup out (i.e tooltips) */
+	height: 60%;
+	/*left: 12%;*/
+	background: tomato;
 }
 
 .modal.fade {
