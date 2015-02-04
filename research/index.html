@@ -9,6 +9,12 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Bhanu Kamapantula - Research Portfolio</title>
+    <style type="text/css">
+    	.img-rounded {
+    		width: 360px;
+    		height: 240px;
+    	}
+    </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -24,19 +30,35 @@
     <script src="js/bootstrap-modalmanager.js"></script>
     <script src="js/bootstrap-modal.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("#id_mirnas").focus().attr("rows", "5");
-        $(".btn-bict").on("click", function() {
-            $("#bictModal").modal("show");
-        });
-        $(".btn-emnet").on("click", function() {
-            $("#emnetModal").modal("show");
-        });
-        $(".btn-dismira").on("click", function() {
-            $("#dismiraModal").modal("show");
-        });
-    });
-</script>
+	    $(document).ready(function() {
+	        $.getJSON("papers.json", function(result) {
+	        	$.each(result, function(i, item) {
+	        		var div_col_lg_4 = document.createElement("div");
+	        		div_col_lg_4.className = "col-lg-4";
+	        		div_col_lg_4.innerHTML = item["title"];
+	        		$(".papers").append("<div class='col-lg-4'>" + "<img class='img-rounded' src=" + item["figure"] + ">" + "<h4>" + item["place"] + "</h4> <h5>" + item["title"] + " (<b>" + item["type"] + "</b>) </h5> <p>" + item["authors"] + "</p> <p>Keywords: " + item["keywords"] + "</p><p>" + item["date"] + " <a href='" + item["url"] + "'>[PDF]</a>" + "</p></div>"); // " <p> <button class='btn btn-dismira'>View abstract</button> </p></div>");
+	        	});
+	        })
+	        .fail(function() {
+	        	alert("Error parsing papers.json. Please notify Bhanu");
+	        });
+	    });
+	</script>
+	<script type="text/javascript">
+	    $(function(){
+	    	console.log("endo bhai!");
+	        $(".btn-bict").on("click", function() {
+	            $("#bictModal").modal("show");
+	        });
+	        $(".btn-emnet").on("click", function() {
+	            $("#emnetModal").modal("show");
+	        });
+	        $(".btn-dismira").on("click", function() {
+	        	console.log("wat");
+	            $("#dismiraModal").modal("show");
+	        });
+	     });
+    </script>
 
   </head>
 
@@ -57,51 +79,7 @@
           </div> <!--container-fluid-->
         </div>
         <h4>Research Portfolio</h4>
-        <hr>
-        <h4>Accepted</h4>
-        <div class="row">
-          <div class="col-lg-4">
-	          <img class="img-rounded" src="ecoli-bict.jpg" alt="Generic placeholder image" style="width: 360px; height: 240px;">
-	          <h3>BICT 2014</h3>
-	          <p>Feature ranking in transcriptional networks: Packet receipt as a dynamical metric <a href="http://bionetics.org/2014/show/exhibit-and-demo" target="_blank"><span class="label label-primary">Best paper</span></a></p>
-	          <p><b>B. Kamapantula</b>, M. Mayo, E. Perkins, A. Abdelzaher and P. Ghosh</p>
-	          <p>December 2014 <a href="files/bict2014.pdf">[PDF]</a></p>
-	          <p>
-	          	<!--a class="btn btn-default" href="#" role="button">View details »</a-->
-	          	<button class="btn btn-bict">View overview</button>
-	          </p>
-          </div><!--end of col-lg-4-->
-
-          <div class="col-lg-4">
-	          <img class="img-rounded" src="ecoli-emnet.jpg" alt="k-means clustering" style="width: 360px; height: 240px;">
-	          <h3>EMNET 2014</h3>
-	          <p>Dynamical impacts from structural redundancy of transcriptional motifs in gene-regulatory networks.</p>
-	          <p><b>B. K. Kamapantula</b>, M. Mayo, E. Perkins and P. Ghosh</p>
-	          <p>December 2014 <a href="files/emnet2014.pdf">[PDF]</a></p>
-	          <p>
-	          	<button class="btn btn-emnet">View overview</button>
-	          </p>
-	      </div>
-
-	      <div class="col-lg-4">
-	          <img class="img-rounded" src="dismira.png" alt="Generic placeholder image" style="width: 360px; height: 240px;">
-	          <h3>DISMIRA</h3>
-	          <p>Prioritization of disease candidates in miRNA-disease associations based on maximum weighted matching inference model and motif-based analysis</p>
-	          <p>Joseph J Nalluri, <b>Bhanu K Kamapantula</b>, Debmalya Barh, Neha Jain, Antaripa Bhattacharya, Sintia Silva de Almeida, Rommel Thiago Juca Ramos, Artur Silva, Vasco Azevedo, and Preetam Ghosh</p>
-	          <p>November 2014 <a href="http://bnet.egr.vcu.edu:8080/assets/acm-bcb-bipartite-nalluri.pdf">[PDF]</a> Tool <a href="http://bnet.egr.vcu.edu:8080/dismira" target="_blank">[URL]</a></p>
-	          	<button class="btn btn-dismira">View abstract</button>
-	          </p>
-	      </div> <!--end of col-lg-4-->
-        </div> <!--end of row-->
-        <div class="row">
-        	<div class="col-lg-4">
-        		<img class="img-rounded" src="miregulome.png" alt="Generic placeholder image" style="width: 360px; height: 240px;">
-	          <h3>miRegulome</h3>
-	          <p>Publication under submission</p>
-	          <p><a href="https://github.com/bkamapantula/miRegulome" target="_blank">Code on GitHub</a></p>
-	          <p><a class="btn btn-default" href="http://bnet.egr.vcu.edu/miRegulome" role="button" target="_blank">Website <span class="glyphicon glyphicon-new-window"></span></a></p>
-        	</div>
-        </div>
+        <div class="papers"></div>        
     </div>
 
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
