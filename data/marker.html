@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>Women in Cabinet</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!--link rel="stylesheet" type="text/css" href="../research/css/bootstrap-bs3patch.css">
+    <link rel="stylesheet" type="text/css" href="../research/css/bootstrap-modal.css"-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1.7.1");
+		google.load('visualization', '1', {packages: ['geochart']});
+	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3>Women in Indian state governments</h3>
+		<h5>Data accumulated by <a href="https://twitter.com/bhanupriyarao/status/566679323147776001" target="_blank">@bhanupriyarao</a>. Thanks to her! [<a href="women_in_govt.csv">CSV</a>] [<a href="women_in_govt.json">JSON</a>] </h5>
+		<p>(Mouseover the bars for exact numbers)</p>
+		<div id="ministersData"></div>
+	</div><!-- end of container -->
+	<script type="text/javascript" defer="defer">
+    $(document).ready(function() {
+    	var dataTable = new google.visualization.DataTable();
+    	dataTable.addColumn('string', 'State');
+		dataTable.addColumn('number', '% of Women in council of ministers');
+		var total_mins, wom_perc, men_perc;
+    	//total_mins = parseInt(item["Women council of ministers"], 10) + parseInt(item["Council of ministers"], 10);
+		//wom_perc = (parseInt(item["Women council of ministers"], 10)/(total_mins))*100; // Math.round(wom_perc*100)/100
+		//men_perc = (parseInt(item["Council of ministers"], 10)/total_mins)*100; // Math.round(men_perc*100)/100
+		$.getJSON("geochart.json", function(result) {
+    		$.each(result, function(iter, item) {
+    			if(item["State"] !== "J&K") {
+    				dataTable.addRow([item["State"], item["% of women in council of ministers"] ]);
+    				//console.log(item["State"], item["Region"], parseInt(item["Women council of ministers"], 10), parseInt(item["Council of ministers"], 10) );
+    			}
+    		});
+    	});
+	    var optionsState = {
+	    	region: 'IN',
+	    	displayMode: 'markers',
+	    	colorAxis: {colors: ['green']}
+	    };
+		
+		var geochart = new google.visualization.GeoChart(document.getElementById('ministersData'));
+	    geochart.draw(dataTable, optionsState);
+	});
+	</script>
+	
+</body>
+</html>
