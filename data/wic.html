@@ -22,12 +22,15 @@
 	<div class="container">
 		<h3>Women in Indian state governments</h3>
 		<h5>Data accumulated by <a href="https://twitter.com/bhanupriyarao/status/566679323147776001" target="_blank">@bhanupriyarao</a>. Thanks to her! [<a href="women_in_govt.csv">CSV</a>] [<a href="women_in_govt.json">JSON</a>] </h5>
+		<p>(Mouseover the bars for exact numbers)</p>
 		<div id="ministersData"></div>
 		<table>
 			<tr style='vertical-align: top'>
 			  <td>
 			    <div style="float: left; width=50%;" id="chartOne"></div>
 			  </td>
+			</tr>
+			<tr>
 			  <td>
 			    <div id="controlOne" style="float: left;"></div>
 			    <div id="controlTwo" style="float: left;"></div>
@@ -41,9 +44,10 @@
     	var dataTable = new google.visualization.DataTable();
     	dataTable.addColumn('string', 'State');
 		dataTable.addColumn('string', 'Region');
-		//dataTable.addColumn('string', 'Ruling party');
+		dataTable.addColumn('string', 'Ruling party');
 		dataTable.addColumn('number', 'Women in council of ministers');
 		dataTable.addColumn('number', 'Total council of ministers');
+		//dataTable.addColumn({type: 'string', role: 'tooltip'});
 		var total_mins, wom_perc, men_perc;
     	//total_mins = parseInt(item["Women council of ministers"], 10) + parseInt(item["Council of ministers"], 10);
 		//wom_perc = (parseInt(item["Women council of ministers"], 10)/(total_mins))*100; // Math.round(wom_perc*100)/100
@@ -51,14 +55,14 @@
 		$.getJSON("women_in_govt.json", function(result) {
     		$.each(result, function(iter, item) {
     			if(item["State"] !== "J&K") {
-    				dataTable.addRow([item["State"], item["Region"], parseInt(item["Women council of ministers"], 10), parseInt(item["Council of ministers"], 10) ]);
-    				console.log(item["State"], item["Region"], parseInt(item["Women council of ministers"], 10), parseInt(item["Council of ministers"], 10) );
+    				dataTable.addRow([item["State"], item["Region"], item["Ruling party"], parseInt(item["Women council of ministers"], 10), parseInt(item["Council of ministers"], 10) ]);
+    				//console.log(item["State"], item["Region"], parseInt(item["Women council of ministers"], 10), parseInt(item["Council of ministers"], 10) );
     			} else {
     				console.log("LULZ - J&K");
     			}
     		});
     	});
-	    var optionsState;
+	    var optionsState; // = {tooltip: {'isHTML': true}};
 		var regionPicker = new google.visualization.ControlWrapper({
 		  'controlType': 'CategoryFilter',
 		  'containerId': 'controlOne',
@@ -84,7 +88,8 @@
 		    }
 		  }
 		});
-		/*var partyPicker = new google.visualization.ControlWrapper({
+		
+		var partyPicker = new google.visualization.ControlWrapper({
 		  'controlType': 'CategoryFilter',
 		  'containerId': 'controlThree',
 		  'options': {
@@ -95,7 +100,7 @@
 		      'allowMultiple': true
 		    }
 		  }
-		});*/
+		});
 
 		var barChartOne = new google.visualization.ChartWrapper({
 		  'chartType': 'ColumnChart',
@@ -107,21 +112,50 @@
 			},
 			'vAxis': {title: 'Women in council of ministers'
 			},
-			//'fontName': 'Arvo',
-		    'width': 960,
-		    'height': 300,
-		    'isStacked': true },
+		    'width': 1200,
+		    'height': 450,
+		    'bar': {'groupWidth': "95%"},
+		    'isStacked': true,
+		    //'tooltip': {'isHTML': true},
+		    'backgroundColor': '#8fcd8d',
+		    'colors': ['#f3f3f3','#cd4d4d']
+		  },
 		  // Configure the barchart to use columns 2 (State) and 3 (Incidents)
-		  'view': {'columns': [0, 3, 2]}
+		  'view': {'columns': [0, 4, 3]}
+		});
+
+		var view = new google.visualization.DataView(dataTable);
+		view.setColumns([0, 3, 
+			{
+				calc: "stringify",
+				sourceColumn: 3,
+				type: "number",
+				role: "annotation"
+			}, 2]);
+			/* ,
+			{
+				calc: "stringify",
+				sourceColumn: 2,
+				type: "number",
+				role: "annotation"
+			}]);*/
+
+		var barChartTwo = new google.visualization.ChartWrapper({
+			'chartType': 'ColumnChart',
+			'containerId': 'chartTwo',
+			'view': {'columns': [0, 8, 9]}
 		});
 
 	    //var elem = $("#ministersData").attr("id");
 	    var dashboard = new google.visualization.Dashboard(document.getElementById('ministersData'));
 	    dashboard.bind(statePicker, regionPicker)
-	    //.bind(statePicker, partyPicker)
-	    .bind(regionPicker, barChartOne);
+	    .bind(statePicker, partyPicker)
+	    .bind(partyPicker, barChartOne);
 		dashboard.draw(dataTable, optionsState);
+		/*dashboard.bind(barChartTwo);
+		dashboard.draw(dataTable, optionsState);*/
 	});
 	</script>
+	
 </body>
 </html>
