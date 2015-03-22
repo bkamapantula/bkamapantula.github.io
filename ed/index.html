@@ -1,17 +1,265 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<body>
-    <div class="chart"></div>
-    <script src="http://d3js.org/d3.v3.js"></script>
-    <script>
-    // set svg width and height
-    var width = 560,
-        height = 360;
+<style>
+body {
+font-family: "Open Sans", sans-serif;
+background: cadetblue;
+}
+svg {
+background: white;
+}
+.bar {
+  fill: steelblue;
+}
 
-    // creates svg element
-    var svg = d3.select(".chart")
-                .append("svg")
-                  .attr("width", width)
-                  .attr("height", height);
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.info-head:hover .info {
+    display: block;
+}
+
+.info {
+    display: none;
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    height: 30px;
+}
+
+.info-head {
+    margin: 10px;
+    cursor: default;
+}
+
+</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<body>
+    <span class="info-head"><img src="glyphicons-196-circle-info.png"/><span class="info">"States" selection</span></span>
+    <h3>Women representation in states across years</h3>
+    <form>
+      <label><input type="radio" name="mode" value="states" checked> States</label>
+      <label><input type="radio" name="mode" value="india"> India</label>
+      <label><input type="radio" name="mode" value="state" checked>State</label>
+      <label><input type="radio" name="mode" value="year">Year</label>
+    </form>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script>
+        var margin = {top: 10, right: 20, bottom: 20, left: 60},
+            width = 1560 - margin.left - margin.right,
+            height = 600 - margin.top - margin.bottom;
+
+        var y0 = d3.scale.ordinal()
+            .rangeRoundBands([height, 0], .2);
+
+        var y1 = d3.scale.linear();
+
+        var y2 = d3.scale.linear();
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], 1, 0);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+            .tickSize(0);
+
+        var yAxis = d3.svg.axis()
+            .scale(y2)
+            .orient("left")
+            .ticks(20);
+
+        var nest = d3.nest()
+            .key(function(d) { return d.group; });
+
+        var nest_year = d3.nest()
+            .key(function(d) { return d.year; });
+
+        var stack = d3.layout.stack()
+            .values(function(d) { return d.values; })
+            .x(function(d) { return d.year; })
+            .y(function(d) { return d.value; })
+            .out(function(d, y0) { d.valueOffset = y0; });
+
+        var stack_year = d3.layout.stack()
+            .values(function(d) { return d.values; })
+            .x(function(d) { return d.year; })
+            .y(function(d) { return d.value; })
+            .out(function(d, y2) { d.valueOffset = y2; });
+
+        var color = d3.scale.category10();
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<p>State: " + d['group'] + "<p>Year: " + d['year'] + "</p></p> Women MLAs: " + d['value'] + "<p>Total constituencies: " + d['constituencies'] + "</p>";
+          });
+
+        svg.call(tip);
+
+        d3.csv("multiple.csv", function(error, data) {
+          data.forEach(function(d) {
+            d.year = +d.year;
+            d.value = +d.value;
+          });
+
+          var dataByGroup = nest.entries(data);
+          var dataByGroup_year = nest_year.entries(data);
+
+          // calculates sum of all wins per year
+          dataByGroup_year.forEach(function(d) {
+            var order = d.values.map(function(d) { return d.value; });
+            d.year_wise_sum = d3.sum(order);
+          });
+
+          //console.log(dataByGroup);
+          //console.log(dataByGroup_year);
+          stack(dataByGroup);
+          stack_year(dataByGroup_year);
+
+          x.domain(dataByGroup[0].values.map(function(d) { return d.year; }));
+          y0.domain(dataByGroup.map(function(d) { return d.key; }));
+          y1.domain([0, d3.max(data, function(d) { return d.value; })]).range([y0.rangeBand(), 0]);
+          y2.domain([0, d3.max(dataByGroup_year, function(d) { return d.year_wise_sum; })]).range([height, 0]);
+
+          var group = svg.selectAll(".group")
+              .data(dataByGroup)
+            .enter().append("g")
+              .attr("class", "group")
+              .attr("transform", function(d) { return "translate(0," + y0(d.key) + ")"; });
+          group.append("text")
+              .attr("class", "group-label")
+              .attr("x", 10)
+              .attr("y", function(d) { return y1(d.values[0].value / 2 ); })
+              .attr("dy", ".35em")
+              .text(function(d) { return d.key; });
+
+          var rects = group.selectAll("rect")
+              .data(function(d) { return d.values; })
+            .enter().append("rect")
+              .style("fill", function(d) { return color(d.group); })
+              .attr("x", function(d) { return x(d.year); })
+              .attr("y", function(d) { return y1(d.value); })
+              .attr("width", 8) 
+              .attr("height", function(d) { return y0.rangeBand() - y1(d.value); })
+              .on('mouseover', tip.show)
+              .on('mouseout', tip.hide);
+
+          group.filter(function(d, i) { return !i; }).append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + y0.rangeBand() + ")")
+              .call(xAxis)
+            .selectAll("text")
+              .style("text-anchor", "end")
+              .attr("dx", "-.55em")
+              .attr("dy", ".21em")
+              .attr("y",".5em")
+              .attr("transform", "rotate(-90)")
+              //.attr("stroke", "#000000")
+              //.style("fill", function(d) { return color(d.group); } );
+
+          d3.selectAll("input").on("change", change);
+
+          var timeout = setTimeout(function() {
+            d3.select("input[value=\"india\"]").property("checked", true).each(change);
+          }, 2000);
+
+          function change() {
+            clearTimeout(timeout);
+            if (this.value === "states") transitionMultiples();
+            else transitionStacked();
+          }
+
+          function transitionMultiples() {
+            var t = svg.transition().duration(750),
+                g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + y0(d.key) + ")"; });
+            g.selectAll("rect").attr("y", function(d) { return y1(d.value); })
+                                .attr("height", function(d) { return y0.rangeBand() - y1(d.value); });
+
+            g.select(".group-label").attr("y", function(d) { return y1(d.values[0].value / 2); })
+            g.selectAll(".group-label").text(function(d) { return d.key; });
+            // removes y axis on switch to multiples view
+            svg.selectAll(".y.axis").remove();
+          }
+
+          function transitionStacked() {
+            var t = svg.transition().duration(750),
+                g = t.selectAll(".group").attr("transform", "translate(0," + y0(y0.domain()[0]) + ")");
+            g.selectAll("rect").attr("x", function(d) { return x(d.year); })
+                                .attr("y", function(d) { return height - y2(d.valueOffset); }) 
+                                .attr("height", function(d) { return height - y2(d.value); });
+            g.selectAll(".group-label").text("");
+
+            //console.log(y2.domain()[1], y0.rangeBand(), y0(y0.domain()[0]));
+            // adds y axis on switch to stacked view
+            svg.append("g")
+              .attr("class", "y axis")
+              .attr("transform", "translate(0," + y2(y2.domain()[1]) + ")")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Total Women MLAs in India");
+          }
+        });
     </script>
 </body>
+
