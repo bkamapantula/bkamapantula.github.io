@@ -144,14 +144,14 @@ background: white;
           .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var tip = d3.tip()
+        /*var tip = d3.tip()
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
             return "<p>State: " + d['group'] + "<p>Year: " + d['year'] + "</p></p> Women MLAs: " + d['value'] + "<p>Total constituencies: " + d['constituencies'] + "</p>";
           });
 
-        svg.call(tip);
+        svg.call(tip);*/
 
         d3.csv("multiple.csv", function(error, data) {
           data.forEach(function(d) {
@@ -198,8 +198,8 @@ background: white;
               .attr("y", function(d) { return y1(d.value); })
               .attr("width", 8) 
               .attr("height", function(d) { return y0.rangeBand() - y1(d.value); })
-              .on('mouseover', tip.show)
-              .on('mouseout', tip.hide);
+              /*.on('mouseover', tip.show)
+              .on('mouseout', tip.hide)*/ ;
 
           group.filter(function(d, i) { return !i; }).append("g")
               .attr("class", "x axis")
