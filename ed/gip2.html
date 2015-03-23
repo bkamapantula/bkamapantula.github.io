@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Slider - Range with fixed maximum</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<!-- Bootstrap core CSS >
+<link href="css/bootstrap.min.css" rel="stylesheet"-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .btn {
+            padding: 90px;
+            border: 0px;
+        }
+    </style>
+    <script>
+    $(function() {
+        $( "#slider-range-max" ).slider({
+                range: "max",
+                min: 0,
+                max: 100,
+                value: 0,
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( ui.value );
+                    $("button").each(function() {
+                        if($(this).val() < ui.value) {
+                            $(this).attr("disabled", "disabled");
+                        } else {
+                            $(this).removeAttr("disabled");
+                        }
+                    });
+                }
+        });
+        $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+        $("button").on("click", function() {
+            $( "#amount" ).val( $(this).val() );
+            $("#slider-range-max").slider("value", $(this).val());
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="container">
+        <p>
+        <label for="amount">Women representation %: </label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-range-max"></div>
+        <div class="buttons">
+            <button class="btn btn-default btn-lg" value="2">Andhra Pradesh</button>
+            <button class="btn btn-default btn-lg" value="20">Arunachal Pradesh</button>
+            <button class="btn btn-default btn-lg" value="5">Assam</button>
+            <button class="btn btn-default btn-lg" value="12">Bihar</button>
+        </div>
+        <!--section class="card">
+          <h1><strong>32 minutes</strong> to Consol Energy Center</h1>
+          <h2>Andhra Pradesh</h2>
+        </section>
+        <svg id="svg" style="width: 720; height: 960;"></svg>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+        <script>
+            /*var s = Snap("#svg");
+            var svg = Snap.load("india-svg.svg", function(fragment) {
+                g = s.append(fragment.select("#BIHAR").attr({ fill: "blue"}) );
+                g.drag();
+            });*/
+        </script-->
+    </div>
+</body>
+</html>
+
