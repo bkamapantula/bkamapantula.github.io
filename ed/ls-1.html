@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<link href="colorbrewer.css" rel="stylesheet">
+<script src="colorbrewer.js"></script>
+
+<script>
+    $(document).ready(function() {
+    });
+</script>
+<style>
+body {
+font-family: "Open Sans", sans-serif;
+}
+svg {
+background: white;
+}
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.info-head:hover .info {
+    display: block;
+}
+
+.info {
+    display: none;
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width: 150px;
+    height: 30px;
+}
+
+.info-head {
+    margin: 10px;
+    cursor: default;
+}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<body>
+    <div class="container-fluid">
+        <p class="led">60 years of Indian elections. 17 parliament elections.</p>
+        <div class="svg-legend-wrapper row">
+            <div class="svg col-md-10"></div>
+            <div class="floating-legend col-md-2">
+                <h6>Explore trends across years</h6>
+                <!--div class="btn-group" data-toggle="buttons" aria-label="...">
+                  <label class="btn btn-success active" id="statesLabel">
+                    <input type="radio" name="options" id="states" value="states" class="btn btn-default" data-toggle="button" checked>States
+                  </label>
+                  <label class="btn btn-success" id="indiaLabel">
+                    <input type="radio" name="options" id="india" value="india" class="btn btn-default" data-toggle="button">India
+                  </label>
+                </div-->
+                <form class="form">
+                <label>Set Y-axis</label>
+                  <select name="select">
+                    <option value="number" selected>No. of MPs</option>
+                    <option value="percentage">% of MPs</option>
+                    <option value="total">Total MPs</option>
+                    <option value="allinall">All in all</option>
+                  </select>
+                <label>Color by</label>
+                  <select name="selectColor">
+                    <option value="default" selected>Select criteria</option>
+                    <option value="1">% of MPs</option>
+                  </select>
+                </form>
+                <p class="text-muted">Current Lok Sabha (2014 general elections) has produced only 62 MPs who are women. To put it in perspective, that's a meagre 11.4% of total MPs.</p>
+
+                The worst - all in all
+<p class="text-muted">The total number of women MPs elected from 1957 to 2014 (14 elections) is less (537) than the total number of seats contested for in a single election (543).</p>
+                <!--span class="info-head"><img src="glyphicons-196-circle-info.png"/><span class="info">"States" selection</span></span-->
+
+                <p class="text-muted">Data for 1951, 1971 elections is not segregated by <a href="http://eci.nic.in" target="_blank">ECI</a> based on gender.</p>
+            </div> <!-- end of floating-legend -->
+        </div> <!-- end of svg-legend-wrapper -->
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script>
+        var margin = {
+            top: 70, 
+            right: 80,
+            bottom: 100,
+            left: 30
+        };
+
+        var width = $(window).width() - margin.left - margin.right - $(".floating-legend").width();
+        var height = $(window).height() - margin.top - margin.bottom; // - legendMargin.bottom;
+
+        var y0 = d3.scale.ordinal()
+            .rangeRoundBands([height, 0], .2);
+
+        var y1 = d3.scale.linear()
+                .range([height, 0]);
+
+        var y2 = d3.scale.linear();
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], 1, 0);
+
+        var tickYears = [1951, 1957, 1962, 1967, 1971, 1977, 1980, 1984, 1989, 1991, 1996, 1998, 1999, 2004, 2009, 2014];
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+            .tickSize(0)
+            .tickValues(tickYears);
+
+        var yAxis = d3.svg.axis()
+            .scale(y1)
+            .orient("left")
+            .ticks(20);
+
+        var color = d3.scale.category20c();
+
+        var colorScale = d3.scale.linear()
+             .domain([0, 5, 10])
+             .range(colorbrewer.Reds[3]);
+
+        var svg = d3.select(".svg").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        /*var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<p>Year: " + d['year'] + "</p></p> Women MPs: " + d['value'] + "<p>Total seats: " + d['constituencies'] + "</p><p>%: " + (d.value/d.constituencies)*100 + "</p>";
+          });
+
+        svg.call(tip);*/
+
+        d3.csv("ls_q_1-all-years-const.csv", function(error, data) {
+          data.forEach(function(d) {
+            d.year = +d.year;
+            d.value = +d.value;
+          });
+
+          x.domain(data.map(function(d) {
+            return d.year; 
+          }));
+
+          y1.domain([0, d3.max(data, function(d) {
+            return d.value; 
+          })]);
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
+            .selectAll("text")
+              .style("text-anchor", "end")
+              .attr("dx", "-.55em")
+              .attr("dy", ".21em")
+              .attr("y",".5em")
+              .attr("transform", "rotate(-90)");
+
+          svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+          .append("text")
+            .attr("class", "yaxislabel")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Total Women MPs in India");
+
+          var updateChart = function() {
+            svg.selectAll("rect")
+              .data(data)
+            .enter().append("rect")
+              .style("fill", function(d) { 
+                if(d.constituencies) {
+                    return "#bcbcbc"; //colorScale((d.value/d.constituencies)*100);
+                }
+            })
+              .attr("x", function(d) { 
+                return x(d.year); 
+            })
+              .attr("y", function(d) {
+                return y1(d.value);
+            })
+              .attr("width", 12)
+              .attr("height", function(d) {
+                return height - y1(d.value);
+            })
+              .on('mouseover', tip.show)
+              .on('mouseout', tip.hide);
+          }
+
+        updateChart();
+        d3.selectAll("select[name='select']").on("change", radioChange);
+        d3.selectAll("select[name='selectColor']").on("change", colorChange);
+
+        var dataTot = {
+            "constituencies": 543,
+            "value": 537,
+            "year": 2015
+        };
+
+        function colorChange() {
+            if(this.value === "1") {
+                svg.selectAll("rect")
+                  .style("fill", function(d) {
+                    return colorScale((d.value/d.constituencies)*100);
+                  })
+            } else {
+                svg.selectAll("rect")
+                  .style("fill", function(d) {
+                    return "#bcbcbc";
+                  })
+            }
+        }
+
+        function radioChange() {
+            if(this.value === "percentage") {
+                y1.domain([0, 100]);
+
+                svg.selectAll(".y.axis")
+                    .call(yAxis)
+                    .select(".yaxislabel")
+                        .attr("y", 6)
+                        .attr("dy", ".71em")
+                    .text("Women MPs %");
+
+                svg.selectAll("rect")
+                    .transition()
+                    .attr("y", function(d) {
+                        return y1((d.value/d.constituencies)*100);
+                    })
+                    .attr("height", function(d) {
+                        return height - y1((d.value/d.constituencies)*100);
+                    });
+            } else if(this.value === "total") {
+                y1.domain([0, 543]);
+                set_yaxis("total");
+            } else if(this.value === "allinall") {
+                y1.domain([0, 543]); 
+                set_yaxis("women");
+
+                data.push(dataTot);
+                  x.domain(data.map(function(d) {
+                    return d.year; 
+                  }));
+                updateChart();
+            } else {
+                y1.domain([0, d3.max(data, function(d) {
+                    return d.value;
+                })]);
+                set_yaxis("Total women MPs");
+            }
+        }
+
+        function set_yaxis(yAxisText) {
+            var yText = yAxisText === "total" ? "Total MPs" : "Women MPs";
+            // sets y axis domain from 62 to 543 (total MPs)
+            svg.selectAll(".y.axis")
+                .call(yAxis)
+                .select(".yaxislabel")
+                    .attr("y", 6)
+                    .attr("dy", ".71em")
+                .text(yText);
+
+            svg.selectAll("rect")
+                .transition()
+                  .attr("y", function(d) {
+                    return y1(d.value);
+                })
+                .attr("height", function(d) {
+                    return height - y1(d.value);
+                })
+        } // end of set_yaxis function
+
+          var legend = d3.select(".floating-legend")
+                .append("svg")
+              .selectAll("legend")
+                .data(colorScale.domain(), function(d) {
+                    return d;
+                })
+                .enter().append("g")
+                  .attr("class", "legend");
+
+        legend.append("rect")
+          .attr("x", function(d,i) {
+            return 50*i;
+          })
+          .attr("y", 100)
+          .attr("width", 50)
+          .attr("height", 20)
+          .style("fill", function(d) { 
+            return colorScale(d); 
+          });
+
+        legend.append("text")
+            .text(function(d) { return "≥ " + Math.round(d) + "%"; })
+              .attr("x", function(d, i) { return 50 * i; })
+              .attr("y", 100 + 100/3)
+              .style("fill", "black")
+              .style("font-size", "10px");
+
+        svg.selectAll(".legend")
+            .attr("transform", "translate(" + $(window).width()*0.8 + "," + $(window).height()*0.5 + ")");
+        });
+    </script>
+    </div> <!-- end of container -->
+</body>
+
