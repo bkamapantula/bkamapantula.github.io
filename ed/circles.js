@@ -58,4 +58,4 @@ circlesFour.filter(function(d, i) {
     .attr("r", 10);
 }
 
-setTimeout(loadSVG, 8000);
+setTimeout(loadSVG, 11000);

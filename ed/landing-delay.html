@@ -69,7 +69,7 @@
         h1.global-rank {
             font-size: 56px;
         }
-        h2 {
+        h4 {
             text-align: center;
         }
         div.card-body {
@@ -87,8 +87,11 @@
           height: 256px;
           opacity: 0.4;
         }
-        .col-md-2, .delay-text, #svg-legend {
+        .col-md-2, #svg-legend, .delay-text {
              visibility: hidden;
+        }
+        .page-end {
+            min-height: 125px;
         }
     </style>
     <!-- http://stackoverflow.com/a/22484486 -->
@@ -112,7 +115,17 @@
         <div id="navbar" class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="javascript:void(0);" class="disabled">Explore</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0);" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Explore <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li role="presentation" class="dropdown-header">Lok Sabha</li>
+                    <li><a href="#">Women MPs from 1957-2014</a></li>
+                    <li><a href="#">Women MPs in states 1957-2014</a></li>
+                    <li role="presentation" class="dropdown-header">State Assemblies</li>
+                    <li><a href="#">Women MLAs in states 1955-2014</a></li>
+                    <li><a href="#">% increase in MLA representation 1955-2014</a></li>
+                </ul>
+            </li>
             <li><a href="javascript:void(0);" class="disabled">Data</a></li>
             <li><a href="javascript:void(0);" class="disabled">About</a></li>
             <li><a class="hack"> </a></li>
@@ -127,11 +140,7 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="card">
-                    <!--div class="card-height-indicator"></div-->
                     <div class="card-content">
-                        <!--div class="card-image">
-                            <img src="parliament-2.jpg">
-                        </div--> 
                         <div class="card-body">Only
                             <h1 class="women-percs">12%</h1> MPs are women
                         </div>
@@ -147,25 +156,40 @@
                 <script src="circles.js"></script>
             </div>
             <div class="col-md-2">
-                <svg width="175" height="110" id="svg-legend">
-                  <circle cx="15" cy="30" r="10" fill="steelblue"></circle> <text x="30" y="35">1% Women MPs</text>
+                <svg width="175" height="60" id="svg-legend">
+                  <circle cx="15" cy="15" r="10" fill="steelblue"></circle> <text x="30" y="20">1% Women MPs</text>
                   <!--circle cx="15" cy="90" r="10" fill="#fdae6b"></circle>  <text x="30" y="95">1% Women MLAs</text-->
-                  <circle cx="15" cy="60" r="5" fill="#bcbcbc"></circle> <text x="35" y="65">1% Men MPs</text>
+                  <circle cx="15" cy="40" r="5" fill="#bcbcbc"></circle> <text x="35" y="45">1% Men MPs</text>
                 </svg>
+                Each circle represents 5 MP seats approximately.
                 <!--ul class="list-unstyled">
                     <li>How has women representation changed across India since 1957 general elections?</li>
                 </ul-->
-                <button type="button" class="btn btn-info">Explore</button>
+                <!--button type="button" class="btn btn-info">Explore</button-->
             </div>
         </div> <!--end of row div-->
-        <!--div class="row">
+        <p><h4 class="text-center">Explore</h4></p>
+        <div class="row">
+            <div class="col-md-6"><h4><a href="#">1) How representation changes across 65 years in India</a></h4></div>
+            <div class="col-md-6"><h4><a href="#">2) How representation changes across 65 years across all the states</a></h4></div>
+        </div>
+        <!--h4 class="text-center">States <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></h4-->
+        <div class="page-end"></div>
+        <h4 class="text-center"><a href="#" class="btn btn-link">States <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
+        <!--div class="icon-preview text-center"><i class="mdi-navigation-arrow-drop-down-circle"></i><span>States</span></div-->
+        <p>
+            <h4>29 states</h4>
+            <h4>Over 300 assembly elections</h4>
+            <h4>2289 seats across State Legislative Assemblies</h4>
+            <h4>How many average women MLAs across the states</h4>
+        </p>
+        <div class="row states">
             <div class="col-md-2">
                 <div class="card">
-                    <div class="card-height-indicator"></div>
                     <div class="card-content">
                         <div class="card-body">Only
                             <h1 class="women-percs">9%</h1>
-                            <p class="text-muted">of MLAs on average are women.</p>
+                            of MLAs on average are women
                         </div>
                     </div>
                 </div>
@@ -179,12 +203,20 @@
                 <script src="circless.js"></script>
             </div>
             <div class="col-md-2">
-                <ul class="list-unstyled">
-                    <li>How has women representation changed across Indian states since 1957 assembly elections?</li>
-                </ul>
-                <button type="button" class="btn btn-primary">Explore</button>
+                <svg width="175" height="60" id="svg-legend">
+                  <circle cx="15" cy="15" r="10" fill="#fdae6b"></circle>  <text x="30" y="20">1% Women MLAs</text>
+                  <circle cx="15" cy="40" r="5" fill="#bcbcbc"></circle> <text x="35" y="45">1% Men MLAs</text>
+                </svg>
+                Each circle represents 23 MLA seats approximately.
+                <!--button type="button" class="btn btn-primary">Explore</button-->
             </div>
-        </div--> <!--end of row div-->
+        </div> <!--end of row div-->
+
+        <p><h4 class="text-center">Explore</h4></p>
+        <div class="row">
+            <div class="col-md-6"><h4><a href="#">1) How representation changes across 65 years across all the states</a></h4></div>
+            <div class="col-md-6"><h4><a href="#">2) by what % representation changes across 65 years in all the states</a></h4></div>
+        </div>
 
     </div> <!-- end of container -->
     <!--footer class="footer">
@@ -201,7 +233,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     <script>
         // credit: http://stackoverflow.com/a/22266737
-        var firstText = "<h2>65 years of Indian elections</h2><h2>908 females per 1000 males</h2><h2>How many MPs among the 543 are women?</h2>",
+        var firstText = "<h4>65 years of Indian democracy</h4><h4>14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4>",
             i = 0,
             isTag,
             text;
@@ -226,11 +258,11 @@
             $.material.init();
             setTimeout(function() {
                 $(".delay-text").css("visibility", "visible").show(); //hide().fadeIn('slow');
-            }, 11000);
+            }, 14000);
 
             setTimeout(function() {
                 $(".col-md-2, #svg-legend, #perc-stat").css("visibility", "visible").hide().fadeIn('slow');
-            }, 10200);
+            }, 13400);
         });
     </script>
 
