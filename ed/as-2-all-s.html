@@ -22,11 +22,22 @@
   shape-rendering: crispEdges;
 }
 
+.parent {
+  position: relative;
+}
+.svg {
+  float: left;
+}
+.table{
+  float: left;
+}
 </style>
 <body>
 <select id="states"></select>
-<div class="svg"></div>
-<div class="table"></div>
+<div class="parent">
+    <div class="svg"></div>
+    <div class="table"></div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="underscore-min.js"></script>
