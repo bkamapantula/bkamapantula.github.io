@@ -2,7 +2,7 @@ function loadSVG() {
 var svgOne = d3.select(".circlesOne")
             .append("svg")
             .attr("width", "720px")
-            .attr("height", "40px")
+            .attr("height", "60px")
 
 var svgTwo = d3.select(".circlesTwo")
             .append("svg")
@@ -17,7 +17,7 @@ var svgThree = d3.select(".circlesThree")
 var svgFour = d3.select(".circlesFour")
             .append("svg")
             .attr("width", "720px")
-            .attr("height", "40px");
+            .attr("height", "80px");
 
 var circlesList = [];
 for(var circleId=1; circleId<=25; circleId++) {
@@ -31,22 +31,22 @@ svgOne.selectAll("circle")
                 .attr("cx", function(d, i) {
                     return i*25 + 20;
                 })
-                .attr("cy", 20)
+                .attr("cy", 50)
                 .attr("r", 6)
                 .style("fill", "#bcbcbc");
 
 svgTwo.selectAll("circle").data(circlesList).enter().append("circle").attr("cx", function(d, i) { return i*25 + 20; })
-                .attr("cy", 20)
+                .attr("cy", 30)
                 .attr("r", 6)
                 .style("fill", "#bcbcbc");
 
 svgThree.selectAll("circle").data(circlesList).enter().append("circle").attr("cx", function(d, i) { return i*25 + 20; })
-                .attr("cy", 20)
+                .attr("cy", 30)
                 .attr("r", 6)
                 .style("fill", "#bcbcbc");
 
 var circlesFour = svgFour.selectAll("circle").data(circlesList).enter().append("circle").attr("cx", function(d, i) { return i*25 + 20; })
-                .attr("cy", 20)
+                .attr("cy", 30)
                 .attr("r", 6)
                 .style("fill", "#bcbcbc");
 

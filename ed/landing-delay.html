@@ -87,11 +87,14 @@
           height: 256px;
           opacity: 0.4;
         }
-        .col-md-2, #svg-legend, .delay-text {
+        .col-md-2, #svg-legend, .delay-text, .ls-explore {
              visibility: hidden;
         }
+        .transition, #states, .as-explore, .btn-link, .letsdomore {
+            display: none;
+        }
         .page-end {
-            min-height: 125px;
+            min-height: 80%; /*125px;*/
         }
     </style>
     <!-- http://stackoverflow.com/a/22484486 -->
@@ -123,7 +126,7 @@
                     <li><a href="#">Statewise share of women MPs (1957-2014)</a></li>
                     <li role="presentation" class="dropdown-header">State Assemblies</li>
                     <li><a href="#">No. of women MLAs (1955-2014)</a></li>
-                    <li><a href="#">Patterns in women's representation (1955-2014)</a></li>
+                    <li><a href="#">Changing patterns in women MLAs (1955-2014)</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="disabled">Data</a></li>
@@ -158,32 +161,32 @@
             <div class="col-md-2">
                 <svg width="175" height="60" id="svg-legend">
                   <circle cx="15" cy="15" r="10" fill="steelblue"></circle> <text x="30" y="20">1% Women MPs</text>
-                  <!--circle cx="15" cy="90" r="10" fill="#fdae6b"></circle>  <text x="30" y="95">1% Women MLAs</text-->
                   <circle cx="15" cy="40" r="5" fill="#bcbcbc"></circle> <text x="35" y="45">1% Men MPs</text>
                 </svg>
                 Each circle represents 5 MP seats approximately.
-                <!--ul class="list-unstyled">
-                    <li>How has women representation changed across India since 1957 general elections?</li>
-                </ul-->
                 <!--button type="button" class="btn btn-info">Explore</button-->
             </div>
         </div> <!--end of row div-->
-        <p><h4 class="text-center">Explore</h4></p>
-        <div class="row">
-            <div class="col-md-6"><h4>1) The total women MPs elected from 1957 to 2014 is less (537) than the number of seats in a single election (543). <a href="#">Explore</a>.</h4></div>
-            <div class="col-md-6"><h4><a href="#">2) How representation changes across 65 years across all the states</a></h4></div>
+
+        <div class="transition">
+            <p><h4 class="text-center">Explore</h4></p>
+            <div class="row">
+                <div class="col-md-6"><h5>1) The total women MPs elected from 1957 to 2014 is less (537) than the number of seats in a single election (543). <a href="#">Explore</a>.</h5></div>
+                <div class="col-md-6"><h5><a href="#">2) How representation changes across 65 years across all the states</a></h5></div>
+            </div>
         </div>
+
         <!--h4 class="text-center">States <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></h4-->
         <div class="page-end"></div>
-        <h4 class="text-center"><a href="#" class="btn btn-link">States <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
+        <h4 class="text-center"><a href="#states" class="btn btn-link">States <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
         <!--div class="icon-preview text-center"><i class="mdi-navigation-arrow-drop-down-circle"></i><span>States</span></div-->
-        <p>
-            <h4>29 states.
-            Over 300 assembly elections</h4>
-            <h4>2289 seats across State Legislative Assemblies</h4>
-            <h4>How many average women MLAs across the states</h4>
-        </p>
-        <div class="row states">
+        <div class="row states" id="states">
+            <p>
+                <h4>29 states.
+                Over 300 assembly elections</h4>
+                <h4>2289 seats across State Legislative Assemblies</h4>
+                <h4>How many average women MLAs across the states?</h4>
+            </p>
             <div class="col-md-2">
                 <div class="card">
                     <div class="card-content">
@@ -212,13 +215,19 @@
             </div>
         </div> <!--end of row div-->
 
+        <div class="row as-explore">
         <p><h4 class="text-center">Explore</h4></p>
-        <div class="row">
-            <div class="col-md-6"><h4><a href="#">1) How representation changes across 65 years across all the states</a></h4></div>
-            <div class="col-md-6"><h4><a href="#">2) by what % representation changes across 65 years in all the states</a></h4></div>
+            <div class="col-md-6"><h5><a href="#">1) How representation changes across 65 years across all the states</a></h5></div>
+            <div class="col-md-6"><h5><a href="#">2) by what % representation changes across 65 years in all the states</a></h5></div>
+        </div>
+
+        <div class="letsdomore">
+            <h3>#letsdomore</h3>
+            <p class="well">The low numbers of women representation in Indian elected bodies must be increased. #letsdomore is an effort to raise awareness on the improper representation of women.</p>
         </div>
 
     </div> <!-- end of container -->
+
     <!--footer class="footer">
         <div class="container">
            <p class="text-muted text-center">by <a href="https://twitter.com/bhanupriyarao">@bhanupriyarao</a> and <a href="https://twitter.com/bkamapantula">@bkamapantula</a></p>
@@ -233,7 +242,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     <script>
         // credit: http://stackoverflow.com/a/22266737
-        var firstText = "<h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4>",
+        var firstText = "<p><h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4></p>",
             i = 0,
             isTag,
             text;
@@ -256,13 +265,31 @@
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
+
             setTimeout(function() {
-                $(".delay-text").css("visibility", "visible").show(); //hide().fadeIn('slow');
+                $(".delay-text").css("visibility", "visible").show();
             }, 14000);
 
             setTimeout(function() {
-                $(".col-md-2, #svg-legend, #perc-stat").css("visibility", "visible").hide().fadeIn('slow');
+                $(".col-md-2, #svg-legend, #perc-stat, .ls-explore").css("visibility", "visible").hide().fadeIn('slow');
+                $(".transition, .btn-link, #states, .as-explore, .letsdomore").css("display", "block").hide().fadeIn('slow');
             }, 13400);
+
+            $(function() {
+              $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                  }
+                }
+              });
+            });
+
         });
     </script>
 
