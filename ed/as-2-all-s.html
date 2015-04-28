@@ -146,16 +146,6 @@
 		svg.selectAll("text")
 		    .attr("font-size", "12px");
 
-        // http://stackoverflow.com/a/9973592 - fixes issue of delete data[data.length-1]
-        Object.prototype.removeItem = function (key) {
-           if (!this.hasOwnProperty(key))
-              return
-           if (isNaN(parseInt(key)) || !(this instanceof Array))
-              delete this[key]
-           else
-              this.splice(key, 1)
-        };
-
 		function loadTable(data, columns) {
 		    // http://jsfiddle.net/7WQjr/
 		    var table = d3.select(".table").append("table"),
