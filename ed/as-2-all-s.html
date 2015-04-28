@@ -3,14 +3,12 @@
 <title>States - women representation trends</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.css">
-    <!-- Custom styles for this template -->
-    <!--link href="sticky-footer.css" rel="stylesheet"-->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -46,6 +44,10 @@
             visibility: hidden;
         }
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/d3.v3.min.js"></script>
+	<!--script src="http://d3js.org/topojson.v1.min.js"></script-->
+	<script src="underscore-min.js"></script>
 <body>
 	<div class="navbar navbar-default navbar-fixed-top delay-text">
         <div class="navbar-header">
@@ -79,23 +81,24 @@
     <div class="container">
 		<select id="states"></select>
 		<div class="row">
-		    <div class="col-md-8">
+		    <div class="col-md-9">
 		    	<div class="svg"></div>
 		    </div>
-		    <div class="col-md-4">
+		    <div class="col-md-3">
 		    	<div class="table"></div>
+		    	<div class="state-notes"></div>
 		    </div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="underscore-min.js"></script>
+        <div class="chart-info">
+            Chart depicts the % change in women MLAs in consecutive state assembly elections. Lack of bars suggests that there is no change in number of MLAs.
+        </div>
 		<script>
 
 		var margin = {top: 75, right: 10, bottom: 40, left: 40},
-		    width = 560 - margin.left - margin.right,
+		    width = 460 - margin.left - margin.right,
 		    height = 500 - margin.top - margin.bottom;
 
-		var y_toyear_width = width - 20,
+		var y_toyear_width = width - 25,
 		    y_fromyear_width = 30;
 
 		var x = d3.scale.linear()
@@ -135,13 +138,23 @@
 		    .attr("y", -35)
 		    .text("% Decrease | % Increase")
 
-		svg.append("text")
+		/*svg.append("text")
 		    .attr("x", -25)
 		    .attr("y", 400)
-		    .text("How to read: Women MLA representation decreased by 47% in 2014 compared to 2009")
+		    .text("How to read: Women MLA representation decreased by 47% in 2014 compared to 2009");*/
 
 		svg.selectAll("text")
 		    .attr("font-size", "12px");
+
+        // http://stackoverflow.com/a/9973592 - fixes issue of delete data[data.length-1]
+        Object.prototype.removeItem = function (key) {
+           if (!this.hasOwnProperty(key))
+              return
+           if (isNaN(parseInt(key)) || !(this instanceof Array))
+              delete this[key]
+           else
+              this.splice(key, 1)
+        };
 
 		function loadTable(data, columns) {
 		    // http://jsfiddle.net/7WQjr/
@@ -155,7 +168,12 @@
 		        .data(columns)
 		        .enter()
 		        .append("th")
-		            .text(function(column) { return column; });
+		            .text(function(column) { 
+                        if(column.indexOf('Previous') === 0) {
+                            return column.split('Previous ')[1] + " ||";
+                        }
+                        return column + " ||";
+                    });
 
 		    // create a row for each object in the data
 		    var rows = tbody.selectAll("tr")
@@ -186,10 +204,11 @@
 		  x.domain(d3.extent(data, function(d) { return d.value; })).nice(); 
 		  y.domain(data.map(function(d) { return d['Next year']; }));
 		  y_toyear.domain(data.map(function(d) { return d['Next year']; }));
-		  y_fromyear.domain(data.map(function(d) { return d['Previous year']; }));
+		  y_fromyear.domain(data.map(function(d) { return d['Election year']; }));
 		}
 
-		d3.csv("as_q_2_all_states_extra_cols.csv", type, function(error, data) {
+		d3.csv("as_q_2_all_states_const.csv", type, function(error, data) {
+
 		  var dataByState = nest.entries(data);
 
 		  $("select#states").on("change", function() {
@@ -197,17 +216,21 @@
 
 		    if(selectedStateKey) {
 
+                // removes data from existing table, if any
 		        if($(".table").length) {
 		            $(".table").empty();
 		        }
 
+                // removes existing y axes and rectangles, if any
 		        if($("svg").length) {
 		            d3.selectAll(".bar").remove();
 		            d3.selectAll(".y.axis").remove();
 		            d3.selectAll(".x.axis").remove();
 		        }
 
-		        var table = loadTable(dataByState[selectedStateKey].values, ["Previous year", "Next year", "Previous #MLAs", "Next #MLAs"]);
+		        var table = loadTable(dataByState[selectedStateKey].values, ["Election year", "Previous #MLAs", "Constituencies"]);
+                var lastVal = dataByState[selectedStateKey].values[dataByState[selectedStateKey].values.length-1];
+                $("table").append("<tr><td>" + lastVal["Next year"] + "</td><td>" + lastVal["Next #MLAs"] + "</td><td>" + lastVal["Constituencies"] + "</td></tr>");
 
 		      // dataByState[0].values
 		      drawAxes(dataByState[selectedStateKey].values);
@@ -266,5 +289,28 @@
 		        }
 
 		    });
+		</script>
+		<script type="text/javascript">
+			/*var svg = d3.select("#india-svg").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+	        d3.json("in-states-topo.json", function(error, data) {
+	            if(error) {
+	                console.log("error loading topo json");
+	                alert("wut");
+	            }
+
+	            var states = svg.append("g")
+	                .attr("id", "states")
+	                .selectAll("path")
+	                    .data(topojson.object(data, data.objects.states).geometries)
+	                  .enter().append("path")
+	                    .attr("class", "state")
+	                    .attr("title", function(d) {
+	                        return d.properties.name;
+	                    })
+	                    //.attr("d", d3.geo.path().projection(d3.geo.mercator()))
+	        });*/ // end of json reading
 		</script>
 	</div>
