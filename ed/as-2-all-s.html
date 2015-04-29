@@ -79,19 +79,35 @@
         </div><!--/.nav-collapse -->
     </div>
     <div class="container">
+        <h3 class="text-center">Changing patterns in women MLAs (1955-2014)</h3>
 		<select id="states"></select>
 		<div class="row">
-		    <div class="col-md-9">
+		    <div class="col-md-6">
 		    	<div class="svg"></div>
 		    </div>
 		    <div class="col-md-3">
-		    	<div class="table"></div>
-		    	<div class="state-notes"></div>
+                <div class="row">
+                    <div class="table">
+                    </div>
+                </div>
+                <div class="row chart-info">
+                <ul class="list-unstyled">
+                    <li>Chart depicts the % change in women MLAs in consecutive state assembly elections.</li>
+                    <li>Lack of bars suggests that there is no change in number of MLAs.</li>
+                </ul>
+                </div>
 		    </div>
+            <div class="col-md-3">
+                <div class="state-notes">
+                    <h4>Observations</h4>
+                </div>
+            </div>
 		</div>
-        <div class="chart-info">
-            Chart depicts the % change in women MLAs in consecutive state assembly elections. Lack of bars suggests that there is no change in number of MLAs.
+        <div class="row">
+            <h4>More</h4>
+            <p>The following are the states with highest and lowest </p>
         </div>
+
 		<script>
 
 		var margin = {top: 75, right: 10, bottom: 40, left: 40},
@@ -148,6 +164,8 @@
 
 		function loadTable(data, columns) {
 		    // http://jsfiddle.net/7WQjr/
+
+            $(".table").html("<h4>#MLAs per election year</h4>");
 		    var table = d3.select(".table").append("table"),
 		        thead = table.append("thead"),
 		        tbody = table.append("tbody");
