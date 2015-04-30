@@ -52,8 +52,8 @@ var circlesFour = svgFour.selectAll("circle").data(circlesList).enter().append("
 circlesFour.filter(function(d, i) {
             return d > 16;
     })
-    .style("fill", "#fdae6b")
-    .attr("r", 10);
+    .style("fill", "#fdae6b");
+    //.attr("r", 10);
     //.on("mouseover", function(d) { return console.log("12% women MPs only"); });
 
 

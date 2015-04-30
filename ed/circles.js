@@ -54,8 +54,9 @@ circlesFour.filter(function(d, i) {
             return d > 13;
     })
     .transition().delay((function(d, i) { return i*200; }))
-    .style("fill", "steelblue")
-    .attr("r", 10);
+    .style("fill", "steelblue");
+    //.attr("r", 10);
 }
 
-setTimeout(loadSVG, 11000);
+setTimeout(loadSVG, 13000);
+
