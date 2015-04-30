@@ -144,11 +144,11 @@
                 <a href="javascript:void(0);" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Explore <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li role="presentation" class="dropdown-header">Lok Sabha</li>
-                    <li><a href="#">No. of women MPs (1957-2014)</a></li>
-                    <li><a href="#">Statewise share of women MPs (1957-2014)</a></li>
+                    <li><a href="ls-1.html">No. of women MPs (1957-2014)</a></li>
+                    <li><a href="ls-2.html">Statewise share of women MPs (1957-2014)</a></li>
                     <li role="presentation" class="dropdown-header">State Assemblies</li>
                     <li><a href="#">No. of women MLAs (1955-2014)</a></li>
-                    <li><a href="#">Changing patterns in women MLAs (1955-2014)</a></li>
+                    <li><a href="http://bkamapantula.github.io/ed/as-2-all-s.html">Changing patterns in women MLAs (1955-2014)</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="disabled">Data</a></li>
@@ -259,7 +259,7 @@
                 <h5>Share snippets (Mouse over for links)</h5>
                 <div class="row">
                     <div class="col-md-2">
-                        <div class="card">
+                        <div class="card" id="card-1">
                             <div class="card-height-indicator"></div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -274,7 +274,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="card">
+                        <div class="card" id="card-2">
                             <div class="card-height-indicator"></div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -289,7 +289,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="card card-fact">
+                        <div class="card card-fact" id="card-3">
                             <div class="card-height-indicator"></div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -304,7 +304,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="card">
+                        <div class="card" id="card-4">
                             <div class="card-height-indicator"></div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -362,11 +362,10 @@
             // This command is used to initialize some elements and make them work properly
             $.material.init();
 
-            $(".card").mouseover(function(e) {
+            //$("#card-1,#card-2,#card-3,#card-4").mouseover(function(e) {
+            $("[id^=card-]").mouseover(function(e) {
             	e.preventDefault();
-            	//$(".card-footer").css("visibility", "visible");
-            	$(".card").find("footer").css("visibility", "visible");
-            	console.log($(".card footer").attr('id'));
+            	$(this).find("footer").css("visibility", "visible");
             }).mouseout(function(e) {
             	$(".card-footer").css("visibility", "hidden");
             });
