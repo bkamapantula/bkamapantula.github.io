@@ -163,16 +163,7 @@
         </div>
 
         <div class="row">
-            <!--div class="col-md-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body">Only
-                            <h1 class="women-percs">12%</h1> MPs are women
-                        </div>
-                    </div>
-                </div>
-            </div-->
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="circlesOne"></div>
                 <div class="circlesTwo"></div>
                 <div class="circlesThree"></div>
@@ -180,14 +171,22 @@
                 <script src="js/d3.v3.min.js"></script>
                 <script src="circles.js"></script>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
+                <div class="circlesOnes"></div>
+                <div class="circlesTwos"></div>
+                <div class="circlesThrees"></div>
+                <div class="circlesFours"></div>
+                <script src="js/d3.v3.min.js"></script>
+                <script src="circless.js"></script>
+            </div>
+            <!--div class="col-md-4">
                 <svg width="320" height="80" class="svg-legend">
                   <circle cx="5" cy="10" r="5" fill="steelblue"></circle> <text x="30" y="15">1% Women MPs</text>
                   <circle cx="5" cy="30" r="5" fill="#bcbcbc"></circle> <text x="35" y="35">1% Men MPs</text>
                   <text x="0" y="60">Each circle represents 5 MP seats approximately.</text>
                 </svg>
-                <!--button type="button" class="btn btn-info">Explore</button-->
-            </div>
+                <-button type="button" class="btn btn-info">Explore</button>
+            </div-->
         </div> <!--end of row div-->
 
         <div class="transition">
@@ -205,25 +204,15 @@
         <h4 class="text-center"><a href="#states" class="btn btn-link">States <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
         <!--div class="icon-preview text-center"><i class="mdi-navigation-arrow-drop-down-circle"></i><span>States</span></div-->
         <div class="row states" id="states">
-            <p class="states">
+            <!--p class="states">
 <h3>State Assemblies</h3>
                 <h4>29 states.
                 Over 300 assembly elections</h4>
                 <h4>2289 seats across State Legislative Assemblies</h4>
                 <h4>How many average women MLAs across the states?</h4>
                 <h4><span class="stat-stress">Only 320</span>/2289 <span class="stat-stress">(14%) MLAs are women</span></h4>
-            </p>
-            <!--div class="col-md-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body">Only
-                            <h1 class="women-percs">9%</h1>
-                            of MLAs on average are women
-                        </div>
-                    </div>
-                </div>
-            </div-->
-            <div class="col-md-8">
+            </p-->
+            <!--div class="col-md-8">
                 <div class="circlesOnes"></div>
                 <div class="circlesTwos"></div>
                 <div class="circlesThrees"></div>
@@ -237,8 +226,8 @@
                   <circle cx="15" cy="30" r="5" fill="#bcbcbc"></circle> <text x="35" y="35">1% Men MLAs</text>
                   <text x="5" y="60">Each circle represents 23 MLA seats approximately.</text>
                 </svg>
-                <!--button type="button" class="btn btn-primary">Explore</button-->
-            </div>
+                <-button type="button" class="btn btn-primary">Explore</button>
+            </div-->
         </div> <!--end of row div-->
 
         <!--div class="row as-explore">
@@ -338,7 +327,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     <script>
         // credit: http://stackoverflow.com/a/22266737
-        var firstText = "<p><h3>Parliament</h3><h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4></p><p><h4> <span class='stat-stress'>Only 66</span>/543 <span class='stat-stress'>(12%) MPs are women</span></h4></p>",
+        /*var firstText = "<p><h3>Parliament</h3><h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4></p><p><h4> <span class='stat-stress'>Only 66</span>/543 <span class='stat-stress'>(12%) MPs are women</span></h4></p>",
             i = 0,
             isTag,
             text;
@@ -355,7 +344,7 @@
 
             if (isTag) return type();
             setTimeout(type, 70);
-        }());
+        }());*/
     </script>
     <script>
         $(document).ready(function() {

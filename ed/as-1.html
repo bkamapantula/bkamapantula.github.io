@@ -105,7 +105,7 @@ background: white;
             <div class="svg col-md-10"></div>
             <div class="floating-legend col-md-2">
                 <h6>Women representation trends across years</h6>
-                <div class="btn-group" data-toggle="buttons" aria-label="...">
+                <!--div class="btn-group" data-toggle="buttons" aria-label="...">
                   <label class="btn btn-success active" id="statesLabel">
                     <input type="radio" name="options" id="states" value="states" class="btn btn-default" data-toggle="button" checked>States
                   </label>
@@ -113,7 +113,7 @@ background: white;
                     <input type="radio" name="options" id="india" value="india" class="btn btn-default" data-toggle="button">India
                   </label>
                 </div>
-                <!--form class="form">
+                <form class="form">
                   <label><input type="radio" name="mode" value="states" checked> States</label>
                   <label><input type="radio" name="mode" value="india"> India</label>
                 </form-->
@@ -141,9 +141,6 @@ background: white;
 
         var y2 = d3.scale.linear();
 
-        // for % as y-axis
-        var yPerc = d3.scale.linear();
-
         var x = d3.scale.ordinal()
             .rangeRoundBands([0, width], 1, 0);
 
@@ -154,11 +151,6 @@ background: white;
 
         var yAxis = d3.svg.axis()
             .scale(y2)
-            .orient("left")
-            .ticks(20);
-
-        var yPercAxis = d3.svg.axis()
-            .scale(yPerc)
             .orient("left")
             .ticks(20);
 
@@ -190,8 +182,8 @@ background: white;
         var color = d3.scale.category20c();
 
         var colorScale = d3.scale.linear()
-             .domain([0, 5, 10, 15, 20, 25]) //, 50, 75, 100]) // winners/constituencies
-             .range(colorbrewer.Reds[6]);
+             .domain([0, 5, 10, 15]) //, 50, 75, 100]) // winners/constituencies
+             .range(colorbrewer.Reds[4]);
 
         var svg = d3.select(".svg").append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -245,18 +237,15 @@ background: white;
             return d.key;
           }));
 
-          y1.domain([0, d3.max(data, function(d) {
+          y1.domain([0, 15]) /*d3.max(data, function(d) {
             return d.value; 
-          })])
+          })])*/
             .range([y0.rangeBand(), 0]);
 
           y2.domain([0, d3.max(dataByGroup_year, function(d) {
             return d.year_wise_win_sum;
           })])
             .range([height, 0]);
-
-          // y axis goes from 0% to 100%
-          yPerc.domain([0, 100]);
 
           var group = svg.selectAll(".group")
               .data(dataByGroup)
@@ -287,11 +276,13 @@ background: white;
                 return x(d.year); 
             })
               .attr("y", function(d) {
-                return y1(d.value);
+                return y1((d.value/d.constituencies)*100); // y1(d.value);
             })
               .attr("width", 12) //8
               .attr("height", function(d) {
-                return y0.rangeBand() - y1(d.value);
+                if(d.value) {
+                  return y0.rangeBand() - y1((d.value/d.constituencies)*100); // y1(d.value); //
+                }
             })
               .on('mouseover', tip.show)
               .on('mouseout', tip.hide);
@@ -309,12 +300,6 @@ background: white;
               .attr("transform", "rotate(-90)");
 
             d3.selectAll("input[type=radio]").on("change", change);
-
-        /*$("input").on("change", function() {
-            console.log(this.value);
-            $(this.value).attr('checked', true);
-            change();
-        });*/
 
           var timeout = setTimeout(function() {
             d3.select("input[value=\"india\"]").property("checked", true).each(change);
@@ -370,6 +355,7 @@ background: white;
             .attr("transform", "translate(" + $(window).width()/2 + ", 0)");
 
           function transitionMultiples() {
+            /*
             var t = svg.transition().duration(1000),
                 g = t.selectAll(".group").attr("transform", function(d) {
                         return "translate(0," + y0(d.key) + ")"; 
@@ -378,7 +364,7 @@ background: white;
                 return y1(d.value);
             })
                 .attr("height", function(d) {
-                    return y0.rangeBand() - y1(d.value); 
+                    return y0.rangeBand() - y1((d.value/d.constituencies)*100); // y1(d.value); 
             });
 
             g.select(".group-label").attr("y", function(d) {
@@ -388,7 +374,8 @@ background: white;
                 return d.key;
             });
             // removes y axis on switch to multiples view
-            svg.selectAll(".y.axis").remove();
+            svg.selectAll(".y.axis").remove(); 
+            */
           }
 
           function transitionStacked() {

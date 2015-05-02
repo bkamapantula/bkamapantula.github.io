@@ -91,12 +91,13 @@
           height: 256px;
           opacity: 0.4;
         }
+        /*
         .col-md-3, .svg-legend, .delay-text, .ls-explore {
              visibility: hidden;
         }
         .transition, .states, #states, .as-explore, .btn-link, .letsdomore {
             display: none;
-        }
+        } */
         .page-end {
             min-height: 80%; /*125px;*/
         }
@@ -144,11 +145,11 @@
                 <a href="javascript:void(0);" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Explore <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li role="presentation" class="dropdown-header">Lok Sabha</li>
-                    <li><a href="ls-1.html">No. of women MPs (1957-2014)</a></li>
-                    <li><a href="ls-2.html">Statewise share of women MPs (1957-2014)</a></li>
+                    <li><a href="ls-1.html">Q1) No. of women MPs (1957-2014)</a></li>
+                    <li><a href="ls-2.html">Q2) Statewise share of women MPs (1957-2014)</a></li>
                     <li role="presentation" class="dropdown-header">State Assemblies</li>
-                    <li><a href="as-1.html">No. of women MLAs (1955-2014)</a></li>
-                    <li><a href="as-2-all-s.html">Changing patterns in women MLAs (1955-2014)</a></li>
+                    <li><a href="as-1.html">Q1) No. of women MLAs (1955-2014)</a></li>
+                    <li><a href="as-2-all-s.html">Q2) Changing patterns in women MLAs (1955-2014)</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="disabled">Data</a></li>
@@ -162,93 +163,23 @@
         <div class="row" id="first-text">
         </div>
 
-        <div class="row">
-            <!--div class="col-md-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body">Only
-                            <h1 class="women-percs">12%</h1> MPs are women
-                        </div>
-                    </div>
-                </div>
-            </div-->
-            <div class="col-md-8">
-                <div class="circlesOne"></div>
-                <div class="circlesTwo"></div>
-                <div class="circlesThree"></div>
-                <div class="circlesFour"></div>
-                <script src="js/d3.v3.min.js"></script>
-                <script src="circles.js"></script>
+        <div class="row" id="charts">
+            <div class="col-md-6" id="mpschart">
             </div>
-            <div class="col-md-4">
-                <svg width="320" height="80" class="svg-legend">
-                  <circle cx="5" cy="10" r="5" fill="steelblue"></circle> <text x="30" y="15">1% Women MPs</text>
-                  <circle cx="5" cy="30" r="5" fill="#bcbcbc"></circle> <text x="35" y="35">1% Men MPs</text>
-                  <text x="0" y="60">Each circle represents 5 MP seats approximately.</text>
-                </svg>
-                <!--button type="button" class="btn btn-info">Explore</button-->
+            <div class="col-md-6" id="mlaschart">
             </div>
         </div> <!--end of row div-->
 
-        <div class="transition">
             <p><h4 class="text-center">Explore</h4></p>
-            <!--div class="row">
-                <div class="col-md-6"><h5>1) The total women MPs elected from 1957 to 2014 is less (537) than the number of seats in a single election (543). <a href="#">Explore</a>.</h5></div>
-                <div class="col-md-6"><h5><a href="#">2) How representation changes across 65 years across all the states</a></h5></div>
-            </div-->
-                <h5 class="text-center">1) The total women MPs elected from 1957 to 2014 is less (537) than the number of seats in a single election (543). <a href="#">Explore</a>.</h5>
-                <h5 class="text-center"><a href="#">2) How representation changes across 65 years across all the states</a></h5>
-        </div>
-
-        <!--h4 class="text-center">States <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></h4-->
-        <div class="page-end"></div>
-        <h4 class="text-center"><a href="#states" class="btn btn-link">States <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
-        <!--div class="icon-preview text-center"><i class="mdi-navigation-arrow-drop-down-circle"></i><span>States</span></div-->
-        <div class="row states" id="states">
-            <p class="states">
-<h3>State Assemblies</h3>
-                <h4>29 states.
-                Over 300 assembly elections</h4>
-                <h4>2289 seats across State Legislative Assemblies</h4>
-                <h4>How many average women MLAs across the states?</h4>
-                <h4><span class="stat-stress">Only 320</span>/2289 <span class="stat-stress">(14%) MLAs are women</span></h4>
-            </p>
-            <!--div class="col-md-2">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body">Only
-                            <h1 class="women-percs">9%</h1>
-                            of MLAs on average are women
-                        </div>
-                    </div>
-                </div>
-            </div-->
-            <div class="col-md-8">
-                <div class="circlesOnes"></div>
-                <div class="circlesTwos"></div>
-                <div class="circlesThrees"></div>
-                <div class="circlesFours"></div>
-                <script src="js/d3.v3.min.js"></script>
-                <script src="circless.js"></script>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="text-center">Q1) The total women MPs elected from 1957 to 2014 is less (537) than the number of seats in a single election (543). <a href="#">Explore</a>.</h5>
+                <h5 class="text-center"><a href="#">Q2) How representation changes across 65 years across all the states</a></h5>
             </div>
-            <div class="col-md-4">
-                <svg width="320" height="80" class="svg-legend-2">
-                  <circle cx="15" cy="10" r="5" fill="#fdae6b"></circle>  <text x="30" y="15">1% Women MLAs</text>
-                  <circle cx="15" cy="30" r="5" fill="#bcbcbc"></circle> <text x="35" y="35">1% Men MLAs</text>
-                  <text x="5" y="60">Each circle represents 23 MLA seats approximately.</text>
-                </svg>
-                <!--button type="button" class="btn btn-primary">Explore</button-->
+            <div class="col-md-6">
+                <h5 class="text-center"><a href="#">Q1) How representation changes across 65 years across all the states</a></h5>
+                <h5 class="text-center"><a href="#">Q2) by what % representation changes across 65 years in all the states</a></h5>
             </div>
-        </div> <!--end of row div-->
-
-        <!--div class="row as-explore">
-        <p><h4 class="text-center">Explore</h4></p>
-            <div class="col-md-6"><h5><a href="#">1) How representation changes across 65 years across all the states</a></h5></div>
-            <div class="col-md-6"><h5><a href="#">2) by what % representation changes across 65 years in all the states</a></h5></div>
-        </div-->
-        <div class="row as-explore">
-            <h5 class="text-center"><a href="#">1) How representation changes across 65 years across all the states</a></h5>
-            <h5 class="text-center"><a href="#">2) by what % representation changes across 65 years in all the states</a></h5>
         </div>
 
         <div class="letsdomore">
@@ -338,7 +269,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     <script>
         // credit: http://stackoverflow.com/a/22266737
-        var firstText = "<p><h3>Parliament</h3><h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4></p><p><h4> <span class='stat-stress'>Only 66</span>/543 <span class='stat-stress'>(12%) MPs are women</span></h4></p>",
+        /*var firstText = "<p><h3>Parliament</h3><h4>65 years of Indian democracy. 14 Lok Sabha elections</h4><h4>For every 1000 men, 908 are women</h4><h4>But how many of the 543 MPs are women?</h4></p><p><h4> <span class='stat-stress'>Only 66</span>/543 <span class='stat-stress'>(12%) MPs are women</span></h4></p>",
             i = 0,
             isTag,
             text;
@@ -355,13 +286,15 @@
 
             if (isTag) return type();
             setTimeout(type, 70);
-        }());
+        }());*/
     </script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
+            $("#mpschart, #mlaschart").css('min-height', $(window).innerHeight()*0.8);
 
+            /*
             //$("#card-1,#card-2,#card-3,#card-4").mouseover(function(e) {
             $("[id^=card-]").mouseover(function(e) {
             	e.preventDefault();
@@ -379,23 +312,109 @@
                 $(".col-md-2, .svg-legend, #perc-stat, .ls-explore").css("visibility", "visible").hide().fadeIn('slow');
                 $(".transition, .btn-link, .states, #states, .as-explore, .letsdomore").css("display", "block").hide().fadeIn('slow');
             }, 13400);
-
-            $(function() {
-              $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                  var target = $(this.hash);
-                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                  if (target.length) {
-                    $('html,body').animate({
-                      scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                  }
-                }
-              });
-            });
-
+            */
         });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.1.5/highcharts.js"></script>
+    <script>
+    $(function () {
+        $('#mpschart').highcharts({
+            chart: {
+                backgroundColor: 'rgba(238, 238, 238, 0.1)',
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'Only <b>12%</b> MPs are <b>women</b>',
+                align: 'center',
+                useHTML: true,
+                verticalAlign: 'middle',
+                y: 200
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+                style: {
+                    fontSize: '16px',
+                }
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: -50,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white',
+                            textShadow: '0px 1px 2px black'
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%'],
+                    size: '100%'
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Gender representation in parliament',
+                innerSize: '40%',
+                data: [
+                    ['Women MPs', 12],
+                    ['Male MPs',  88]
+                ]
+            }],
+            credits: {enabled: false}
+        });
+        $('#mlaschart').highcharts({
+            chart: {
+                backgroundColor: 'rgb(238, 238, 238)',
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'Only <b>14%</b> MLAs on average are women',
+                align: 'center',
+                useHTML: true,
+                verticalAlign: 'middle',
+                y: 200
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+                style: {
+                    fontSize: '16px',
+                }
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: -40,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white',
+                            textShadow: '0px 1px 2px black'
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%'],
+                    size: '100%'
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Average gender representation in assembly',
+                innerSize: '40%',
+                data: [
+                    ['Women MLAs', 14],
+                    ['Male MLAs',  86]
+                ]
+            }],
+            credits: {enabled: false}
+        });
+    });
     </script>
 
 </body>
