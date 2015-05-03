@@ -341,7 +341,7 @@
                 pie: {
                     dataLabels: {
                         enabled: true,
-                        distance: -40,
+                        distance: -50,
                         style: {
                             fontWeight: 'bold',
                             color: 'white',
@@ -351,13 +351,13 @@
                     startAngle: -90,
                     endAngle: 90,
                     center: ['50%', '75%'],
-                    size: '70%'
+                    size: '100%'
                 }
             },
             series: [{
                 type: 'pie',
                 name: 'Gender representation in parliament',
-                innerSize: '60%',
+                innerSize: '25%',
                 data: [
                     ['Male MPs',  88],
                     ['Women MPs', 12]
@@ -372,6 +372,7 @@
                 plotBorderWidth: 0,
                 plotShadow: false
             },
+            colors: ['#F39D41', '#E04836'], //['#FFCC99', '#f45b5b'],
             title: {
                 text: 'Only <b>14%</b> MLAs on average are women',
                 align: 'center',
@@ -389,7 +390,7 @@
                 pie: {
                     dataLabels: {
                         enabled: true,
-                        distance: -40,
+                        distance: -50,
                         style: {
                             fontWeight: 'bold',
                             color: 'white',
@@ -399,13 +400,13 @@
                     startAngle: -90,
                     endAngle: 90,
                     center: ['50%', '75%'],
-                    size: '70%'
+                    size: '100%'
                 }
             },
             series: [{
                 type: 'pie',
                 name: 'Average gender representation in assembly',
-                innerSize: '70%',
+                innerSize: '25%',
                 data: [
                     ['Male MLAs',  86],
                     ['Women MLAs', 14]
