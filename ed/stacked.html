@@ -1,6 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <div id="container" style="min-width: 310px; max-width: 800px; height: 500px; margin: 0 auto"></div>
+<div id="container2" style="min-width: 310px; max-width: 800px; height: 500px; margin: 0 auto"></div>
 
 <script>
 $(function () {
@@ -12,7 +13,7 @@ $(function () {
             },
 colors: ['#434348', '#80CEB9'],
             title: {
-                text: 'MPs in Indian parliament'
+                text: 'MPs by gender in Indian parliament from 1957 to 2014'
             },
             xAxis: {
                 categories: years,
@@ -81,6 +82,79 @@ colors: ['#434348', '#80CEB9'],
         });
     });
 
+});
+
+$(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'area'
+        },
+colors: ['#434348', '#80CEB9'],
+        title: {
+            text: 'MPs by gender in Indian parliament from 1957 to 2014'
+        },
+        xAxis: {
+            categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Percent'
+            }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} %)<br/>',
+            shared: true
+        },
+        plotOptions: {
+            area: {
+                stacking: 'percent',
+                lineColor: '#ffffff',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#ffffff'
+                }
+            }
+        },
+        series: [{
+            name: 'Women',
+            data: [4.453441296,
+                    6.275303644,
+                    5.576923077,
+                    3.49907919,
+                    5.156537753,
+                    7.918968692,
+                    5.340699816,
+                    7.182320442,
+                    7.366482505,
+                    7.918968692,
+                    9.023941068,
+                    8.287292818,
+                    10.68139963,
+                    12.15469613]
+        }, {
+            name: 'Men',
+                data: [95.5465587,
+                    93.72469636,
+                    94.42307692,
+                    96.50092081,
+                    94.84346225,
+                    92.08103131,
+                    94.65930018,
+                    92.81767956,
+                    92.6335175,
+                    92.08103131,
+                    90.97605893,
+                    91.71270718,
+                    89.31860037,
+                    87.84530387]
+        }
+        ]
+    });
 });
 
 </script>
