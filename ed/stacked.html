@@ -1,6 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
-<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="container" style="min-width: 310px; max-width: 800px; height: 500px; margin: 0 auto"></div>
 
 <script>
 $(function () {
@@ -26,11 +26,13 @@ colors: ['#434348', '#80CEB9'],
                         return (Math.abs(this.value)) + '%';
                     }
                 },
-                min: 0
+                min: 0,
+                max: 100
             },
 
             plotOptions: {
                 series: {
+                    pointWidth: 20,
                     stacking: 'normal'
                 }
             },
