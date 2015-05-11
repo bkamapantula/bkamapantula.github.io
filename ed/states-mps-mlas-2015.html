@@ -14,23 +14,28 @@
         font-family: 'Lato', sans-serif;
         font-weight: 400; 
     }
+    .col-md-3 {
+        background-color: black;
+        color: white;
+    }
 </style>
 <body>
 <div class="container">
+<h4 class="text-center">1) Women MPs and MLAs representation in each Indian state</h4>
 <div class="row">
     <div class="col-md-3">
-        <h4>1) Women MPs and MLAs representation in each Indian state</h4>
-        <h4>Notes</h4>
+        <h5>Notes</h5>
         <ul>
             <li style="color: #218c8d;">Only 8 states have higher than average women MP %</li>
             <li style="color: #218c8d;">12 states have 0 women MPs</li>
             <li style="color: #ef7126;">3 states have 0 women MLAs</li>
         </ul>
-        <h4>Tips</h4>
+        <h5>Tips</h5>
         <ul class="tips">
-        	<li>Mouse over each bubble for state information.</li>
-            <li>Toggle legend entries to select only MPs or MLAs.</li>
-            <li>Select area to zoom, use reset to parent view.</li>
+        	<li>Mouse over each bubble for state information</li>
+            <li>Toggle legend entries to select only MPs or MLAs</li>
+            <li>Select area to zoom, use reset to parent view</li>
+            <li>Use menu option to download the image and share</li>
         </ul>
     </div>
     <div class="col-md-9">
@@ -38,12 +43,12 @@
     </div>
 </div>
 <hr>
+<h4 class="text-center">2) Only 2 states have higher than national women % MPs and MLAs averages</h4>
 <div class="row">
     <div class="col-md-3">
-        <h4>2) Only 2 states have higher than national women % MPs and MLAs averages</h4>
-        <h4>Notes</h4>
+        <h5>Notes</h5>
         <ul>
-            <li>Only 2 out of 31 states/UTs have both higher women MP and MLA representaion than the national average.</li>
+            <li>Only 2 out of 31 states/UTs have both higher women MP and MLA representation than the national average.</li>
         </ul>
     </div>
     <div class="col-md-9">
@@ -55,6 +60,8 @@
     $(function () {
         $('#higherAverage').highcharts({
             chart: {
+                plotBackgroundColor: null,
+                backgroundColor: 'rgba(238, 238, 238, 0.4)',
                 inverted: true,
                 type: 'bubble',
                 zoomType: 'xy'
@@ -130,7 +137,7 @@
                 }
             }],
             title: {
-                text: 'Women representation %'
+                text: 'Women %'
             }
         },
         credits: {
@@ -290,7 +297,7 @@ $(function () {
                 }
             }],
             title: {
-                text: 'Women representation %'
+                text: 'Women %'
             }
         },
             tooltip: {

@@ -54,13 +54,15 @@ $(function () {
         'min': -100,
         'max': 0,
         'color': '#90CEB9',
-        'legendEntry': 'Men MPs'
+        'legendEntry': 'Men MPs',
+        'title': 'Men MPs in Indian parliament'
     };
     var limitsWomen = {
         'min': 0,
         'max': 100,
         'color': '#434348',
-        'legendEntry': 'Women MPs'
+        'legendEntry': 'Women MPs',
+        'title': 'Women MPs in Indian parliament'
     };
 
     drawChart('#containerOne', men_mps, true, limitsMen);
@@ -75,15 +77,15 @@ $(function () {
                 type: 'bar'
             },
             title: {
-                text: 'MPs in Indian parliament'
+                text: limits.title
             },
             xAxis: [{
                 categories: years,
                 opposite: oppositeFlag,
                 reversed: false,
                 labels: {
-align: "left",
-distance: 80,
+                    align: "left",
+                    distance: 80,
                     step: 1
                 }
             } 
