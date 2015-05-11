@@ -28,12 +28,13 @@
         </ul>
         <h4>Tips</h4>
         <ul class="tips">
+        	<li>Mouse over each bubble for state information.</li>
             <li>Toggle legend entries to select only MPs or MLAs.</li>
             <li>Select area to zoom, use reset to parent view.</li>
         </ul>
     </div>
     <div class="col-md-9">
-        <div id="containerChart" style="height: 650px; min-width: 510px; max-width: 720px; margin: 0 auto"></div>
+        <div id="containerChart" style="height: 630px; min-width: 510px; max-width: 720px; margin: 0 auto"></div>
     </div>
 </div>
 <hr>
@@ -50,7 +51,7 @@
     </div>
 </div>
 <script>
-    var states_high = ['AS', 'WB'];
+    var states_high = ['Assam', 'West Bengal'];
     $(function () {
         $('#higherAverage').highcharts({
             chart: {
@@ -66,20 +67,20 @@
                 y: 50
             },
             title: {
-                text: 'States with higher than national average Women MP and MLA % in 2015'
+                text: 'States with higher than national average % of women MPs and MLAs in 2015'
             },
             series: [{
                 name: 'MPs %',
                 data: [
-                    ['AS', 13.3, 1],
-                    ['WB', 28.6, 1]
+                    ['Assam', 13.3, 1],
+                    ['West Bengal', 28.6, 1]
                 ]
             }, 
             {
                 name: 'MLAs %',
                 data: [
-                    ['AS', 11.11, 1],
-                    ['WB', 11.56, 1]
+                    ['Assam', 11.11, 1],
+                    ['West Bengal', 11.56, 1]
                 ],
                 keys: ['name', 'y', 'size']
             }
@@ -93,9 +94,9 @@
         xAxis: {
             categories: states_high,
             gridLineWidth: 1,
-            title: {
+            /*title: {
                 text: 'States'
-            }
+            }*/
         },
         yAxis: {
             gridLineWidth: 0,
@@ -139,73 +140,73 @@
 </script>
 
 <script>
-var states = ['AP', 'AR', 'AS', 'BH', 'CT', 'DL', 'GA', 'GJ', 'HR', 'HP', 'JK', 'JH', 'KA', 'KL', 'MP', 'MH', 'MN', 'ML', 'MZ', 'NL',
-            'OR', 'PY', 'PB', 'RJ', 'SK', 'TN', 'TG', 'TR', 'UP', 'UK', 'WB'];
+var states = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu Kashmir', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland',
+            'Odisha', 'Pondicherry', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
 var states_mps = [
-    ['AP', 8, 1],
-    ['AR', 0, 1],
-    ['AS', 13.3, 1],
-    ['BH', 7.5, 1],
-    ['CT', 9.1, 1],
-    ['DL', 14.3, 1],
-    ['GA', 0, 1],
-    ['GJ', 15.4, 1],
-    ['HR', 0, 1],
-    ['HP', 0, 1],
-    ['JK', 16.7, 1],
-    ['JH', 0, 1],
-    ['KA', 3.6, 1],
-    ['KL', 5, 1],
-    ['MP', 17.2, 1],
-    ['MH', 10.4, 1],
-    ['MN', 0, 1],
-    ['ML', 0, 1],
-    ['MZ', 0, 1],
-    ['NL', 0, 1],
-    ['OR', 9.5, 1],
-    ['PY', 0, 1],
-    ['PB', 7.7, 1],
-    ['RJ', 4, 1],
-    ['SK', 0, 1],
-    ['TN', 10.3, 1],
-    ['TG', 5.9, 1],
-    ['TR', 0, 1],
-    ['UP', 16.3, 1],
-    ['UK', 20, 1],
-    ['WB', 28.6, 1]
+    ['Andhra Pradesh', 8, 1],
+    ['Arunachal Pradesh', 0, 1],
+    ['Assam', 13.3, 1],
+    ['Bihar', 7.5, 1],
+    ['Chhattisgarh', 9.1, 1],
+    ['Delhi', 14.3, 1],
+    ['Goa', 0, 1],
+    ['Gujarat', 15.4, 1],
+    ['Haryana', 0, 1],
+    ['Himachal Pradesh', 0, 1],
+    ['Jammu Kashmir', 16.7, 1],
+    ['Jharkhand', 0, 1],
+    ['Karnataka', 3.6, 1],
+    ['Kerala', 5, 1],
+    ['Madhya Pradesh', 17.2, 1],
+    ['Maharashtra', 10.4, 1],
+    ['Manipur', 0, 1],
+    ['Meghalaya', 0, 1],
+    ['Mizoram', 0, 1],
+    ['Nagaland', 0, 1],
+    ['Odisha', 9.5, 1],
+    ['Pondicherry', 0, 1],
+    ['Punjab', 7.7, 1],
+    ['Rajasthan', 4, 1],
+    ['Sikkim', 0, 1],
+    ['Tamil Nadu', 10.3, 1],
+    ['Telangana', 5.9, 1],
+    ['Tripura', 0, 1],
+    ['Uttar Pradesh', 16.3, 1],
+    ['Uttarakhand', 20, 1],
+    ['West Bengal', 28.6, 1]
 ];
 var states_mlas = [
     ['AP', 10.28, 1],
-    ['AR', 3.33, 1],
-    ['AS', 11.11, 1],
-    ['BH', 13.99, 1],
-    ['CT', 11.11, 1],
-    ['DL', 4.28, 1],
-    ['GA', 2.5, 1],
-    ['GJ', 8.79, 1],
-    ['HR', 14.44, 1],
-    ['HP', 4.41, 1],
-    ['JK', 3.44, 1],
-    ['JH', 9.87, 1],
-    ['KA', 2.67, 1],
-    ['KL', 5, 1],
-    ['MP', 13.04, 1],
-    ['MH', 3.81, 1],
-    ['MN', 5, 1],
-    ['ML', 6.67, 1],
-    ['MZ', 0, 1],
-    ['NL', 0, 1],
-    ['OR', 7.48, 1],
-    ['PY', 0, 1],
-    ['PB', 11.96, 1],
-    ['RJ', 14, 1],
-    ['SK', 9.37, 1],
-    ['TN', 7.26, 1],
-    ['TG', 7.56, 1],
-    ['TR', 8.33, 1],
-    ['UP', 8.68, 1],
-    ['UK', 7.14, 1],
-    ['WB', 11.56, 1]
+    ['Arunachal Pradesh', 3.33, 1],
+    ['Assam', 11.11, 1],
+    ['Bihar', 13.99, 1],
+    ['Chhattisgarh', 11.11, 1],
+    ['Delhi', 4.28, 1],
+    ['Goa', 2.5, 1],
+    ['Gujarat', 8.79, 1],
+    ['Haryana', 14.44, 1],
+    ['Himachal Pradesh', 4.41, 1],
+    ['Jammu Kashmir', 3.44, 1],
+    ['Jharkhand', 9.87, 1],
+    ['Karnataka', 2.67, 1],
+    ['Kerala', 5, 1],
+    ['Madhya Pradesh', 13.04, 1],
+    ['Maharashtra', 3.81, 1],
+    ['Manipur', 5, 1],
+    ['Meghalaya', 6.67, 1],
+    ['Mizoram', 0, 1],
+    ['Nagaland', 0, 1],
+    ['Odisha', 7.48, 1],
+    ['Pondicherry', 0, 1],
+    ['Punjab', 11.96, 1],
+    ['Rajasthan', 14, 1],
+    ['Sikkim', 9.37, 1],
+    ['Tamil Nadu', 7.26, 1],
+    ['Telangana', 7.56, 1],
+    ['Tripura', 8.33, 1],
+    ['Uttar Pradesh', 8.68, 1],
+    ['Uttarakhand', 7.14, 1],
+    ['West Bengal', 11.56, 1]
 ];
 
 $(function () {
@@ -224,7 +225,7 @@ $(function () {
             y: 50
         },
         title: {
-            text: 'Women MPs and MLAs in all states in 2015'
+            text: '% of women MPs and MLAs in all states in 2015'
         },
 
         series: [{
@@ -245,10 +246,15 @@ $(function () {
         },
         xAxis: {
             categories: states,
+            gridLineDashStyle: 'Dash',
             gridLineWidth: 1,
-            title: {
+            labels: {
+                step: 2
+            },
+            tickWidth: 0.5,
+            /*title: {
                 text: 'States'
-            }
+            }*/
         },
         yAxis: {
             gridLineWidth: 0,
