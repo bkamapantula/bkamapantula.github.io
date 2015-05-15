@@ -98,7 +98,8 @@ $(function () {
                 labels: {
                     formatter: function () {
                         return (Math.abs(this.value)) + '%';
-                    }
+                    },
+                    step: 2
                 },
                 min: limits.min,
                 max: limits.max
@@ -107,6 +108,7 @@ $(function () {
             plotOptions: {
                 series: {
                     color: limits.color,
+                    pointWidth: 18,
                     stacking: 'normal'
                 }
             },
