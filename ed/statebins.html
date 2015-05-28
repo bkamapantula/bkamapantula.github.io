@@ -3,8 +3,8 @@
 <html>
 <head>
 	<!-- Load the d3 library. -->
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<style>
 		body { 
 			font-family: "Open Sans"; 
@@ -139,30 +139,30 @@ var zeroToSixStates = {
     "DL": {"state": "DL", "name": "Delhi", "perc": 4.28},
     "HP": {"state": "HP", "name": "Himachal Pradesh", "perc": 4.41},
     "KL": {"state": "KL", "name": "Kerala", "perc": 5},
-    "MN": {"state": "MN", "perc": 5},
+    "MN": {"state": "MN", "name": "Manipur", "perc": 5},
 };
 
 var sixToTwelveStates = {
-    "ML": {"state": "ML", "perc": 6.67},
-    "OR": {"state": "OR", "perc": 7.14},
-    "TL": {"state": "TL", "perc": 7.56},
-    "TR": {"state": "TR", "perc": 8.33},
-    "UP": {"state": "UP", "perc": 8.68},
-    "GJ": {"state": "GJ", "perc": 8.79},
-    "SK": {"state": "SK", "perc": 9.37},
-    "JH": {"state": "JH", "perc": 9.87},
-    "AP": {"state": "AP", "perc": 10.28},
-    "AS": {"state": "AS", "perc": 11.11},
-    "CT": {"state": "TL", "perc": 11.11},
-    "WB": {"state": "TR", "perc": 11.56},
-    "PB": {"state": "PB", "perc": 11.96},
+    "ML": {"state": "ML", "name": "Meghalaya", "perc": 6.67},
+    "OR": {"state": "OR", "name": "Odisha", "perc": 7.14},
+    "TL": {"state": "TL", "name": "Telangana", "perc": 7.56},
+    "TR": {"state": "TR", "name": "Tripura", "perc": 8.33},
+    "UP": {"state": "UP", "name": "Uttar Pradesh", "perc": 8.68},
+    "GJ": {"state": "GJ", "name": "Gujarat", "perc": 8.79},
+    "SK": {"state": "SK", "name": "Sikkim", "perc": 9.37},
+    "JH": {"state": "JH", "name": "Jharkhand", "perc": 9.87},
+    "AP": {"state": "AP", "name": "Andhra Pradesh", "perc": 10.28},
+    "AS": {"state": "AS", "name": "Assam", "perc": 11.11},
+    "CT": {"state": "CT", "name": "Chhattisgarh", "perc": 11.11},
+    "WB": {"state": "WB", "name": "West Bengal", "perc": 11.56},
+    "PB": {"state": "PB", "name": "Punjab", "perc": 11.96},
 };
 
 var twelveToFourteenStates = {
-    "MP": {"state": "MP", "perc": 13.04},
-    "BH": {"state": "BH", "perc": 13.99},
-    "MP": {"state": "MP", "perc": 14.0},
-    "BH": {"state": "BH", "perc": 14.44},
+    "MP": {"state": "MP", "name": "Madhya Pradesh", "perc": 13.04},
+    "BH": {"state": "BH", "name": "Bihar", "perc": 13.99},
+    "RJ": {"state": "MP", "name": "Rajasthan", "perc": 14.0},
+    "HR": {"state": "BH", "name": "Haryana", "perc": 14.44},
 };
 
 drawGrid(stateGrid, '#plotOne', zeroToSixStates);
