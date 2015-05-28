@@ -1,0 +1,316 @@
+
+<!-- from http://bl.ocks.org/mimno/4a904031a566a361f2b1 -->
+<html>
+<head>
+	<!-- Load the d3 library. -->
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<style>
+		body { 
+			font-family: "Open Sans"; 
+		}
+		text.stateID { 
+			dominant-baseline: middle; text-anchor: middle; 
+		}
+		.wrapper {
+			position: relative;
+            height: 500;
+		}
+		#plotOne, #plotTwo, #plotThree {
+			width: 30%;
+			float: left;
+		}
+        #plotOne-header, #plotTwo-header, #plotThree-header {
+            width: 30%;
+            float: left;
+        }
+    h3 {
+        text-align: center;
+    }
+
+/* testing out d3 tooltip */
+    .d3-tip {
+      line-height: 1;
+      font-weight: normal;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+
+	</style>
+<link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+
+</head>
+
+<body>
+    <div class="wrapper-header">
+        <div id="plotOne-header"><h3>0-6%</h3></div>
+        <div id="plotTwo-header"><h3>6-12%</h3></div>
+        <div id="plotThree-header"><h3>12-14%</h3></div>
+    </div>
+    <div class="wrapper">
+        <div id="plotOne"></div>
+        <div id="plotTwo"></div>
+        <div id="plotThree"></div>
+        <div id="plotFour"></div>
+    </div>
+        <span id="stateSpan"></span>
+    <div id="historical">
+    </div>
+
+<script type="text/javascript" src="js/d3.tip.min.js"></script>
+<script>
+var stateGrid = {
+	"JK": {"state": "JK", "row": 0, "col": 4},
+	
+	"HP": {"state": "HP", "row": 1, "col": 4},
+	"SK": {"state": "SK", "row": 1, "col": 7},
+	
+	"PB": {"state": "PB", "row": 2, "col": 3},
+	"HR": {"state": "PB", "row": 2, "col": 3},
+	"UK": {"state": "UK", "row": 2, "col": 4},
+	"AR": {"state": "AR", "row": 2, "col": 9},
+
+	"CH": {"state": "CH", "row": 3, "col": 3},
+	"DL": {"state": "DL", "row": 3, "col": 4},
+	"UP": {"state": "UP", "row": 3, "col": 5},
+	"BH": {"state": "BH", "row": 3, "col": 6},
+	"WB": {"state": "WB", "row": 3, "col": 7},
+	"AS": {"state": "AS", "row": 3, "col": 8},
+	"NG": {"state": "NG", "row": 3, "col": 9},
+
+	"GJ": {"state": "CH", "row": 4, "col": 2},
+	"RJ": {"state": "RJ", "row": 4, "col": 3},
+	"MP": {"state": "MP", "row": 4, "col": 4},
+	"CT": {"state": "CT", "row": 4, "col": 5},
+	"JH": {"state": "JH", "row": 4, "col": 6},
+	"ML": {"state": "ML", "row": 4, "col": 8},
+	"MN": {"state": "MN", "row": 4, "col": 9},
+
+	"DD": {"state": "CH", "row": 5, "col": 2},
+	"MH": {"state": "MH", "row": 5, "col": 3},
+	"TG": {"state": "TG", "row": 5, "col": 4},
+	"OR": {"state": "OR", "row": 5, "col": 5},
+	"TR": {"state": "TR", "row": 5, "col": 8},
+	"MZ": {"state": "MZ", "row": 5, "col": 9},
+
+	"GA": {"state": "GA", "row": 6, "col": 2},
+	"KA": {"state": "KA", "row": 6, "col": 3},
+	"AP": {"state": "AP", "row": 6, "col": 4},
+	"PY": {"state": "PY", "row": 6, "col": 5},
+
+	"LK": {"state": "LK", "row": 7, "col": 0},
+	"KL": {"state": "KA", "row": 7, "col": 3},
+	"TN": {"state": "AP", "row": 7, "col": 4},
+	"AN": {"state": "AN", "row": 7, "col": 9},
+}
+
+var zeroToSixStates = {
+    "MZ": {"state": "MZ", "name": "Mizoram", "perc": 0},
+    "NG": {"state": "NG", "name": "Nagaland", "perc": 0},
+    "PY": {"state": "PY", "name": "Pondicherry", "perc": 0},
+    "GA": {"state": "GA", "name": "Goa", "perc": 2.5},
+    "KA": {"state": "KA", "name": "Karnataka", "perc": 2.67},
+    "AR": {"state": "AR", "name": "Arunachal Pradesh", "perc": 3.33},
+    "JK": {"state": "JK", "name": "Jammu Kashmir", "perc": 3.44},
+    "MH": {"state": "MH", "name": "Maharashtra", "perc": 3.81},
+    "DL": {"state": "DL", "name": "Delhi", "perc": 4.28},
+    "HP": {"state": "HP", "name": "Himachal Pradesh", "perc": 4.41},
+    "KL": {"state": "KL", "name": "Kerala", "perc": 5},
+    "MN": {"state": "MN", "perc": 5},
+};
+
+var sixToTwelveStates = {
+    "ML": {"state": "ML", "perc": 6.67},
+    "OR": {"state": "OR", "perc": 7.14},
+    "TL": {"state": "TL", "perc": 7.56},
+    "TR": {"state": "TR", "perc": 8.33},
+    "UP": {"state": "UP", "perc": 8.68},
+    "GJ": {"state": "GJ", "perc": 8.79},
+    "SK": {"state": "SK", "perc": 9.37},
+    "JH": {"state": "JH", "perc": 9.87},
+    "AP": {"state": "AP", "perc": 10.28},
+    "AS": {"state": "AS", "perc": 11.11},
+    "CT": {"state": "TL", "perc": 11.11},
+    "WB": {"state": "TR", "perc": 11.56},
+    "PB": {"state": "PB", "perc": 11.96},
+};
+
+var twelveToFourteenStates = {
+    "MP": {"state": "MP", "perc": 13.04},
+    "BH": {"state": "BH", "perc": 13.99},
+    "MP": {"state": "MP", "perc": 14.0},
+    "BH": {"state": "BH", "perc": 14.44},
+};
+
+drawGrid(stateGrid, '#plotOne', zeroToSixStates);
+drawGrid(stateGrid, '#plotTwo', sixToTwelveStates);
+drawGrid(stateGrid, '#plotThree', twelveToFourteenStates);
+//drawGrid(stateGrid, '#plotFour');
+
+function drawGrid(stateGrid, svgContainer, statesData) {
+	var selectedStates = {};
+	var stateIDs = Object.getOwnPropertyNames(stateGrid);
+	stateIDs.forEach(function(stateID) {
+	    selectedStates[stateID] = Object.getOwnPropertyNames(statesData).indexOf(stateID) >=0 ? true: false; //stateID.startsWith("M");
+	});
+
+    console.log(selectedStates);
+
+	var xScale, yScale, xDomain, yDomain;
+
+	var height = 400;
+	var width = 400;
+
+	var svg = d3.select(svgContainer).append("svg")
+	.attr("height", height)
+	.attr("width", width);
+
+	var stateWidth = 30;
+	var gap = 2;
+
+	var stateGroup = svg.append("g").attr("transform", "translate(50, 50)");
+	var stateXScale = d3.scale.linear().domain([0, 9]).range([0, 9 * (stateWidth + gap)]);
+	var stateYScale = d3.scale.linear().domain([0, 7]).range([0, 7 * (stateWidth + gap)]);
+
+    /* Initialize tooltip */
+    tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return statesData[d]["name"] + "<br> Women MPs: " + statesData[d]["perc"]+"%"; });
+
+    /* Invoke the tip in the context of your visualization */
+    svg.call(tip);
+
+	var stateGroups = stateGroup.selectAll("g").data(stateIDs)
+	.enter().append("g")
+	.attr("transform", function (stateID) { 
+        return "translate(" + stateXScale(stateGrid[stateID].col) + "," + stateYScale(stateGrid[stateID].row) + ")"; 
+    });
+
+	var selectedStateColor = "#1F7872",
+        unSelectedStateColor = '#aa3333';
+		unSelectedStateColorDefault = "#dedede";
+
+	var stateRects = stateGroups.append("rect")
+	.attr("width", stateWidth)
+    .attr("height", stateWidth)
+	.style("fill", function (stateID) { 
+        if (selectedStates[stateID]) { 
+            return selectedStateColor; 
+        }
+        else { 
+            return unSelectedStateColorDefault; 
+        } 
+    });
+
+    // selects states that are valid only for specific % category
+	var currentStates = stateRects
+    .filter(function(d) {
+        if(Object.getOwnPropertyNames(statesData).indexOf(d) >= 0) {
+            return d;
+        }
+    });
+
+	currentStates.on("click", function(stateID) {
+	    // select (or unselect) the state
+	    selectedStates[stateID] = ! selectedStates[stateID]
+	    
+	    // Update the color of the state box
+	    currentStates.style("fill", function(stateID) { 
+            if (selectedStates[stateID]) {
+                return selectedStateColor;
+            } else { 
+                return unSelectedStateColor;
+            } 
+        });
+
+        // draws state's historical trend chart
+        drawStateHistorical(stateID);
+	})
+    .on("mouseover", tip.show) /*function(d) {
+        console.log(statesData[d]["state"], statesData[d]["perc"]);
+    });*/
+    .on("mouseout", tip.hide)
+
+	// What do we have to do to make this not clickable?
+	stateGroups.append("text")
+	.attr("class", "stateID")
+	.style("font-size", "x-small")
+	.style("pointer-events", "none")
+	.attr("x", stateWidth / 2)
+	.attr("y", stateWidth / 2)
+	.text(function (d) { return d; });
+} // end of function drawGrid()
+
+
+// draws historical trends of a selected state
+function drawStateHistorical(state) {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Year');
+    data.addColumn('number', 'Women MP %');
+
+    data.addRows([
+        ['1957', 5.1],
+        ['1967', 3.7],
+        ['1977', 9.3],
+        ['1996', 2.1],
+        ['2004', 8.4]
+    ]);
+
+    var options = {
+        chart: {
+            title: 'Historical trends'
+        },
+        colors: ['#aa3333'],
+        legend: {
+            position: 'none'
+        },
+        lineWidth: 5,
+        vAxis: {
+            gridlines: {
+                color: 'transparent'
+            }
+        },
+        width: 500,
+        height: 400
+    };
+
+    var spanEl = document.getElementById('stateSpan');
+    spanEl.innerHTML = "<p>State: " + state + "</p>";
+
+    var chart = new google.charts.Line(document.getElementById('historical'));
+    chart.draw(data, options);
+
+} // end of drawStateHistorical function
+
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+    google.load('visualization', '1.1', {packages: ['line']});
+    //google.setOnLoadCallback(drawStateHistorical);
+</script>
+
+</body>
+</html>
+
