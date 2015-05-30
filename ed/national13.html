@@ -17,14 +17,10 @@
 			position: relative;
             height: 500;
 		}
-		#plotOne, #stateHistorical {
+		#plotOne, #rankedStates {
 			width: 50%;
 			float: left;
 		}
-        #plotOne-header, #plotTwo-header, #plotThree-header {
-            width: 30%;
-            float: left;
-        }
     h3, h4 {
         text-align: center;
     }
@@ -64,29 +60,25 @@
 <link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
 <link href="colorbrewer.css" rel="stylesheet">
 <script src="colorbrewer.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
 </head>
 
 <body>
-    <!--input type="radio" name="percRange" id="3" value=3 checked="checked" onclick="radioChanged(this)"> <label for="3">0-6%</label>
-    <input type="radio" name="percRange" id="9" value=9 onclick="radioChanged(this)"> <label for="9">6-12%</label>
-    <input type="radio" name="percRange" id="13" value=13 onclick="radioChanged(this)"> <label for="13">12-14%</label-->
-    <h3>Women MLA % - State legislative assemblies in 2015</h3>
+    <h3>Women MP % - Indian Parliament in 2015</h3>
     <h4>National 1.3</h4>
     <div class="wrapper-header">
-        <!--div id="plotOne-header"><h3>0-6%</h3></div>
-        <div id="plotTwo-header"><h3>6-12%</h3></div>
-        <div id="plotThree-header"><h3>12-14%</h3></div-->
         <h3>Years Timeline goes here</h3>
     </div>
     <div class="wrapper">
         <div id="plotOne"></div>
-        <div id="stateHistorical">
-            <span id="stateSpan"></span>
-            <div id="historical"></div>
-        </div>
+        <div id="rankedStates"></div>
     </div>
     <div class="floating-legend">
+    <div id="stateHistorical">
+        <span id="stateSpan"></span>
+        <div id="historical"></div>
+    </div>
 
 <script type="text/javascript" src="js/d3.tip.min.js"></script>
 <script>
@@ -137,7 +129,7 @@ var stateGrid = {
 	//"AN": {"state": "AN", "row": 8, "col": 8},
 }
 
-var zeroToSixStates = {
+var statesData2015 = {
   "MZ": {
     "state": "MZ",
     "name": "Mizoram",
@@ -364,25 +356,7 @@ var zeroToSixStates = {
   }
 };
 
-function radioChanged() {
-    var radioElements = document.getElementsByName('percRange');
-    var radioValue;
-
-    for(var iter=0; iter<radioElements.length; iter++) {
-        if(radioElements[iter].type === 'radio' && radioElements[iter].checked) {
-            radioValue = parseInt(radioElements[iter].value, 10);
-            if(radioValue === 3) {
-                drawGrid(stateGrid, '#plotOne', zeroToSixStates);
-            } else if(radioValue === 9) {
-                drawGrid(stateGrid, '#plotOne', sixToTwelveStates);
-            } else {
-                drawGrid(stateGrid, '#plotOne', twelveToFourteenStates);
-            }
-        }
-    }
-} // end of onclick function
-
-drawGrid(stateGrid, '#plotOne', zeroToSixStates);
+drawGrid(stateGrid, '#plotOne', statesData2015);
 
 function drawGrid(stateGrid, svgContainer, statesData) {
     var svgEl = document.getElementById('svgElement');
@@ -465,7 +439,7 @@ function drawGrid(stateGrid, svgContainer, statesData) {
             if (selectedStates[stateID]) {
                 return selectedStateColor;
             } else { 
-                return unSelectedStateColor;
+                return colorScale(statesData[stateID]["perc"]); //unSelectedStateColor;
             } 
         });
 
@@ -478,7 +452,7 @@ function drawGrid(stateGrid, svgContainer, statesData) {
 	// What do we have to do to make this not clickable?
 	stateGroups.append("text")
 	.attr("class", "stateID")
-	.style("font-size", "x-small")
+	.style("font-size", "small")
 	.style("pointer-events", "none")
 	.attr("x", stateWidth / 2)
 	.attr("y", stateWidth / 3)
@@ -581,6 +555,64 @@ function drawStateHistorical(state) {
     //google.setOnLoadCallback(drawStateHistorical);
 </script>
 
+<script>
+    $(function() {
+        /*
+        function arraySort(a, b) { 
+            return parseFloat(b.perc) - parseFloat(a.perc); //string.localeCompare(a.perc) - string.localeCompare(b.perc) 
+        };
+
+        console.log(statesData2015);
+        Object.keys(statesData2015).sort(function(a, b) { 
+            return parseFloat(statesData2015[b].perc) - parseFloat(statesData2015[a].perc); 
+        }); //arraySort);
+        console.log(statesData2015); */
+
+        var stateKeys = Object.getOwnPropertyNames(statesData2015);
+        console.log(stateKeys);
+        var stateNames = [],
+            statePercs = [];
+
+        stateKeys.forEach(function(stateID) {
+            stateNames.push(statesData2015[stateID]["name"]);
+            statePercs.push(statesData2015[stateID]["perc"]);
+        });
+
+        $('#rankedStates').highcharts({
+            chart: {
+                height: 600,
+                type: 'bar'
+            },
+            title: { 
+                text: 'ranked by women MP %' 
+            },
+            xAxis: {
+                categories: stateNames
+            },
+            yAxis: {
+                title: {
+                    text: 'Women MPs %'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' %'
+            },
+            plotOptions: { 
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            series: [{
+                name: 'Women MP %',
+                data: statePercs
+            }],
+            legend: { enabled: false},
+            credits: { enabled: false}
+        }); // end of highcharts function
+    }); // end of jquery load function
+</script>
 </body>
 </html>
 
