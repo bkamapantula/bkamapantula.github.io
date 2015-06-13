@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>India</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+	
+	<!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" /><![endif]-->
+	<style type="text/css">
+	/*html, body { 
+		margin: 0; 
+		padding: 0;
+	    font-family: 'Vollkorn', serif;
+		}
+		*/
+		
+	#map {
+		margin-right: auto;
+		margin-left: auto;
+		width: 550px; 
+		height: 600px;
+		background-color: white;
+	}
+	h4 {
+		text-align: center;
+	}
+
+	</style>
+</head>
+<body>
+	<h4>State 1.1</h4>
+	<div class="row">
+        <div class="col-xs-6 col-md-6 col-lg-6" id="map"></div>
+        <div class="col-xs-6 col-md-6 col-lg-6" id="historical"></div>
+    </div>
+
+	<script src="india.js" type="text/javascript"></script>
+	<script src="lib.js" type="text/javascript"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+
+	<script src="state11data.js"> </script>
+	<script src="map.js"> </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+            google.load('visualization', '1.1', {packages: ['line, bar']});
+        </script>
+</body>
+</html>
