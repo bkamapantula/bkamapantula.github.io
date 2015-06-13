@@ -15,9 +15,9 @@ L.tileLayer('http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg', {
 }).addTo(map);
 
 var defStyle = {
-	weight : 1.5,
-	color : "#42e2ab",
-	opacity : 1,
+	weight : 1,
+	color : "#dbdbdb",
+	opacity : 0.9,
 	fillColor : "white",
 	fillOpacity : 0.3
 };
@@ -44,16 +44,17 @@ function drawStateHistorical(state) {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
     data.addColumn('number', '# Women MLAs');
+    console.log(state);
 
     for (var iter = 0; iter < statesData[state].length; iter++) {
-    	data.addRow([ statesData[state][iter]['year_value'].toString(), statesData[state][iter]['women_mps']]);
+    	data.addRow([ statesData[state][iter]['year_value'].toString(), statesData[state][iter]['women_mlas']]);
     }
 
     console.log(statesData[state][0]['state_name']);
 
     var options = {
         chart: {
-            title: 'Historical trends - ' + statesData[state][0]['state_name']
+            title: 'Legislative assembly historical trends - ' + statesData[state][0]['state_name']
         },
         colors: ['#aa3333'],
         legend: {
@@ -73,8 +74,19 @@ function drawStateHistorical(state) {
     };
 
     sLayer.setStyle(styleSelector);
-    var chart = new google.charts.Line(document.getElementById('historical'));
-    chart.draw(data, options);
+    if(statesData[state].length > 1) {
+    	var chart = new google.charts.Line(document.getElementById('historical'));
+    	chart.draw(data, options);
+	} else {
+		var chart = new google.charts.Bar(document.getElementById('historical'));
+		var noptions = {
+			colors: ['#aa3333'],
+        	vAxis: {
+				maxValue: 30
+			}
+		};
+		chart.draw(data, noptions);
+	}
 
 } // end of drawStateHistorical function
 
@@ -104,8 +116,9 @@ function onEachFeature(feature, layer) {
 				drawStateHistorical(feature.properties.CD);
 				layer.setStyle({
 					color: 'black',
-					weight: 5,
-					fillColor: '#42e2ab'
+					weight: 2,
+					fillColor: '#AA3333',
+					fillOpacity: 1
 				});
 		        //show popup
 		        //var popText=createPopUpText();
@@ -115,63 +128,4 @@ function onEachFeature(feature, layer) {
 	            //document.getElementById('StateSelector').focus();
 			}
 	});
-}
-
-function NameSelected(val) {
-	var code = selectedFeature.properties.CD;
-	
-	if (val === code) {
-		selectedFeature.properties.v = 2;
-               addUnit(code);
-	} else {
-		selectedFeature.properties.v = 0;
-            removeUnit(code);
-	}
-	sLayer.setStyle(styleSelector);
-        showScore();
-        
-}
-
-function showScore() {
-    var msg= "Correctly Named "+String(correctUnits.length) +" out of "+ String(stCodes.length);
-    document.getElementById("ScoreDiv").innerHTML=msg;
-    
-   if(correctUnits.length>35){
-        alert("Congratulations! You have named all of the States & UTs");
-      }
-}
-
-function addUnit(val) {
-    //check if it exists
-    if(correctUnits.indexOf(val) < 0) {
-        correctUnits.push(val);
-        
-        //remove selector
-        var x = document.getElementById("StateSelector");
-        x.remove(x.selectedIndex);
-        
-        //remove popup
-        map.closePopup(popup);
-    }
-}
-
-function removeUnit(val) {
-      if(correctUnits.indexOf(val) > -1) {
-        correctUnits.pop(val);
-    }
-}
-
-function createPopUpText() {
-	var innerHTML='Select Name: <select id="StateSelector" onchange="drawStateHistorical(this.value)"> <option value="--">-----</option>';
-	for(var i=0; i < 36; i++) {
-		    var stCode = stCodes[i];
-		    if(correctUnits.indexOf(stCode) < 0) {
-			    var name = stNames[i];
-			    var txt = '<option value="' + stCode + '">' + name + '</option>';
-			    innerHTML = innerHTML + txt;
-	    }
-	}
-	innerHTML = innerHTML + '<select>';
-
-	return innerHTML;
 }
