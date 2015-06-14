@@ -3,105 +3,120 @@ var statesData = {
   "AP": [
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1955,
-    "women_mps": 0
-  },
-  {
-    "state_name": "Andhra Pradesh",
     "year_value": 1957,
-    "women_mps": 7
+    "women_mps": 3
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 1962,
-    "women_mps": 10
+    "women_mps": 4
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 1967,
-    "women_mps": 11
+    "women_mps": 3
   },
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1978,
-    "women_mps": 10
+    "year_value": 1977,
+    "women_mps": 1
   },
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1983,
-    "women_mps": 11
+    "year_value": 1980,
+    "women_mps": 3
   },
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1985,
-    "women_mps": 10
+    "year_value": 1984,
+    "women_mps": 2
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 1989,
-    "women_mps": 17
+    "women_mps": 5
   },
   {
     "state_name": "Andhra Pradesh",
-    "year_value": 1994,
-    "women_mps": 8
+    "year_value": 1991,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Andhra Pradesh",
+    "year_value": 1996,
+    "women_mps": 3
+  },
+  {
+    "state_name": "Andhra Pradesh",
+    "year_value": 1998,
+    "women_mps": 2
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 1999,
-    "women_mps": 28
+    "women_mps": 4
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 2004,
-    "women_mps": 26
+    "women_mps": 3
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 2009,
-    "women_mps": 34
+    "women_mps": 5
   },
   {
     "state_name": "Andhra Pradesh",
     "year_value": 2014,
-    "women_mps": 18
+    "women_mps": 2
   }
   ],
   "AR": [
   {
     "state_name": "Arunachal Pradesh",
-    "year_value": 1978,
+    "year_value": 1977,
     "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
     "year_value": 1980,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
     "year_value": 1984,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
-    "year_value": 1990,
-    "women_mps": 1
+    "year_value": 1989,
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
-    "year_value": 1995,
-    "women_mps": 1
+    "year_value": 1991,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Arunachal Pradesh",
+    "year_value": 1996,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Arunachal Pradesh",
+    "year_value": 1998,
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
     "year_value": 1999,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
@@ -111,12 +126,12 @@ var statesData = {
   {
     "state_name": "Arunachal Pradesh",
     "year_value": 2009,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Arunachal Pradesh",
     "year_value": 2014,
-    "women_mps": 2
+    "women_mps": 0
   }
   ],
   "AS": [
@@ -128,65 +143,75 @@ var statesData = {
   {
     "state_name": "Assam",
     "year_value": 1957,
-    "women_mps": 5
-  },
-  {
-    "state_name": "Assam",
-    "year_value": 1962,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Assam",
-    "year_value": 1967,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Assam",
-    "year_value": 1972,
-    "women_mps": 0
-  },
-  {
-    "state_name": "Assam",
-    "year_value": 1978,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Assam",
-    "year_value": 1983,
     "women_mps": 2
   },
   {
     "state_name": "Assam",
-    "year_value": 1985,
-    "women_mps": 5
+    "year_value": 1962,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 1967,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 1971,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 1977,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 1984,
+    "women_mps": 0
   },
   {
     "state_name": "Assam",
     "year_value": 1991,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Assam",
     "year_value": 1996,
-    "women_mps": 6
+    "women_mps": 1
   },
   {
     "state_name": "Assam",
-    "year_value": 2001,
-    "women_mps": 10
+    "year_value": 1998,
+    "women_mps": 1
   },
   {
     "state_name": "Assam",
-    "year_value": 2006,
-    "women_mps": 13
+    "year_value": 1999,
+    "women_mps": 2
   },
   {
     "state_name": "Assam",
-    "year_value": 2011,
-    "women_mps": 14
+    "year_value": 2004,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 2009,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Assam",
+    "year_value": 2014,
+    "women_mps": 2
   }
   ],
-  "BH": [
+  "BR": [
   {
     "state_name": "Bihar",
     "year_value": 1951,
@@ -195,94 +220,94 @@ var statesData = {
   {
     "state_name": "Bihar",
     "year_value": 1957,
-    "women_mps": 30
+    "women_mps": 5
   },
   {
     "state_name": "Bihar",
     "year_value": 1962,
-    "women_mps": 25
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 1967,
     "women_mps": 6
   },
   {
     "state_name": "Bihar",
-    "year_value": 1969,
+    "year_value": 1967,
     "women_mps": 4
   },
   {
     "state_name": "Bihar",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Bihar",
     "year_value": 1977,
-    "women_mps": 13
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 1980,
-    "women_mps": 11
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 1985,
-    "women_mps": 15
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 1990,
-    "women_mps": 10
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 1995,
-    "women_mps": 11
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 2000,
-    "women_mps": 19
-  },
-  {
-    "state_name": "Bihar",
-    "year_value": 2005,
     "women_mps": 0
   },
   {
     "state_name": "Bihar",
-    "year_value": 2010,
-    "women_mps": 34
+    "year_value": 1980,
+    "women_mps": 5
   },
   {
     "state_name": "Bihar",
-    "year_value": 20051,
+    "year_value": 1984,
+    "women_mps": 9
+  },
+  {
+    "state_name": "Bihar",
+    "year_value": 1989,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Bihar",
+    "year_value": 1991,
     "women_mps": 3
   },
   {
     "state_name": "Bihar",
-    "year_value": 20052,
-    "women_mps": 25
-  }
-  ],
-  "CH": [
+    "year_value": 1996,
+    "women_mps": 3
+  },
   {
-    "state_name": "Chhattisgarh",
-    "year_value": 2003,
+    "state_name": "Bihar",
+    "year_value": 1998,
+    "women_mps": 4
+  },
+  {
+    "state_name": "Bihar",
+    "year_value": 1999,
     "women_mps": 5
   },
   {
+    "state_name": "Bihar",
+    "year_value": 2004,
+    "women_mps": 3
+  },
+  {
+    "state_name": "Bihar",
+    "year_value": 2009,
+    "women_mps": 4
+  },
+  {
+    "state_name": "Bihar",
+    "year_value": 2014,
+    "women_mps": 3
+  }
+  ],
+  "CT": [
+  {
     "state_name": "Chhattisgarh",
-    "year_value": 2008,
-    "women_mps": 11
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Chhattisgarh",
-    "year_value": 2013,
-    "women_mps": 10
+    "year_value": 2009,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Chhattisgarh",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "DL": [
@@ -293,65 +318,100 @@ var statesData = {
   },
   {
     "state_name": "Delhi",
-    "year_value": 1972,
-    "women_mps": 3
+    "year_value": 1957,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1962,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1967,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1971,
+    "women_mps": 0
   },
   {
     "state_name": "Delhi",
     "year_value": 1977,
-    "women_mps": 4
+    "women_mps": 0
   },
   {
     "state_name": "Delhi",
-    "year_value": 1983,
-    "women_mps": 4
+    "year_value": 1980,
+    "women_mps": 0
   },
   {
     "state_name": "Delhi",
-    "year_value": 1993,
-    "women_mps": 3
+    "year_value": 1984,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1989,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1991,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 1996,
+    "women_mps": 2
   },
   {
     "state_name": "Delhi",
     "year_value": 1998,
-    "women_mps": 9
+    "women_mps": 2
   },
   {
     "state_name": "Delhi",
-    "year_value": 2003,
-    "women_mps": 7
+    "year_value": 1999,
+    "women_mps": 1
   },
   {
     "state_name": "Delhi",
-    "year_value": 2008,
-    "women_mps": 3
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Delhi",
-    "year_value": 2013,
-    "women_mps": 3
+    "year_value": 2009,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Delhi",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "GA": [
   {
     "state_name": "Goa",
     "year_value": 1967,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Goa",
     "year_value": 1977,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
     "year_value": 1980,
-    "women_mps": 0
+    "women_mps": 1
   },
   {
     "state_name": "Goa",
@@ -361,73 +421,88 @@ var statesData = {
   {
     "state_name": "Goa",
     "year_value": 1989,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
-    "year_value": 1994,
-    "women_mps": 4
+    "year_value": 1991,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Goa",
+    "year_value": 1996,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Goa",
+    "year_value": 1998,
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
     "year_value": 1999,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
-    "year_value": 2002,
-    "women_mps": 1
+    "year_value": 2004,
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
-    "year_value": 2007,
-    "women_mps": 1
+    "year_value": 2009,
+    "women_mps": 0
   },
   {
     "state_name": "Goa",
-    "year_value": 2012,
-    "women_mps": 1
+    "year_value": 2014,
+    "women_mps": 0
   }
   ],
   "GJ": [
   {
     "state_name": "Gujarat",
     "year_value": 1962,
-    "women_mps": 11
+    "women_mps": 2
   },
   {
     "state_name": "Gujarat",
     "year_value": 1967,
-    "women_mps": 8
-  },
-  {
-    "state_name": "Gujarat",
-    "year_value": 1972,
     "women_mps": 1
   },
   {
     "state_name": "Gujarat",
-    "year_value": 1975,
-    "women_mps": 3
+    "year_value": 1971,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Gujarat",
+    "year_value": 1977,
+    "women_mps": 1
   },
   {
     "state_name": "Gujarat",
     "year_value": 1980,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Gujarat",
-    "year_value": 1985,
-    "women_mps": 16
+    "year_value": 1984,
+    "women_mps": 2
   },
   {
     "state_name": "Gujarat",
-    "year_value": 1990,
-    "women_mps": 4
+    "year_value": 1989,
+    "women_mps": 0
   },
   {
     "state_name": "Gujarat",
-    "year_value": 1995,
+    "year_value": 1991,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Gujarat",
+    "year_value": 1996,
     "women_mps": 2
   },
   {
@@ -437,18 +512,23 @@ var statesData = {
   },
   {
     "state_name": "Gujarat",
-    "year_value": 2002,
-    "women_mps": 12
+    "year_value": 1999,
+    "women_mps": 3
   },
   {
     "state_name": "Gujarat",
-    "year_value": 2007,
-    "women_mps": 16
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Gujarat",
-    "year_value": 2012,
-    "women_mps": 16
+    "year_value": 2009,
+    "women_mps": 4
+  },
+  {
+    "state_name": "Gujarat",
+    "year_value": 2014,
+    "women_mps": 4
   }
   ],
   "HR": [
@@ -459,58 +539,63 @@ var statesData = {
   },
   {
     "state_name": "Haryana",
-    "year_value": 1968,
-    "women_mps": 7
-  },
-  {
-    "state_name": "Haryana",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Haryana",
     "year_value": 1977,
-    "women_mps": 4
+    "women_mps": 1
   },
   {
     "state_name": "Haryana",
-    "year_value": 1982,
-    "women_mps": 7
+    "year_value": 1980,
+    "women_mps": 0
   },
   {
     "state_name": "Haryana",
-    "year_value": 1987,
-    "women_mps": 5
+    "year_value": 1984,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Haryana",
+    "year_value": 1989,
+    "women_mps": 0
   },
   {
     "state_name": "Haryana",
     "year_value": 1991,
-    "women_mps": 6
+    "women_mps": 1
   },
   {
     "state_name": "Haryana",
     "year_value": 1996,
-    "women_mps": 4
+    "women_mps": 1
   },
   {
     "state_name": "Haryana",
-    "year_value": 2000,
-    "women_mps": 4
+    "year_value": 1998,
+    "women_mps": 1
   },
   {
     "state_name": "Haryana",
-    "year_value": 2005,
-    "women_mps": 11
+    "year_value": 1999,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Haryana",
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Haryana",
     "year_value": 2009,
-    "women_mps": 9
+    "women_mps": 2
   },
   {
     "state_name": "Haryana",
     "year_value": 2014,
-    "women_mps": 13
+    "women_mps": 0
   }
   ],
   "HP": [
@@ -521,117 +606,152 @@ var statesData = {
   },
   {
     "state_name": "Himachal Pradesh",
+    "year_value": 1957,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Himachal Pradesh",
+    "year_value": 1962,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Himachal Pradesh",
     "year_value": 1967,
     "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 1972,
-    "women_mps": 4
+    "year_value": 1971,
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
     "year_value": 1977,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Himachal Pradesh",
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Himachal Pradesh",
+    "year_value": 1984,
     "women_mps": 1
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 1982,
-    "women_mps": 3
+    "year_value": 1989,
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 1985,
-    "women_mps": 3
+    "year_value": 1991,
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 1990,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Himachal Pradesh",
-    "year_value": 1993,
-    "women_mps": 3
+    "year_value": 1996,
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
     "year_value": 1998,
-    "women_mps": 6
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 2003,
-    "women_mps": 4
+    "year_value": 1999,
+    "women_mps": 0
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 2007,
-    "women_mps": 5
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Himachal Pradesh",
-    "year_value": 2012,
-    "women_mps": 3
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Himachal Pradesh",
+    "year_value": 2014,
+    "women_mps": 0
   }
   ],
   "JK": [
   {
     "state_name": "Jammu Kashmir",
-    "year_value": 1962,
-    "women_mps": 0
-  },
-  {
-    "state_name": "Jammu Kashmir",
     "year_value": 1967,
     "women_mps": 0
   },
   {
     "state_name": "Jammu Kashmir",
-    "year_value": 1972,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Jammu Kashmir",
-    "year_value": 1977,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Jammu Kashmir",
-    "year_value": 1983,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Jammu Kashmir",
-    "year_value": 1987,
+    "year_value": 1977,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Jammu Kashmir",
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Jammu Kashmir",
+    "year_value": 1984,
     "women_mps": 1
   },
   {
     "state_name": "Jammu Kashmir",
+    "year_value": 1989,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Jammu Kashmir",
     "year_value": 1996,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Jammu Kashmir",
-    "year_value": 2002,
-    "women_mps": 2
+    "year_value": 1998,
+    "women_mps": 0
   },
   {
     "state_name": "Jammu Kashmir",
-    "year_value": 2008,
-    "women_mps": 3
+    "year_value": 1999,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Jammu Kashmir",
+    "year_value": 2004,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Jammu Kashmir",
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Jammu Kashmir",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "JH": [
   {
     "state_name": "Jharkhand",
-    "year_value": 2005,
-    "women_mps": 3
+    "year_value": 2004,
+    "women_mps": 1
   },
   {
     "state_name": "Jharkhand",
     "year_value": 2009,
-    "women_mps": 8
+    "women_mps": 0
   },
   {
     "state_name": "Jharkhand",
@@ -642,85 +762,95 @@ var statesData = {
   "KA": [
   {
     "state_name": "Karnataka",
-    "year_value": 1957,
-    "women_mps": 13
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 1962,
-    "women_mps": 18
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 1967,
-    "women_mps": 5
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 1972,
+    "year_value": 1951,
     "women_mps": 0
   },
   {
     "state_name": "Karnataka",
-    "year_value": 1978,
-    "women_mps": 8
+    "year_value": 1957,
+    "women_mps": 0
   },
   {
     "state_name": "Karnataka",
-    "year_value": 1983,
+    "year_value": 1962,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1967,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1971,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1977,
     "women_mps": 1
   },
   {
     "state_name": "Karnataka",
-    "year_value": 1985,
-    "women_mps": 8
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1984,
+    "women_mps": 2
   },
   {
     "state_name": "Karnataka",
     "year_value": 1989,
-    "women_mps": 10
+    "women_mps": 1
   },
   {
     "state_name": "Karnataka",
-    "year_value": 1994,
-    "women_mps": 7
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 1999,
-    "women_mps": 6
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 2004,
-    "women_mps": 6
-  },
-  {
-    "state_name": "Karnataka",
-    "year_value": 2008,
+    "year_value": 1991,
     "women_mps": 3
   },
   {
     "state_name": "Karnataka",
-    "year_value": 2013,
-    "women_mps": 6
+    "year_value": 1996,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1998,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 1999,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 2004,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 2009,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Karnataka",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "KL": [
   {
     "state_name": "Kerala",
     "year_value": 1957,
-    "women_mps": 6
+    "women_mps": 0
   },
   {
     "state_name": "Kerala",
-    "year_value": 1960,
-    "women_mps": 7
-  },
-  {
-    "state_name": "Kerala",
-    "year_value": 1965,
-    "women_mps": 3
+    "year_value": 1962,
+    "women_mps": 0
   },
   {
     "state_name": "Kerala",
@@ -729,53 +859,63 @@ var statesData = {
   },
   {
     "state_name": "Kerala",
-    "year_value": 1970,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Kerala",
     "year_value": 1977,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Kerala",
     "year_value": 1980,
-    "women_mps": 5
+    "women_mps": 1
   },
   {
     "state_name": "Kerala",
-    "year_value": 1982,
-    "women_mps": 4
+    "year_value": 1984,
+    "women_mps": 0
   },
   {
     "state_name": "Kerala",
-    "year_value": 1987,
-    "women_mps": 8
+    "year_value": 1989,
+    "women_mps": 1
   },
   {
     "state_name": "Kerala",
     "year_value": 1991,
-    "women_mps": 8
+    "women_mps": 2
   },
   {
     "state_name": "Kerala",
     "year_value": 1996,
-    "women_mps": 13
+    "women_mps": 0
   },
   {
     "state_name": "Kerala",
-    "year_value": 2001,
-    "women_mps": 8
+    "year_value": 1998,
+    "women_mps": 1
   },
   {
     "state_name": "Kerala",
-    "year_value": 2006,
-    "women_mps": 7
+    "year_value": 1999,
+    "women_mps": 1
   },
   {
     "state_name": "Kerala",
-    "year_value": 2011,
-    "women_mps": 7
+    "year_value": 2004,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Kerala",
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Kerala",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "MP": [
@@ -787,140 +927,190 @@ var statesData = {
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1957,
-    "women_mps": 15
+    "women_mps": 3
   },
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1962,
-    "women_mps": 15
+    "women_mps": 6
   },
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1967,
-    "women_mps": 10
+    "women_mps": 5
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1977,
-    "women_mps": 10
+    "women_mps": 0
   },
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1980,
-    "women_mps": 18
+    "women_mps": 3
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 1985,
-    "women_mps": 31
+    "year_value": 1984,
+    "women_mps": 2
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 1990,
-    "women_mps": 11
+    "year_value": 1989,
+    "women_mps": 3
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 1993,
-    "women_mps": 12
+    "year_value": 1991,
+    "women_mps": 5
+  },
+  {
+    "state_name": "Madhya Pradesh",
+    "year_value": 1996,
+    "women_mps": 5
   },
   {
     "state_name": "Madhya Pradesh",
     "year_value": 1998,
-    "women_mps": 26
+    "women_mps": 4
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 2003,
-    "women_mps": 19
+    "year_value": 1999,
+    "women_mps": 3
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 2008,
-    "women_mps": 25
+    "year_value": 2004,
+    "women_mps": 2
   },
   {
     "state_name": "Madhya Pradesh",
-    "year_value": 2013,
-    "women_mps": 30
+    "year_value": 2009,
+    "women_mps": 6
+  },
+  {
+    "state_name": "Madhya Pradesh",
+    "year_value": 2014,
+    "women_mps": 5
   }
   ],
   "MH": [
   {
     "state_name": "Maharashtra",
-    "year_value": 1962,
-    "women_mps": 13
-  },
-  {
-    "state_name": "Maharashtra",
-    "year_value": 1967,
-    "women_mps": 9
-  },
-  {
-    "state_name": "Maharashtra",
-    "year_value": 1972,
+    "year_value": 1951,
     "women_mps": 0
   },
   {
     "state_name": "Maharashtra",
-    "year_value": 1978,
-    "women_mps": 8
+    "year_value": 1957,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1962,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1967,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1971,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1977,
+    "women_mps": 3
   },
   {
     "state_name": "Maharashtra",
     "year_value": 1980,
-    "women_mps": 19
+    "women_mps": 3
   },
   {
     "state_name": "Maharashtra",
-    "year_value": 1985,
-    "women_mps": 16
+    "year_value": 1984,
+    "women_mps": 3
   },
   {
     "state_name": "Maharashtra",
-    "year_value": 1990,
-    "women_mps": 6
+    "year_value": 1989,
+    "women_mps": 2
   },
   {
     "state_name": "Maharashtra",
-    "year_value": 1995,
-    "women_mps": 11
+    "year_value": 1991,
+    "women_mps": 3
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1996,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 1998,
+    "women_mps": 2
   },
   {
     "state_name": "Maharashtra",
     "year_value": 1999,
-    "women_mps": 12
+    "women_mps": 4
   },
   {
     "state_name": "Maharashtra",
     "year_value": 2004,
-    "women_mps": 12
+    "women_mps": 5
   },
   {
     "state_name": "Maharashtra",
     "year_value": 2009,
-    "women_mps": 11
+    "women_mps": 3
+  },
+  {
+    "state_name": "Maharashtra",
+    "year_value": 2014,
+    "women_mps": 5
   }
   ],
   "MN": [
   {
     "state_name": "Manipur",
+    "year_value": 1951,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 1957,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 1962,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
     "year_value": 1967,
     "women_mps": 0
   },
   {
     "state_name": "Manipur",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Manipur",
-    "year_value": 1974,
+    "year_value": 1977,
     "women_mps": 0
   },
   {
@@ -935,107 +1125,112 @@ var statesData = {
   },
   {
     "state_name": "Manipur",
-    "year_value": 1990,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Manipur",
-    "year_value": 1995,
+    "year_value": 1989,
     "women_mps": 0
   },
   {
     "state_name": "Manipur",
-    "year_value": 2000,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Manipur",
-    "year_value": 2002,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Manipur",
-    "year_value": 2007,
+    "year_value": 1991,
     "women_mps": 0
   },
   {
     "state_name": "Manipur",
-    "year_value": 2012,
-    "women_mps": 3
+    "year_value": 1996,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 1998,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 1999,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 2004,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Manipur",
+    "year_value": 2014,
+    "women_mps": 0
   }
   ],
   "ML": [
   {
     "state_name": "Meghalaya",
-    "year_value": 1972,
+    "year_value": 1977,
     "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 1978,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Meghalaya",
-    "year_value": 1983,
+    "year_value": 1980,
     "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 1988,
-    "women_mps": 2
+    "year_value": 1984,
+    "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 1993,
-    "women_mps": 1
+    "year_value": 1989,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Meghalaya",
+    "year_value": 1991,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Meghalaya",
+    "year_value": 1996,
+    "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
     "year_value": 1998,
-    "women_mps": 3
+    "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 2003,
-    "women_mps": 2
+    "year_value": 1999,
+    "women_mps": 0
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 2008,
+    "year_value": 2004,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Meghalaya",
+    "year_value": 2009,
     "women_mps": 1
   },
   {
     "state_name": "Meghalaya",
-    "year_value": 2013,
-    "women_mps": 4
+    "year_value": 2014,
+    "women_mps": 0
   }
   ],
   "MZ": [
   {
     "state_name": "Mizoram",
-    "year_value": 1972,
+    "year_value": 1977,
     "women_mps": 0
   },
   {
     "state_name": "Mizoram",
-    "year_value": 1978,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Mizoram",
-    "year_value": 1979,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Mizoram",
-    "year_value": 1984,
+    "year_value": 1980,
     "women_mps": 0
-  },
-  {
-    "state_name": "Mizoram",
-    "year_value": 1987,
-    "women_mps": 1
   },
   {
     "state_name": "Mizoram",
@@ -1044,7 +1239,12 @@ var statesData = {
   },
   {
     "state_name": "Mizoram",
-    "year_value": 1993,
+    "year_value": 1991,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Mizoram",
+    "year_value": 1996,
     "women_mps": 0
   },
   {
@@ -1054,17 +1254,22 @@ var statesData = {
   },
   {
     "state_name": "Mizoram",
-    "year_value": 2003,
+    "year_value": 1999,
     "women_mps": 0
   },
   {
     "state_name": "Mizoram",
-    "year_value": 2008,
+    "year_value": 2004,
     "women_mps": 0
   },
   {
     "state_name": "Mizoram",
-    "year_value": 2013,
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Mizoram",
+    "year_value": 2014,
     "women_mps": 0
   }
   ],
@@ -1077,17 +1282,17 @@ var statesData = {
   {
     "state_name": "Orissa",
     "year_value": 1957,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
-    "year_value": 1961,
-    "women_mps": 3
+    "year_value": 1962,
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
     "year_value": 1967,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
@@ -1096,69 +1301,69 @@ var statesData = {
   },
   {
     "state_name": "Orissa",
-    "year_value": 1974,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Orissa",
     "year_value": 1977,
-    "women_mps": 7
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
     "year_value": 1980,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
-    "year_value": 1985,
-    "women_mps": 8
+    "year_value": 1984,
+    "women_mps": 1
   },
   {
     "state_name": "Orissa",
-    "year_value": 1990,
-    "women_mps": 7
+    "year_value": 1989,
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
-    "year_value": 1995,
-    "women_mps": 8
+    "year_value": 1991,
+    "women_mps": 1
   },
   {
     "state_name": "Orissa",
-    "year_value": 2000,
-    "women_mps": 13
+    "year_value": 1996,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Orissa",
+    "year_value": 1998,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Orissa",
+    "year_value": 1999,
+    "women_mps": 2
   },
   {
     "state_name": "Orissa",
     "year_value": 2004,
-    "women_mps": 11
+    "women_mps": 2
   },
   {
     "state_name": "Orissa",
     "year_value": 2009,
-    "women_mps": 7
+    "women_mps": 0
   },
   {
     "state_name": "Orissa",
     "year_value": 2014,
-    "women_mps": 11
+    "women_mps": 2
   }
   ],
   "PY": [
   {
     "state_name": "Pondicherry",
-    "year_value": 1964,
-    "women_mps": 2
+    "year_value": 1967,
+    "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
-    "year_value": 1969,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Pondicherry",
-    "year_value": 1974,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
@@ -1169,41 +1374,51 @@ var statesData = {
   {
     "state_name": "Pondicherry",
     "year_value": 1980,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
-    "year_value": 1985,
-    "women_mps": 1
+    "year_value": 1984,
+    "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
-    "year_value": 1990,
+    "year_value": 1989,
     "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
     "year_value": 1991,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
     "year_value": 1996,
-    "women_mps": 1
-  },
-  {
-    "state_name": "Pondicherry",
-    "year_value": 2001,
     "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
-    "year_value": 2006,
+    "year_value": 1998,
     "women_mps": 0
   },
   {
     "state_name": "Pondicherry",
-    "year_value": 2011,
+    "year_value": 1999,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Pondicherry",
+    "year_value": 2004,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Pondicherry",
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Pondicherry",
+    "year_value": 2014,
     "women_mps": 0
   }
   ],
@@ -1216,12 +1431,12 @@ var statesData = {
   {
     "state_name": "Punjab",
     "year_value": 1957,
-    "women_mps": 9
+    "women_mps": 1
   },
   {
     "state_name": "Punjab",
     "year_value": 1962,
-    "women_mps": 8
+    "women_mps": 0
   },
   {
     "state_name": "Punjab",
@@ -1230,53 +1445,63 @@ var statesData = {
   },
   {
     "state_name": "Punjab",
-    "year_value": 1969,
+    "year_value": 1971,
     "women_mps": 0
-  },
-  {
-    "state_name": "Punjab",
-    "year_value": 1972,
-    "women_mps": 6
   },
   {
     "state_name": "Punjab",
     "year_value": 1977,
-    "women_mps": 3
+    "women_mps": 0
   },
   {
     "state_name": "Punjab",
     "year_value": 1980,
-    "women_mps": 6
+    "women_mps": 2
   },
   {
     "state_name": "Punjab",
-    "year_value": 1985,
+    "year_value": 1984,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 1989,
+    "women_mps": 3
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 1991,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 1996,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 1998,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 1999,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 2004,
+    "women_mps": 2
+  },
+  {
+    "state_name": "Punjab",
+    "year_value": 2009,
     "women_mps": 4
   },
   {
     "state_name": "Punjab",
-    "year_value": 1992,
-    "women_mps": 6
-  },
-  {
-    "state_name": "Punjab",
-    "year_value": 1997,
-    "women_mps": 7
-  },
-  {
-    "state_name": "Punjab",
-    "year_value": 2002,
-    "women_mps": 8
-  },
-  {
-    "state_name": "Punjab",
-    "year_value": 2007,
-    "women_mps": 7
-  },
-  {
-    "state_name": "Punjab",
-    "year_value": 2012,
-    "women_mps": 0
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "RJ": [
@@ -1288,116 +1513,156 @@ var statesData = {
   {
     "state_name": "Rajasthan",
     "year_value": 1957,
-    "women_mps": 8
+    "women_mps": 0
   },
   {
     "state_name": "Rajasthan",
     "year_value": 1962,
-    "women_mps": 8
+    "women_mps": 1
   },
   {
     "state_name": "Rajasthan",
     "year_value": 1967,
-    "women_mps": 6
+    "women_mps": 1
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 1972,
-    "women_mps": 4
+    "year_value": 1971,
+    "women_mps": 0
   },
   {
     "state_name": "Rajasthan",
     "year_value": 1977,
-    "women_mps": 7
+    "women_mps": 0
   },
   {
     "state_name": "Rajasthan",
     "year_value": 1980,
-    "women_mps": 10
+    "women_mps": 1
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 1985,
-    "women_mps": 16
+    "year_value": 1984,
+    "women_mps": 2
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 1990,
-    "women_mps": 11
+    "year_value": 1989,
+    "women_mps": 1
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 1993,
-    "women_mps": 9
+    "year_value": 1991,
+    "women_mps": 4
+  },
+  {
+    "state_name": "Rajasthan",
+    "year_value": 1996,
+    "women_mps": 4
   },
   {
     "state_name": "Rajasthan",
     "year_value": 1998,
-    "women_mps": 14
+    "women_mps": 3
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 2003,
-    "women_mps": 12
+    "year_value": 1999,
+    "women_mps": 3
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 2008,
-    "women_mps": 28
+    "year_value": 2004,
+    "women_mps": 2
   },
   {
     "state_name": "Rajasthan",
-    "year_value": 2013,
-    "women_mps": 28
+    "year_value": 2009,
+    "women_mps": 3
+  },
+  {
+    "state_name": "Rajasthan",
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "SK": [
   {
     "state_name": "Sikkim",
-    "year_value": 1979,
+    "year_value": 1977,
     "women_mps": 0
   },
   {
     "state_name": "Sikkim",
-    "year_value": 1985,
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Sikkim",
+    "year_value": 1984,
     "women_mps": 0
   },
   {
     "state_name": "Sikkim",
     "year_value": 1989,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Sikkim",
+    "year_value": 1991,
     "women_mps": 1
   },
   {
     "state_name": "Sikkim",
-    "year_value": 1994,
-    "women_mps": 1
+    "year_value": 1996,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Sikkim",
+    "year_value": 1998,
+    "women_mps": 0
   },
   {
     "state_name": "Sikkim",
     "year_value": 1999,
-    "women_mps": 1
+    "women_mps": 0
   },
   {
     "state_name": "Sikkim",
     "year_value": 2004,
-    "women_mps": 3
+    "women_mps": 0
   },
   {
     "state_name": "Sikkim",
     "year_value": 2009,
-    "women_mps": 4
+    "women_mps": 0
   },
   {
     "state_name": "Sikkim",
     "year_value": 2014,
-    "women_mps": 3
+    "women_mps": 0
   }
   ],
   "TN": [
   {
     "state_name": "Tamil Nadu",
+    "year_value": 1951,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tamil Nadu",
+    "year_value": 1957,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tamil Nadu",
+    "year_value": 1962,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tamil Nadu",
     "year_value": 1967,
-    "women_mps": 3
+    "women_mps": 0
   },
   {
     "state_name": "Tamil Nadu",
@@ -1412,45 +1677,70 @@ var statesData = {
   {
     "state_name": "Tamil Nadu",
     "year_value": 1980,
-    "women_mps": 5
+    "women_mps": 0
   },
   {
     "state_name": "Tamil Nadu",
     "year_value": 1984,
-    "women_mps": 8
+    "women_mps": 2
   },
   {
     "state_name": "Tamil Nadu",
     "year_value": 1989,
-    "women_mps": 9
+    "women_mps": 2
   },
   {
     "state_name": "Tamil Nadu",
     "year_value": 1991,
-    "women_mps": 32
+    "women_mps": 3
   },
   {
     "state_name": "Tamil Nadu",
     "year_value": 1996,
-    "women_mps": 9
+    "women_mps": 0
   },
   {
     "state_name": "Tamil Nadu",
-    "year_value": 2001,
-    "women_mps": 25
+    "year_value": 1998,
+    "women_mps": 1
   },
   {
     "state_name": "Tamil Nadu",
-    "year_value": 2006,
-    "women_mps": 22
+    "year_value": 1999,
+    "women_mps": 1
   },
   {
     "state_name": "Tamil Nadu",
-    "year_value": 2011,
-    "women_mps": 17
+    "year_value": 2004,
+    "women_mps": 4
+  },
+  {
+    "state_name": "Tamil Nadu",
+    "year_value": 2009,
+    "women_mps": 1
+  },
+  {
+    "state_name": "Tamil Nadu",
+    "year_value": 2014,
+    "women_mps": 4
   }
   ],
   "TR": [
+  {
+    "state_name": "Tripura",
+    "year_value": 1951,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1957,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1962,
+    "women_mps": 0
+  },
   {
     "state_name": "Tripura",
     "year_value": 1967,
@@ -1458,65 +1748,80 @@ var statesData = {
   },
   {
     "state_name": "Tripura",
-    "year_value": 1972,
+    "year_value": 1971,
     "women_mps": 0
   },
   {
     "state_name": "Tripura",
     "year_value": 1977,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1980,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1984,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1989,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 1991,
     "women_mps": 1
   },
   {
     "state_name": "Tripura",
-    "year_value": 1983,
-    "women_mps": 4
-  },
-  {
-    "state_name": "Tripura",
-    "year_value": 1988,
-    "women_mps": 2
-  },
-  {
-    "state_name": "Tripura",
-    "year_value": 1993,
-    "women_mps": 1
+    "year_value": 1996,
+    "women_mps": 0
   },
   {
     "state_name": "Tripura",
     "year_value": 1998,
-    "women_mps": 2
+    "women_mps": 0
   },
   {
     "state_name": "Tripura",
-    "year_value": 2003,
-    "women_mps": 2
+    "year_value": 1999,
+    "women_mps": 0
   },
   {
     "state_name": "Tripura",
-    "year_value": 2008,
-    "women_mps": 3
+    "year_value": 2004,
+    "women_mps": 0
   },
   {
     "state_name": "Tripura",
-    "year_value": 2013,
-    "women_mps": 5
+    "year_value": 2009,
+    "women_mps": 0
+  },
+  {
+    "state_name": "Tripura",
+    "year_value": 2014,
+    "women_mps": 0
   }
   ],
   "UK": [
   {
     "state_name": "Uttarakhand",
-    "year_value": 2002,
-    "women_mps": 4
+    "year_value": 2004,
+    "women_mps": 0
   },
   {
     "state_name": "Uttarakhand",
-    "year_value": 2007,
-    "women_mps": 4
+    "year_value": 2009,
+    "women_mps": 0
   },
   {
     "state_name": "Uttarakhand",
-    "year_value": 2012,
-    "women_mps": 5
+    "year_value": 2014,
+    "women_mps": 1
   }
   ],
   "UP": [
@@ -1528,77 +1833,77 @@ var statesData = {
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1957,
-    "women_mps": 18
+    "women_mps": 1
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1962,
-    "women_mps": 20
-  },
-  {
-    "state_name": "Uttar Pradesh",
-    "year_value": 1967,
     "women_mps": 6
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 1969,
-    "women_mps": 18
+    "year_value": 1967,
+    "women_mps": 7
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 1974,
-    "women_mps": 21
+    "year_value": 1971,
+    "women_mps": 0
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1977,
-    "women_mps": 11
+    "women_mps": 3
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1980,
-    "women_mps": 23
+    "women_mps": 7
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 1985,
-    "women_mps": 31
+    "year_value": 1984,
+    "women_mps": 9
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1989,
-    "women_mps": 18
+    "women_mps": 6
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1991,
-    "women_mps": 10
-  },
-  {
-    "state_name": "Uttar Pradesh",
-    "year_value": 1993,
-    "women_mps": 14
+    "women_mps": 3
   },
   {
     "state_name": "Uttar Pradesh",
     "year_value": 1996,
-    "women_mps": 20
+    "women_mps": 9
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 2002,
-    "women_mps": 26
+    "year_value": 1998,
+    "women_mps": 9
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 2007,
-    "women_mps": 23
+    "year_value": 1999,
+    "women_mps": 9
   },
   {
     "state_name": "Uttar Pradesh",
-    "year_value": 2012,
-    "women_mps": 35
+    "year_value": 2004,
+    "women_mps": 7
+  },
+  {
+    "state_name": "Uttar Pradesh",
+    "year_value": 2009,
+    "women_mps": 12
+  },
+  {
+    "state_name": "Uttar Pradesh",
+    "year_value": 2014,
+    "women_mps": 13
   }
   ],
   "WB": [
@@ -1610,22 +1915,17 @@ var statesData = {
   {
     "state_name": "West Bengal",
     "year_value": 1957,
-    "women_mps": 6
+    "women_mps": 2
   },
   {
     "state_name": "West Bengal",
     "year_value": 1962,
-    "women_mps": 10
+    "women_mps": 1
   },
   {
     "state_name": "West Bengal",
     "year_value": 1967,
-    "women_mps": 9
-  },
-  {
-    "state_name": "West Bengal",
-    "year_value": 1969,
-    "women_mps": 7
+    "women_mps": 2
   },
   {
     "state_name": "West Bengal",
@@ -1634,48 +1934,58 @@ var statesData = {
   },
   {
     "state_name": "West Bengal",
-    "year_value": 1972,
-    "women_mps": 0
-  },
-  {
-    "state_name": "West Bengal",
     "year_value": 1977,
-    "women_mps": 3
+    "women_mps": 2
   },
   {
     "state_name": "West Bengal",
-    "year_value": 1982,
+    "year_value": 1980,
+    "women_mps": 2
+  },
+  {
+    "state_name": "West Bengal",
+    "year_value": 1984,
     "women_mps": 5
   },
   {
     "state_name": "West Bengal",
-    "year_value": 1987,
-    "women_mps": 12
+    "year_value": 1989,
+    "women_mps": 3
   },
   {
     "state_name": "West Bengal",
     "year_value": 1991,
-    "women_mps": 21
+    "women_mps": 3
   },
   {
     "state_name": "West Bengal",
     "year_value": 1996,
-    "women_mps": 20
+    "women_mps": 4
   },
   {
     "state_name": "West Bengal",
-    "year_value": 2001,
-    "women_mps": 28
+    "year_value": 1998,
+    "women_mps": 5
   },
   {
     "state_name": "West Bengal",
-    "year_value": 2006,
-    "women_mps": 37
+    "year_value": 1999,
+    "women_mps": 5
   },
   {
     "state_name": "West Bengal",
-    "year_value": 2011,
-    "women_mps": 34
+    "year_value": 2004,
+    "women_mps": 4
+  },
+  {
+    "state_name": "West Bengal",
+    "year_value": 2009,
+    "women_mps": 7
+  },
+  {
+    "state_name": "West Bengal",
+    "year_value": 2014,
+    "women_mps": 12
   }
-  ]
-};
+]
+}

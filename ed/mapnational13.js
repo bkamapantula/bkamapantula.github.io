@@ -43,11 +43,11 @@ function drawStateHistorical(state) {
 
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
-    data.addColumn('number', '# Women MLAs');
+    data.addColumn('number', '# Women MPs');
     console.log(state);
 
     for (var iter = 0; iter < statesData[state].length; iter++) {
-    	data.addRow([ statesData[state][iter]['year_value'].toString(), statesData[state][iter]['women_mlas']]);
+    	data.addRow([ statesData[state][iter]['year_value'].toString(), statesData[state][iter]['women_mps']]);
     }
 
     console.log(statesData[state][0]['state_name']);
