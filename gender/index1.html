@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Gender and Relief</title>
+
+    <!-- Bootstrap core CSS >
+    <link href="css/bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+      $(function() {
+        var all_types = new Array();
+        var all_values = {};
+        $.getJSON("gender.json", function(json){
+          $.extend(all_values, json);
+          $.each(json, function(key, val){
+            if(all_types.indexOf(json[key]["Type"]) == -1) {
+              all_types.push(json[key]["Type"]);
+              //$(".btn-group").append('<button type="button" class="btn btn-default">' + json[key]["Type"] + '</button>');
+              $(".btn-group").append('<button type="button" class="btn btn-default" value="' + json[key]["Type"] + '">' + json[key]["Type"] + '</button>');
+            }
+          }); // end of $.each
+        }); // end of $.getJSON
+
+        // http://stackoverflow.com/questions/18031608/how-to-get-radio-button-group-values-in-bootstrap
+        $("#btngroup").click(function() {
+          var actvbtnval = $("#btngroup").find("button").val($(this).text()); //.prop("value");
+          //alert("wat");
+          console.log(actvbtnval);
+        });
+
+        $(".btn").click(function(e) {
+          e.preventDefault();
+          console.log("wat");
+          alert( $(this).attr("data-value") );
+          $(".panel-ul").empty();
+          var type_selected = $(".btn-group option:selected").val();
+          $.each(all_values, function(key, val){
+            if(type_selected == all_values[key]["Type"]) {
+                $(".panel-heading").text(all_values[key]["Type"]);
+                $(".panel-ul").append('<p>' + key + ".\t" + all_values[key]["Point"] + '</p>');
+              }
+          });
+        }); // end of select change
+      }); // end of function
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand">Bhanu</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="../">Home</a></li>
+              <!--li><a href="#research">Research</a></li>
+              <li><a href="#projects">Other Projects</a></li-->
+              <li><a href="https://github.com/bkamapantula" target="_blank">Code<span class="glyphicon glyphicon-new-window"></span></a></li>
+            </ul>
+          </div> <!--navbar-collapse-->
+        </div> <!--container-fluid-->
+      </div>
+      <h3 align="center">Gender and Relief</h3>
+      <div class="btn-group" role="group" aria-label="button-group" id="btngroup"></div>
+      <div class="panel panel-info">
+        <div class="panel-heading">Type</div>
+        <div class="panel-body">
+          <p class="panel-ul"></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
