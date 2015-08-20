@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>India - small multiples</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.css">
+    <!-- Custom styles for this template -->
+    <!--link href="sticky-footer.css" rel="stylesheet"-->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+            #container {
+                /*height: 500px; 
+                min-width: 310px; 
+                max-width: 800px; 
+                /*margin: 0 auto; */
+            }
+            .loading {
+                margin-top: 10em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="http://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+        <div class="row">
+            <div class="col-md-4" id="1957"></div>
+            <div class="col-md-4" id="1962"></div>
+            <div class="col-md-4" id="1967"></div>
+        </div>
+        <div id="container"></div>
+    </body>
+        <script type="text/javascript">
+            $(function () {
+
+                // Prepare demo data
+                var data = [{ 'hc-key': 'in-py', value: 0 },
+                    { 'hc-key': 'in-ld', value: 1 },
+                    { 'hc-key': 'in-wb', value: 2 },
+                    { 'hc-key': 'in-or', value: 3 },
+                    { 'hc-key': 'in-br', value: 4 },
+                    { 'hc-key': 'in-sk', value: 5 },
+                    { 'hc-key': 'in-ct', value: 6 },
+                    { 'hc-key': 'in-tn', value: 7 },
+                    { 'hc-key': 'in-mp', value: 8 },
+                    { 'hc-key': 'in-2984', value: 9 },
+                    { 'hc-key': 'in-ga', value: 10 },
+                    { 'hc-key': 'in-nl', value: 11 },
+                    { 'hc-key': 'in-mn', value: 12 },
+                    { 'hc-key': 'in-ar', value: 13 },
+                    { 'hc-key': 'in-mz', value: 14 },
+                    { 'hc-key': 'in-tr', value: 15 },
+                    { 'hc-key': 'in-3464', value: 16 },
+                    { 'hc-key': 'in-dl', value: 17 },
+                    { 'hc-key': 'in-hr', value: 18 },
+                    { 'hc-key': 'in-ch', value: 19 },
+                    { 'hc-key': 'in-hp', value: 20 },
+                    { 'hc-key': 'in-jk', value: 21 },
+                    { 'hc-key': 'in-kl', value: 22 },
+                    { 'hc-key': 'in-ka', value: 23 },
+                    { 'hc-key': 'in-dn', value: 24 },
+                    { 'hc-key': 'in-mh', value: 25 },
+                    { 'hc-key': 'in-as', value: 26 },
+                    { 'hc-key': 'in-ap', value: 27 },
+                    { 'hc-key': 'in-ml', value: 28 },
+                    { 'hc-key': 'in-pb', value: 29 },
+                    { 'hc-key': 'in-rj', value: 30 },
+                    { 'hc-key': 'in-up', value: 31 },
+                    { 'hc-key': 'in-ut', value: 32 },
+                    { 'hc-key': 'in-jh', value: 33 }];
+
+                var data_1957 = [
+                    {'hc-key': 'in-ap', value: 1},
+                    {'hc-key': 'in-as', value: 1},
+                    {'hc-key': 'in-br', value: 1},
+                    {'hc-key': 'in-dl', value: 1},
+                    {'hc-key': 'in-mp', value: 1},
+                    {'hc-key': 'in-pb', value: 1},
+                    {'hc-key': 'in-up', value: 1},
+                    {'hc-key': 'in-wb', value: 1}
+                ];
+
+                var data_1962 = [
+                    {'hc-key': 'in-ap', value: 8},
+                    {'hc-key': 'in-as', value: 6},
+                    {'hc-key': 'in-br', value: 3},
+                    {'hc-key': 'in-2984', value: 12},
+                    {'hc-key': 'in-mh', value: 1},
+                    {'hc-key': 'in-mp', value: 10},
+                    {'hc-key': 'in-rj', value: 4},
+                    {'hc-key': 'in-up', value: 2},
+                    {'hc-key': 'in-wb', value: 9}
+                ];
+
+                var data_1967 = [
+                    {'hc-key': 'in-ap', value: 1},
+                    {'hc-key': 'in-br', value: 8},
+                    {'hc-key': 'in-2984', value: 2},
+                    {'hc-key': 'in-kl', value: 11},
+                    {'hc-key': 'in-mh', value: 5},
+                    {'hc-key': 'in-mp', value: 6},
+                    {'hc-key': 'in-pb', value: 12},
+                    {'hc-key': 'in-rj', value: 1},
+                    {'hc-key': 'in-up', value: 1},
+                    {'hc-key': 'in-wb', value: 2}
+                ];
+
+                // http://www.colorcombos.com/color-schemes/6656/ColorCombo6656.html
+                drawMap(data_1957, '#1957', '0-6%', '#EF7126');
+                drawMap(data_1962, '#1962', '6-12%', '#F9E559');
+                drawMap(data_1967, '#1967', '12-14%', '#8EDC9D');
+
+                function drawMap(data, mapContainer, mapTitle, mapColor) { 
+                    // Initiate the chart
+                    $(mapContainer).highcharts('Map', {
+                        title : {
+                            text : mapTitle
+                        },
+
+                        /*subtitle : {
+                            text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/in/in-all.js">countries/in/in-all</a>'
+                        },*/
+
+                        mapNavigation: {
+                            enabled: false,
+                            buttonOptions: {
+                                verticalAlign: 'bottom'
+                            }
+                        },
+
+                        colorAxis: {
+                            min: 0
+                        },
+colorAxis: {
+    dataClassColor: mapColor
+},
+                        series : [{
+                            color: mapColor,
+                            nullColor: 'white',
+                            data : data,
+                            mapData: Highcharts.maps['countries/in/in-all'],
+                            joinBy: 'hc-key',
+                            name: 'State with women MPs',
+                            states: {
+                                hover: {
+                                    //color: mapColor
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false,
+                                format: '{point.name}'
+                            }
+                        }],
+                        credits: {enabled: false}
+                    });
+                } // end of draw map
+
+            });
+        </script>
+</html>
+

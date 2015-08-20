@@ -143,7 +143,7 @@
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
-            return "<p>State: " + d['State'] + "</p><p>Women MPs: " + d[2014] + "%</p><p>Total seats: " + d['Seats'] + "</p>";
+            return "<p>State: " + d['State'] + "</p><p>Total seats: " + d['Seats'] + "</p>" + "<p>Women MPs: " + d['Wseats'] + ", " + d[2014] + "%</p>";
           });
 
         svg.call(tip);
@@ -233,10 +233,8 @@
 
         d3.select("svg")
             .append("text")
-                //.attr("x", xAxisWidth+175)
-                //.attr("y", height/2)
-                .attr("transform", "translate(" + width*0.65 + ", " + height/2 + ") rotate(90)")
-                .text("Gender parity")
+                .attr("transform", "translate(" + width*0.645 + ", " + height/2 + ") rotate(90)")
+                .text("50% seats")
 
         // 33% line
         svg.append("line")
@@ -250,8 +248,6 @@
 
         d3.select("svg")
             .append("text")
-                //.attr("x", width/3+90)
-                //.attr("y", height/2)
                 .attr("transform", "translate(" + width*0.48 + ", " + height/2 + ") rotate(90)")
                 .text("Proposed 33% reservation");
 

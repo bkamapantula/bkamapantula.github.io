@@ -19,24 +19,35 @@
 		*/
 		
 	#map {
-		margin-right: auto;
-		margin-left: auto;
-		width: 550px; 
-		height: 600px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
 		background-color: white;
 	}
+
+    .menu-ui {
+      position:absolute;
+      top:10px;
+      right:10px;
+      }
+
 	h4, h6 {
 		text-align: center;
 	}
 
 	</style>
+    <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
 </head>
 <body>
 	<h4>State 1.1</h4>
 	<h6>Note that MLA absolute values are charted. Y-axis will be changed to % women MLAs</h6>
-	<select id="stateOption" onclick="drawStateHistorical(this.value)"></select>
+	<!--select id="stateOption" onclick="drawStateHistorical(this.value)"></select-->
 	<div class="row">
-        <div class="col-xs-6 col-md-4 col-lg-4" id="map"></div>
+        <div class="col-xs-6 col-md-4 col-lg-4"></div>
+            <div id="map"></div>
+            <div class="menu-ui" id="variables"></div>
+        </div>
         <div class="col-xs-6 col-md-8 col-lg-8" id="historical"></div>
     </div>
 

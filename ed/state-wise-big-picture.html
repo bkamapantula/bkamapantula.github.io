@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+<div id="container" style="min-width: 310px; height: 700px; margin: 0 auto"></div>
+
+<script>
+var states = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu Kashmir', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland',
+            'Odisha', 'Pondicherry', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+var states_mps = [
+    ['Andhra Pradesh', 8],
+    ['Arunachal Pradesh', 0],
+    ['Assam', 13.3],
+    ['Bihar', 7.5],
+    ['Chandigarh', 100],
+    ['Chhattisgarh', 9.1],
+    ['Delhi', 14.3],
+    ['Goa', 0],
+    ['Gujarat', 15.4],
+    ['Haryana', 0],
+    ['Himachal Pradesh', 0],
+    ['Jammu Kashmir', 16.7],
+    ['Jharkhand', 0],
+    ['Karnataka', 3.6],
+    ['Kerala', 5],
+    ['Madhya Pradesh', 17.2],
+    ['Maharashtra', 10.4],
+    ['Manipur', 0],
+    ['Meghalaya', 0],
+    ['Mizoram', 0],
+    ['Nagaland', 0],
+    ['Odisha', 9.5],
+    ['Pondicherry', 0],
+    ['Punjab', 7.7],
+    ['Rajasthan', 4],
+    ['Sikkim', 0],
+    ['Tamil Nadu', 10.3],
+    ['Telangana', 5.9],
+    ['Tripura', 0],
+    ['Uttar Pradesh', 16.3],
+    ['Uttarakhand', 20],
+    ['West Bengal', 28.6]
+];
+
+$(function () {
+    $('#container').highcharts({
+
+        chart: {
+            type: 'bar'
+        },
+
+        title: {
+            text: 'Percentage of Women MPs and MLAs in each state in 2014'
+        },
+
+        xAxis: {
+            categories: states,
+            gridLineWidth: 0
+        },
+
+        yAxis: {
+            gridLineWidth: 0,
+            min: 0,
+            max: 75,
+            title: {
+                text: 'Women representation (%)'
+            },
+            plotBands: [{
+                color: 'rgba(239, 113, 38, 0.1)',
+                from:  33.5,
+                to: 33.5,
+                label: {
+                    text: 'Proposed Women % cutoff',
+                    align: 'left',
+                    y: -20,
+                    style: {
+                        color: '#ef7126'
+                    }
+                }
+            },
+            {
+                color: 'rgba(33, 140, 141, 0.1)',
+                from:  50,
+                to: 50.5,
+                label: {
+                    text: 'Gender parity',
+                    align: 'left',
+                    y: -5,
+                    style: {
+                        color: '#218c8d'
+                    }
+                }
+            }],
+        },
+
+        tooltip: {
+            //valueSuffix: '°C'
+        },
+
+        plotOptions: {
+            columnrange: {
+                dataLabels: {
+                    enabled: true /*,
+                    formatter: function () {
+                        return this.y + '°C';
+                    }*/
+                }
+            }
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'Women MPs %',
+            data: states_mps
+        }],
+        credits: {enabled: false}
+    });
+
+});
+</script>

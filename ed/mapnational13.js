@@ -54,7 +54,7 @@ function drawStateHistorical(state) {
 
     var options = {
         chart: {
-            title: 'Legislative assembly historical trends - ' + statesData[state][0]['state_name']
+            title: 'Parliament historical trends - ' + statesData[state][0]['state_name']
         },
         colors: ['#aa3333'],
         legend: {
