@@ -33,10 +33,17 @@
 	    $(document).ready(function() {
 	        $.getJSON("papers.json", function(result) {
 	        	$.each(result, function(i, item) {
+	        		if( i%3 == 0) {
+	        			var row_col_lg_4 = document.createElement("div");
+	        			row_col_lg_4.className = "row";
+	        			$(".papers").append(row_col_lg_4);
+	        		}
+	        		/*
 	        		var div_col_lg_4 = document.createElement("div");
 	        		div_col_lg_4.className = "col-lg-4";
 	        		div_col_lg_4.innerHTML = item["title"];
-	        		$(".papers").append("<div class='col-lg-4'>" + "<img class='img-rounded' src=" + item["figure"] + ">" + "<h4>" + item["place"] + "</h4> <h5>" + item["title"] + " (<b>" + item["type"] + "</b>) </h5> <p>" + item["authors"] + "</p> <p>Keywords: " + item["keywords"] + "</p><p>" + item["date"] + " <a href='" + item["url"] + "'>[PDF]</a>" + "</p></div>"); // " <p> <button class='btn btn-dismira'>View abstract</button> </p></div>");
+	        		*/
+	        		$(".papers").append("<div class='col-lg-4'>" + "<img class='img-rounded' src=" + item["figure"] + ">" + "<h4>" + item["id"] + ") " + item["place"] + "</h4> <h5>" + item["title"] + " (<b>" + item["type"] + "</b>) </h5> <p>" + item["authors"] + "</p> <p>Keywords: " + item["keywords"] + "</p><p>" + item["date"] + " <a href='" + item["url"] + "'>[PDF]</a>" + "</p></div>"); //" <p> <button class='btn btn-dismira'>View abstract</button> </p></div>");
 	        	});
 	        })
 	        .fail(function() {
@@ -46,8 +53,7 @@
 	</script>
 	<script type="text/javascript">
 	    $(function(){
-	    	console.log("endo bhai!");
-	        $(".btn-bict").on("click", function() {
+	    	$(".btn-bict").on("click", function() {
 	            $("#bictModal").modal("show");
 	        });
 	        $(".btn-emnet").on("click", function() {
