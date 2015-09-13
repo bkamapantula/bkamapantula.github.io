@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Bhanu Kamapantula - Research Portfolio</title>
     <style type="text/css">
@@ -15,28 +12,33 @@
     		height: 240px;
     	}
     </style>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-bs3patch.css">
+    <!--link rel="stylesheet" type="text/css" href="css/bootstrap-bs3patch.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-modal.css">
 
-    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-modalmanager.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
     <script type="text/javascript">
 	    $(document).ready(function() {
 	        $.getJSON("papers.json", function(result) {
 	        	$.each(result, function(i, item) {
+	        		if( i%3 == 0) {
+	        			var row_col_lg_4 = document.createElement("div");
+	        			row_col_lg_4.className = "row";
+	        			$(".papers").append(row_col_lg_4);
+                        $(".papers").append("<hr>");
+	        		}
+	        		/*
 	        		var div_col_lg_4 = document.createElement("div");
 	        		div_col_lg_4.className = "col-lg-4";
 	        		div_col_lg_4.innerHTML = item["title"];
-	        		$(".papers").append("<div class='col-lg-4'>" + "<img class='img-rounded' src=" + item["figure"] + ">" + "<h4>" + item["place"] + "</h4> <h5>" + item["title"] + " (<b>" + item["type"] + "</b>) </h5> <p>" + item["authors"] + "</p> <p>Keywords: " + item["keywords"] + "</p><p>" + item["date"] + " <a href='" + item["url"] + "'>[PDF]</a>" + "</p></div>"); // " <p> <button class='btn btn-dismira'>View abstract</button> </p></div>");
+	        		*/
+	        		$(".papers").append("<div class='col-lg-4'>" + "<img class='img-rounded img-responsive' src=" + item["figure"] + ">" + "<h4>" + item["id"] + ") " + item["place"] + "</h4> <h5>" + item["title"] + " (<b>" + item["type"] + "</b>) </h5> <p>" + item["authors"] + "</p> <p>Keywords: " + item["keywords"] + "</p><p>" + item["date"] + " <a href='" + item["url"] + "'>[PDF]</a>" + "</p></div>"); //" <p> <button class='btn btn-dismira'>View abstract</button> </p></div>");
 	        	});
 	        })
 	        .fail(function() {
@@ -46,8 +48,7 @@
 	</script>
 	<script type="text/javascript">
 	    $(function(){
-	    	console.log("endo bhai!");
-	        $(".btn-bict").on("click", function() {
+	    	$(".btn-bict").on("click", function() {
 	            $("#bictModal").modal("show");
 	        });
 	        $(".btn-emnet").on("click", function() {
@@ -64,26 +65,104 @@
 
   <body>
     <div class="container">
-      <div class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
               <a class="navbar-brand">Bhanu Kamapantula</a>
           </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li class="active"><a href="javascript:void(0);">Research</a></li>
+                <li><a href="../viz/index.html">Visualizations</a></li>
+                <li><a href="../news.html">News</a></li>
                 <li><a href="https://github.com/bkamapantula" target="_blank">Code<span class="glyphicon glyphicon-new-window"></span></a></li>
               </ul>
             </div> <!--navbar-collapse-->
           </div> <!--container-fluid-->
+      </nav>
+        <h4>Research Portfolio (2011-2015)</h4>
+        <hr>
+        <a href="#currentProjects">Current work</a> | <a href="#pastProjects">Past work</a> | <a href="#pubs">Publications</a>
+        <hr>
+        <h4 id="currentProjects">Current projects</h4>
+         <div class="panel panel-info">
+            <div class="panel-heading">Structural role of FFLs in signal transduction</div>
+            <div class="panel-body">
+                <p>This work explores the role of feed forward loop (FFL) motifs in signal transduction within transcriptional regulatory networks. To observe this, FFLs are categorized using two criteria: spacial and structural. While peripheral and non-peripheral FFLs form the spacial categorization, canonical and embedded FFLs form the structural categorization.</p>
+                <img src="fflscategorized.png" width="40%" height=40%/>
+                <h5>Status: manuscript under preparation</h5>
+            </div>
         </div>
-        <h4>Research Portfolio</h4>
-        <div class="papers"></div>        
+         <div class="panel panel-info">
+            <div class="panel-heading">Vertex-shared motifs</div>
+            <div class="panel-body">
+                <p>
+                Feed-forward loop (FFL) motifs are often cited to be important factor for robust biological networks. In this study, we consider the role of connected FFLs in creating robust networks. To this effect, we study all 23 possible vertex-shared FFLs.
+                </p>
+                <p>
+                    An example of a vertex-shared motif is presented below where the structural pattern ABC is one FFL and BCD is another FFL. #1 and #8 represent identifiers for two different vertex-shared motifs on left and right respectively. The patterns #1 and #8 are isomorphic in nature.
+                </p>
+                    <img src="RH-1-8.png" width="30%" height="30%"/>
+                <h5>Status: manuscript under preparation</h5>
+            </div>
+        </div>
+         <div class="panel panel-info">
+            <div class="panel-heading">BioRobust</div>
+            <div class="panel-body">
+                <p>
+                    BioRobust is an online framework to determine robustness of biological systems. Robustness is measured in terms of a metric (packet receival rate) determined using NS-2, a network simulation platform. Features derived from the network are used to execute machine learning models to determine the best features impacting the robustness.
+                </p>
+                <img src="deri_2014.png" width="40%" height="40%"/>
+                <h5>Status: under development</h5>
+                As part of a programme named <a href="http://www.egr.vcu.edu/deri/class-2014/" target="_blank">Dean's Early Research Initiative (DERI)</a>, I mentored a high school student from Fall 2014 to Spring 2015.
+            </div>
+        </div>
+        <h4 id="pastProjects">Past projects</h4>
+         <div class="panel panel-info">
+            <div class="panel-heading">miRegulome</div>
+            <div class="panel-body">
+            miRegulome is an integrated online repository that provides entire regulatory modules of a miRNA, based on manually curated validated published data. Each module is hyperlinked to appropriate external database such as CTD, mir2Disease, miRNApath, KEGG, Entrez, and PubMed etc. to give a comprehensive view of a miRNA regulome. The modules of a miRNA regulome consist of upstream regulators (transcription factors and various chemicals), downstream targets, pathways, functions, and disease associations etc. The relationships between modules and miRNA and experimental details have also been provided.
+              <p>
+                <h5><a href="http://bnet.egr.vcu.edu/miRegulome" target="_blank">Tool URL</a></h5>
+                <h5><a href="http://www.nature.com/articles/srep12832" target="_blank">Paper</a>, August 2015</h5>
+              </p>
+            </div>
+        </div>
+         <div class="panel panel-info">
+            <div class="panel-heading">DISMIRA</div>
+            <div class="panel-body">
+                Chemicals under certain environmental conditions cause changes to genes impacting miRNAs which can cause a certain disease. In order to identify the impact of miRNA(s) on disease(s), we use maximum-weighted matching approach and motif-based analysis.
+                <h5><a href="http://bnet.egr.vcu.edu:8080/dismira" target="_blank">Tool URL</a></h5>
+                <h5> <a href="files/bmcgenomics2014.pdf" target="_blank">Paper</a>, May 2015</h5>
+            </div>
+        </div>
+         <div class="panel panel-info">
+            <div class="panel-heading">Role of static motif-based features in biological network robustness</div>
+            <div class="panel-body">
+                Machine learning techniques can be useful in realizing the features contributing to the robustness of biological systems. In this work, we compare subnetworks extracted from E. coli and yeast using in-silico experiments. As a first, this study quantifies the impact of motif, feed-forward loop and bifan, abundance in natural networks.
+                <h5><a href="" target="_blank">Paper</a>, December 2014</h5>
+            </div>
+        </div>
+         <div class="panel panel-info">
+            <div class="panel-heading">Pannotator</div>
+            <div class="panel-body">
+                Pannotator is an online framework to automate genome annotation.
+                <h5><a href="http://bnet.egr.vcu.edu/pannotator/index.html" target="_blank">Tool URL</a></h5>
+                <h5><a href="http://www.geneticsmr.com/articles/2370" target="_blank">Paper</a>, August 2013</a></h5>
+            </div>
+        </div>
+        <hr>
+        <h4 id="pubs">Publications</h4>
+        <div class="papers"></div>
     </div>
 
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script-->
     <div id="bictModal" class="modal fade" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -125,6 +204,9 @@
 	  </div><!--end of modal-body-->
 	</div><!--end of dismiraModal-->
 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
   </body>
 </html>
 

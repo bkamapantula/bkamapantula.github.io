@@ -1,9 +1,24 @@
 [
 	{
+		"id": "13",
+		"title": "miRegulome: a knowledge-base of miRNA regulomics and analysis",
+		"authors": "Debmalya Barh, Bhanu Kamapantula, Neha Jain, Joseph Nalluri, Antaripa Bhattacharya, Lucky Juneja, Neha Barve, Sandeep Tiwari, Anderson Miyoshi, Vasco Azevedo, Kenneth Blum, Anil Kumar, Artur Silva and Preetam Ghosh",
+		"keywords": "database, miRNA associations, disease",
+		"figure": "nature-srep.jpg",
+		"type": "Journal",
+		"place": "Nature Scientific Reports",
+		"date": "August 2015",
+		"url": "http://www.nature.com/articles/srep12832",
+		"overview": {
+			"abstract": "miRNAs regulate post transcriptional gene expression by targeting multiple mRNAs and hence can modulate multiple signalling pathways, biological processes, and patho-physiologies. Therefore, understanding of miRNA regulatory networks is essential in order to modulate the functions of a miRNA. The focus of several existing databases is to provide information on specific aspects of miRNA regulation. However, an integrated resource on the miRNA regulome is currently not available to facilitate the exploration and understanding of miRNA regulomics. miRegulome attempts to bridge this gap. The current version of miRegulome v1.0 provides details on the entire regulatory modules of miRNAs altered in response to chemical treatments and transcription factors, based on validated data manually curated from published literature. Modules of miRegulome (upstream regulators, downstream targets, miRNA regulated pathways, functions, diseases, etc) are hyperlinked to an appropriate external resource and are displayed visually to provide a comprehensive understanding. Four analysis tools are incorporated to identify relationships among different modules based on user specified datasets. miRegulome and its tools are helpful in understanding the biology of miRNAs and will also facilitate the discovery of biomarkers and therapeutics. With added features in upcoming releases, miRegulome will be an essential resource to the scientific community. Availability: http://bnet.egr.vcu.edu/miRegulome.",
+			"picture": "nature-srep-2.jpg"
+		}
+	},
+	{
 		"id": "12",
 		"title": "Feature ranking in transcriptional networks: Packet receipt as a dynamical metric",
 		"authors": "B. Kamapantula, M. Mayo, E. Perkins, A. Abdelzaher and P. Ghosh",
-		"keywords": "machine learning, k-means, feature ranking, ANOVA F-value",
+		"keywords": "machine learning, k-means, feature ranking",
 		"figure": "ecoli-bict.jpg",
 		"type": "Conference",
 		"place": "BICT 2014",
@@ -15,19 +30,19 @@
 		}
 	},
 	{
-			"id": "11",
-			"title": "Dynamical impacts from structural redundancy of transcriptional motifs in gene-regulatory networks.",
-			"authors": "B. K. Kamapantula, M. Mayo, E. Perkins and P. Ghosh",
-			"keywords": "machine learning, k-means, feature ranking, ANOVA F-value",
-			"figure": "ecoli-emnet.jpg",
-			"type": "Conference",
-			"place": "EMNET 2014",
-			"date": "December 2014",
-			"url": "files/emnet2014.pdf",
-			"overview": {
-				"abstract": "We examine and compare transcriptional networks extracted from the bacterium Escherichia coli and the baker's yeast Saccharomyces cerevisiae using discrete event simulation based in silico experiments. The packet receipt rate is used as a dynamical metric to understand information ow, while machine learning techniques are used to examine underlying relationships inherent to the network topology. To this effect, we defined sixteen features based on structural/topological significance, such as transcriptional motifs,and other traditional metrics, such as network density and average shortest path, among others. Support vector classification is carried out using these features after parameters were identified using a cross-validation grid-search method. Feature ranking is performed using analysis of variance F-value metric. We found that feed-forward loop based features rank consistently high in both the bacterial and yeast networks, even at different perturbation levels. This work paves the way to design specialized engineered systems, such as wireless sensor networks, that exploit topological properties of natural networks to attain maximum efficiency.",
-				"picture": "methodology.jpg"
-			}
+		"id": "11",
+		"title": "Dynamical impacts from structural redundancy of transcriptional motifs in gene-regulatory networks.",
+		"authors": "B. K. Kamapantula, M. Mayo, E. Perkins and P. Ghosh",
+		"keywords": "machine learning, k-means, feature ranking, ANOVA F-value",
+		"figure": "ecoli-emnet.jpg",
+		"type": "Conference",
+		"place": "EMNET 2014",
+		"date": "December 2014",
+		"url": "files/emnet2014.pdf",
+		"overview": {
+			"abstract": "We examine and compare transcriptional networks extracted from the bacterium Escherichia coli and the baker's yeast Saccharomyces cerevisiae using discrete event simulation based in silico experiments. The packet receipt rate is used as a dynamical metric to understand information ow, while machine learning techniques are used to examine underlying relationships inherent to the network topology. To this effect, we defined sixteen features based on structural/topological significance, such as transcriptional motifs,and other traditional metrics, such as network density and average shortest path, among others. Support vector classification is carried out using these features after parameters were identified using a cross-validation grid-search method. Feature ranking is performed using analysis of variance F-value metric. We found that feed-forward loop based features rank consistently high in both the bacterial and yeast networks, even at different perturbation levels. This work paves the way to design specialized engineered systems, such as wireless sensor networks, that exploit topological properties of natural networks to attain maximum efficiency.",
+			"picture": "methodology.jpg"
+		}
 	},
 	{
 		"id": "10",
@@ -47,13 +62,13 @@
 	{
 		"id": "9",
 		"title": "Prioritization of disease candidates in miRNA-disease associations based on maximum weighted matching inference model and motif-based analysis",
-		"authors": "Joseph J Nalluri, Bhanu K Kamapantula, Debmalya Barh, Neha Jain, Antaripa Bhattacharya, Sintia Silva de Almeida, Rommel Thiago Juca Ramos, Artur Silva, Vasco Azevedo, and Preetam Ghosh",
-		"keywords": "miRNA-disease associations, disease prediction",
+		"authors": "Joseph J Nalluri, Bhanu K Kamapantula et. al",
+		"keywords": "miRNA-disease associations",
 		"figure": "dismira.png",
 		"type": "Journal",
 		"place": "BMC Genomics Special Issue",
 		"date": "November 2014",
-		"url": "bmcgenomics2014.pdf",
+		"url": "files/bmcgenomics2014.pdf",
 		"overview": {
 			"abstract": "Background: MicroRNAs (miRNAs) have increasingly been found to regulate diseases at a significant level. The interaction of miRNA and diseases is a complex web of multilevel interactions, given the fact that a miRNA regulates upto 50 or more diseases and miRNAs/diseases work in clusters. The clear patterns of miRNAs regulating a disease and vice-versa are still elusive. Methods: In this work, we approach the miRNA-disease interactions from a network scientific perspective and devise two approaches - maximum weighted matching model (a graph theoretical algorithm which provides the result by solving an optimization equation of selecting the most prominent set of diseases) and motif-based analyses (which investigates the motifs of the miRNA-disease network and selects the most prominent set of diseases based on their maximum number of participation in motifs, thereby revealing the miRNA-disease interaction dynamics) to determine and prioritize the set of diseases which are most certainly impacted upon the activation of a group of queried miRNAs, in a miRNA-disease network. Results and Conclusion: Our tool, DISMIRA implements the above mentioned approaches and presents an interactive visualization which helps the user in exploring the networking dynamics of miRNAs and diseases by analyzing their neighbors, paths and topological features. A set of miRNAs can be used in this analysis to get the associated diseases for the input group of miRs with ranks and also further analysis can be done to find key miRs or diseases, shortest paths etc. DISMIRA can be accessed online for free at http://bnet.egr.vcu.edu:8080/dismira.",
 			"picture": "methodology.jpg"
@@ -78,7 +93,7 @@
 		"id": "7",
 		"title": "Pannotator: an automated tool for annotation of pan-genomes",
 		"authors": "A.R. Santos, E. Barbosa, K. Fiaux, M. Zurita-Turk, V. Chaitankar, B. Kamapantula, A. Abdelzaher, P. Ghosh, S. Tiwari, N. Barve, N. Jain, D. Barh, A. Silva, A. Miyoshi, V. Azevedo",
-		"keywords": "Bacterial pan-genomes, Cut-off value parameterized, Automatic annotation, Reference genome, Web interface",
+		"keywords": "Bacterial pan-genomes, Cut-off value parameterized, Automatic annotation, Web interface",
 		"figure": "pannotator.png",
 		"type": "Journal",
 		"place": "Genetics and Molecular Research Journal",
@@ -93,7 +108,7 @@
 		"id": "6",
 		"title": "Determining miRNA-disease associations using bipartite graph modelling",
 		"authors": "Joseph Nalluri, Bhanu Kamapantula, Preetam Ghosh, Debmalya Barh, Neha Jain, Lucky Juneja and Neha Barve",
-		"keywords": "bipartite graph, miRNA-disease, optimization",
+		"keywords": "bipartite graph optimization, miRNA-disease",
 		"figure": "acmbcbposter.png",
 		"type": "Poster",
 		"place": "ACM BCB 2013 - ACM Conference on Bioinformatics, Computational Biology and Biomedical Informatics",

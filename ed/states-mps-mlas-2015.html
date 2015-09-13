@@ -16,7 +16,6 @@
     }
     .col-md-3 {
         background-color: ghostwhite;
-        /*color: white;*/
     }
 </style>
 <body>
@@ -43,12 +42,12 @@
     </div>
 </div>
 <hr>
-<h4 class="text-center">2) Only 2 states have higher than national women % MPs and MLAs averages</h4>
+<h4 class="text-center">2) Only 3 states have higher than national women % MPs and MLAs averages</h4>
 <div class="row">
     <div class="col-xs-3 col-md-3 col-lg-3">
         <h5>Notes</h5>
         <ul>
-            <li>Only 2 out of 31 states/UTs have both higher women MP and MLA representation than the national average.</li>
+            <li>Only 3 out of 31 states/UTs have both higher women MP and MLA representation than the national average.</li>
         </ul>
     </div>
     <div class="col-xs-9 col-md-9 col-lg-9">
@@ -80,6 +79,7 @@
                 name: 'MPs %',
                 data: [
                     ['Assam', 13.3, 1],
+                    ['Madhya Pradesh', 17.2, 1],
                     ['West Bengal', 28.6, 1]
                 ]
             }, 
@@ -87,6 +87,7 @@
                 name: 'MLAs %',
                 data: [
                     ['Assam', 11.11, 1],
+                    ['Madhya Pradesh', 13.04, 1],
                     ['West Bengal', 11.56, 1]
                 ],
                 keys: ['name', 'y', 'size']
@@ -117,7 +118,7 @@
                 label: {
                     text: 'Women MLAs % - India',
                     align: 'left',
-                    y: -15,
+                    y: -20,
                     style: {
                         color: '#ef7126'
                     }

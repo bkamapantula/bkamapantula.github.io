@@ -50,6 +50,11 @@ var circlesFour = svgFour.selectAll("circle").data(circlesList).enter().append("
                 .attr("r", 6)
                 .style("fill", "#bcbcbc");
 
+svgFour.append("text")
+    .attr("x", 360)
+    .attr("y", 70)
+    .text("Only 12% of MPs are women")
+
 circlesFour.filter(function(d, i) {
             return d > 13;
     })
@@ -58,5 +63,5 @@ circlesFour.filter(function(d, i) {
     //.attr("r", 10);
 }
 
-setTimeout(loadSVG, 13000);
+setTimeout(loadSVG, 130);
 

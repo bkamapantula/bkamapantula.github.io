@@ -4,70 +4,54 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Bhanu Kamapantula</title>
 
     <!-- Bootstrap core CSS >
     <link href="css/bootstrap.min.css" rel="stylesheet"-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-    <!-- Custom styles for this template>
-    <link href="css/cover.css" rel="stylesheet" -->
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <!--script type="text/javascript">
-      var _bftn_options = { animation: 'banner' }
-  </script>
-  <script src="//widget.battleforthenet.com/widget.min.js" async></script-->
   </head>
 
   <body>
     <div class="container">
-      <div class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <a class="navbar-brand">Bhanu Kamapantula</a>
           </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="research/index.html">Research</a></li>
+<<<<<<< HEAD
                 <li><a href="viz/">Visualizations</a></li>
+=======
+                <li><a href="viz/index.html">Visualizations</a></li>
+                <li><a href="news.html">News</a></li>
+>>>>>>> origin/master
                 <li><a href="https://github.com/bkamapantula" target="_blank">Code<span class="glyphicon glyphicon-new-window"></span></a></li>
               </ul>
             </div> <!--navbar-collapse-->
           </div> <!--container-fluid-->
-        </div>
-      <!--div id="research">
-        <h3>Research</h3>
-        
-      </div>
-      <h3 id="#research">Research</h3-->
+      </nav>
+
       <div class="panel panel-info">
         <div class="panel-heading">About</div>
         <div class="panel-body">
-          <p>Bhanu is a Ph.D. candidate in the <a href="http://computer-science.egr.vcu.edu/">Department of Computer Science</a>, <a href="http://vcu.edu/">VCU</a>. He explores the structural robustness in biological and complex networks with applications to wireless sensor networks. Primary objective of the research is to identify features responsible for biological robustness from a structural perspective.</p>
+          <p>Bhanu is a Ph.D. candidate in the <a href="http://computer-science.egr.vcu.edu/" target="_blank">Department of Computer Science</a>, <a href="http://vcu.edu/" target="_blank">VCU</a>. He explores the structural robustness in biological and complex networks with applications to wireless sensor networks. Primary objective of the research is to identify features responsible for biological robustness from a structural perspective.</p>
           <!--More at <a href="http://bnet.egr.vcu.edu/people/kamapantula.html" target="_blank">research website</a>. -->
           <p>His interests are in data science, data journalism and systems biology. <a href="research/index.html">Research portfolio</a> displays several of his works.</p>
           <!--p class="text-success">Bhanu is looking for Summer 2015 internships. If you like his work, reach out to him on <a href="https://twitter.com/bkamapantula">Twitter</a> or email user kamapantulbk with domain vcu.edu</p-->
@@ -76,15 +60,31 @@
       <div class="panel panel-info">
         <div class="panel-heading">Projects</div>
         <div class="panel-body">
-            <p>
-                <h5>Attendance of Members of Indian Parliament - <a href="http://opinionatedindian.org/MPAttendance/">URL</a></h5>
-            </p>
-            <p>
-                <h5>Crime in India - <a href="http://crimeinindia.org">URL</a></h5>
-            </p>
-        </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <p>
+                  <h5><a href="http://genderinpolitics.org" target="_blank">Gender in Politics</a></h5>
+              </p>
+              <p>
+                  <h5><a href="http://opinionatedindian.org/MPAttendance/" target="_blank">Attendance of Members of Indian Parliament</a></h5>
+              </p>
+              <p>
+                  <h5><a href="http://crimeinindia.org" target="_blank">Crime in India</a></h5>
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <p>
+                <h5><a href="http://bnet.egr.vcu.edu:8080/dismira" target="_blank">DISMIRA</a></h5>
+              </p>
+              <p>
+                <h5><a href="http://bnet.egr.vcu.edu/miRegulome" target="_blank">miRegulome</a></h5>
+              </p>
+            </div>
+          </div> <!-- row -->
+        </div> <!-- panel-body -->
       </div>
       <div class="panel panel-info">
+<<<<<<< HEAD
         <div class="panel-heading">News</div>
         <div class="panel-body">
           <p>
@@ -138,27 +138,29 @@
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">Crime in India</div>
+=======
+        <div class="panel-heading">Articles</div>
+>>>>>>> origin/master
         <div class="panel-body">
-          Crime in India tracks several categories of crime in India. At <a href="http://crimeinindia.org/" target="_blank">crimeinindia.org</a>.
-        </div>
-      </div-->
-      <!--div class="panel panel-default">
-        <div class="panel-heading">#NEFloodRelief Timeline</div>
+            <ol>
+                <li><a href="https://factly.in/women-in-parliament-where-does-india-figure-among-the-rest-world/" target="_blank">Women in Parliament: Where does India figure among the rest of the World? With @bhanupriyarao</a></li>
+                <li><a href="http://scroll.in/article/707064/As-Arvind-Kejriwals-cabinet-meets-in-Delhi-the-one-thing-that-makes-AAPs-government-just-like-any-other" target="_blank">As Arvind Kejriwal's cabinet meets in Delhi, the one thing that makes AAP's government just like any other</a></li>
+            </ol>
+            </div>
+        </div> <!-- panel-body -->
+
+      <div class="panel panel-info">
+        <div class="panel-heading">Curriculum Vitae</div>
         <div class="panel-body">
-          Timeline of flood relief distribution and relief material collection as a response to floods in Assam, Meghalaya in September 2014. At <a href="nefloodrelief/index.html">URL</a>.
+          <h4><a href="cv-bhanu-kamapantula.pdf">PDF</a></h4>
         </div>
-      </div-->
-        <!--h3>On web</h3>
-        <div class="text-muted"><a href="http://www.github.com/bkamapantula" target="_blank">GitHub</a> <span class="glyphicon glyphicon-new-window"></span></div>
-        <div class="text-muted"><a href="http://www.twitter.com/bkamapantula" target="_blank">Twitter</a> <span class="glyphicon glyphicon-new-window"></span></div-->
-    </div>
+      </div>
+    </div> <!-- container -->
     
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>

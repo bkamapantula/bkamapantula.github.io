@@ -44,6 +44,7 @@ var wrongStyle = {
 	fillOpacity : 0.8
 };
 
+/*
 // adds options to select element dynamically
 var selectEl = document.getElementById('stateOption');
 
@@ -54,6 +55,21 @@ for (var iter = 0; iter < stNames.length; iter++) {
 	selectOption.id = stCodes[iter];
 	selectEl.appendChild(selectOption);
 };
+*/
+
+var $select = $('<select></select>')
+    .appendTo($('#variables'))
+    .on('change', function() {
+        setVariable($(this).val());
+    });
+for (var i = 0; i < stNames.length; i++) {
+    // Simultaneously, build the UI for selecting different
+    // ranges
+    $('<option></option>')
+        .text(stNames[i])
+        .attr('value', stNames[i])
+        .appendTo($select);
+}
 
 // draws historical trends of a selected state
 function drawStateHistorical(state) {
@@ -115,7 +131,6 @@ function drawStateHistorical(state) {
 } // end of drawStateHistorical function
 
 function styleSelector(feature) {
-	console.log(feature.properties.v);
 	switch (feature.properties.v) {
 	case 1:
 		return defStyle;
@@ -136,19 +151,20 @@ function onEachFeature(feature, layer) {
 	layer.on('click', function (e) {
         selectedFeature = feature;
 		if(feature.properties.v != 2) {
-				drawStateHistorical(feature.properties.CD);
-				// change select option
-			    
-			    // get index of selected state in stCodes
-			    var stateIndex = stCodes.indexOf(feature.properties.CD);
-			    selectEl.options[stateIndex].selected = true;
+            drawStateHistorical(feature.properties.CD);
+            // change select option
+            
+            // get index of selected state in stCodes
+            var stateIndex = stCodes.indexOf(feature.properties.CD);
+            selectEl.options[stateIndex].selected = true;
 
-    			layer.setStyle({
-					color: 'black',
-					weight: 2,
-					fillColor: '#AA3333',
-					fillOpacity: 1
-				});
-			}
+            layer.setStyle({
+                color: 'black',
+                weight: 2,
+                fillColor: '#AA3333',
+                fillOpacity: 1
+            });
+        }
 	});
 }
+

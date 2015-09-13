@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LS all years</title>
+</head>
+<link rel="stylesheet" href="css/d3.slider.css" /> 
+<style type="text/css">
+body {
+  font: 10px "Helvetica Neue";
+}
+table {
+  border-collapse: collapse;
+  width: 960px;
+}
+
+th {
+  font-weight: normal;
+  text-align: right;
+  padding-right: 6px;
+}
+
+thead td {
+  cursor: s-resize;
+}
+
+tbody td {
+  height: 12px;
+}
+
+tbody rect {
+  /*background: steelblue;*/
+  margin: 0 auto;
+}
+
+tbody tr:hover rect {
+  fill: orange;
+}
+
+.hint {
+  margin-top: 25px;
+  color: #999;
+  text-align: center;
+}
+
+/* testing out d3 tooltip */
+    .d3-tip {
+      line-height: 1;
+      font-weight: normal;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+    #slider {
+        width: 300px;
+    }
+
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="js/d3.tip.min.js"></script>
+<script type="text/javascript" src="js/d3.slider.js"></script>
+<script>
+// tooltips for bar chart
+var barTip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function (d) { 
+          return  d + " % of MPs are women";
+        })
+.style("font-size", "16px");
+
+d3.csv("2015-ls.csv", function(csv) {
+  var states = d3.keys(csv[0]).filter(function(key) {
+    return key != "State" && key != 'Seats';
+  });
+
+  d3.selectAll("thead td").data(states).on("click", function(k) {
+    tr.sort(function(a, b) { return (b[k]) - (a[k]); });
+  });
+
+  var tr = d3.select("tbody").selectAll("tr")
+      .data(csv)
+    .enter().append("tr");
+
+  var x = d3.scale.sqrt().domain([0,(d3.max(csv, function(d) {return +d[2014];}) + 10)]).range([0, 256]); // 26
+
+  tr.append("th")
+      .text(function(d) { return d.State; });
+
+  tr.selectAll("td")
+      .data(function(d) { return states.map(function(k) { return d[k]; }); })
+    .enter().append("td")
+      .append("svg")
+        .attr("width", 400) // 91
+        .attr("height", 32)
+      .append("rect")
+        .attr("class", "bar")
+        .attr("height", 50) //12)
+        .attr("width", function(d) {
+            return x(+d);
+        })
+        .style("fill", "#821122");
+
+  tr.selectAll(".bar")
+    .append("text")
+    .attr("x", function(d) {
+        return x(+d) + 10;
+    })
+    .attr("y", 25)
+    .attr("dy", ".35em")
+    .text(function(d) { return d; })
+    .style("color", "white")
+
+  var sliderMin = d3.min(csv, function(d) { 
+                return +d['Seats']; 
+            });
+  var sliderMax = d3.max(csv, function(d) {
+                return +d['Seats'];
+            });
+  d3.select("#slider")
+    .call(d3.slider()
+        .axis(true)//.value([sliderMin, sliderMax])
+        .max(sliderMax)
+        .on("slide", function(e, value) {
+            console.log(parseInt(value, 10));
+            d3.select(".seats").html(parseInt(value, 10)); //append("text").text(parseInt(value, 10));
+            d3.selectAll("td")
+                .filter(function(d) {
+                    return d >=value;
+                })
+                .style("fill", "steelblue");
+            d3.selectAll("td")
+                .filter(function(d) {
+                    return d < value;
+                })
+                .style("fill", "black");
+        })
+    )
+
+    d3.selectAll(".bar").call(barTip);
+      d3.selectAll(".bar").on('mouseover', barTip.show)
+          .on('mouseout', barTip.hide);
+});
+</script>
+<body>
+<h4>Filter states with seats > <span class="seats"></span></h4>
+<!--div id="slider"></div-->
+<div class="hint">Click year column header to sort</div>
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <!--td>1957</td>
+      <td>1962</td>
+      <td>1967</td>
+      <td>1977</td>
+      <td>1980</td>
+      <td>1984</td>
+      <td>1989</td>
+      <td>1991</td>
+      <td>1996</td>
+      <td>1998</td>
+      <td>1999</td>
+      <td>2004</td>
+      <td>2009</td-->
+      <td>2014</td>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>India - small multiples</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <style type="text/css">
+            .loading {
+                margin-top: 10em;
+                text-align: center;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="http://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-md-4" id="1957"></div>
+            <div class="col-md-4 col-lg-4 col-md-4" id="historical"></div>
+            <div class="col-md-4 col-lg-4 col-md-4" id="stateSpan"></div>
+        </div>
+    </body>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+            google.load('visualization', '1.1', {packages: ['line']});
+            //google.setOnLoadCallback(drawStateHistorical);
+        </script>
+
+        <script type="text/javascript">
+            $(function () {                
+                // draws historical trends of a selected state
+                function drawStateHistorical(state) {
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Year');
+                    data.addColumn('number', 'Women MLAs %');
+
+                    data.addRows([
+                        ['1957', 5.1],
+                        ['1967', 3.7],
+                        ['1977', 9.3],
+                        ['1996', 2.1],
+                        ['2004', 8.4]
+                    ]);
+
+                    var options = {
+                        chart: {
+                            title: 'Historical trends'
+                        },
+                        colors: ['#aa3333'],
+                        legend: {
+                            position: 'none'
+                        },
+                        lineWidth: 5,
+                        vAxis: {
+                            gridlines: {
+                                color: 'transparent'
+                            }
+                        },
+                        width: 500,
+                        height: 400,
+                        view: {
+                            columns: [0, 1]
+                        }
+                    };
+
+                    var spanEl = document.getElementById('stateSpan');
+                    spanEl.innerHTML = "<p>State: " + state + "</p>";
+
+                    var chart = new google.charts.Line(document.getElementById('historical'));
+                    chart.draw(data, options);
+
+                } // end of drawStateHistorical function
+
+
+                // Prepare demo data
+                var data = [{ 'hc-key': 'in-py', value: 0 },
+                    { 'hc-key': 'in-ld', value: 1 },
+                    { 'hc-key': 'in-wb', value: 2 },
+                    { 'hc-key': 'in-or', value: 3 },
+                    { 'hc-key': 'in-br', value: 4 },
+                    { 'hc-key': 'in-sk', value: 5 },
+                    { 'hc-key': 'in-ct', value: 6 },
+                    { 'hc-key': 'in-tn', value: 7 },
+                    { 'hc-key': 'in-mp', value: 8 },
+                    { 'hc-key': 'in-2984', value: 9 },
+                    { 'hc-key': 'in-ga', value: 10 },
+                    { 'hc-key': 'in-nl', value: 11 },
+                    { 'hc-key': 'in-mn', value: 12 },
+                    { 'hc-key': 'in-ar', value: 13 },
+                    { 'hc-key': 'in-mz', value: 14 },
+                    { 'hc-key': 'in-tr', value: 15 },
+                    { 'hc-key': 'in-3464', value: 16 },
+                    { 'hc-key': 'in-dl', value: 17 },
+                    { 'hc-key': 'in-hr', value: 18 },
+                    { 'hc-key': 'in-ch', value: 19 },
+                    { 'hc-key': 'in-hp', value: 20 },
+                    { 'hc-key': 'in-jk', value: 21 },
+                    { 'hc-key': 'in-kl', value: 22 },
+                    { 'hc-key': 'in-ka', value: 23 },
+                    { 'hc-key': 'in-dn', value: 24 },
+                    { 'hc-key': 'in-mh', value: 25 },
+                    { 'hc-key': 'in-as', value: 26 },
+                    { 'hc-key': 'in-ap', value: 27 },
+                    { 'hc-key': 'in-ml', value: 28 },
+                    { 'hc-key': 'in-pb', value: 29 },
+                    { 'hc-key': 'in-rj', value: 30 },
+                    { 'hc-key': 'in-up', value: 31 },
+                    { 'hc-key': 'in-ut', value: 32 },
+                    { 'hc-key': 'in-jh', value: 33 }];
+
+                // http://www.colorcombos.com/color-schemes/6656/ColorCombo6656.html
+                drawMap(data, '#1957', 'Women MPs - 2015', '#8EDC9D');
+
+                function drawMap(data, mapContainer, mapTitle, mapColor) { 
+                    // Initiate the chart
+                    $(mapContainer).highcharts('Map', {
+                        chart: {
+                            height: 650
+                        },
+                        colorAxis: {
+                            min: 0
+                        },
+                        colorAxis: {
+                            dataClassColor: mapColor
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        exporting: {
+                            enabled: false
+                        },
+                        mapNavigation: {
+                            enabled: false,
+                            buttonOptions: {
+                                verticalAlign: 'bottom'
+                            }
+                        },
+                        series : [{
+                            color: mapColor,
+                            nullColor: 'white',
+                            data : data,
+                            mapData: Highcharts.maps['countries/in/in-all'],
+                            joinBy: 'hc-key',
+                            name: 'Number of women MPs',
+                            states: {
+                                hover: {
+                                    //color: mapColor
+                                }
+                            },
+                            events: {
+                                click: function(e) {
+                                    drawStateHistorical(e.point.name);
+                                }
+                            },
+                            dataLabels: {
+                                enabled: false,
+                                format: '{point.name}'
+                            }
+                        }],
+                        title : {
+                            text : mapTitle
+                        }
+                        /*,
+                        tooltip: {
+                            valueSuffix: ''
+                        }*/
+                    });
+                } // end of draw map
+
+            });
+        </script>
+</html>
+
