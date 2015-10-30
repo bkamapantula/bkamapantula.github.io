@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.css">
+
+<style>
+    body {
+        padding-top: 65px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#mpsContainer, #mlasContainer").css("min-height", $(window).innerHeight()*0.95);
+        $("#mpsStatesContainer").css("min-height", $(window).innerHeight()*0.9);
+    });
+</script>
+<script src="js/d3.v3.min.js"></script>
+<div class="container">
+    <div class="row" id="svgOnly"></div>
+        <div class="col-md-7 col-lg-7" id="mpsStatesContainer">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script src="http://code.highcharts.com/highcharts.js"></script>
+            <script src="http://code.highcharts.com/highcharts-more.js"></script>
+            <script src="http://code.highcharts.com/modules/exporting.js"></script>
+            <script src="states-mps-mlas.js"></script>
+        </div>
+    <div class="row">
+        <div class="col-md-5 col-lg-5" id="mpsContainer"></div>
+        <!--div class="col-md-7 col-lg-7" id="mpsStatesContainer">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script src="http://code.highcharts.com/highcharts.js"></script>
+            <script src="http://code.highcharts.com/highcharts-more.js"></script>
+            <script src="http://code.highcharts.com/modules/exporting.js"></script>
+            <script src="states-mps-mlas.js"></script>
+        </div-->
+    </div>
+    <!--div class="row">
+        <div class="col-md-7 col-lg-7" id="mlasContainer"></div>
+        <div class="col-md-5 col-lg-7" id="mlasStatesContainer"></div>
+    </div-->
+</div>
+<script>
+drawMPCircles('#svgOnly', 40, 560, $(window).innerWidth()*0.7, 600, 23, 477, "Only 12% (66) MPs are women", 40);
+
+//drawSVG('#mpsContainer', 40, 560, 530, $(window).innerHeight()*0.9, 23, 477, "Only 12% (66) MPs are women", 40);
+// 75*31 = 2325. 2325 - 2289 = 36 (remove 36 rectangles from last row)
+// 2289 - 320 = 1969 (color all rects [320] over 1989 ids)
+//drawSVG('#mlasContainer', 75, 790, 830, 800, 36, 1969, "Only 14% (320) MLAs are women", 25);
+
+function drawSVG(container, numRectsInRow, maxYPos, width, height, rectRemoveThreshold, colorThreshold, supportText, yPosStep) {
+    var svg = d3.select(container)
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var rectWidth = 8,
+        rectHeight = 8;
+
+    var data = [];
+
+    for(var i = 1; i <= numRectsInRow; i++) {
+        data.push(i);
+    }
+
+    var yPos = [];
+
+    for(var iter = yPosStep; iter <= maxYPos; iter += yPosStep) {
+        yPos.push(iter);
+    }
+
+    //console.log(yPos);
+
+    var scale = d3.scale.linear()
+      .range([10, 490])
+      .domain([1, 50]);
+
+
+    var rectangle = svg.selectAll("circle")
+    .data(data, function(d) {
+        return d;
+    });
+
+    for(var y=0; y < yPos.length; y++) {
+rectangle.enter().append("circle")
+    .attr("cx", function(d) { return scale(d); })
+    .attr("cy", yPos[y])
+    .attr("r", 4)
+        /*rectangle.enter().append("rect")
+        .attr("y", yPos[y])
+        .attr("x", function(d) { return scale(d); })
+        .attr("width", rectWidth)
+        .attr("height", rectHeight) */
+        .style("fill", "#bcbcbc")
+        .on("mouseover", function(d, i) {
+            console.log(d, i);
+        });
+    }
+
+    rectangle.filter(function(d) {
+            return d>=rectRemoveThreshold;
+        })
+        .remove();
+
+    svg.selectAll("circle")
+        .filter(function(d, i) {
+            return i>=colorThreshold;
+        })
+        .style("fill", "steelblue");
+
+    /*svg.append("rect")
+        .attr("x", 500)
+        .attr("y", 420)
+        .attr("width", rectWidth)
+        .attr("height", rectHeight)
+        .style("fill", "steelblue");*/
+
+    writeText(150, 15, "of the total 543 MPs");
+    writeText(250, height-30, supportText);
+
+    function writeText(x, y, text) {
+        svg.append("text")
+            .attr("x", x)
+            .attr("y", y) //430)
+            .text(text);
+    }
+}
+
+function drawMPCircles(container, numRectsInRow, maxYPos, width, height, rectRemoveThreshold, colorThreshold, supportText, yPosStep) {
+    var svg = d3.select(container)
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var rectWidth = 8,
+        rectHeight = 8;
+
+    var data = [];
+
+    for(var i = 1; i <= numRectsInRow; i++) {
+        data.push(i);
+    }
+
+    var yPos = [];
+
+    for(var iter = yPosStep; iter <= maxYPos; iter += yPosStep) {
+        yPos.push(iter);
+    }
+
+    //console.log(yPos);
+
+    var scale = d3.scale.linear()
+      .range([10, width-20]) // 490
+      .domain([1, numRectsInRow]);
+
+    var rectangle = svg.selectAll("circle")
+    .data(data, function(d) {
+        return d;
+    });
+
+    for(var y=0; y < yPos.length; y++) {
+        rectangle.enter().append("circle")
+            .attr("cx", function(d) { return scale(d); })
+            .attr("cy", yPos[y])
+            .attr("r", 8)
+        /*rectangle.enter().append("rect")
+        .attr("y", yPos[y])
+        .attr("x", function(d) { return scale(d); })
+        .attr("width", rectWidth)
+        .attr("height", rectHeight) */
+        .style("fill", "#bcbcbc")
+        .on("mouseover", function(d, i) {
+            console.log(d, i);
+        });
+    }
+
+    rectangle.filter(function(d) {
+            return d>=rectRemoveThreshold;
+        })
+        .remove();
+
+    svg.selectAll("circle")
+        .filter(function(d, i) {
+            return i>=colorThreshold;
+        })
+        .transition().delay((function(d, i) { return i*40; }))
+        .style("fill", "steelblue");
+
+    writeText(width/2, 20, "of the total 543 MPs", "24px");
+    writeText(width*2/3, height-30, supportText, "20px");
+
+    function writeText(x, y, text, fontSize) {
+        svg.append("text")
+            .attr("x", x)
+            .attr("y", y)
+            .text(text)
+                .style("font-size", fontSize);
+    }
+}
+</script>
+

@@ -180,16 +180,17 @@ background: white;
           .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        /*var tip = d3.tip()
+        var tip = d3.tip()
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
             return "<p>Year: " + d['year'] + "</p></p> Women MPs: " + d['value'] + "<p>Total seats: " + d['constituencies'] + "</p><p>%: " + (d.value/d.constituencies)*100 + "</p>";
           });
 
-        svg.call(tip);*/
+        svg.call(tip);
 
-        d3.csv("ls_q_1-all-years-const.csv", function(error, data) {
+        //d3.csv("ls_q_1-all-years-const.csv", function(error, data) {
+        d3.csv("multiple.csv", function(error, data) {
           data.forEach(function(d) {
             d.year = +d.year;
             d.value = +d.value;
