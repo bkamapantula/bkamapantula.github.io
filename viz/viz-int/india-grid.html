@@ -1,0 +1,653 @@
+
+<!-- from http://bl.ocks.org/mimno/4a904031a566a361f2b1 -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>India Tiled Grid Map Prototype</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/navbar.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Load the d3 library. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+	<style>
+		text.stateID { 
+			dominant-baseline: middle; text-anchor: middle; 
+		}
+    h3, h4 {
+        text-align: center;
+    }
+
+/* testing out d3 tooltip */
+    .d3-tip {
+      line-height: 1;
+      font-weight: normal;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+
+	</style>
+<link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+<link href="../../ed/colorbrewer.css" rel="stylesheet">
+<script src="../../ed/colorbrewer.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              <a class="navbar-brand">Bhanu Kamapantula</a>
+          </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../research/index.html">Research</a></li>
+                <li class="active"><a href="../index.html">Visualizations</a></li>
+                <li><a href="../../news.html">News</a></li>
+                <li><a href="https://github.com/bkamapantula" target="_blank">Code<span class="glyphicon glyphicon-new-window"></span></a></li>
+              </ul>
+            </div> <!--navbar-collapse-->
+          </div> <!--container-fluid-->
+        </nav>
+
+    <h3> India tiled grid, a prototype</h3>
+    <h4 class="text-warning"> Women MLAs % - Indian state assemblies in 2015</h4>
+    <p class="text-muted">
+        Hex and tiled maps became a rage in tech community earlier in 2015. Inspired by NPR's <a href="https://twitter.com/alykat/status/593089102687375360" target="_blank">visual</a> comparison <a href="http://www.bloomberg.com/graphics/2015-pace-of-social-change/" target="_blank">among <a href="https://fivethirtyeight.com/features/where-your-state-gets-its-money/" target="_blank">several</a> <a href="https://www.washingtonpost.com/graphics/health/how-fast-does-measles-spread/" target="_blank">others</a>, I created a tiled grid for India. I mapped women MLAs in terms of total MLA seats in India to great effect! The darker the color, higher the women MLAs %.
+    </p>
+
+    <div class="wrapper">
+        <div id="plotOne"></div>
+        <!--div class="floating-legend">
+        <div id="rankedStates"></div-->
+    </div>
+    <div id="stateHistorical">
+        <span id="stateSpan"></span>
+        <div id="historical"></div>
+    </div>
+
+<script type="text/javascript" src="../../ed/js/d3.tip.min.js"></script>
+<script>
+
+var stateGrid = {
+	"JK": {"state": "JK", "row": 0, "col": 4},
+	
+	"HP": {"state": "HP", "row": 1, "col": 4},
+	"SK": {"state": "SK", "row": 1, "col": 7},
+	
+	"HR": {"state": "PB", "row": 2, "col": 3},
+	"PB": {"state": "PB", "row": 2, "col": 4},
+	"UK": {"state": "UK", "row": 2, "col": 5},
+	"AR": {"state": "AR", "row": 2, "col": 9},
+
+	"RJ": {"state": "RJ", "row": 3, "col": 2},
+	"CH": {"state": "CH", "row": 3, "col": 3},
+	"DL": {"state": "DL", "row": 3, "col": 4},
+	"UP": {"state": "UP", "row": 3, "col": 5},
+	"BH": {"state": "BH", "row": 3, "col": 6},
+	"WB": {"state": "WB", "row": 3, "col": 7},
+	"AS": {"state": "AS", "row": 3, "col": 8},
+	"NG": {"state": "NG", "row": 3, "col": 9},
+
+	"GJ": {"state": "CH", "row": 4, "col": 1},
+	"MH": {"state": "MH", "row": 4, "col": 2},
+	"MP": {"state": "MP", "row": 4, "col": 3},
+	"CT": {"state": "CT", "row": 4, "col": 4},
+	"JH": {"state": "JH", "row": 4, "col": 6},
+	"ML": {"state": "ML", "row": 4, "col": 8},
+	"MN": {"state": "MN", "row": 4, "col": 9},
+
+	//"DD": {"state": "CH", "row": 5, "col": 1},
+	"GA": {"state": "GA", "row": 5, "col": 2},
+	"TG": {"state": "TG", "row": 5, "col": 3},
+	"AP": {"state": "AP", "row": 5, "col": 4},
+	"OR": {"state": "OR", "row": 5, "col": 6},
+	"TR": {"state": "TR", "row": 5, "col": 8},
+	"MZ": {"state": "MZ", "row": 5, "col": 9},
+
+	"KA": {"state": "KA", "row": 6, "col": 3},
+	"TN": {"state": "AP", "row": 6, "col": 4},
+
+	"KL": {"state": "KA", "row": 7, "col": 3},
+	"PY": {"state": "PY", "row": 7, "col": 4},
+
+	//"LK": {"state": "LK", "row": 8, "col": 1},
+	//"AN": {"state": "AN", "row": 8, "col": 8},
+}
+
+var statesData2015 = {
+  "MZ": {
+    "state": "MZ",
+    "name": "Mizoram",
+    "mlas": 0,
+    "seats": 40,
+    "perc": 0
+  },
+  "NG": {
+    "state": "NG",
+    "name": "Nagaland",
+    "mlas": 0,
+    "seats": 60,
+    "perc": 0
+  },
+  "PY": {
+    "state": "PY",
+    "name": "Pondicherry",
+    "mlas": 0,
+    "seats": 30,
+    "perc": 0
+  },
+  "GA": {
+    "state": "GA",
+    "name": "Goa",
+    "mlas": 1,
+    "seats": 40,
+    "perc": 2.5
+  },
+  "KA": {
+    "state": "KA",
+    "name": "Karnataka",
+    "mlas": 6,
+    "seats": 224,
+    "perc": 2.68
+  },
+  "AR": {
+    "state": "AR",
+    "name": "Arunachal Pradesh",
+    "mlas": 2,
+    "seats": 60,
+    "perc": 3.33
+  },
+  "JK": {
+    "state": "JK",
+    "name": "Jammu Kashmir",
+    "mlas": 3,
+    "seats": 87,
+    "perc": 3.45
+  },
+  "HP": {
+    "state": "HP",
+    "name": "Himachal Pradesh",
+    "mlas": 3,
+    "seats": 68,
+    "perc": 4.41
+  },
+  "KL": {
+    "state": "KL",
+    "name": "Kerala",
+    "mlas": 7,
+    "seats": 140,
+    "perc": 5
+  },
+  "MN": {
+    "state": "MN",
+    "name": "Manipur",
+    "mlas": 3,
+    "seats": 60,
+    "perc": 5
+  },
+  "ML": {
+    "state": "ML",
+    "name": "Meghalaya",
+    "mlas": 4,
+    "seats": 60,
+    "perc": 6.67
+  },
+  "MH": {
+    "state": "MH",
+    "name": "Maharashtra",
+    "mlas": 20,
+    "seats": 288,
+    "perc": 6.94
+  },
+  "UK": {
+    "state": "UK",
+    "name": "Uttarakhand",
+    "mlas": 5,
+    "seats": 70,
+    "perc": 7.14
+  },
+  "TN": {
+    "state": "TN",
+    "name": "Tamil Nadu",
+    "mlas": 17,
+    "seats": 234,
+    "perc": 7.26
+  },
+  "OR": {
+    "state": "OR",
+    "name": "Orissa",
+    "mlas": 11,
+    "seats": 147,
+    "perc": 7.48
+  },
+  "TG": {
+    "state": "TG",
+    "name": "Telangana",
+    "mlas": 9,
+    "seats": 119,
+    "perc": 7.56
+  },
+  "TR": {
+    "state": "TR",
+    "name": "Tripura",
+    "mlas": 5,
+    "seats": 60,
+    "perc": 8.33
+  },
+  "DL": {
+    "state": "DL",
+    "name": "Delhi",
+    "mlas": 6,
+    "seats": 70,
+    "perc": 8.57
+  },
+  "UP": {
+    "state": "UP",
+    "name": "Uttar Pradesh",
+    "mlas": 35,
+    "seats": 403,
+    "perc": 8.68
+  },
+  "GJ": {
+    "state": "GJ",
+    "name": "Gujarat",
+    "mlas": 16,
+    "seats": 182,
+    "perc": 8.79
+  },
+  "SK": {
+    "state": "SK",
+    "name": "Sikkim",
+    "mlas": 3,
+    "seats": 32,
+    "perc": 9.38
+  },
+  "JH": {
+    "state": "JH",
+    "name": "Jharkhand",
+    "mlas": 8,
+    "seats": 81,
+    "perc": 9.88
+  },
+  "AP": {
+    "state": "AP",
+    "name": "Andhra Pradesh",
+    "mlas": 18,
+    "seats": 175,
+    "perc": 10.29
+  },
+  "CH": {
+    "state": "CH",
+    "name": "Chandigarh",
+    "mlas": 10,
+    "seats": 90,
+    "perc": 11.11
+  },
+  "AS": {
+    "state": "AS",
+    "name": "Assam",
+    "mlas": 14,
+    "seats": 126,
+    "perc": 11.11
+  },
+  "CT": {
+    "state": "CT",
+    "name": "Chhattisgarh",
+    "mlas": 10,
+    "seats": 90,
+    "perc": 11.11
+  },
+  "WB": {
+    "state": "WB",
+    "name": "West Bengal",
+    "mlas": 34,
+    "seats": 294,
+    "perc": 11.56
+  },
+  "PB": {
+    "state": "PB",
+    "name": "Punjab",
+    "mlas": 14,
+    "seats": 117,
+    "perc": 11.97
+  },
+  "MP": {
+    "state": "MP",
+    "name": "Madhya Pradesh",
+    "mlas": 30,
+    "seats": 230,
+    "perc": 13.04
+  },
+  "BH": {
+    "state": "BH",
+    "name": "Bihar",
+    "mlas": 34,
+    "seats": 243,
+    "perc": 13.99
+  },
+  "RJ": {
+    "state": "RJ",
+    "name": "Rajasthan",
+    "mlas": 28,
+    "seats": 200,
+    "perc": 14
+  },
+  "HR": {
+    "state": "HR",
+    "name": "Haryana",
+    "mlas": 13,
+    "seats": 90,
+    "perc": 14.44
+  }
+};
+
+drawGrid(stateGrid, '#plotOne', statesData2015);
+
+function drawGrid(stateGrid, svgContainer, statesData) {
+    var svgEl = document.getElementById('svgElement');
+    if(typeof(svgEl) != 'undefined' && svgEl != null) { 
+        d3.select("svg").remove();
+    }
+
+	var selectedStates = {};
+	var stateIDs = Object.getOwnPropertyNames(stateGrid);
+	stateIDs.forEach(function(stateID) {
+	    selectedStates[stateID] = Object.getOwnPropertyNames(statesData).indexOf(stateID) >=0 ? true: false;
+	});
+
+	var xScale, yScale, xDomain, yDomain;
+
+	var height = 400;
+	var width = 600;
+
+	var svg = d3.select(svgContainer).append("svg")
+    .attr("id", "svgElement")
+	.attr("height", height)
+	.attr("width", width);
+
+	var stateWidth = 40;
+	var gap = 2;
+
+    var colorScale = d3.scale.linear()
+     .domain([0, 3, 6, 9, 12, 15])
+     .range(colorbrewer.Blues[6]);
+
+	var stateGroup = svg.append("g").attr("transform", "translate(50, 50)");
+	var stateXScale = d3.scale.linear().domain([0, 9]).range([0, 9 * (stateWidth + gap)]);
+	var stateYScale = d3.scale.linear().domain([0, 7]).range([0, 7 * (stateWidth + gap)]);
+
+    /* Initialize tooltip */
+    tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return "State: " + statesData[d]["name"] + "<br>Women MLAs: " + statesData[d]["mlas"] + "<br>Seats: " + statesData[d]["seats"] + "<br>Percentage: " + statesData[d]["perc"]+"%"; });
+
+    /* Invoke the tip in the context of your visualization */
+    svg.call(tip);
+
+	var stateGroups = stateGroup.selectAll("g").data(stateIDs)
+	.enter().append("g")
+	.attr("transform", function (stateID) { 
+        return "translate(" + stateXScale(stateGrid[stateID].col) + "," + stateYScale(stateGrid[stateID].row) + ")"; 
+    });
+
+	var selectedStateColor = "#1F7872",
+        unSelectedStateColor = '#aa3333';
+		unSelectedStateColorDefault = "#dedede";
+
+	var stateRects = stateGroups.append("rect")
+	.attr("width", stateWidth)
+    .attr("height", stateWidth)
+	.style("fill", function (d) { 
+        if(statesData[d]) {
+            return colorScale(statesData[d]["perc"]);
+        }
+        /*if (selectedStates[stateID]) { 
+            return selectedStateColor; 
+        }
+        else { 
+            return unSelectedStateColorDefault; 
+        } */
+    });
+
+    // selects states that are valid only for specific % category
+	var currentStates = stateRects
+    .filter(function(d) {
+        if(Object.getOwnPropertyNames(statesData).indexOf(d) >= 0) {
+            return d;
+        }
+    });
+
+	currentStates.on("click", function(stateID) {
+	    // select (or unselect) the state
+	    selectedStates[stateID] = ! selectedStates[stateID];
+	    
+	    // Update the color of the state box
+	    currentStates.style("fill", function(stateID) { 
+            if (selectedStates[stateID]) {
+                return selectedStateColor;
+            } else { 
+                return colorScale(statesData[stateID]["perc"]); //unSelectedStateColor;
+            } 
+        });
+
+        // draws state's historical trend chart
+        drawStateHistorical(stateID);
+	})
+    .on("mouseover", tip.show)
+    .on("mouseout", tip.hide);
+
+	// What do we have to do to make this not clickable?
+	stateGroups.append("text")
+	.attr("class", "stateID")
+	.style("font-size", "small")
+	.style("pointer-events", "none")
+	.attr("x", stateWidth / 2)
+	.attr("y", stateWidth / 3)
+	.text(function (d) { return d; });
+
+    stateGroups.append("text")
+      .attr("class", "statePerc")
+	  .style("font-size", "x-small")
+	  .style("pointer-events", "none")
+      .attr("x", stateWidth/3)
+      .attr("y", stateWidth*0.8)
+      .text(function(d) { 
+        if(statesData[d]) {
+            return statesData[d]["perc"]; 
+        }
+    });
+
+    // draw legend
+    var legend = d3.select(".floating-legend")
+        .append("svg")
+      .selectAll("legend")
+        .data(colorScale.domain(), function(d) {
+            return d;
+        })
+        .enter().append("g")
+          .attr("class", "legend");
+
+    legend.append("rect")
+      .attr("x", function(d,i) {
+        return 50*i;
+      })
+      .attr("y", 100)
+      .attr("width", 50)
+      .attr("height", 20)
+      .style("fill", function(d) { 
+        return colorScale(d); 
+      });
+
+    legend.append("text")
+        .text(function(d) { return "≥ " + Math.round(d) + "%"; })
+          .attr("x", function(d, i) { return 50 * i; })
+          .attr("y", 100 + 100/3)
+          .style("fill", "black")
+          .style("font-size", "10px");
+
+    svg.selectAll(".legend")
+        .attr("transform", "translate(" + $(window).width()*0.8 + "," + $(window).height()*0.5 + ")");
+
+} // end of function drawGrid()
+
+
+// draws historical trends of a selected state
+function drawStateHistorical(state) {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Year');
+    data.addColumn('number', 'Women MLAs %');
+
+    data.addRows([
+        ['1957', 5.1],
+        ['1967', 3.7],
+        ['1977', 9.3],
+        ['1996', 2.1],
+        ['2004', 8.4]
+    ]);
+
+    var options = {
+        chart: {
+            title: 'Historical trends'
+        },
+        colors: ['#aa3333'],
+        legend: {
+            position: 'none'
+        },
+        lineWidth: 5,
+        vAxis: {
+            gridlines: {
+                color: 'transparent'
+            }
+        },
+        width: 500,
+        height: 400,
+        view: {
+            columns: [0, 1]
+        }
+    };
+
+    var spanEl = document.getElementById('stateSpan');
+    spanEl.innerHTML = "<p>State: " + state + "</p>";
+
+    var chart = new google.charts.Line(document.getElementById('historical'));
+    chart.draw(data, options);
+
+} // end of drawStateHistorical function
+
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+    google.load('visualization', '1.1', {packages: ['line']});
+    //google.setOnLoadCallback(drawStateHistorical);
+</script>
+
+<script>
+    $(function() {
+        /*
+        function arraySort(a, b) { 
+            return parseFloat(b.perc) - parseFloat(a.perc); //string.localeCompare(a.perc) - string.localeCompare(b.perc) 
+        };
+
+        console.log(statesData2015);
+        Object.keys(statesData2015).sort(function(a, b) { 
+            return parseFloat(statesData2015[b].perc) - parseFloat(statesData2015[a].perc); 
+        }); //arraySort);
+        console.log(statesData2015); */
+
+        var stateKeys = Object.getOwnPropertyNames(statesData2015);
+        console.log(stateKeys);
+        var stateNames = [],
+            statePercs = [];
+
+        stateKeys.forEach(function(stateID) {
+            stateNames.push(statesData2015[stateID]["name"]);
+            statePercs.push(statesData2015[stateID]["perc"]);
+        });
+
+        $('#rankedStates').highcharts({
+            chart: {
+                height: 300,
+                type: 'column'
+            },
+            title: { 
+                text: 'ranked by women MP %' 
+            },
+            xAxis: {
+                categories: stateKeys //stateNames
+            },
+            yAxis: {
+                enabled: false,
+                labels: {
+                    enabled: false
+                },
+                gridLineColor: 'white',
+                title: {
+                    enabled: false
+                    //text: 'Women MPs %'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' %'
+            },
+            plotOptions: { 
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            series: [{
+                name: 'Women MP %',
+                data: statePercs
+            }],
+            legend: { enabled: false},
+            credits: { enabled: false}
+        }); // end of highcharts function
+    }); // end of jquery load function
+</script>
+
+    <p class="text-muted">
+        Created using D3.js.
+    </p>
+</body>
+</html>
+
