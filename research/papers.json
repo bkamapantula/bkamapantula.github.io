@@ -1,4 +1,18 @@
 [
+    {
+        "id": "14",
+        "title": "Abundance of connected motifs in transcriptional networks, a case study using random forests regression",
+        "authors": "Khajamoinuddin Syed, Bhanu K. Kamapantula, Michael Mayo, Edward Perkins and Preetam Ghosh",
+        "keywords": "vertex-shared motifs, complex networks, connected motifs",
+        "figure": "bict-2015.png",
+        "type": "Conference",
+        "place": "BICT 2015",
+        "date": "December 2015",
+        "url": "files/bict2015.pdf",
+        "overview": {
+            "abstract": "Biological network topologies are known to be robust despite internal and external perturbances. Motifs such as feed-forward loop and bifan have been marked to contribute to structural and functional significance. While network characteristics such as network density, average shortest path, and centrality measures etc., have been well studied, modular characteristics have not been explored in similar detail. Motif connectivity might play a major role in regulation under high perturbations. Connected motif abundance can skew network robustness as well. To test this hypothesis, we study the significance of the two connected feed-forward loop motifs using random forest regression modeling. We define thirty eight network features, fifteen of which are static and dynamic features and the other twenty three are two feed-forward loop connected motif features. We identify significant features among these using random forests regression and create models that can be used to train and predict the robustness of the biological networks. The performance of these models is measured using coefficient of determination metric and the significance of the features themselves is characterized using feature importances. Our experiments reveal that connected feed-forward loop motifs do not contribute to the robustness of network when models are created with all 38 features. For models with only connected motif features, the performance of a specific rhombus motif under high loss stands out"
+        }
+    },
 	{
 		"id": "13",
 		"title": "miRegulome: a knowledge-base of miRNA regulomics and analysis",
