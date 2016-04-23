@@ -1,7 +1,7 @@
 MPAttendance
 ============
 
-Tracking the attendance of Members of Indian Parliament. Demo is available at [http://opinionatedindian.org/MPAttendance/]
+Tracking the attendance of Members of Indian Parliament. Demo is available at [http://bkamapantula.github.io/MPAttendance/]
 
 *Data*
 ========
