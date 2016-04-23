@@ -1,0 +1,145 @@
+[
+    {
+        "id": "7",
+        "title": "India tiled grid map - a prototype",
+        "url": "https://bkamapantula.github.io/viz/viz-int/india-grid.html",
+        "image": "../images/thumbnail-india-grid.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "6",
+        "title": "microRNA-disease associations - DISMIRA",
+        "url": "http://bnet.egr.vcu.edu:8080/dismira/",
+        "image": "../images/thumbnail-dismira.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "5",
+        "title": "On-campus crimes across the United States in 4-year public universities with at least 25,000 student population",
+        "url": "https://bkamapantula.github.io/viz/viz-int/vcu-crime.html",
+        "image": "../images/thumbnail-univ-crimes.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "Tableau",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "4",
+        "title": "Indian state legislative assemblies: State-wise women MLAs (1951-2015)",
+        "url": "https://bkamapantula.github.io/viz/viz-int/as-1.html",
+        "image": "../images/thumbnail-small-multiples.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "3",
+        "title": "Explore state-wise women MLA trends for all the assembly election years (1955-2014)",
+        "url": "https://bkamapantula.github.io/viz/viz-int/mlas-trends.html",
+        "image": "../images/thumbnail-mlas.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "2",
+        "title": "Indian parliament: State-wise women MPs - 2015",
+        "url": "https://bkamapantula.github.io/viz/viz-int/mps-trends.html",
+        "image": "../images/thumbnail-mps.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "1",
+        "title": "Attendance of Indian Parliament members - MAP",
+        "url": "http://opinionatedindian.org/MPAttendance/",
+        "image": "../images/thumbnail-map.png",
+        "description": "wat",
+        "type": "dynamic",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "4",
+        "title": "Visual encoding",
+        "url": "https://bkamapantula.github.io/viz/543-images.html",
+        "image": "../images/thumbnail-visual-encoding.png",
+        "description": "wat",
+        "type": "static",
+        "tags": "D3.js",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "3",
+        "title": "Women MPs representation in each state",
+        "url": "https://bkamapantula.github.io/viz/gip/index.html",
+        "image": "../images/mps.gif",
+        "description": "wat",
+        "type": "static",
+        "tags": "matplotlib, python, gif",
+        "details": {
+            "article": "0",
+            "with": "0"
+        }
+    },
+    {
+        "id": "2",
+        "title": "Women in Parliament: Where does India figure among the rest of the World?",
+        "url": "https://bkamapantula.github.io/viz/articles/factly.html",
+        "image": "../images/asia.png",
+        "description": "wat",
+        "type": "static",
+        "tags": "matplotlib, python",
+        "details": {
+            "article": "https://factly.in/women-in-parliament-where-does-india-figure-among-the-rest-world/",
+            "with": "Bhanupriya Rao"
+        }
+    },  
+    {
+        "id": "1",
+        "title": "As Arvind Kejriwal's cabinet meets in Delhi, the one thing that makes AAP's government just like any other",
+        "url": "https://bkamapantula.github.io/viz/articles/scroll.html",
+        "image": "../images/series-2-y.gif",
+        "description": "wat",
+        "type": "static",
+        "tags": "Google drawing, gif",
+        "details": {
+            "article": "http://scroll.in/article/707064/as-arvind-kejriwals-cabinet-meets-in-delhi-the-one-thing-that-makes-aaps-government-just-like-any-other",
+            "with": "Bhanupriya Rao"
+        }
+    }
+]
