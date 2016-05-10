@@ -12,6 +12,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar.css">
 
+    <style>
+    .bar.positive {
+      fill: steelblue;
+    }
+
+    .bar.negative {
+      fill: brown;
+    }
+
+    .axis text {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    body {
+            font-family: 'Lato', sans-serif;
+        }
+        img {
+            width: 5%;
+            height: 5%;
+        }
+        a.hack {
+            min-width: 10px;    
+            visibility: hidden;
+        }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="underscore-min.js"></script>
+
   </head>
 
   <body>
@@ -39,12 +74,234 @@
           </div> <!--container-fluid-->
         </nav>
 
-		<h4>Women in Indian state assemblies - Interactive</h4>
+		<h4>Women in Indian state assemblies - Interactive prototype</h4>
     <div class="row">
-			<div class="col-lg-12 col-sm-6 col-xs-6">
+      <p class="text-muted">
+      I made this visual as part of presenting a story on women representation in Indian parliament (see our initiative <a href="http://genderinpolitics.org/" target="_blank">Gender in Politics</a>) Women reservation bill has been neglected in Indian politics for many years. Our goal is to bring it back to focus using data. One of the objectives of the bill is to reserve 1/3rd of the contesting parliament seats to women as affirmative action.</p>
+
+			<!--div class="col-lg-12 col-sm-6 col-xs-6">
 				<iframe class="container well well-small" src="http://bl.ocks.org/bkamapantula/raw/7f0480b22227b85c2467" 
 				style="height: 700px;" seamless></iframe>
-			</div>
+			</div-->
+
+         <h3 class="text-center">Explore state-wise women MLA trends for all the assembly election years (1955-2014)</h3>
+    <select id="states"></select>
+    <div class="row">
+        <div class="col-md-6">
+          <div class="svg"></div>
+        </div>
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="table">
+                    </div>
+                </div>
+                <div class="row chart-info">
+                <ul class="list-unstyled">
+                    <li>* Chart depicts the % change in women MLAs in consecutive state assembly elections.</li>
+                    <li>* Lack of bars suggests that there is no change in number of MLAs.</li>
+                    <li>* Every Member of Legislative Assembly (MLA) is elected by people in respective constituency.</li>
+                    <li>* Election data for all the states for 1971 is not segregated by gender by ECI (Election Commission of India). Hence, missing from the analysis here.</li>
+                </ul>
+                </div>
+        </div>
+    </div>
+
+    <script>
+
+    var margin = {top: 75, right: 10, bottom: 40, left: 40},
+        width = 460 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var y_toyear_width = width - 25,
+        y_fromyear_width = 30;
+
+    var x = d3.scale.linear()
+        .range([0, width-20]);
+
+    var y = d3.scale.ordinal()
+        .rangeRoundBands([0, height], .2);
+
+    var y_fromyear = d3.scale.ordinal()
+        .rangeRoundBands([0, height], 0.2);
+
+    var y_toyear = d3.scale.ordinal()
+        .rangeRoundBands([0, height], 0.2);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("top");
+
+    var yAxisToYear = d3.svg.axis()
+        .scale(y_toyear)
+        .orient("right")
+        .tickSize(0);
+
+    var yAxisFromYear = d3.svg.axis()
+        .scale(y_fromyear)
+        .orient("right")
+        .tickSize(0);
+
+    var svg = d3.select(".svg").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("text")
+        .attr("x", 65)
+        .attr("y", -35)
+        .text("% Decrease | % Increase")
+
+    /*svg.append("text")
+        .attr("x", -25)
+        .attr("y", 400)
+        .text("How to read: Women MLA representation decreased by 47% in 2014 compared to 2009");*/
+
+    function loadTable(data, columns) {
+        // http://jsfiddle.net/7WQjr/
+
+            $(".table").html("<h4>No. women MLAs per election year</h4>");
+        var table = d3.select(".table").append("table"),
+            thead = table.append("thead"),
+            tbody = table.append("tbody");
+
+        // append the header row
+        thead.append("tr")
+            .selectAll("th")
+            .data(columns)
+            .enter()
+            .append("th")
+                .text(function(column) { 
+                        if(column.indexOf('Previous') === 0) {
+                            return column.split('Previous ')[1] + " - ";
+                        } else if(column.indexOf('Constituencies') === 0) {
+                            return " Seats -";
+                        } else if(column.indexOf('Percentage') === 0) {
+                            return " Women MLAs %";
+                        } else {
+                            return column + " - ";
+                        }
+                    });
+
+        // create a row for each object in the data
+        var rows = tbody.selectAll("tr")
+            .data(data)
+            .enter()
+            .append("tr");
+
+        // create a cell in each row for each column
+        var cells = rows.selectAll("td")
+            .data(function(row) {
+                return columns.map(function(column) {
+                    return {column: column, value: row[column]};
+                });
+            })
+            .enter()
+            .append("td")
+                .text(function(d) { return d.value; });
+        
+        return table;
+    }
+
+    var nest = d3.nest()
+        .key(function(d) {
+            return d.State;
+        });
+
+    function drawAxes(data) {
+      x.domain(d3.extent(data, function(d) { return d.value; })).nice(); 
+      y.domain(data.map(function(d) { return d['Next year']; }));
+      y_toyear.domain(data.map(function(d) { return d['Next year']; }));
+      y_fromyear.domain(data.map(function(d) { return d['Election year']; }));
+    }
+
+    d3.csv("states-mlas-changes.csv", type, function(error, data) {
+
+      var dataByState = nest.entries(data);
+
+      $("select#states").on("change", function() {
+        var selectedStateKey = $("select").val();
+
+        if(selectedStateKey) {
+
+                // removes data from existing table, if any
+            if($(".table").length) {
+                $(".table").empty();
+            }
+
+                // removes existing y axes and rectangles, if any
+            if($("svg").length) {
+                d3.selectAll(".bar").remove();
+                d3.selectAll(".y.axis").remove();
+                d3.selectAll(".x.axis").remove();
+            }
+
+            var table = loadTable(dataByState[selectedStateKey].values, ["Election year", "Previous #MLAs", "Constituencies", "Percentage"]);
+                var lastVal = dataByState[selectedStateKey].values[dataByState[selectedStateKey].values.length-1];
+                $("table").append("<tr><td>" + lastVal["Next year"] + "</td><td>" + lastVal["Next #MLAs"] + "</td><td>" + lastVal["Constituencies"] + "</td><td>" + lastVal["Percentage"] + "</td></tr>");
+
+          // dataByState[0].values
+          drawAxes(dataByState[selectedStateKey].values);
+
+          svg.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate(" + y_toyear_width + ", 0)")
+            .call(yAxisToYear);
+
+          svg.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate(-" + y_fromyear_width + ", 0)")
+            .call(yAxisFromYear);
+
+          // removes lines from y axis
+          d3.selectAll("path").remove();
+
+          svg.selectAll(".bar")
+              .data(dataByState[selectedStateKey].values)
+            .enter().append("rect")
+              .attr("class", function(d) { return d.value < 0 ? "bar negative" : "bar positive"; })
+              .attr("x", function(d) { return x(Math.min(0, d.value)); })
+              .attr("y", function(d) { return y(d['Next year']); })
+              .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
+              .attr("height", y.rangeBand());
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .call(xAxis);
+
+          svg.append("g")
+              .attr("class", "y axis")
+            .append("line")
+              .attr("x1", x(0))
+              .attr("x2", x(0))
+              .attr("y2", height);
+
+          $(".table").css("font-size", "14px");
+                svg.selectAll("g")
+                    .attr("font-size", "14px");
+
+        }
+      });
+    });
+
+    function type(d) {
+      d.value = +d.value;
+      return d;
+    }
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            var states = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu Kashmir', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Orissa', 'Pondicherry', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+
+            $("#states").append('<option value="state">Select state</option>');
+            for(iter=0; iter<states.length; iter++) {
+                $("#states").append('<option value="' + iter + '">' + states[iter] + '</option>');
+            }
+
+        });
+    </script>
+
 		</div>
     <div>
       <p class="text-muted">
