@@ -63,7 +63,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Cartogramener</title>
+  <title>Aadhaar enrollments data - an analysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.v3.min.css">
   <link rel="stylesheet" href="css/jquery.handsontable.full.min.css">
@@ -476,12 +476,12 @@ function redraw(json, preserve_data) {
     labels = table.getDataAtCol(2)
   }
   else {
-    console.log(data.length, data);
     // Initialise with semi-random numbers
     for (i=0, l=data.length, values=[], sizes=[], labels=[]; i<l; i++) {
       values[i] = i % 6
       sizes[i] = 3 + i % 5
       labels[i] = ''
+      console.log(data[i]);
     }
   }
   for (i=0, l=data.length; i<l; i++) {
