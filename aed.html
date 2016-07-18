@@ -476,6 +476,7 @@ function redraw(json, preserve_data) {
     labels = table.getDataAtCol(2)
   }
   else {
+    console.log(data.length, data);
     // Initialise with semi-random numbers
     for (i=0, l=data.length, values=[], sizes=[], labels=[]; i<l; i++) {
       values[i] = i % 6
