@@ -645,7 +645,7 @@ function hashchange() {
   maptype = type
   d3.selectAll('.mapname .mapname-text').text(mapfilesdict[new_mapfile].name)
   loading.style('display', null)
-  d3.json('maps/' + new_mapfile + '.json?v=5', function (error, json) {
+  d3.json(new_mapfile + '.json?v=5', function (error, json) {
     loading.style('display', 'none')
     if (new_mapfile !== mapfile) {
       redraw(json, false)
