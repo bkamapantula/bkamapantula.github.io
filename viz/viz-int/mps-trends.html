@@ -9,8 +9,82 @@
 
     <!-- Bootstrap core CSS >
     <link href="css/bootstrap.min.css" rel="stylesheet"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar.css">
+
+    <link href="colorbrewer.css" rel="stylesheet">
+    <script src="colorbrewer.js"></script>
+
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <style>
+        .axis {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .d3-tip {
+          line-height: 1;
+          font-weight: bold;
+          padding: 12px;
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+          box-sizing: border-box;
+          display: inline;
+          font-size: 10px;
+          width: 100%;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.8);
+          content: "\25BC";
+          position: absolute;
+          text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+          margin: -1px 0 0 0;
+          top: 100%;
+          left: 0;
+        }
+
+        .info-head:hover .info {
+            display: block;
+        }
+
+        .info {
+            display: none;
+            background: #C8C8C8;
+            margin-left: 28px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1000;
+            width: 150px;
+            height: 30px;
+        }
+
+        .info-head {
+            margin: 10px;
+            cursor: default;
+        }
+        h4 {
+            text-align: center;
+        }
+        .floating-legend {
+            margin-top: 40%;
+        }
+    </style>
 
   </head>
 
@@ -39,16 +113,218 @@
           </div> <!--container-fluid-->
         </nav>
 
-		<h4>Women in Indian parliament - Interactive</h4>
+		<h4>Women in Indian parliament - Interactive prototype</h4>
+    <p class="text-muted">
+      I made this visual as part of presenting a story on women representation in Indian parliament (see our initiative <a href="http://genderinpolitics.org/" target="_blank">Gender in Politics</a>) Women reservation bill has been neglected in Indian politics for many years. Our goal is to bring it back to focus using data. One of the objectives of the bill is to reserve 1/3rd of the contesting parliament seats to women as affirmative action.</p>
+
+    <p class="text-muted">
+      The visual shows the percentage of women MP (member of parliament) representation in each each Indian state compared to the proposed 33% reservation (and 50% in an ideal world).
+    </p>
     	<div class="row">
-  			<div class="col-lg-12 col-sm-6 col-xs-6">
+        <div class="svg col-md-9"></div>
+        <div class="floating-legend-wrapper col-md-3">
+            <div class="floating-legend"></div>
+        </div>
+    </div>
+        <!--div class="col-lg-12 col-sm-6 col-xs-6">
   				<iframe class="container well well-small" src="http://bl.ocks.org/bkamapantula/raw/b2f7a900ebd559a9e6a5" 
   				style="height: 850px;" seamless></iframe>
-  			</div>
-  		</div>
-      <div>
+  			</div-->
+        
+    <script>
+        var margin = {
+            top: 40, 
+            right: 30, // 80,
+            bottom: 50,
+            left: 150
+        };
+
+        var width = $(window).width()*0.7 - margin.left - margin.right;
+        var height = window.innerHeight - margin.top - margin.bottom; 
+        //var height = document.documentElement.clientHeight - margin.top - margin.bottom; 
+
+        var y0 = d3.scale.ordinal()
+            .rangeRoundBands([height, 0], .2);
+
+        // set women MPs % scale as 0% to 100%
+        var x = d3.scale.linear();
+
+        // x axis - women MP %
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("top")
+            .tickSize(0);
+
+        // y axis - states
+        var yAxis = d3.svg.axis()
+            .scale(y0)
+            .orient("left")
+            .ticks(20);
+
+        var colorScale = d3.scale.linear()
+             .domain([0, 5, 10, 40, 80])
+             .range(colorbrewer.Blues[5]);
+
+        var svg = d3.select(".svg").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<p>State: " + d['State'] + "</p><p>Total seats: " + d['Seats'] + "</p>" + "<p>Women MPs: " + d['Wseats'] + ", " + d[2014] + "%</p>";
+          });
+
+        svg.call(tip);
+
+        d3.csv("national-mps-2015.csv", function(error, data) {
+            // set domain for x and y axes
+            x.domain([0, 100])
+                .range([0, width]);
+            y0.domain(data.map(function(d) {
+                return d.State;
+            }));
+
+        // adds x axis
+        svg.append("g")
+            .attr("id", "xAxisYa")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0, 0)") //+ height + ")")
+            .call(xAxis)
+          .selectAll("text")
+            .attr("class", "xAxisLabels")
+            .style("text-anchor", "end")
+            .attr("dx", "-.55em")
+            .attr("dy", ".21em")
+            .attr("x", "0.7em")
+            .attr("y","-.5em")
+            //.attr("transform", "rotate(90)")
+
+        svg.select(".x.axis")
+          .append("text")
+            .attr("class", "xaxislabel")
+            .attr("x", '65%')
+            .attr("y", -25)
+            .style("text-anchor", "end")
+            .text("Women MPs %");
+
+        svg.select(".x.axis")
+          .append("text")
+            .attr("class", "xaxislabel")
+            .attr("x", '16%')
+            .attr("y", -25)
+            .style("text-anchor", "end")
+            .text("mouseover blue bars for more information");
+
+        console.log( $("#xAxisYa").width() );
+        // adds y axis
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+        // add bars
+          var updateChart = function() {
+            svg.selectAll("rect")
+              .data(data)
+            .enter().append("rect")
+              .style("fill", function(d) { 
+                if(d.Seats) {
+                    return colorScale(d.Seats);
+                }
+            })
+              .attr("x", function(d) { 
+                5;
+            })
+              .attr("y", function(d) {
+                return y0(d.State);
+            })
+              .attr("height", 12)
+              .attr("width", function(d) {
+                return x(d[2014]);
+            })
+              .on('mouseover', tip.show)
+              .on('mouseout', tip.hide);
+          }
+
+        updateChart(); 
+        var xAxisWidth = width/2; //$(".xAxisLabels")[5].getBoundingClientRect().left-175;
+
+        // draw parity line
+        svg.append("line")
+            .attr("class", "genderLines")
+            .attr("x1", xAxisWidth)
+            .attr("y1", 5)
+            .attr("x2", xAxisWidth)
+            .attr("y2", height)
+            .style("stroke-dasharray", "2,2")
+            .style("stroke", "black")
+            .style("stroke-width", 2);
+
+        d3.select("svg")
+            .append("text")
+                .attr("transform", "translate(" + width*0.645 + ", " + height/2 + ") rotate(90)")
+                .text("50% seats")
+
+        // 33% line
+        svg.append("line")
+            .attr("x1", width/3)
+            .attr("y1", 5)
+            .attr("x2", width/3)
+            .attr("y2", height)
+            .style("stroke-dasharray", "2,2")
+            .style("stroke", "black")
+            .style("stroke-width", 2);
+
+        d3.select("svg")
+            .append("text")
+                .attr("transform", "translate(" + width*0.48 + ", " + height/2 + ") rotate(90)")
+                .text("Proposed 33% reservation");
+
+        // add legend
+          var legend = d3.select(".floating-legend")
+            .append("svg")
+          .selectAll("legend")
+            .data(colorScale.domain(), function(d) {
+                return d;
+            })
+            .enter().append("g")
+              .attr("class", "legend");
+
+        legend.append("rect")
+          .attr("x", function(d,i) {
+            return 50*i;
+          })
+          .attr("y", 100)
+          .attr("width", 50)
+          .attr("height", 20)
+          .style("fill", function(d) { 
+            return colorScale(d); 
+          });
+
+        legend.append("text")
+            .text(function(d) { return "≥ " + Math.round(d); })
+              .attr("x", function(d, i) { return 50 * i; })
+              .attr("y", 100 + 100/3)
+              //.style("fill", "black")
+              .style("font-size", "10px");
+
+        legend.append("text")
+            .text("States with parliament seats")
+            .attr("x", 40)
+            .attr("y", 90);
+
+        svg.selectAll(".legend")
+            .attr("transform", "translate(" + $(window).width()*0.8 + "," + $(window).height()*0.5 + ")");
+        }); // end of d3.csv function
+
+        //}); // end of csv call
+        </script>
+  		<div>
       <p class="text-muted">
-        Created using D3.js, jQuery, Bootstrap. Data from <a href="http://eci.nic.in/" target="_blank">Election Commission of India>/a?.
+        Created using D3.js, jQuery, Bootstrap. Data from <a href="http://eci.nic.in/" target="_blank">Election Commission of India</a>.
       </p>
     </div>
 

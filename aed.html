@@ -1,0 +1,749 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['geochart']});
+    google.charts.setOnLoadCallback(drawRegionsMap);
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['State Code', 'State', 'Enrollments generated'],
+        ['IN-AN', 'Andaman and Nicobar Islands', 290614],
+        ['IN-AP', 'Andhra Pradesh',	52824624],
+        ['IN-AR', 'Arunachal Pradesh', 494223],
+        ['IN-AS', 'Assam',	504120],
+        ['IN-BR', 'Bihar',	56368567],
+        ['IN-CH', 'Chandigarh',	596175],
+        ['IN-CT', 'Chhattisgarh',	20573178],
+        ['IN-DN', 'Dadra and Nagar Haveli',	269913],
+        ['IN-DD', 'Daman and Diu',	92602],
+        ['IN-DL', 'Delhi',	11862742],
+        ['IN-GA', 'Goa',	1076175],
+        ['IN-GJ', 'Gujarat',	39923523],
+        ['IN-HR', 'Haryana',	22269352],
+        ['IN-HP', 'Himachal Pradesh',	4719171],
+        ['IN-JK', 'Jammu and Kashmir',	5757930],
+        ['IN-JH', 'Jharkhand',	23245893],
+        ['IN-KA', 'Karnataka',	41973616],
+        ['IN-KL', 'Kerala',	28991609],
+        ['IN-LD', 'Lakshadweep',	52306],
+        ['IN-MP', 'Madhya Pradesh',	51529243],
+        ['IN-MH', 'Maharashtra',	75960427],
+        ['IN-MN', 'Manipur',	1165638],
+        ['IN-ML', 'Meghalaya',	39724],
+        ['IN-MZ', 'Mizoram',	376222],
+        ['IN-NL', 'Nagaland',	883320],
+        ['IN-OR', 'Odisha',	25746975],
+        ['IN-PY', 'Puducherry',	537711],
+        ['IN-PB', 'Punjab',	21207133],
+        ['IN-RJ', 'Rajasthan',	47045435],
+        ['IN-SK', 'Sikkim',	362034],
+        ['IN-TN', 'Tamil Nadu',	49077586],
+        ['IN-TG', 'Telangana',	1234896],
+        ['IN-TR', 'Tripura',	867685],
+        ['IN-UP', 'Uttar Pradesh',	118565666],
+        ['IN-UT', 'Uttarakhand',	6353293],
+        ['IN-WB', 'West Bengal',	63345554],
+      ]);
+      var options = {
+        region: 'IN',
+        displayMode: 'regions',
+        resolution: 'provinces',
+        colorAxis: {colors: ['#00FF00', '#FF0000']},
+        width: 640, 
+        height: 480
+      };
+     
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+      chart.draw(data, options);
+    }
+  </script>
+
+<!-- from gramener cartogram -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aadhaar enrollments data - an analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.v3.min.css">
+  <link rel="stylesheet" href="css/jquery.handsontable.full.min.css">
+  <style>
+  header { background-color: #e6e0ec; margin-bottom: 20px; }
+  header h2 { margin-bottom: 20px; }
+  .loading { position: absolute; }
+  .dim { opacity: .1; }
+  .highlight { stroke-width: 2; stroke: #000; }
+  .mapname { margin:0; font-size:26px; line-height:34px; cursor: pointer; }
+  .mapfiles { max-height: 410px; overflow-y: auto; }
+  .handsontable table th, .handsontable table td {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+  }
+  text.map {
+    fill: #000;
+    stroke: #fff;
+    stroke-width: 0.2;
+    font-weight: bold;
+    font-size: 80%;
+  }
+  .table-controls { margin-top: 20px;}
+  .legend { margin-top: 1em; }
+  </style>
+</head>
+
+<body>
+  <!--div id="regions_div" style="width: 900px; height: 500px;"></div-->
+<iframe width="1263.0309419192854" height="781" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YDTw7QGdw6qNsiPVAJNVf4HnxTatGmprfxo4U2Qh1pA/pubchart?oid=696213345&amp;format=interactive"></iframe>
+
+<h3>Observations</h3>
+<div class="muted">
+  <ul>
+    <li>Regions with low aadhaar generations: Puducherry, Delhi, Nagaland (<65%).</li>
+    <li>Regions with high aadhaar generations:  Andaman and Nicobar Islands, Arunachal Pradesh, Assam, Meghalaya, Mizoram, Sikkim (>95%)</li>
+  </ul>  
+</div>
+
+<h2>Incomplete - mapping successful aadhaar generations across states</h2>
+<header>
+  <div class="container">
+    <h2>
+      <div class="dropdown pull-left">
+        <div class="mapname dropdown-toggle" data-toggle="dropdown">
+          <span class="mapname-text"></span>
+          <small class="glyphicon glyphicon-chevron-down"></small>
+        </div>
+        <ul class="dropdown-menu mapfiles">
+          <li><a class="no-action"><input type="search" class="form-control" data-search="data-file" data-target=".mapfiles li.mapfile" data-hide-class="hide"></a></li>
+        </ul>
+      </div>
+      <div class="pull-right">
+        <form class="form-inline">
+          <div class="form-group dropdown">
+            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Map <b class="caret"></b></a>
+            <ul class="dropdown-menu maptypes">
+              <li><a href="?type=">
+                <svg width="16" height="16" viewBox="0 0 10 10">
+                  <path d="m0,0h5v5h-5z" fill="#f00" stroke="#fff"/>
+                  <path d="m5,0h5v5h-5z" fill="#777" stroke="#fff"/>
+                  <path d="m0,5h5v5h-5z" fill="#0c0" stroke="#fff"/>
+                  <path d="m5,5h5v5h-5z" fill="#44f" stroke="#fff"/>
+                  </svg>
+                Plain
+              </a></li>
+              <li><a href="?type=Stretch">
+                <svg width="16" height="16" viewBox="0 0 10 10">
+                  <path d="m0,0h7v6h-7z" fill="#f00" stroke="#fff"/>
+                  <path d="m7,0h3v6h-3z" fill="#777" stroke="#fff"/>
+                  <path d="m0,6h3v4h-3z" fill="#0c0" stroke="#fff"/>
+                  <path d="m3,6h7v4h-7z" fill="#44f" stroke="#fff"/>
+                </svg>
+                Stretch
+              </a></li>
+              <li><a href="?type=Circle">
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="5"  cy="4"  r="3" fill="#f00"/>
+                  <circle cx="15" cy="8"  r="4" fill="#777"/>
+                  <circle cx="3"  cy="12" r="2" fill="#0c0"/>
+                  <circle cx="10" cy="17" r="3" fill="#44f"/>
+                </svg>
+                Circle
+              </a></li>
+            </ul>
+
+            <!--input type="search" class="form-control search-in-map" placeholder="Search" data-search="title" data-target=".carto path" data-hide-class="dim">
+
+            <div class="form-group dropdown">
+              <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" title="Download" data-placement="left">
+                <i class="glyphicon glyphicon-download-alt"></i> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li class="download" data-type="svg"><a href="#">SVG image</a></li>
+                <li class="download" data-type="png"><a href="#">PNG image</a></li>
+                <li class="download" data-type="csv"><a href="#">Data in Excel</a></li>
+              </ul>
+            </div-->
+          </div>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </h2>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="left col-md-8">
+      <div class="loading">
+        <img width="66" height="66" src="img/loading.gif?v=8ab63" />
+        <h4>Loading...</h4>
+      </div>
+      <svg class="map" style="width:100%" preserveAspectRatio="xMidYMid" data-height="1" viewBox="0 0 500 500">
+        <g class="carto"></g>
+      </svg>
+      <svg class="legend" style="width:100%" height="25">
+        <defs>
+         <linearGradient id="gradient_legend">
+           <stop offset="0%"   class="min" stop-color="#444"/>
+           <stop offset="50%"  class="mid" stop-color="#888"/>
+           <stop offset="100%" class="max" stop-color="#eee"/>
+         </linearGradient>
+        </defs>
+        <rect width="100%" height="10" fill="url(#gradient_legend)"/>
+        <g font-size="12" transform="translate(0,20)">
+          <text class="min" x="0%"   text-anchor="start"  dy=".37em">Min</text>
+          <text class="mid" x="50%"  text-anchor="middle" dy=".37em">Mid</text>
+          <text class="max" x="100%" text-anchor="end"    dy=".37em">Max</text>
+        </g>
+      </svg>
+    </div>
+    <div class="right col-md-4">
+      <div id="table"></div>
+      <form class="table-controls">
+        <button class="btn btn-default reset-zoom" title="Reset zoom"><i class="glyphicon glyphicon-home"></i></button>
+        <button class="btn btn-default move-map-with-table" data-toggle="button" title="Show on map as you move on the table"><i class="glyphicon glyphicon-map-marker"></i></button>
+        <span class="dropdown">
+          <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Choose colour palette">
+            <svg width="40" height="10">
+              <rect width="100%" height="10" fill="url(#gradient_legend)"/>
+            </svg>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu palettes">
+          </ul>
+        </span>
+        <a class="btn btn-default reverse-palette" title="Reverse colour scale"><i class="glyphicon glyphicon-random"></i></a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/csv" id="mapfiles">file,name,source
+ne_50m_admin_0_countries,World,http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip
+india-states,India: States,https://groups.google.com/d/msg/datameet/X5kzViRMJKs/N84vOu-391MJ
+india-states-2,India: States with Telangana,https://github.com/datameet/maps/tree/master/States
+india-districts,India: Districts,http://geocommons.com/overlays/226411.zip
+</script>
+
+<script src="css/d3.v3.min.js"></script>
+<script src="css/jquery2.min.js"></script>
+<script src="css/jquery.handsontable.full.min.js"></script>
+<script src="css/topojson.min.js"></script>
+<script src="css/G.min.js"></script>
+<script src="css/cartogram.js"></script>
+<script src="css/colorbrewer.v1.min.js"></script>
+<script>
+var width = 500,
+    height = 500,
+    mapfile,
+    maptype,
+    abruptzoom,
+    smoothzoom,
+    update, labels_update,
+    move_map_with_table,
+    value_column = 'Colour',
+    size_column = 'Size',
+    label_column = 'Label',
+    scale = d3.scale.linear()
+      .domain([0,0,0])
+      .clamp(true),
+    allowed_sources = {
+      paste: 1,
+      edit: 1,
+      autofill: 1
+    },
+    mapfiles = d3.csv.parse($('#mapfiles').text()),
+    mapfilesdict = {}
+    svg = d3.select('.carto')
+            .attr('width', width)
+            .attr('height', height)
+
+// Populate list of maps dropdown
+mapfiles.forEach(function(d) { mapfilesdict[d.file] = d })
+d3.select('.mapfiles').selectAll('li.mapfile')
+    .data(mapfiles)
+  .enter()
+    .append('li')
+    .attr('class', 'mapfile')
+    .attr('data-file', function(d) { return d.name })
+    .append('a')
+      .text(function(d) { return d.name })
+      .attr('href', function(d) { return '?map=' + d.file })
+
+// Populate list of colour palettes
+var palette_keys = [
+  'RdYlGn',
+  'RdYlBu',
+  'Spectral',
+  'RdBu',
+  'RdGy',
+  'BrBG',
+  'PiYG',
+  'PRGn',
+  'PuOr',
+  'Greys',
+  'Oranges',
+  'YlOrBr',
+  'YlOrRd',
+  'OrRd',
+  'Reds',
+  'RdPu',
+  'PuRd',
+  'Purples',
+  'BuPu',
+  'PuBu',
+  'PuBuGn',
+  'YlGnBu',
+  'Blues',
+  'GnBu',
+  'BuGn',
+  'YlGn',
+  'Greens'
+]
+var palette_svg = d3.select('.palettes').selectAll('li.palette')
+    .data(palette_keys)
+  .enter()
+    .append('li')
+    .attr('class', 'palette')
+    .attr('title', String)
+    .append('a')
+      .attr('href', function(d) { return '?palette=' + d })
+      .append('svg')
+      .attr('width', '100%')
+      .attr('height', 10)
+palette_svg.append('defs')
+  .append('linearGradient')
+  .attr('id', String)
+  .selectAll('stop')
+  .data([{offset: 0, index:0}, {offset: 50, index:4}, {offset: 100, index:8}])
+  .enter()
+    .append('stop')
+    .attr('offset', function(d) { return d.offset + '%' })
+    .attr('stop-color', function(d, i, j) {
+      return colorbrewer[palette_keys[j]][9][d.index]
+    })
+palette_svg.append('rect')
+  .attr('width', '100%')
+  .attr('height', 10)
+  .attr('fill', function(d) { return 'url(#' + d + ')' })
+
+// Set up the table
+var table = $('#table').handsontable({
+  height: 605,
+  colHeaders: true,
+  manualColumnResize: true,
+  manualColumnMove: true,
+  contextMenu: true,
+  copyRowsLimit: 10000,
+  afterSelectionEnd: function(row, col, r2, c2) {
+    if (move_map_with_table) zoom_to([update[0][row]], true)
+  },
+  contextMenu: {
+    items: {
+      'find': {
+        name: 'Find on map',
+        callback: function(key, options) {
+          var paths = [],
+              start = options.start._row,
+              end = options.end._row
+          while (start <= end) paths.push(update[0][start++])
+          zoom_to(paths, true)
+        }
+      },
+      'related': {
+        name: 'Highlight similar',
+        callback: function(key, options) {
+          var col_data = table.getDataAtCol(options.end._col),
+              cell = col_data[options.end._row],
+              paths = [],
+              l = col_data.length,
+              row = 0
+          for (; row<l; row++)
+            if (col_data[row] === cell) {
+              update[0][row].setAttribute('class', 'map')
+              paths.push(update[0][row])
+            }
+            else
+              update[0][row].setAttribute('class', 'map dim')
+          zoom_to(paths, false)
+        }
+      }
+
+    }
+  }
+}).handsontable('getInstance')
+
+var map = G.map()
+    .width(width)
+    .height(height)
+
+// Return copy of data with redundant (i.e. constant value) columns removed
+function dedup(data) {
+  var l = data.length,
+      cols = d3.keys(data[0]),
+      num_cols = cols.length,
+      keep_cols = {},
+      result = [],
+      obj,
+      i, j
+
+  // Ignore any data that stay the same
+  i=0; while (++i < l) {
+    for (j=0; j<num_cols; j++) {
+      if (data[i][cols[j]] != data[0][cols[j]]) {
+        keep_cols[cols[j]] = true
+      }
+    }
+  }
+  i=-1; while (++i < l) {
+    obj = {}
+    for (j in keep_cols) {
+      obj[j] = data[i][j]
+    }
+    result.push(obj)
+  }
+  return result
+}
+
+// Change global scale so that lo -> hi translates to 0 -> 1
+var number_format = d3.format(',.1f')
+function rescale(values) {
+  values = values.filter(function(d) { return !isNaN(+d) && d !== "" })
+  var lo = d3.min(values),
+      hi = d3.max(values),
+      mid = (lo + hi)/2
+  scale.domain([lo, mid, hi])
+  d3.select('text.min').text(number_format(lo))
+  d3.select('text.mid').text(number_format(mid))
+  d3.select('text.max').text(number_format(hi))
+}
+
+// Zoom behaviour using translate() instead of viewBox
+// abruptZoom jumps to target zoom. For touch / mouse events
+// smoothZoom transitions smoothly. For table selections
+// They keep each other's zoom state in sync.
+abruptzoom = d3.behavior.zoom()
+  .on('zoom', function() {
+    $('.tooltip').remove()
+    svg.attr('transform', 'translate(' + d3.event.translate + ')scale(' + d3.event.scale + ')')
+    smoothzoom.translate(d3.event.translate).scale(d3.event.scale)
+  })
+smoothzoom = d3.behavior.zoom()
+  .on('zoom', function() {
+    $('.tooltip').remove()
+    svg.transition().attr('transform', 'translate(' + d3.event.translate + ')scale(' + d3.event.scale + ')')
+    abruptzoom.translate(d3.event.translate).scale(d3.event.scale)
+  })
+d3.select('svg.map').call(abruptzoom)
+
+// Zoom into outer bound of a set of paths. Add .highlight class
+function zoom_to(els, highlight) {
+  var bounds={}, i=0, el, box, trans, scale;
+  for (; el=els[i]; i++) {
+    box = el.getBBox(),
+    // If the element is transformed (e.g. in dorling), add the transformed position
+    trans = (el.getAttribute('transform') || '').match(/translate\(([\+\-\d\.]+),([\+\-\d\.]+)\)/)
+    if (trans) {
+      box.x += +trans[1]
+      box.y += +trans[2]
+    }
+    if (!(box.x >= bounds.x)) bounds.x = box.x
+    if (!(box.y >= bounds.y)) bounds.y = box.y
+    if (!(box.x + box.width <= bounds.x2)) bounds.x2 = box.x + box.width
+    if (!(box.y + box.height <= bounds.y2)) bounds.y2 = box.y + box.height
+  }
+  bounds.width = bounds.x2 - bounds.x
+  bounds.height = bounds.y2 - bounds.y
+  scale = Math.min(width / bounds.width, height / bounds.height) * .7
+  smoothzoom
+    .translate([(-bounds.x - bounds.width/2) * scale + width/2, (-bounds.y - bounds.height/2) * scale  + height/2])
+    .scale(scale)
+    .event(svg)
+  $('.carto path.highlight').removeClass('highlight')
+  if (highlight) $(els).addClass('highlight')
+}
+
+function redraw(json, preserve_data) {
+  // There may be multiple objects in a ShapeFile. Take the first
+  var object = d3.values(json.objects)[0],
+      shape = topojson.feature(json, object),
+      props = shape.features.map(function(d) { return d.properties }),
+      data = dedup(props),
+      headers = d3.keys(data[0]),
+      cols = [],
+      changes = [],
+      size = function(d, i) { return data[i][size_column] },
+      size_min,
+      values, sizes, labels,
+      i, l;
+
+  $('.tooltip').remove()
+
+  // Preserve previously stored data
+  if (preserve_data) {
+    values = table.getDataAtCol(0)
+    sizes = table.getDataAtCol(1)
+    labels = table.getDataAtCol(2)
+  }
+  else {
+    // Initialise with semi-random numbers
+    for (i=0, l=data.length, values=[], sizes=[], labels=[]; i<l; i++) {
+      values[i] = i % 6
+      sizes[i] = 3 + i % 5
+      labels[i] = ''
+      console.log(data[i]);
+    }
+  }
+  for (i=0, l=data.length; i<l; i++) {
+    data[i][value_column] = values[i]
+    data[i][size_column] = sizes[i]
+    data[i][label_column] = labels[i]
+  }
+  rescale(values)
+
+  function draw_label(labels) {
+    labels_update = labels
+    labels.text(function(d, i) { return data[i][label_column] })
+  }
+
+  if (maptype == 'Circle')
+    update = map.shape(shape).size(size).label(draw_label).dorling(svg)
+  else if (maptype == 'Plain')
+    update = map.shape(shape).size(size).label(draw_label).map(svg)
+  else if (maptype == 'Stretch') {
+    // init projection
+    var projection = d3.geo.mercator()
+    var path = d3.geo.path()
+      .projection(projection)
+
+    // center_shape()
+    projection
+      .scale(1)
+      .translate([0, 0])
+    var b = path.bounds(shape),
+        s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+        t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2]
+    projection
+      .scale(s)
+      .translate(t)
+
+    // Ensure that size > 0, else cartogram will not work
+    size_min = d3.min(data, function(row) { return row[size_column] > 0 ? row[size_column] : NaN })
+    size = function(d, i) { return Math.max(size_min / 5, data[i][size_column]) }
+
+    // init carto
+    var carto = d3.cartogram()
+      .projection(projection)
+      .value(size);
+
+    shape = carto(json, object.geometries)
+
+    update = svg.selectAll('path.map')
+      .data(shape.features)
+    update
+      .transition()
+      .attr('transform', null)
+      .attr('d', carto.path)
+    update.enter()
+      .append('path')
+      .attr('class', 'map')
+      .attr('transform', null)
+      .attr('d', carto.path)
+    update.exit()
+      .remove()
+  }
+
+  update
+    .attr('stroke', '#fff')
+    .attr('stroke-width', .5)
+    .attr('vector-effect', 'non-scaling-stroke')
+    .attr('fill', function(d, i) { return (values[i] === "" || isNaN(+values[i])) ? '#ddd' : scale(+values[i]) })
+    .attr('title', function(d) {
+      return d.properties['NAME_2'] ||
+             d.properties['NAME_1'] ||
+             d.properties['NAME'] ||
+             d.properties['name'] ||
+             d.properties['AC_NAME'] ||
+             d.properties['PC_NAME']
+    })
+    .on('click', function(d, i) {
+      var old_move_map_with_table = move_map_with_table
+      move_map_with_table = false
+      table.selectCell(i, 0)
+      d3.selectAll('.carto path.highlight').classed('highlight', false)
+      d3.selectAll('.carto path.dim').classed('dim', false)
+      d3.select(this).classed('highlight', true)
+      move_map_with_table = old_move_map_with_table
+    })
+
+  // Make all default properties read-only
+  for (i=0, l=headers.length; i<l; i++) {
+    cols.push({data: headers[i], readOnly: true})
+  }
+  // Render the size and color columns in a different colour
+  var editable_renderer =  function (instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments)
+    $(td).css({
+      background: '#ffffbf'
+    })
+  };
+  // Pre-pend color, size and labels columns
+  cols.unshift({data: label_column, type: 'text', renderer: editable_renderer})
+  headers.unshift(label_column)
+  cols.unshift({data: size_column, type: 'numeric', renderer: editable_renderer})
+  headers.unshift(size_column)
+  cols.unshift({data: value_column, type: 'numeric', renderer: editable_renderer})
+  headers.unshift(value_column)
+
+  // Draw the table
+  table.loadData(data)
+  table.updateSettings({
+    colHeaders: headers,
+    columns: cols,
+    afterChange: function (params, source) {
+      if (!allowed_sources[source]) return
+      // Update all colours on the map, every time
+      var values = table.getDataAtCol(0),
+          labels = table.getDataAtCol(2),
+          i = -1,
+          l = update[0].length
+      rescale(values)
+      // Re-draw all colours and labels
+      while (++i < l) {
+        update[0][i].setAttribute('fill', (values[i] === "" || isNaN(+values[i])) ? '#ddd' : scale(+values[i]))
+        labels_update[0][i].textContent = labels[i]
+      }
+
+      // If size has changed, redraw the map
+      size_min = d3.min(data, function(row) { return row[size_column] > 0 ? row[size_column] : NaN })
+      for (i=0, l=params.length; i<l; i++) {
+        if (params[i][1] == size_column) {
+          if (maptype == 'Circle') map.dorling(svg)
+          else if (maptype == 'Stretch') {
+            shape = carto(json, object.geometries)
+            update
+              .data(shape.features)
+              .transition()
+              .attr('d', carto.path)
+          }
+          break
+        }
+      }
+    }
+  })
+}
+
+function hashchange() {
+  var query = G.url.parse(location.hash.replace(/^#/, '')),
+      new_mapfile = query.searchKey['map'] || mapfiles[0].file,
+      type = query.searchKey['type'] || 'Plain',
+      loading = d3.selectAll('.loading'),
+      palette = Array.prototype.slice.call(colorbrewer[query.searchKey['palette'] || 'RdYlGn'][9]),
+      reverse_palette = query.searchKey['rev'] == '1'
+
+  if (reverse_palette) {
+    $('.reverse-palette').attr('href', '?rev=').addClass('active')
+    palette.reverse()
+  } else {
+    $('.reverse-palette').attr('href', '?rev=1').removeClass('active')
+  }
+
+  scale.range([palette[0], palette[4], palette[8]])
+  d3.select('stop.min').attr('stop-color', palette[0])
+  d3.select('stop.mid').attr('stop-color', palette[4])
+  d3.select('stop.max').attr('stop-color', palette[8])
+
+  maptype = type
+  d3.selectAll('.mapname .mapname-text').text(mapfilesdict[new_mapfile].name)
+  loading.style('display', null)
+  d3.json('css/' + new_mapfile + '.json', function (error, json) {
+    loading.style('display', 'none')
+    if (new_mapfile !== mapfile) {
+      redraw(json, false)
+      svg.attr('transform', null)
+      mapfile = new_mapfile
+    } else {
+      redraw(json, true)
+    }
+
+    // Refresh the search field to pick up new text
+    $('.search-in-map').trigger('refresh.search')
+  })
+}
+
+$(window).on('hashchange', hashchange)
+hashchange()
+</script>
+<script src="css/bootstrap.v3.min.js"></script>
+<script>
+$('body')
+  .tooltip({
+    selector: '[title]',
+    html: true,
+    container: 'body'
+  })
+  .urlfilter({
+    selector: '[href^="?"]',
+    target: '#'
+  })
+  .aspect({
+    selector: '[data-height]'
+  })
+  .search()
+  .on('shown.g.search', function(e) {
+    var paths = $('.carto path'),
+        shown = paths.not('.dim')
+    // If we match a subset, zoom to subset
+    if (e.matches && paths.length !== shown.length) zoom_to(shown.get(), true)
+  })
+
+// Click anywhere outside the map to clear the highlight
+$('html')
+  .on('click', function(e) {
+    if (!$(e.target).parents('.carto').length) {
+      $('.carto path.highlight').removeClass('highlight')
+    }
+  })
+
+// When dropdowns open, focus on the first input (if any)
+$('.dropdown').on('shown.bs.dropdown', function() {
+  var el = $('input', this).get(0)
+  if (el) setTimeout(function() { el.focus() }, 0)
+})
+
+$('.move-map-with-table').on('click', function(e) {
+  e.preventDefault()
+  move_map_with_table = !$(this).is('.active')
+  $('.highlight').removeClass('highlight')
+})
+
+$('.reset-zoom').on('click', function(e) {
+  e.preventDefault()
+  smoothzoom.translate([0, 0]).scale(1).event(svg)
+})
+
+// .no-action links wrap search boxes in dropdowns
+$('a.no-action').on('click', function(e) {
+  e.preventDefault()
+  e.stopPropagation()
+})
+
+$('body').on('click', '.download', function(e) {
+  e.preventDefault()
+  var type = $(this).data('type'),
+      option = {
+        file: mapfilesdict[mapfile].name.replace(/[^A-Za-z0-9]+/g, '-') + '.' + type
+      }
+  if      (type == 'svg') option.svg = $('.map')
+  else if (type == 'csv') option.csv = table.getData()
+  else if (type == 'png') option.png = $('.map')
+  G.download(option)
+})
+</script>
+
+</body></html>
+
+
+</body>
+
+</html>
