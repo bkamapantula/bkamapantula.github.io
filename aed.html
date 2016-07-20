@@ -1,64 +1,3 @@
-<html>
-<head>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['geochart']});
-    google.charts.setOnLoadCallback(drawRegionsMap);
-    function drawRegionsMap() {
-      var data = google.visualization.arrayToDataTable([
-        ['State Code', 'State', 'Enrollments generated'],
-        ['IN-AN', 'Andaman and Nicobar Islands', 290614],
-        ['IN-AP', 'Andhra Pradesh',	52824624],
-        ['IN-AR', 'Arunachal Pradesh', 494223],
-        ['IN-AS', 'Assam',	504120],
-        ['IN-BR', 'Bihar',	56368567],
-        ['IN-CH', 'Chandigarh',	596175],
-        ['IN-CT', 'Chhattisgarh',	20573178],
-        ['IN-DN', 'Dadra and Nagar Haveli',	269913],
-        ['IN-DD', 'Daman and Diu',	92602],
-        ['IN-DL', 'Delhi',	11862742],
-        ['IN-GA', 'Goa',	1076175],
-        ['IN-GJ', 'Gujarat',	39923523],
-        ['IN-HR', 'Haryana',	22269352],
-        ['IN-HP', 'Himachal Pradesh',	4719171],
-        ['IN-JK', 'Jammu and Kashmir',	5757930],
-        ['IN-JH', 'Jharkhand',	23245893],
-        ['IN-KA', 'Karnataka',	41973616],
-        ['IN-KL', 'Kerala',	28991609],
-        ['IN-LD', 'Lakshadweep',	52306],
-        ['IN-MP', 'Madhya Pradesh',	51529243],
-        ['IN-MH', 'Maharashtra',	75960427],
-        ['IN-MN', 'Manipur',	1165638],
-        ['IN-ML', 'Meghalaya',	39724],
-        ['IN-MZ', 'Mizoram',	376222],
-        ['IN-NL', 'Nagaland',	883320],
-        ['IN-OR', 'Odisha',	25746975],
-        ['IN-PY', 'Puducherry',	537711],
-        ['IN-PB', 'Punjab',	21207133],
-        ['IN-RJ', 'Rajasthan',	47045435],
-        ['IN-SK', 'Sikkim',	362034],
-        ['IN-TN', 'Tamil Nadu',	49077586],
-        ['IN-TG', 'Telangana',	1234896],
-        ['IN-TR', 'Tripura',	867685],
-        ['IN-UP', 'Uttar Pradesh',	118565666],
-        ['IN-UT', 'Uttarakhand',	6353293],
-        ['IN-WB', 'West Bengal',	63345554],
-      ]);
-      var options = {
-        region: 'IN',
-        displayMode: 'regions',
-        resolution: 'provinces',
-        colorAxis: {colors: ['#00FF00', '#FF0000']},
-        width: 640, 
-        height: 480
-      };
-     
-      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-      chart.draw(data, options);
-    }
-  </script>
-
 <!-- from gramener cartogram -->
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.v3.min.css">
   <link rel="stylesheet" href="css/jquery.handsontable.full.min.css">
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
   <style>
   header { background-color: #e6e0ec; margin-bottom: 20px; }
   header h2 { margin-bottom: 20px; }
@@ -89,22 +29,170 @@
   }
   .table-controls { margin-top: 20px;}
   .legend { margin-top: 1em; }
+  #tableone, #tabletwo {
+    width: 100%;
+  }
   </style>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['geochart']});
+    google.charts.setOnLoadCallback(drawRegionsMap);
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['State Code', 'State', 'Enrollments generated'],
+        ['IN-AN', 'Andaman and Nicobar Islands', 290614],
+        ['IN-AP', 'Andhra Pradesh', 52824624],
+        ['IN-AR', 'Arunachal Pradesh', 494223],
+        ['IN-AS', 'Assam',  504120],
+        ['IN-BR', 'Bihar',  56368567],
+        ['IN-CH', 'Chandigarh', 596175],
+        ['IN-CT', 'Chhattisgarh', 20573178],
+        ['IN-DN', 'Dadra and Nagar Haveli', 269913],
+        ['IN-DD', 'Daman and Diu',  92602],
+        ['IN-DL', 'Delhi',  11862742],
+        ['IN-GA', 'Goa',  1076175],
+        ['IN-GJ', 'Gujarat',  39923523],
+        ['IN-HR', 'Haryana',  22269352],
+        ['IN-HP', 'Himachal Pradesh', 4719171],
+        ['IN-JK', 'Jammu and Kashmir',  5757930],
+        ['IN-JH', 'Jharkhand',  23245893],
+        ['IN-KA', 'Karnataka',  41973616],
+        ['IN-KL', 'Kerala', 28991609],
+        ['IN-LD', 'Lakshadweep',  52306],
+        ['IN-MP', 'Madhya Pradesh', 51529243],
+        ['IN-MH', 'Maharashtra',  75960427],
+        ['IN-MN', 'Manipur',  1165638],
+        ['IN-ML', 'Meghalaya',  39724],
+        ['IN-MZ', 'Mizoram',  376222],
+        ['IN-NL', 'Nagaland', 883320],
+        ['IN-OR', 'Odisha', 25746975],
+        ['IN-PY', 'Puducherry', 537711],
+        ['IN-PB', 'Punjab', 21207133],
+        ['IN-RJ', 'Rajasthan',  47045435],
+        ['IN-SK', 'Sikkim', 362034],
+        ['IN-TN', 'Tamil Nadu', 49077586],
+        ['IN-TG', 'Telangana',  1234896],
+        ['IN-TR', 'Tripura',  867685],
+        ['IN-UP', 'Uttar Pradesh',  118565666],
+        ['IN-UT', 'Uttarakhand',  6353293],
+        ['IN-WB', 'West Bengal',  63345554],
+      ]);
+      var options = {
+        region: 'IN',
+        displayMode: 'regions',
+        resolution: 'provinces',
+        colorAxis: {colors: ['#00FF00', '#FF0000']},
+        width: 640, 
+        height: 480
+      };
+     
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+      chart.draw(data, options);
+    }
+  </script>
+
 </head>
 
 <body>
   <!--div id="regions_div" style="width: 900px; height: 500px;"></div-->
-<iframe width="1263.0309419192854" height="781" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YDTw7QGdw6qNsiPVAJNVf4HnxTatGmprfxo4U2Qh1pA/pubchart?oid=696213345&amp;format=interactive"></iframe>
 
-<h3>Observations</h3>
+  <div class="container">
+    <h3>Aadhaar enrollment data analysis</h3>
+    <div class="muted">
+      Indian government launched Aadhaar project to gather biometric and demographic data from Indian residents. Aadhaar card is now used for public distribution system such as kerosene and gas (LPG) helping save high costs due to streamlining of information processing.<br>
+
+      Unique identification authority of India (UIDAI) is an agency that presides the operations of Aadhaar and has made metadata available for public consumption. The following is an analysis of 400 million data points (2012 - September 2015). Each row in this dataset comprises of the following information: date, registrar, private agency, state, district, sub district, pincode, gender, age, aadhaar generated, rejected, email provided, mobile number provided. The last four fields report the instances of people that are bracketed together. For example, 5, 0, 0, 5 indicates that 5 aadhaars were generated, none were rejected, none had email and 5 had mobile number information.
+    </div>
+
+    <div class="info">
+      <h4>Notes about data</h4>
+      Apart from the 29 states and 7 union territories, some data was categorized in 'Others' state. These instances are ignored in our analysis.
+    </div>
+    <h3>Enrollment information</h3>
+
+    <p class="text-info text-center"> Aadhaar enrollment data - Gender distribution</p>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <i class="fa fa-venus fa-2x" title="female"></i>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="fa fa-mars fa-2x" title="male"></i>
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="fa fa-transgender fa-2x" title="transgender"></i>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <table class="table table-striped">
+          <tr>
+            <td>Enrolled: 373435651 (88.41%)</td>
+          </tr>
+          <tr>
+            <td>Rejected: 48939750 (11.59%)</td>
+          </tr>
+          <tr>
+            <td>Email information: 4215132 (0.99%)</td>
+          </tr>
+          <tr>
+            <td>Mobile information: 136845977 (32.39%)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <table class="table table-striped">
+          <tr>
+            <td>Enrolled: 402717613 (88.92%)</td>
+          </tr>
+          <tr>
+            <td>Rejected: 50167687 (11.08%)</td>
+          </tr>
+          <tr>
+            <td>Email information: 6595534 (1.45%)</td>
+          </tr>
+          <tr>
+            <td>Mobile information: 171775195 (37.91%)</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <table class="table table-striped">
+          <tr>
+            <td>Enrolled: 31611 (66.33%)</td>
+          </tr>
+          <tr>
+            <td>Rejected: 16048 (33.67%)</td>
+          </tr>
+          <tr>
+            <td>Email information: 233 (0.48%)</td>
+          </tr>
+          <tr>
+            <td>Mobile information: 15611 (32.75%)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="info">
+      <h4>How to read the gender distribution table</h4>
+      Consider the table in Female gender: of all the females that tried to register their Aadhaar, 88.41% succeeded while ~11.6% female applicants were rejected. Successful female Aadhaar enrollments: 373435651. Of all the female applicants, only 0.99% had provided email information and about ~32.4% provided mobile information. Transgender applicants have a higher rejection rate compared to their female and male compatriots. The fraction of applicants that provided mobile information is comparable across genders. <mark>The fraction of applicants that provided email information is miniscule.</mark>
+    </div>
+
+    <hr>
+  <!--iframe width="1263.0309419192854" height="781" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YDTw7QGdw6qNsiPVAJNVf4HnxTatGmprfxo4U2Qh1pA/pubchart?oid=696213345&amp;format=interactive"></iframe-->
+
+<!--h3>Observations</h3>
 <div class="muted">
   <ul>
     <li>Regions with low aadhaar generations: Puducherry, Delhi, Nagaland (<65%).</li>
     <li>Regions with high aadhaar generations:  Andaman and Nicobar Islands, Arunachal Pradesh, Assam, Meghalaya, Mizoram, Sikkim (>95%)</li>
   </ul>  
-</div>
+</div-->
 
-<h2>Incomplete - mapping successful aadhaar generations across states</h2>
+<h2>Ongoing - mapping successful aadhaar generations across states</h2>
+</div>
 <header>
   <div class="container">
     <h2>
@@ -117,7 +205,7 @@
           <li><a class="no-action"><input type="search" class="form-control" data-search="data-file" data-target=".mapfiles li.mapfile" data-hide-class="hide"></a></li>
         </ul>
       </div>
-      <div class="pull-right">
+      <!--div class="pull-right">
         <form class="form-inline">
           <div class="form-group dropdown">
             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Map <b class="caret"></b></a>
@@ -151,7 +239,7 @@
               </a></li>
             </ul>
 
-            <!--input type="search" class="form-control search-in-map" placeholder="Search" data-search="title" data-target=".carto path" data-hide-class="dim">
+            <input type="search" class="form-control search-in-map" placeholder="Search" data-search="title" data-target=".carto path" data-hide-class="dim">
 
             <div class="form-group dropdown">
               <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" title="Download" data-placement="left">
@@ -162,18 +250,24 @@
                 <li class="download" data-type="png"><a href="#">PNG image</a></li>
                 <li class="download" data-type="csv"><a href="#">Data in Excel</a></li>
               </ul>
-            </div-->
+            </div>
           </div>
         </form>
-      </div>
+      </div-->
       <div class="clearfix"></div>
     </h2>
   </div>
 </header>
 
 <div class="container">
+  <div class="text-info">
+    Click on a state to view corresponding information on Aadhaar enrollments. Toggle legend entries to view gender-specific enrollments data.
+  </div>
+  <div class="text-warning">
+    A toggle option to view rejected enrollments will be added.
+  </div>
   <div class="row">
-    <div class="left col-md-8">
+    <div class="left col-md-7">
       <div class="loading">
         <img width="66" height="66" src="img/loading.gif?v=8ab63" />
         <h4>Loading...</h4>
@@ -197,9 +291,16 @@
         </g>
       </svg>
     </div>
-    <div class="right col-md-4">
-      <div id="table"></div>
-      <form class="table-controls">
+    <div class="right col-md-5">
+      <div id="table">
+        <div class="row">
+          <div id="tableone" class="col-md-5"></div>
+        </div>
+        <div class="row">
+          <div id="tabletwo" class="col-md-5"></div>
+        </div>
+      </div>
+      <!--form class="table-controls">
         <button class="btn btn-default reset-zoom" title="Reset zoom"><i class="glyphicon glyphicon-home"></i></button>
         <button class="btn btn-default move-map-with-table" data-toggle="button" title="Show on map as you move on the table"><i class="glyphicon glyphicon-map-marker"></i></button>
         <span class="dropdown">
@@ -213,14 +314,13 @@
           </ul>
         </span>
         <a class="btn btn-default reverse-palette" title="Reverse colour scale"><i class="glyphicon glyphicon-random"></i></a>
-      </form>
+      </form-->
     </div>
   </div>
+  <div id="tables"></div>
 </div>
 
 <script type="text/csv" id="mapfiles">file,name,source
-ne_50m_admin_0_countries,World,http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip
-india-states,India: States,https://groups.google.com/d/msg/datameet/X5kzViRMJKs/N84vOu-391MJ
 india-states-2,India: States with Telangana,https://github.com/datameet/maps/tree/master/States
 india-districts,India: Districts,http://geocommons.com/overlays/226411.zip
 </script>
@@ -232,6 +332,7 @@ india-districts,India: Districts,http://geocommons.com/overlays/226411.zip
 <script src="css/G.min.js"></script>
 <script src="css/cartogram.js"></script>
 <script src="css/colorbrewer.v1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
 var width = 500,
     height = 500,
@@ -327,9 +428,23 @@ palette_svg.append('rect')
   .attr('height', 10)
   .attr('fill', function(d) { return 'url(#' + d + ')' })
 
+var state_data;
+
+var all_states_total = 0;
+d3.json("aed_keyed.json", function(err, data) {
+  if(err) alert("error fetching state data" + err);
+  state_data = data;
+
+  //console.log(state_data, typeof state_data);
+  for(i=0; i < state_data["India"].length; i++) {
+    console.log(state_data["India"][i]);
+  }
+});
+
+
 // Set up the table
-var table = $('#table').handsontable({
-  height: 605,
+var table = $('#tables').handsontable({
+  height: 205,
   colHeaders: true,
   manualColumnResize: true,
   manualColumnMove: true,
@@ -373,9 +488,12 @@ var table = $('#table').handsontable({
   }
 }).handsontable('getInstance')
 
+
 var map = G.map()
     .width(width)
     .height(height)
+
+console.log(state_data);
 
 // Return copy of data with redundant (i.e. constant value) columns removed
 function dedup(data) {
@@ -491,7 +609,7 @@ function redraw(json, preserve_data) {
       values[i] = i % 6
       sizes[i] = 3 + i % 5
       labels[i] = ''
-      console.log(data[i]);
+      //console.log(data[i]);
     }
   }
   for (i=0, l=data.length; i<l; i++) {
@@ -574,6 +692,149 @@ function redraw(json, preserve_data) {
       d3.selectAll('.carto path.dim').classed('dim', false)
       d3.select(this).classed('highlight', true)
       move_map_with_table = old_move_map_with_table
+
+      var state_name = d.properties.ST_NM;
+      state_object = state_data[state_name];
+
+      // enrolled + rejected
+      var state_totals = {
+        "state_total": 0,
+        "state_enrolled": 0,
+        "state_rejected": 0,
+        "state_emails": 0,
+        "state_mobiles": 0
+      };
+      
+      // selected state of interest
+      for(i=0; i < state_object.length;i++) {
+        console.log( state_object[i] );
+
+        state_totals["state_total"] = state_totals["state_total"] + parseInt(state_object[i]["enrolled"]) + parseInt(state_object[i]["rejected"]);
+        state_totals["state_enrolled"] = state_totals["state_enrolled"] + parseInt(state_object[i]["enrolled"]);
+        state_totals["state_rejected"] = state_totals["state_rejected"] + parseInt(state_object[i]["rejected"]);
+        state_totals["state_emails"] = state_totals["state_emails"] + parseInt(state_object[i]["email_instances"]);
+        state_totals["state_mobiles"] = state_totals["state_mobiles"] + parseInt(state_object[i]["mobile_instances"]);
+      }
+      console.log("state_instances: ", d.properties.ST_NM, state_totals);
+
+      $("#tables").empty();
+      //function draw_stacked_bar() {
+        $(function () {
+          var india_male = parseInt(state_data["India"][1]["enrolled"]);
+          var india_female = parseInt(state_data["India"][0]["enrolled"]);
+          var india_transgender = parseInt(state_data["India"][2]["enrolled"]);
+          var india_total = india_male + india_female + india_transgender;
+
+          console.log(state_totals["state_total"]);
+
+          // email distribution chart
+          $("#tableone").highcharts({
+            chart: {
+              height: 250,
+              type: 'column',
+              inverted: true
+            },
+            credits: false,
+            series: [
+            {
+              name: 'Male',
+              data: [parseInt(state_data["India"][1]["email_instances"]), parseInt(state_object[1]["email_instances"])]
+            }, {
+              name: 'Female',
+              data: [parseInt(state_data["India"][0]["email_instances"]), parseInt(state_object[0]["email_instances"])]
+            }, {
+              name: 'Transgender',
+              data: [parseInt(state_data["India"][2]["email_instances"]), parseInt(state_object[2]["email_instances"])]
+            },
+            ],
+            title: {
+              text: "No. of enrollments with email data"
+            },
+            xAxis: {
+              categories: ["India", d.properties.ST_NM],
+              title: { enabled: false},
+              tickLength: 0,
+              minorGridLineWidth: 0,
+              gridLineColor: 'transparent',
+              gridLineWidth: 0
+            },
+            yAxis: {
+              min: 0,
+              title: {
+                enabled: false
+              },
+              labels: {
+                enabled: false
+              },
+              tickLength: 0,
+              minorGridLineWidth: 0,
+              gridLineColor: 'transparent',
+              gridLineWidth: 0
+            }
+          })
+          // gender distribution chart
+          $("#tabletwo").highcharts({
+            chart: {
+              height: 250,
+              //width: '100%',
+              type: 'column',
+              inverted: true
+            },
+            credits: false,
+            series: [
+            /*{
+              name: 'Male',
+              data: [india_male/india_total*100, parseInt(state_object[1]["enrolled"])/state_totals["state_total"]*100]
+            }, {
+              name: 'Female',
+              data: [india_female/india_total*100, parseInt(state_object[0]["enrolled"])/state_totals["state_total"]*100]
+            },
+            {
+              name: 'Transgender',
+              data: [india_transgender/india_total*100, parseInt(state_object[2]["enrolled"])/state_totals["state_total"]*100]
+            }*/
+            {
+              name: 'Male',
+              data: [india_male, parseInt(state_object[1]["enrolled"])]
+            }, {
+              name: 'Female',
+              data: [india_female, parseInt(state_object[0]["enrolled"])]
+            },
+            {
+              name: 'Transgender',
+              data: [india_transgender, parseInt(state_object[2]["enrolled"])]
+            }
+            ],
+            title: {
+              enabled: false,
+              text: "Gender-specific enrollments"
+            },
+            xAxis: {
+              categories: ["India", d.properties.ST_NM],
+              title: {
+                enabled: false
+              },
+              tickLength: 0,
+              minorGridLineWidth: 0,
+              gridLineColor: 'transparent',
+              gridLineWidth: 0
+            },
+            yAxis: {
+              min: 0,
+              title: {
+                enabled: false
+              },
+              labels: {
+                enabled: false
+              },
+              tickLength: 0,
+              minorGridLineWidth: 0,
+              gridLineColor: 'transparent',
+              gridLineWidth: 0
+            }
+            });
+        });
+      //}
     })
 
   // Make all default properties read-only
@@ -741,6 +1002,503 @@ $('body').on('click', '.download', function(e) {
 })
 </script>
 
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+  <script type="text/javascript">
+    $(function () {
+    $('#heatmap').highcharts({
+      data: {
+          csv: document.getElementById('csv').innerHTML
+      },
+
+      chart: {
+          type: 'heatmap',
+          height: 500
+          //margin: [60, 10, 80, 50]
+      },
+
+      title: {
+          text: 'Ongoing - State-wise enrollment distribution categorized by age',
+          align: 'left',
+          x: 40
+      },
+
+      xAxis: {
+        categories: ["India", "Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli", "Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"]
+          /*type: 'datetime',
+          min: Date.UTC(2013, 0, 1),
+          max: Date.UTC(2014, 0, 1),
+          labels: {
+              align: 'left',
+              x: 5,
+              y: 14,
+              format: '{value:%B}' // long month
+          },*/
+          //showLastLabel: false,
+          //tickLength: 16
+      },
+
+      yAxis: {
+          title: {
+              text: null
+          },
+          categories: ['0-10', '10-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90-100', '>100'],
+          minPadding: 0,
+          maxPadding: 0,
+          //startOnTick: false,
+          //endOnTick: false,
+          tickPositions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+          tickWidth: 1,
+          reversed: true
+      },
+
+      colorAxis: {
+          stops: [
+              [0, '#3060cf'],
+              [0.5, '#fffbbc'],
+              [0.9, '#c4463a'],
+              [1, '#c4463a']
+          ],
+          //min: -15,
+          //max: 25,
+          startOnTick: false,
+          endOnTick: false,
+          labels: {
+              //format: '{value}℃'
+          }
+      },
+
+      series: [{
+          borderWidth: 0,
+          nullColor: '#EFEFEF',
+          colsize: 37 * 11,
+          tooltip: {
+              //pointFormat: '{point.x:%e %b, %Y} {point.y}:00: <b>{point.value} ℃</b>'
+              formatter: function () {
+                console.log(this);
+                return '<b>' + this.series.yAxis.categories[this.point.y] + '</b> sold <br><b>';
+                    //this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
+              },
+            }
+          //turboThreshold: Number.MAX_VALUE // #3404, remove after 4.0.5 release
+      }]
+
+    });
+  });
+
+</script>
+<pre id="csv" style="display: none">
+state,bucket,enrollments_generated
+India,1,85131355
+India,2,166635159
+India,3,159637204
+India,4,130984160
+India,5,103336716
+India,6,67338620
+India,7,46950719
+India,8,16849061
+India,9,3630730
+India,10,344361
+India,11,34512
+Andaman and Nicobar Islands,1,41299
+Andaman and Nicobar Islands,2,48731
+Andaman and Nicobar Islands,3,58158
+Andaman and Nicobar Islands,4,55933
+Andaman and Nicobar Islands,5,41393
+Andaman and Nicobar Islands,6,24868
+Andaman and Nicobar Islands,7,14513
+Andaman and Nicobar Islands,8,4506
+Andaman and Nicobar Islands,9,1076
+Andaman and Nicobar Islands,10,133
+Andaman and Nicobar Islands,11,4
+Andhra Pradesh,1,9481231
+Andhra Pradesh,2,9244940
+Andhra Pradesh,3,10142829
+Andhra Pradesh,4,8390684
+Andhra Pradesh,5,6346067
+Andhra Pradesh,6,4125498
+Andhra Pradesh,7,3411930
+Andhra Pradesh,8,1364996
+Andhra Pradesh,9,285793
+Andhra Pradesh,10,28959
+Andhra Pradesh,11,1693
+Arunachal Pradesh,1,43311
+Arunachal Pradesh,2,133614
+Arunachal Pradesh,3,107263
+Arunachal Pradesh,4,87673
+Arunachal Pradesh,5,65940
+Arunachal Pradesh,6,35875
+Arunachal Pradesh,7,15185
+Arunachal Pradesh,8,4460
+Arunachal Pradesh,9,822
+Arunachal Pradesh,10,75
+Arunachal Pradesh,11,5
+Assam,1,18874
+Assam,2,83099
+Assam,3,147107
+Assam,4,104218
+Assam,5,74927
+Assam,6,46013
+Assam,7,21341
+Assam,8,7329
+Assam,9,1104
+Assam,10,105
+Assam,11,3
+Bihar,1,5009689
+Bihar,2,13546050
+Bihar,3,11718263
+Bihar,4,9456808
+Bihar,5,7024411
+Bihar,6,4592279
+Bihar,7,3719253
+Bihar,8,1038949
+Bihar,9,239447
+Bihar,10,22475
+Bihar,11,943
+Chandigarh,1,112605
+Chandigarh,2,107312
+Chandigarh,3,130849
+Chandigarh,4,100265
+Chandigarh,5,68390
+Chandigarh,6,42544
+Chandigarh,7,22175
+Chandigarh,8,9009
+Chandigarh,9,2726
+Chandigarh,10,284
+Chandigarh,11,16
+Chhattisgarh,1,2597188
+Chhattisgarh,2,4520921
+Chhattisgarh,3,4441414
+Chhattisgarh,4,3275977
+Chhattisgarh,5,2667489
+Chhattisgarh,6,1624961
+Chhattisgarh,7,1032380
+Chhattisgarh,8,334320
+Chhattisgarh,9,71143
+Chhattisgarh,10,7033
+Chhattisgarh,11,352
+Dadra and Nagar Haveli,1,24669
+Dadra and Nagar Haveli,2,62294
+Dadra and Nagar Haveli,3,70930
+Dadra and Nagar Haveli,4,52413
+Dadra and Nagar Haveli,5,31598
+Dadra and Nagar Haveli,6,16076
+Dadra and Nagar Haveli,7,8719
+Dadra and Nagar Haveli,8,2701
+Dadra and Nagar Haveli,9,467
+Dadra and Nagar Haveli,10,39
+Dadra and Nagar Haveli,11,7
+Daman and Diu,1,15959
+Daman and Diu,2,16066
+Daman and Diu,3,22655
+Daman and Diu,4,17406
+Daman and Diu,5,9963
+Daman and Diu,6,5435
+Daman and Diu,7,3323
+Daman and Diu,8,1389
+Daman and Diu,9,366
+Daman and Diu,10,38
+Daman and Diu,11,2
+Delhi,1,1967432
+Delhi,2,2355299
+Delhi,3,2691938
+Delhi,4,2079690
+Delhi,5,1313838
+Delhi,6,734492
+Delhi,7,497310
+Delhi,8,177771
+Delhi,9,41041
+Delhi,10,3417
+Delhi,11,514
+Goa,1,125050
+Goa,2,174389
+Goa,3,183098
+Goa,4,199436
+Goa,5,166905
+Goa,6,112510
+Goa,7,76613
+Goa,8,30879
+Goa,9,6741
+Goa,10,524
+Goa,11,30
+Gujarat,1,3700617
+Gujarat,2,7998409
+Gujarat,3,7920858
+Gujarat,4,7404487
+Gujarat,5,5863103
+Gujarat,6,3894288
+Gujarat,7,2227688
+Gujarat,8,758940
+Gujarat,9,140665
+Gujarat,10,13658
+Gujarat,11,810
+Haryana,1,3530944
+Haryana,2,4714899
+Haryana,3,4366984
+Haryana,4,3428976
+Haryana,5,2572363
+Haryana,6,1622325
+Haryana,7,1338964
+Haryana,8,516225
+Haryana,9,156932
+Haryana,10,20084
+Haryana,11,656
+Himachal Pradesh,1,667816
+Himachal Pradesh,2,883118
+Himachal Pradesh,3,896966
+Himachal Pradesh,4,797304
+Himachal Pradesh,5,618204
+Himachal Pradesh,6,419879
+Himachal Pradesh,7,263389
+Himachal Pradesh,8,122276
+Himachal Pradesh,9,43500
+Himachal Pradesh,10,6327
+Himachal Pradesh,11,392
+Jammu and Kashmir,1,413660
+Jammu and Kashmir,2,1363427
+Jammu and Kashmir,3,1215229
+Jammu and Kashmir,4,1010205
+Jammu and Kashmir,5,795380
+Jammu and Kashmir,6,510883
+Jammu and Kashmir,7,296177
+Jammu and Kashmir,8,122552
+Jammu and Kashmir,9,27184
+Jammu and Kashmir,10,3096
+Jammu and Kashmir,11,137
+Jharkhand,1,4043172
+Jharkhand,2,5663945
+Jharkhand,3,4709949
+Jharkhand,4,3306526
+Jharkhand,5,2443512
+Jharkhand,6,1544584
+Jharkhand,7,1086730
+Jharkhand,8,359546
+Jharkhand,9,78827
+Jharkhand,10,8452
+Jharkhand,11,650
+Karnataka,1,5265551
+Karnataka,2,7819270
+Karnataka,3,8499844
+Karnataka,4,7303994
+Karnataka,5,5526420
+Karnataka,6,3568789
+Karnataka,7,2740384
+Karnataka,8,1003106
+Karnataka,9,221231
+Karnataka,10,21508
+Karnataka,11,3519
+Kerala,1,3399189
+Kerala,2,4957247
+Kerala,3,4434030
+Kerala,4,4669909
+Kerala,5,4518953
+Kerala,6,3461747
+Kerala,7,2256193
+Kerala,8,993051
+Kerala,9,279732
+Kerala,10,20837
+Kerala,11,721
+Lakshadweep,1,6306
+Lakshadweep,2,9838
+Lakshadweep,3,11057
+Lakshadweep,4,9301
+Lakshadweep,5,7156
+Lakshadweep,6,4870
+Lakshadweep,7,2777
+Lakshadweep,8,814
+Lakshadweep,9,171
+Lakshadweep,10,16
+Lakshadweep,11,0
+Madhya Pradesh,1,7266740
+Madhya Pradesh,2,11448757
+Madhya Pradesh,3,10681820
+Madhya Pradesh,4,8333238
+Madhya Pradesh,5,6318938
+Madhya Pradesh,6,3797244
+Madhya Pradesh,7,2537844
+Madhya Pradesh,8,920256
+Madhya Pradesh,9,202990
+Madhya Pradesh,10,20242
+Madhya Pradesh,11,1174
+Maharashtra,1,11384398
+Maharashtra,2,14826842
+Maharashtra,3,14651622
+Maharashtra,4,12274143
+Maharashtra,5,9156527
+Maharashtra,6,5776811
+Maharashtra,7,5384357
+Maharashtra,8,2085037
+Maharashtra,9,384854
+Maharashtra,10,32890
+Maharashtra,11,2945
+Manipur,1,90926
+Manipur,2,244925
+Manipur,3,239048
+Manipur,4,212859
+Manipur,5,162044
+Manipur,6,114497
+Manipur,7,65535
+Manipur,8,26409
+Manipur,9,8653
+Manipur,10,687
+Manipur,11,55
+Meghalaya,1,3322
+Meghalaya,2,8065
+Meghalaya,3,10179
+Meghalaya,4,8003
+Meghalaya,5,5722
+Meghalaya,6,2788
+Meghalaya,7,1098
+Meghalaya,8,441
+Meghalaya,9,100
+Meghalaya,10,6
+Meghalaya,11,0
+Mizoram,1,27674
+Mizoram,2,79952
+Mizoram,3,70526
+Mizoram,4,70962
+Mizoram,5,53451
+Mizoram,6,40746
+Mizoram,7,21764
+Mizoram,8,8938
+Mizoram,9,2087
+Mizoram,10,120
+Mizoram,11,2
+Nagaland,1,121778
+Nagaland,2,208771
+Nagaland,3,176885
+Nagaland,4,145342
+Nagaland,5,104583
+Nagaland,6,64324
+Nagaland,7,36735
+Nagaland,8,17897
+Nagaland,9,5790
+Nagaland,10,1037
+Nagaland,11,178
+Odisha,1,2167116
+Odisha,2,5558068
+Odisha,3,5046487
+Odisha,4,4546538
+Odisha,5,3714599
+Odisha,6,2424247
+Odisha,7,1565883
+Odisha,8,592438
+Odisha,9,119618
+Odisha,10,10748
+Odisha,11,1233
+Puducherry,1,76582
+Puducherry,2,88883
+Puducherry,3,97722
+Puducherry,4,98040
+Puducherry,5,75760
+Puducherry,6,49660
+Puducherry,7,32131
+Puducherry,8,14272
+Puducherry,9,4163
+Puducherry,10,416
+Puducherry,11,82
+Punjab,1,3119515
+Punjab,2,4058753
+Punjab,3,4224327
+Punjab,4,3406546
+Punjab,5,2639326
+Punjab,6,1753298
+Punjab,7,1310893
+Punjab,8,533225
+Punjab,9,142506
+Punjab,10,17732
+Punjab,11,1012
+Rajasthan,1,4432996
+Rajasthan,2,10986979
+Rajasthan,3,10136257
+Rajasthan,4,7529611
+Rajasthan,5,5842275
+Rajasthan,6,4005688
+Rajasthan,7,2751042
+Rajasthan,8,1075781
+Rajasthan,9,257506
+Rajasthan,10,26218
+Rajasthan,11,1082
+Sikkim,1,55125
+Sikkim,2,78259
+Sikkim,3,81877
+Sikkim,4,60102
+Sikkim,5,38860
+Sikkim,6,24990
+Sikkim,7,13974
+Sikkim,8,6832
+Sikkim,9,1828
+Sikkim,10,177
+Sikkim,11,10
+Tamil Nadu,1,3010887
+Tamil Nadu,2,9155893
+Tamil Nadu,3,8867145
+Tamil Nadu,4,9011713
+Tamil Nadu,5,7997563
+Tamil Nadu,6,5691438
+Tamil Nadu,7,3653374
+Tamil Nadu,8,1373609
+Tamil Nadu,9,285031
+Tamil Nadu,10,20556
+Tamil Nadu,11,10377
+Telangana,1,817845
+Telangana,2,72129
+Telangana,3,125665
+Telangana,4,94435
+Telangana,5,49825
+Telangana,6,26384
+Telangana,7,25517
+Telangana,8,15403
+Telangana,9,6514
+Telangana,10,1142
+Telangana,11,37
+Tripura,1,188853
+Tripura,2,139161
+Tripura,3,174328
+Tripura,4,132821
+Tripura,5,103501
+Tripura,6,66109
+Tripura,7,37351
+Tripura,8,17464
+Tripura,9,6648
+Tripura,10,1327
+Tripura,11,122
+Uttar Pradesh,1,6227244
+Uttar Pradesh,2,30202639
+Uttar Pradesh,3,27572236
+Uttar Pradesh,4,20664861
+Uttar Pradesh,5,15594652
+Uttar Pradesh,6,9758037
+Uttar Pradesh,7,6374150
+Uttar Pradesh,8,1822910
+Uttar Pradesh,9,317898
+Uttar Pradesh,10,29719
+Uttar Pradesh,11,1320
+Uttarakhand,1,445193
+Uttarakhand,2,1492268
+Uttarakhand,3,1365931
+Uttarakhand,4,1105568
+Uttarakhand,5,830857
+Uttarakhand,6,545748
+Uttarakhand,7,393412
+Uttarakhand,8,141552
+Uttarakhand,9,30346
+Uttarakhand,10,2349
+Uttarakhand,11,69
+West Bengal,1,4847008
+West Bengal,2,13302289
+West Bengal,3,13471774
+West Bengal,4,10734293
+West Bengal,5,9789156
+West Bengal,6,6325221
+West Bengal,7,3401050
+West Bengal,8,1220437
+West Bengal,9,230359
+West Bengal,10,19874
+West Bengal,11,4093
+</pre>
+
+<div id="heatmap"></div>
 </body></html>
 
 

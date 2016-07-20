@@ -1,0 +1,1205 @@
+{
+   "India": [
+     {
+       "gender": "F",
+       "enrolled": "373435651",
+       "rejected": "48939750",
+       "enrolled_perc": "88.41321017177324",
+       "rejected_perc": "11.586789828226763",
+       "email_instances": "4215132",
+       "mobile_instances": "136845977",
+       "email_perc_enr": "0.9979586855722216",
+       "mobile_perc_enr": "32.399135147550886"
+     },
+     {
+       "gender": "M",
+       "enrolled": "402717613",
+       "rejected": "50167687",
+       "enrolled_perc": "88.92265061374259",
+       "rejected_perc": "11.077349386257403",
+       "email_instances": "6595534",
+       "mobile_instances": "171775195",
+       "email_perc_enr": "1.4563365161112538",
+       "mobile_perc_enr": "37.92907276963947"
+     },
+     {
+       "gender": "T",
+       "enrolled": "31611",
+       "rejected": "16048",
+       "enrolled_perc": "66.32745126838583",
+       "rejected_perc": "33.67254873161418",
+       "email_instances": "233",
+       "mobile_instances": "15611",
+       "email_perc_enr": "0.48888982143981197",
+       "mobile_perc_enr": "32.7556180364674"
+     }
+   ],
+   "Andaman and Nicobar Islands": [
+      {
+         "gender": "F",
+         "enrolled": 137112,
+         "rejected": 6293,
+         "enrolled_perc": 95.61172901921132,
+         "rejected_perc": 4.3882709807886755,
+         "email_instances": 2370,
+         "mobile_instances": 111494,
+         "email_perc_enr": 1.652662041072487,
+         "mobile_perc_enr": 77.74763780900248
+      },
+      {
+         "gender": "M",
+         "enrolled": 153497,
+         "rejected": 7347,
+         "enrolled_perc": 95.43222003929273,
+         "rejected_perc": 4.567779960707269,
+         "email_instances": 5640,
+         "mobile_instances": 131071,
+         "email_perc_enr": 3.5065031956429835,
+         "mobile_perc_enr": 81.48951779363856
+      },
+      {
+         "gender": "T",
+         "enrolled": 5,
+         "rejected": 2,
+         "enrolled_perc": 71.42857142857143,
+         "rejected_perc": 28.57142857142857,
+         "email_instances": 0,
+         "mobile_instances": 7,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 100
+      }
+   ],
+   "Andhra Pradesh": [
+      {
+         "gender": "F",
+         "enrolled": 26297096,
+         "rejected": 6348055,
+         "enrolled_perc": 80.5543708466841,
+         "rejected_perc": 19.44562915331591,
+         "email_instances": 177200,
+         "mobile_instances": 8524622,
+         "email_perc_enr": 0.5428064952127194,
+         "mobile_perc_enr": 26.11298076090994
+      },
+      {
+         "gender": "M",
+         "enrolled": 26522994,
+         "rejected": 6058888,
+         "enrolled_perc": 81.40411901313742,
+         "rejected_perc": 18.595880986862575,
+         "email_instances": 471597,
+         "mobile_instances": 11030795,
+         "email_perc_enr": 1.447420993053747,
+         "mobile_perc_enr": 33.85561030513829
+      },
+      {
+         "gender": "T",
+         "enrolled": 4534,
+         "rejected": 3300,
+         "enrolled_perc": 57.875925453152924,
+         "rejected_perc": 42.124074546847076,
+         "email_instances": 22,
+         "mobile_instances": 1818,
+         "email_perc_enr": 0.2808271636456472,
+         "mobile_perc_enr": 23.206535613990297
+      }
+   ],
+   "Arunachal Pradesh": [
+      {
+         "gender": "F",
+         "enrolled": 236010,
+         "rejected": 7452,
+         "enrolled_perc": 96.93915272198537,
+         "rejected_perc": 3.0608472780146387,
+         "email_instances": 759,
+         "mobile_instances": 105949,
+         "email_perc_enr": 0.311752963501491,
+         "mobile_perc_enr": 43.51767421609944
+      },
+      {
+         "gender": "M",
+         "enrolled": 258210,
+         "rejected": 8422,
+         "enrolled_perc": 96.84133937411865,
+         "rejected_perc": 3.1586606258813648,
+         "email_instances": 1624,
+         "mobile_instances": 127675,
+         "email_perc_enr": 0.6090791802934381,
+         "mobile_perc_enr": 47.88434996549552
+      },
+      {
+         "gender": "T",
+         "enrolled": 3,
+         "rejected": 3,
+         "enrolled_perc": 50,
+         "rejected_perc": 50,
+         "email_instances": 0,
+         "mobile_instances": 0,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 0
+      }
+   ],
+   "Assam": [
+      {
+         "gender": "F",
+         "enrolled": 201065,
+         "rejected": 3198,
+         "enrolled_perc": 98.43437137415978,
+         "rejected_perc": 1.565628625840216,
+         "email_instances": 3232,
+         "mobile_instances": 123616,
+         "email_perc_enr": 1.5822738332443957,
+         "mobile_perc_enr": 60.51805760220892
+      },
+      {
+         "gender": "M",
+         "enrolled": 303055,
+         "rejected": 7729,
+         "enrolled_perc": 97.51306373558485,
+         "rejected_perc": 2.4869362644151565,
+         "email_instances": 9931,
+         "mobile_instances": 224310,
+         "email_perc_enr": 3.195466948105437,
+         "mobile_perc_enr": 72.17553027182866
+      },
+      {
+         "gender": "T",
+         "enrolled": 0,
+         "rejected": 2,
+         "enrolled_perc": 0,
+         "rejected_perc": 100,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 50
+      }
+   ],
+   "Bihar": [
+      {
+         "gender": "F",
+         "enrolled": 27221631,
+         "rejected": 1655170,
+         "enrolled_perc": 94.26816703138273,
+         "rejected_perc": 5.731832968617264,
+         "email_instances": 1215642,
+         "mobile_instances": 9212792,
+         "email_perc_enr": 4.209753012461456,
+         "mobile_perc_enr": 31.903783248012825
+      },
+      {
+         "gender": "M",
+         "enrolled": 29146515,
+         "rejected": 2018360,
+         "enrolled_perc": 93.52360630357093,
+         "rejected_perc": 6.4763936964290725,
+         "email_instances": 300688,
+         "mobile_instances": 12521333,
+         "email_perc_enr": 0.9648297963652991,
+         "mobile_perc_enr": 40.17770968117151
+      },
+      {
+         "gender": "T",
+         "enrolled": 421,
+         "rejected": 129,
+         "enrolled_perc": 76.54545454545455,
+         "rejected_perc": 23.454545454545457,
+         "email_instances": 2,
+         "mobile_instances": 170,
+         "email_perc_enr": 0.36363636363636365,
+         "mobile_perc_enr": 30.909090909090907
+      }
+   ],
+   "Chandigarh": [
+      {
+         "gender": "F",
+         "enrolled": 271736,
+         "rejected": 26954,
+         "enrolled_perc": 90.97592821989353,
+         "rejected_perc": 9.024071780106464,
+         "email_instances": 17719,
+         "mobile_instances": 223635,
+         "email_perc_enr": 5.932237436807393,
+         "mobile_perc_enr": 74.87194080819579
+      },
+      {
+         "gender": "M",
+         "enrolled": 324420,
+         "rejected": 33352,
+         "enrolled_perc": 90.6778618785148,
+         "rejected_perc": 9.322138121485192,
+         "email_instances": 29371,
+         "mobile_instances": 279640,
+         "email_perc_enr": 8.209418288742551,
+         "mobile_perc_enr": 78.16151068278121
+      },
+      {
+         "gender": "T",
+         "enrolled": 19,
+         "rejected": 9,
+         "enrolled_perc": 67.85714285714286,
+         "rejected_perc": 32.142857142857146,
+         "email_instances": 2,
+         "mobile_instances": 23,
+         "email_perc_enr": 7.142857142857142,
+         "mobile_perc_enr": 82.14285714285714
+      }
+   ],
+   "Chhattisgarh": [
+      {
+         "gender": "F",
+         "enrolled": 10258398,
+         "rejected": 641286,
+         "enrolled_perc": 94.11647163348957,
+         "rejected_perc": 5.883528366510442,
+         "email_instances": 103124,
+         "mobile_instances": 2776552,
+         "email_perc_enr": 0.9461191718952586,
+         "mobile_perc_enr": 25.473692631823084
+      },
+      {
+         "gender": "M",
+         "enrolled": 10314552,
+         "rejected": 631513,
+         "enrolled_perc": 94.23068472551552,
+         "rejected_perc": 5.769315274484484,
+         "email_instances": 154525,
+         "mobile_instances": 3363022,
+         "email_perc_enr": 1.41169452218674,
+         "mobile_perc_enr": 30.723570525115644
+      },
+      {
+         "gender": "T",
+         "enrolled": 228,
+         "rejected": 99,
+         "enrolled_perc": 69.72477064220183,
+         "rejected_perc": 30.275229357798167,
+         "email_instances": 3,
+         "mobile_instances": 116,
+         "email_perc_enr": 0.9174311926605505,
+         "mobile_perc_enr": 35.47400611620795
+      }
+   ],
+   "Dadra and Nagar Haveli": [
+      {
+         "gender": "F",
+         "enrolled": 115893,
+         "rejected": 9412,
+         "enrolled_perc": 92.48872750488808,
+         "rejected_perc": 7.511272495111927,
+         "email_instances": 904,
+         "mobile_instances": 52275,
+         "email_perc_enr": 0.7214396871633215,
+         "mobile_perc_enr": 41.71820757352061
+      },
+      {
+         "gender": "M",
+         "enrolled": 154004,
+         "rejected": 14107,
+         "enrolled_perc": 91.60852056081994,
+         "rejected_perc": 8.391479439180067,
+         "email_instances": 2062,
+         "mobile_instances": 92143,
+         "email_perc_enr": 1.2265705397029343,
+         "mobile_perc_enr": 54.8108095246593
+      },
+      {
+         "gender": "T",
+         "enrolled": 16,
+         "rejected": 6,
+         "enrolled_perc": 72.72727272727273,
+         "rejected_perc": 27.27272727272727,
+         "email_instances": 0,
+         "mobile_instances": 19,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 86.36363636363636
+      }
+   ],
+   "Daman and Diu": [
+      {
+         "gender": "F",
+         "enrolled": 38696,
+         "rejected": 4857,
+         "enrolled_perc": 88.84807016738226,
+         "rejected_perc": 11.15192983261773,
+         "email_instances": 379,
+         "mobile_instances": 20328,
+         "email_perc_enr": 0.870204119119234,
+         "mobile_perc_enr": 46.67416710674351
+      },
+      {
+         "gender": "M",
+         "enrolled": 53902,
+         "rejected": 5378,
+         "enrolled_perc": 90.92780026990553,
+         "rejected_perc": 9.072199730094468,
+         "email_instances": 1187,
+         "mobile_instances": 33573,
+         "email_perc_enr": 2.002361673414305,
+         "mobile_perc_enr": 56.63461538461539
+      },
+      {
+         "gender": "T",
+         "enrolled": 4,
+         "rejected": 0,
+         "enrolled_perc": 100,
+         "rejected_perc": 0,
+         "email_instances": 1,
+         "mobile_instances": 2,
+         "email_perc_enr": 25,
+         "mobile_perc_enr": 50
+      }
+   ],
+   "Delhi": [
+      {
+         "gender": "F",
+         "enrolled": 5338758,
+         "rejected": 3174065,
+         "enrolled_perc": 62.714307580458325,
+         "rejected_perc": 37.285692419541675,
+         "email_instances": 112118,
+         "mobile_instances": 4438728,
+         "email_perc_enr": 1.3170484103804343,
+         "mobile_perc_enr": 52.14166910318704
+      },
+      {
+         "gender": "M",
+         "enrolled": 6522931,
+         "rejected": 3463033,
+         "enrolled_perc": 65.32099454794749,
+         "rejected_perc": 34.6790054520525,
+         "email_instances": 205492,
+         "mobile_instances": 5369257,
+         "email_perc_enr": 2.057808339785723,
+         "mobile_perc_enr": 53.768038819286744
+      },
+      {
+         "gender": "T",
+         "enrolled": 1053,
+         "rejected": 909,
+         "enrolled_perc": 53.669724770642205,
+         "rejected_perc": 46.330275229357795,
+         "email_instances": 6,
+         "mobile_instances": 984,
+         "email_perc_enr": 0.3058103975535168,
+         "mobile_perc_enr": 50.15290519877675
+      }
+   ],
+   "Goa": [
+      {
+         "gender": "F",
+         "enrolled": 522249,
+         "rejected": 186117,
+         "enrolled_perc": 73.72587052455934,
+         "rejected_perc": 26.27412947544066,
+         "email_instances": 11799,
+         "mobile_instances": 262517,
+         "email_perc_enr": 1.6656643599495178,
+         "mobile_perc_enr": 37.05951443180503
+      },
+      {
+         "gender": "M",
+         "enrolled": 553808,
+         "rejected": 174055,
+         "enrolled_perc": 76.0868460136042,
+         "rejected_perc": 23.91315398639579,
+         "email_instances": 21504,
+         "mobile_instances": 309764,
+         "email_perc_enr": 2.9544021333685047,
+         "mobile_perc_enr": 42.558008856062195
+      },
+      {
+         "gender": "T",
+         "enrolled": 118,
+         "rejected": 308,
+         "enrolled_perc": 27.699530516431924,
+         "rejected_perc": 72.30046948356808,
+         "email_instances": 0,
+         "mobile_instances": 150,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 35.2112676056338
+      }
+   ],
+   "Gujarat": [
+      {
+         "gender": "F",
+         "enrolled": 18569926,
+         "rejected": 1203548,
+         "enrolled_perc": 93.91332044131447,
+         "rejected_perc": 6.08667955868554,
+         "email_instances": 118977,
+         "mobile_instances": 6951651,
+         "email_perc_enr": 0.6017000351076397,
+         "mobile_perc_enr": 35.156447470990685
+      },
+      {
+         "gender": "M",
+         "enrolled": 21352856,
+         "rejected": 1358973,
+         "enrolled_perc": 94.016452836097,
+         "rejected_perc": 5.983547163903004,
+         "email_instances": 318562,
+         "mobile_instances": 9868255,
+         "email_perc_enr": 1.4026259179742855,
+         "mobile_perc_enr": 43.44984721397823
+      },
+      {
+         "gender": "T",
+         "enrolled": 741,
+         "rejected": 320,
+         "enrolled_perc": 69.83977379830348,
+         "rejected_perc": 30.16022620169651,
+         "email_instances": 12,
+         "mobile_instances": 543,
+         "email_perc_enr": 1.1310084825636193,
+         "mobile_perc_enr": 51.17813383600377
+      }
+   ],
+   "Haryana": [
+      {
+         "gender": "F",
+         "enrolled": 10411209,
+         "rejected": 907453,
+         "enrolled_perc": 91.98268311219118,
+         "rejected_perc": 8.017316887808825,
+         "email_instances": 106683,
+         "mobile_instances": 6038645,
+         "email_perc_enr": 0.9425407349384582,
+         "mobile_perc_enr": 53.3512264965594
+      },
+      {
+         "gender": "M",
+         "enrolled": 11857786,
+         "rejected": 995114,
+         "enrolled_perc": 92.25766947537132,
+         "rejected_perc": 7.7423305246286835,
+         "email_instances": 207374,
+         "mobile_instances": 7491050,
+         "email_perc_enr": 1.6134413245259822,
+         "mobile_perc_enr": 58.28295559756942
+      },
+      {
+         "gender": "T",
+         "enrolled": 357,
+         "rejected": 101,
+         "enrolled_perc": 77.9475982532751,
+         "rejected_perc": 22.05240174672489,
+         "email_instances": 5,
+         "mobile_instances": 234,
+         "email_perc_enr": 1.0917030567685588,
+         "mobile_perc_enr": 51.09170305676856
+      }
+   ],
+   "Himachal Pradesh": [
+      {
+         "gender": "F",
+         "enrolled": 2275123,
+         "rejected": 143845,
+         "enrolled_perc": 94.05345585390134,
+         "rejected_perc": 5.946544146098667,
+         "email_instances": 20570,
+         "mobile_instances": 596045,
+         "email_perc_enr": 0.8503626339827562,
+         "mobile_perc_enr": 24.64046651299232
+      },
+      {
+         "gender": "M",
+         "enrolled": 2443893,
+         "rejected": 146709,
+         "enrolled_perc": 94.33687613921397,
+         "rejected_perc": 5.663123860786025,
+         "email_instances": 64631,
+         "mobile_instances": 895673,
+         "email_perc_enr": 2.494825527039661,
+         "mobile_perc_enr": 34.57393300862116
+      },
+      {
+         "gender": "T",
+         "enrolled": 155,
+         "rejected": 43,
+         "enrolled_perc": 78.28282828282829,
+         "rejected_perc": 21.71717171717172,
+         "email_instances": 2,
+         "mobile_instances": 43,
+         "email_perc_enr": 1.0101010101010102,
+         "mobile_perc_enr": 21.71717171717172
+      }
+   ],
+   "Jammu and Kashmir": [
+      {
+         "gender": "F",
+         "enrolled": 2712150,
+         "rejected": 219418,
+         "enrolled_perc": 92.51533650251334,
+         "rejected_perc": 7.48466349748667,
+         "email_instances": 6053,
+         "mobile_instances": 915675,
+         "email_perc_enr": 0.20647653405958857,
+         "mobile_perc_enr": 31.234990967291225
+      },
+      {
+         "gender": "M",
+         "enrolled": 3045759,
+         "rejected": 256660,
+         "enrolled_perc": 92.22812126504843,
+         "rejected_perc": 7.771878734951561,
+         "email_instances": 23340,
+         "mobile_instances": 1192972,
+         "email_perc_enr": 0.7067546546940289,
+         "mobile_perc_enr": 36.12418654325814
+      },
+      {
+         "gender": "T",
+         "enrolled": 21,
+         "rejected": 12,
+         "enrolled_perc": 63.63636363636363,
+         "rejected_perc": 36.36363636363637,
+         "email_instances": 0,
+         "mobile_instances": 7,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 21.21212121212121
+      }
+   ],
+   "Jharkhand": [
+      {
+         "gender": "F",
+         "enrolled": 11313873,
+         "rejected": 1259389,
+         "enrolled_perc": 89.98359375633785,
+         "rejected_perc": 10.016406243662146,
+         "email_instances": 42632,
+         "mobile_instances": 1660392,
+         "email_perc_enr": 0.3390687317261026,
+         "mobile_perc_enr": 13.205737699572314
+      },
+      {
+         "gender": "M",
+         "enrolled": 11931462,
+         "rejected": 1260258,
+         "enrolled_perc": 90.44659832076485,
+         "rejected_perc": 9.553401679235158,
+         "email_instances": 124593,
+         "mobile_instances": 2357843,
+         "email_perc_enr": 0.9444788094350093,
+         "mobile_perc_enr": 17.873658628291082
+      },
+      {
+         "gender": "T",
+         "enrolled": 558,
+         "rejected": 150,
+         "enrolled_perc": 78.8135593220339,
+         "rejected_perc": 21.1864406779661,
+         "email_instances": 2,
+         "mobile_instances": 102,
+         "email_perc_enr": 0.2824858757062147,
+         "mobile_perc_enr": 14.40677966101695
+      }
+   ],
+   "Karnataka": [
+      {
+         "gender": "F",
+         "enrolled": 20735308,
+         "rejected": 3043116,
+         "enrolled_perc": 87.20219641133491,
+         "rejected_perc": 12.797803588665085,
+         "email_instances": 444644,
+         "mobile_instances": 12361001,
+         "email_perc_enr": 1.869947310217027,
+         "mobile_perc_enr": 51.9841054226302
+      },
+      {
+         "gender": "M",
+         "enrolled": 21236103,
+         "rejected": 2995270,
+         "enrolled_perc": 87.63887626177848,
+         "rejected_perc": 12.36112373822152,
+         "email_instances": 829328,
+         "mobile_instances": 14036699,
+         "email_perc_enr": 3.422538211103432,
+         "mobile_perc_enr": 57.92779055483154
+      },
+      {
+         "gender": "T",
+         "enrolled": 2205,
+         "rejected": 863,
+         "enrolled_perc": 71.87092568448502,
+         "rejected_perc": 28.129074315514995,
+         "email_instances": 26,
+         "mobile_instances": 1537,
+         "email_perc_enr": 0.847457627118644,
+         "mobile_perc_enr": 50.097783572359845
+      }
+   ],
+   "Kerala": [
+      {
+         "gender": "F",
+         "enrolled": 14932910,
+         "rejected": 4684749,
+         "enrolled_perc": 76.11973477569367,
+         "rejected_perc": 23.880265224306324,
+         "email_instances": 324980,
+         "mobile_instances": 7942377,
+         "email_perc_enr": 1.6565687067962593,
+         "mobile_perc_enr": 40.48585511655596
+      },
+      {
+         "gender": "M",
+         "enrolled": 14055287,
+         "rejected": 3822262,
+         "enrolled_perc": 78.61976493533874,
+         "rejected_perc": 21.380235064661267,
+         "email_instances": 634760,
+         "mobile_instances": 8141023,
+         "email_perc_enr": 3.550598574782259,
+         "mobile_perc_enr": 45.53769087697648
+      },
+      {
+         "gender": "T",
+         "enrolled": 3412,
+         "rejected": 2296,
+         "enrolled_perc": 59.77575332866153,
+         "rejected_perc": 40.22424667133847,
+         "email_instances": 69,
+         "mobile_instances": 2456,
+         "email_perc_enr": 1.2088297126839522,
+         "mobile_perc_enr": 43.02733006306937
+      }
+   ],
+   "Lakshadweep": [
+      {
+         "gender": "F",
+         "enrolled": 29374,
+         "rejected": 3701,
+         "enrolled_perc": 88.81027966742252,
+         "rejected_perc": 11.189720332577476,
+         "email_instances": 114,
+         "mobile_instances": 3600,
+         "email_perc_enr": 0.34467120181405897,
+         "mobile_perc_enr": 10.884353741496598
+      },
+      {
+         "gender": "M",
+         "enrolled": 22932,
+         "rejected": 5850,
+         "enrolled_perc": 79.67479674796748,
+         "rejected_perc": 20.32520325203252,
+         "email_instances": 349,
+         "mobile_instances": 7491,
+         "email_perc_enr": 1.2125634076853589,
+         "mobile_perc_enr": 26.026683343756513
+      },
+      {
+         "gender": "T",
+         "enrolled": 0,
+         "rejected": 3,
+         "enrolled_perc": 0,
+         "rejected_perc": 100,
+         "email_instances": 0,
+         "mobile_instances": 0,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 0
+      }
+   ],
+   "Madhya Pradesh": [
+      {
+         "gender": "F",
+         "enrolled": 24057888,
+         "rejected": 2654786,
+         "enrolled_perc": 90.06169880259834,
+         "rejected_perc": 9.938301197401653,
+         "email_instances": 197017,
+         "mobile_instances": 6309930,
+         "email_perc_enr": 0.7375412884535633,
+         "mobile_perc_enr": 23.62148394428802
+      },
+      {
+         "gender": "M",
+         "enrolled": 27470056,
+         "rejected": 2871035,
+         "enrolled_perc": 90.53746946673738,
+         "rejected_perc": 9.462530533262631,
+         "email_instances": 416503,
+         "mobile_instances": 9158870,
+         "email_perc_enr": 1.3727357397926132,
+         "mobile_perc_enr": 30.186356845243306
+      },
+      {
+         "gender": "T",
+         "enrolled": 1299,
+         "rejected": 444,
+         "enrolled_perc": 74.52667814113597,
+         "rejected_perc": 25.47332185886403,
+         "email_instances": 7,
+         "mobile_instances": 399,
+         "email_perc_enr": 0.4016064257028112,
+         "mobile_perc_enr": 22.89156626506024
+      }
+   ],
+   "Maharashtra": [
+      {
+         "gender": "F",
+         "enrolled": 36187339,
+         "rejected": 3701139,
+         "enrolled_perc": 90.72128297299285,
+         "rejected_perc": 9.278717027007147,
+         "email_instances": 562231,
+         "mobile_instances": 13039186,
+         "email_perc_enr": 1.409507276762979,
+         "mobile_perc_enr": 32.68910385600574
+      },
+      {
+         "gender": "M",
+         "enrolled": 39770656,
+         "rejected": 3871662,
+         "enrolled_perc": 91.12865178242824,
+         "rejected_perc": 8.87134821757176,
+         "email_instances": 1035895,
+         "mobile_instances": 16889330,
+         "email_perc_enr": 2.3736021537627767,
+         "mobile_perc_enr": 38.69943388433217
+      },
+      {
+         "gender": "T",
+         "enrolled": 2432,
+         "rejected": 1199,
+         "enrolled_perc": 66.97879372073808,
+         "rejected_perc": 33.02120627926191,
+         "email_instances": 31,
+         "mobile_instances": 1354,
+         "email_perc_enr": 0.8537592949600661,
+         "mobile_perc_enr": 37.29000275406224
+      }
+   ],
+   "Manipur": [
+      {
+         "gender": "F",
+         "enrolled": 537793,
+         "rejected": 31413,
+         "enrolled_perc": 94.48125986022634,
+         "rejected_perc": 5.51874013977365,
+         "email_instances": 4883,
+         "mobile_instances": 132222,
+         "email_perc_enr": 0.8578616528989504,
+         "mobile_perc_enr": 23.229199973296137
+      },
+      {
+         "gender": "M",
+         "enrolled": 627651,
+         "rejected": 35313,
+         "enrolled_perc": 94.67346643256647,
+         "rejected_perc": 5.3265335674335255,
+         "email_instances": 9565,
+         "mobile_instances": 159210,
+         "email_perc_enr": 1.4427631062923476,
+         "mobile_perc_enr": 24.014878635944033
+      },
+      {
+         "gender": "T",
+         "enrolled": 194,
+         "rejected": 35,
+         "enrolled_perc": 84.71615720524017,
+         "rejected_perc": 15.283842794759824,
+         "email_instances": 1,
+         "mobile_instances": 29,
+         "email_perc_enr": 0.43668122270742354,
+         "mobile_perc_enr": 12.663755458515283
+      }
+   ],
+   "Meghalaya": [
+      {
+         "gender": "F",
+         "enrolled": 16618,
+         "rejected": 277,
+         "enrolled_perc": 98.3604616750518,
+         "rejected_perc": 1.6395383249482094,
+         "email_instances": 550,
+         "mobile_instances": 12446,
+         "email_perc_enr": 3.2554010062148566,
+         "mobile_perc_enr": 73.666765315182
+      },
+      {
+         "gender": "M",
+         "enrolled": 23106,
+         "rejected": 875,
+         "enrolled_perc": 96.35127809515866,
+         "rejected_perc": 3.648721904841333,
+         "email_instances": 849,
+         "mobile_instances": 19216,
+         "email_perc_enr": 3.5403027396689044,
+         "mobile_perc_enr": 80.13010299820691
+      }
+   ],
+   "Mizoram": [
+      {
+         "gender": "F",
+         "enrolled": 189558,
+         "rejected": 6455,
+         "enrolled_perc": 96.70685107620413,
+         "rejected_perc": 3.293148923795871,
+         "email_instances": 232,
+         "mobile_instances": 96167,
+         "email_perc_enr": 0.11835949656400341,
+         "mobile_perc_enr": 49.06154183651084
+      },
+      {
+         "gender": "M",
+         "enrolled": 186664,
+         "rejected": 6377,
+         "enrolled_perc": 96.69655669002958,
+         "rejected_perc": 3.3034433099704206,
+         "email_instances": 423,
+         "mobile_instances": 95917,
+         "email_perc_enr": 0.2191244347055807,
+         "mobile_perc_enr": 49.68737211266001
+      },
+      {
+         "gender": "T",
+         "enrolled": 0,
+         "rejected": 1,
+         "enrolled_perc": 0,
+         "rejected_perc": 100,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 100
+      }
+   ],
+   "Nagaland": [
+      {
+         "gender": "F",
+         "enrolled": 441839,
+         "rejected": 249656,
+         "enrolled_perc": 63.89619592332555,
+         "rejected_perc": 36.10380407667445,
+         "email_instances": 816,
+         "mobile_instances": 184031,
+         "email_perc_enr": 0.11800519164997578,
+         "mobile_perc_enr": 26.613496843794966
+      },
+      {
+         "gender": "M",
+         "enrolled": 441390,
+         "rejected": 239558,
+         "enrolled_perc": 64.81992751282036,
+         "rejected_perc": 35.180072487179636,
+         "email_instances": 1710,
+         "mobile_instances": 192512,
+         "email_perc_enr": 0.2511204967192796,
+         "mobile_perc_enr": 28.271174891474825
+      },
+      {
+         "gender": "T",
+         "enrolled": 91,
+         "rejected": 46,
+         "enrolled_perc": 66.42335766423358,
+         "rejected_perc": 33.57664233576642,
+         "email_instances": 0,
+         "mobile_instances": 48,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 35.03649635036496
+      }
+   ],
+   "Odisha": [
+      {
+         "gender": "F",
+         "enrolled": 12537478,
+         "rejected": 2891284,
+         "enrolled_perc": 81.26042776471631,
+         "rejected_perc": 18.739572235283685,
+         "email_instances": 29374,
+         "mobile_instances": 2052528,
+         "email_perc_enr": 0.1903846854336077,
+         "mobile_perc_enr": 13.303257902351465
+      },
+      {
+         "gender": "M",
+         "enrolled": 13207290,
+         "rejected": 3085444,
+         "enrolled_perc": 81.0624539748823,
+         "rejected_perc": 18.937546025117697,
+         "email_instances": 87853,
+         "mobile_instances": 2561120,
+         "email_perc_enr": 0.5392158246737472,
+         "mobile_perc_enr": 15.71939982571372
+      },
+      {
+         "gender": "T",
+         "enrolled": 2207,
+         "rejected": 1288,
+         "enrolled_perc": 63.14735336194563,
+         "rejected_perc": 36.85264663805437,
+         "email_instances": 5,
+         "mobile_instances": 645,
+         "email_perc_enr": 0.14306151645207438,
+         "mobile_perc_enr": 18.4549356223176
+      }
+   ],
+   "Puducherry": [
+      {
+         "gender": "F",
+         "enrolled": 265682,
+         "rejected": 165556,
+         "enrolled_perc": 61.609134630992635,
+         "rejected_perc": 38.39086536900737,
+         "email_instances": 3646,
+         "mobile_instances": 205676,
+         "email_perc_enr": 0.8454728015620144,
+         "mobile_perc_enr": 47.6943126533376
+      },
+      {
+         "gender": "M",
+         "enrolled": 271966,
+         "rejected": 151755,
+         "enrolled_perc": 64.18515957434255,
+         "rejected_perc": 35.81484042565745,
+         "email_instances": 7940,
+         "mobile_instances": 230571,
+         "email_perc_enr": 1.8738745542467805,
+         "mobile_perc_enr": 54.41575942660383
+      },
+      {
+         "gender": "T",
+         "enrolled": 63,
+         "rejected": 63,
+         "enrolled_perc": 50,
+         "rejected_perc": 50,
+         "email_instances": 0,
+         "mobile_instances": 73,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 57.936507936507944
+      }
+   ],
+   "Punjab": [
+      {
+         "gender": "F",
+         "enrolled": 9764320,
+         "rejected": 975088,
+         "enrolled_perc": 90.92046786936486,
+         "rejected_perc": 9.079532130635133,
+         "email_instances": 86107,
+         "mobile_instances": 3045968,
+         "email_perc_enr": 0.8017853498069912,
+         "mobile_perc_enr": 28.362531714969762
+      },
+      {
+         "gender": "M",
+         "enrolled": 11442223,
+         "rejected": 1038748,
+         "enrolled_perc": 91.6773462577551,
+         "rejected_perc": 8.322653742244894,
+         "email_instances": 142164,
+         "mobile_instances": 4051995,
+         "email_perc_enr": 1.1390459924952956,
+         "mobile_perc_enr": 32.465382701393985
+      },
+      {
+         "gender": "T",
+         "enrolled": 590,
+         "rejected": 255,
+         "enrolled_perc": 69.8224852071006,
+         "rejected_perc": 30.17751479289941,
+         "email_instances": 2,
+         "mobile_instances": 267,
+         "email_perc_enr": 0.2366863905325444,
+         "mobile_perc_enr": 31.59763313609468
+      }
+   ],
+   "Rajasthan": [
+      {
+         "gender": "F",
+         "enrolled": 22268979,
+         "rejected": 2403770,
+         "enrolled_perc": 90.25738883008133,
+         "rejected_perc": 9.742611169918684,
+         "email_instances": 96414,
+         "mobile_instances": 6054737,
+         "email_perc_enr": 0.3907712107799581,
+         "mobile_perc_enr": 24.540179936982295
+      },
+      {
+         "gender": "M",
+         "enrolled": 24775599,
+         "rejected": 2583378,
+         "enrolled_perc": 90.55747588807871,
+         "rejected_perc": 9.442524111921289,
+         "email_instances": 242131,
+         "mobile_instances": 8799904,
+         "email_perc_enr": 0.8850148161607067,
+         "mobile_perc_enr": 32.16459445833812
+      },
+      {
+         "gender": "T",
+         "enrolled": 857,
+         "rejected": 320,
+         "enrolled_perc": 72.8122344944775,
+         "rejected_perc": 27.187765505522517,
+         "email_instances": 5,
+         "mobile_instances": 330,
+         "email_perc_enr": 0.4248088360237893,
+         "mobile_perc_enr": 28.037383177570092
+      }
+   ],
+   "Sikkim": [
+      {
+         "gender": "F",
+         "enrolled": 173526,
+         "rejected": 6613,
+         "enrolled_perc": 96.32894598060386,
+         "rejected_perc": 3.6710540193961334,
+         "email_instances": 1126,
+         "mobile_instances": 18774,
+         "email_perc_enr": 0.6250728604022449,
+         "mobile_perc_enr": 10.421951937115228
+      },
+      {
+         "gender": "M",
+         "enrolled": 188496,
+         "rejected": 6869,
+         "enrolled_perc": 96.48401709620454,
+         "rejected_perc": 3.5159829037954595,
+         "email_instances": 1669,
+         "mobile_instances": 23572,
+         "email_perc_enr": 0.8542983645995957,
+         "mobile_perc_enr": 12.065620761139407
+      },
+      {
+         "gender": "T",
+         "enrolled": 12,
+         "rejected": 3,
+         "enrolled_perc": 80,
+         "rejected_perc": 20,
+         "email_instances": 1,
+         "mobile_instances": 0,
+         "email_perc_enr": 6.666666666666667,
+         "mobile_perc_enr": 0
+      }
+   ],
+   "Tamil Nadu": [
+      {
+         "gender": "F",
+         "enrolled": 24959439,
+         "rejected": 3047402,
+         "enrolled_perc": 89.11907987052163,
+         "rejected_perc": 10.880920129478366,
+         "email_instances": 155377,
+         "mobile_instances": 14649294,
+         "email_perc_enr": 0.5547823119358588,
+         "mobile_perc_enr": 52.30612763503031
+      },
+      {
+         "gender": "M",
+         "enrolled": 24114970,
+         "rejected": 2894830,
+         "enrolled_perc": 89.28229753644973,
+         "rejected_perc": 10.717702463550268,
+         "email_instances": 379547,
+         "mobile_instances": 15155144,
+         "email_perc_enr": 1.4052195869647313,
+         "mobile_perc_enr": 56.109797184725544
+      },
+      {
+         "gender": "T",
+         "enrolled": 3177,
+         "rejected": 1218,
+         "enrolled_perc": 72.28668941979522,
+         "rejected_perc": 27.71331058020478,
+         "email_instances": 8,
+         "mobile_instances": 2277,
+         "email_perc_enr": 0.1820250284414107,
+         "mobile_perc_enr": 51.80887372013652
+      }
+   ],
+   "Telangana": [
+      {
+         "gender": "F",
+         "enrolled": 588865,
+         "rejected": 105795,
+         "enrolled_perc": 84.77024731523335,
+         "rejected_perc": 15.229752684766648,
+         "email_instances": 14092,
+         "mobile_instances": 512586,
+         "email_perc_enr": 2.028618316874442,
+         "mobile_perc_enr": 73.789479745487
+      },
+      {
+         "gender": "M",
+         "enrolled": 646005,
+         "rejected": 92375,
+         "enrolled_perc": 87.48950404940545,
+         "rejected_perc": 12.510495950594544,
+         "email_instances": 18350,
+         "mobile_instances": 561271,
+         "email_perc_enr": 2.485170237547062,
+         "mobile_perc_enr": 76.01384111162274
+      },
+      {
+         "gender": "T",
+         "enrolled": 26,
+         "rejected": 35,
+         "enrolled_perc": 42.62295081967213,
+         "rejected_perc": 57.377049180327866,
+         "email_instances": 0,
+         "mobile_instances": 51,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 83.60655737704919
+      }
+   ],
+   "Tripura": [
+      {
+         "gender": "F",
+         "enrolled": 422944,
+         "rejected": 123651,
+         "enrolled_perc": 77.37794893842789,
+         "rejected_perc": 22.622051061572098,
+         "email_instances": 1268,
+         "mobile_instances": 112757,
+         "email_perc_enr": 0.23198163173830713,
+         "mobile_perc_enr": 20.628984897410334
+      },
+      {
+         "gender": "M",
+         "enrolled": 444692,
+         "rejected": 108160,
+         "enrolled_perc": 80.43599371983822,
+         "rejected_perc": 19.56400628016178,
+         "email_instances": 3378,
+         "mobile_instances": 139389,
+         "email_perc_enr": 0.6110134357838988,
+         "mobile_perc_enr": 25.212715157040222
+      },
+      {
+         "gender": "T",
+         "enrolled": 49,
+         "rejected": 68,
+         "enrolled_perc": 41.88034188034188,
+         "rejected_perc": 58.119658119658126,
+         "email_instances": 0,
+         "mobile_instances": 9,
+         "email_perc_enr": 0,
+         "mobile_perc_enr": 7.6923076923076925
+      }
+   ],
+   "Uttar Pradesh": [
+      {
+         "gender": "F",
+         "enrolled": 55678289,
+         "rejected": 4956844,
+         "enrolled_perc": 91.8251288407333,
+         "rejected_perc": 8.174871159266692,
+         "email_instances": 287366,
+         "mobile_instances": 23334881,
+         "email_perc_enr": 0.4739265600357469,
+         "mobile_perc_enr": 38.48409304223016
+      },
+      {
+         "gender": "M",
+         "enrolled": 62885542,
+         "rejected": 5696858,
+         "enrolled_perc": 91.69341113755132,
+         "rejected_perc": 8.306588862448674,
+         "email_instances": 661360,
+         "mobile_instances": 30335851,
+         "email_perc_enr": 0.9643290406868235,
+         "mobile_perc_enr": 44.232705475457266
+      }
+   ]
+}

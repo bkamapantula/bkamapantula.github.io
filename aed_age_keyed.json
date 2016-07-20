@@ -1,0 +1,2867 @@
+{
+   "India": [
+         {"enrollments_generated":"5","enrollments_rejected":"1","email_instances":"0","mobile_instances":"4","bucket":"-1"},
+         {"enrollments_generated":"85131355","enrollments_rejected":"13417149","email_instances":"1584123","mobile_instances":"30475972","bucket":"1"},
+         {"enrollments_generated":"166635159","enrollments_rejected":"21438926","email_instances":"1387378","mobile_instances":"62363456","bucket":"2"},
+         {"enrollments_generated":"159637204","enrollments_rejected":"19312096","email_instances":"3981102","mobile_instances":"72786619","bucket":"3"},
+         {"enrollments_generated":"130984160","enrollments_rejected":"15897552","email_instances":"2055681","mobile_instances":"56046239","bucket":"4"},
+         {"enrollments_generated":"103336716","enrollments_rejected":"12994848","email_instances":"958284","mobile_instances":"41347189","bucket":"5"},
+         {"enrollments_generated":"67338620","enrollments_rejected":"8899010","email_instances":"529726","mobile_instances":"25355759","bucket":"6"},
+         {"enrollments_generated":"46950719","enrollments_rejected":"7094507","email_instances":"248204","mobile_instances":"15114968","bucket":"7"},
+         {"enrollments_generated":"16849061","enrollments_rejected":"2787542","email_instances":"74579","mobile_instances":"5074465","bucket":"8"},
+         {"enrollments_generated":"3630730","enrollments_rejected":"574394","email_instances":"16112","mobile_instances":"1118903","bucket":"9"},
+         {"enrollments_generated":"344361","enrollments_rejected":"61937","email_instances":"1444","mobile_instances":"109423","bucket":"10"},
+         {"enrollments_generated":"34512","enrollments_rejected":"18294","email_instances":"122","mobile_instances":"13347","bucket":"11"},
+   ],
+   "Andaman and Nicobar Islands": [
+      {
+         "enrollments_generated": 41299,
+         "rejected": 3389,
+         "email_instances": 413,
+         "mobile_instances": 33489,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 48731,
+         "rejected": 2373,
+         "email_instances": 845,
+         "mobile_instances": 39289,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 58158,
+         "rejected": 2729,
+         "email_instances": 3374,
+         "mobile_instances": 53004,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 55933,
+         "rejected": 2156,
+         "email_instances": 1801,
+         "mobile_instances": 49197,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 41393,
+         "rejected": 1363,
+         "email_instances": 1004,
+         "mobile_instances": 34887,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 24868,
+         "rejected": 824,
+         "email_instances": 430,
+         "mobile_instances": 19426,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 14513,
+         "rejected": 551,
+         "email_instances": 113,
+         "mobile_instances": 9736,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 4506,
+         "rejected": 189,
+         "email_instances": 25,
+         "mobile_instances": 2833,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 1076,
+         "rejected": 60,
+         "email_instances": 4,
+         "mobile_instances": 638,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 133,
+         "rejected": 6,
+         "email_instances": 1,
+         "mobile_instances": 72,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 4,
+         "rejected": 2,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "bucket": 11
+      }
+   ],
+   "Andhra Pradesh": [
+      {
+         "enrollments_generated": 4,
+         "rejected": 0,
+         "email_instances": 0,
+         "mobile_instances": 3,
+         "bucket": -1
+      },
+      {
+         "enrollments_generated": 9481231,
+         "rejected": 1831444,
+         "email_instances": 25528,
+         "mobile_instances": 3222612,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 9244940,
+         "rejected": 2417688,
+         "email_instances": 85118,
+         "mobile_instances": 3116731,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 10142829,
+         "rejected": 2599166,
+         "email_instances": 313835,
+         "mobile_instances": 4506376,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 8390684,
+         "rejected": 2004438,
+         "email_instances": 134321,
+         "mobile_instances": 3539424,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 6346067,
+         "rejected": 1425899,
+         "email_instances": 51575,
+         "mobile_instances": 2489255,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 4125498,
+         "rejected": 923461,
+         "email_instances": 25393,
+         "mobile_instances": 1418344,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 3411930,
+         "rejected": 820682,
+         "email_instances": 9961,
+         "mobile_instances": 880314,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1364996,
+         "rejected": 319653,
+         "email_instances": 2529,
+         "mobile_instances": 307697,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 285793,
+         "rejected": 60293,
+         "email_instances": 523,
+         "mobile_instances": 68562,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 28959,
+         "rejected": 6426,
+         "email_instances": 32,
+         "mobile_instances": 7388,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1693,
+         "rejected": 1093,
+         "email_instances": 4,
+         "mobile_instances": 529,
+         "bucket": 11
+      }
+   ],
+   "Arunachal Pradesh": [
+      {
+         "enrollments_generated": 43311,
+         "rejected": 3262,
+         "email_instances": 16,
+         "mobile_instances": 15586,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 133614,
+         "rejected": 2569,
+         "email_instances": 439,
+         "mobile_instances": 60786,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 107263,
+         "rejected": 2451,
+         "email_instances": 1227,
+         "mobile_instances": 60014,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 87673,
+         "rejected": 2079,
+         "email_instances": 418,
+         "mobile_instances": 45145,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 65940,
+         "rejected": 1936,
+         "email_instances": 193,
+         "mobile_instances": 32151,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 35875,
+         "rejected": 1654,
+         "email_instances": 82,
+         "mobile_instances": 14627,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 15185,
+         "rejected": 1113,
+         "email_instances": 3,
+         "mobile_instances": 4112,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 4460,
+         "rejected": 584,
+         "email_instances": 4,
+         "mobile_instances": 1005,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 822,
+         "rejected": 189,
+         "email_instances": 1,
+         "mobile_instances": 183,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 75,
+         "rejected": 36,
+         "email_instances": 0,
+         "mobile_instances": 13,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 5,
+         "rejected": 4,
+         "email_instances": 0,
+         "mobile_instances": 2,
+         "bucket": 11
+      }
+   ],
+   "Assam": [
+      {
+         "enrollments_generated": 18874,
+         "rejected": 551,
+         "email_instances": 190,
+         "mobile_instances": 11387,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 83099,
+         "rejected": 1316,
+         "email_instances": 841,
+         "mobile_instances": 50237,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 147107,
+         "rejected": 4004,
+         "email_instances": 7082,
+         "mobile_instances": 114007,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 104218,
+         "rejected": 2539,
+         "email_instances": 2903,
+         "mobile_instances": 75714,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 74927,
+         "rejected": 1364,
+         "email_instances": 1066,
+         "mobile_instances": 51133,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 46013,
+         "rejected": 698,
+         "email_instances": 853,
+         "mobile_instances": 30004,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 21341,
+         "rejected": 310,
+         "email_instances": 187,
+         "mobile_instances": 11607,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 7329,
+         "rejected": 84,
+         "email_instances": 34,
+         "mobile_instances": 3317,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 1104,
+         "rejected": 53,
+         "email_instances": 7,
+         "mobile_instances": 487,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 105,
+         "rejected": 9,
+         "email_instances": 0,
+         "mobile_instances": 33,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 3,
+         "rejected": 1,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "bucket": 11
+      }
+   ],
+   "Bihar": [
+      {
+         "enrollments_generated": 5009689,
+         "rejected": 693497,
+         "email_instances": 1136651,
+         "mobile_instances": 1240778,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 13546050,
+         "rejected": 722309,
+         "email_instances": 92268,
+         "mobile_instances": 5221385,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 11718263,
+         "rejected": 731421,
+         "email_instances": 176449,
+         "mobile_instances": 5553771,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 9456808,
+         "rejected": 560344,
+         "email_instances": 60324,
+         "mobile_instances": 3940531,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 7024411,
+         "rejected": 394342,
+         "email_instances": 25293,
+         "mobile_instances": 2684516,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 4592279,
+         "rejected": 245716,
+         "email_instances": 13273,
+         "mobile_instances": 1588893,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 3719253,
+         "rejected": 228889,
+         "email_instances": 7493,
+         "mobile_instances": 1124207,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1038949,
+         "rejected": 72002,
+         "email_instances": 4013,
+         "mobile_instances": 305434,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 239447,
+         "rejected": 20997,
+         "email_instances": 515,
+         "mobile_instances": 67660,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 22475,
+         "rejected": 3504,
+         "email_instances": 49,
+         "mobile_instances": 6697,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 943,
+         "rejected": 638,
+         "email_instances": 4,
+         "mobile_instances": 423,
+         "bucket": 11
+      }
+   ],
+   "Chandigarh": [
+      {
+         "enrollments_generated": 112605,
+         "rejected": 10696,
+         "email_instances": 2212,
+         "mobile_instances": 88878,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 107312,
+         "rejected": 12057,
+         "email_instances": 5699,
+         "mobile_instances": 88220,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 130849,
+         "rejected": 12500,
+         "email_instances": 16382,
+         "mobile_instances": 116803,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 100265,
+         "rejected": 10391,
+         "email_instances": 10792,
+         "mobile_instances": 87293,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 68390,
+         "rejected": 6984,
+         "email_instances": 5736,
+         "mobile_instances": 58345,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 42544,
+         "rejected": 3933,
+         "email_instances": 3913,
+         "mobile_instances": 36574,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 22175,
+         "rejected": 2689,
+         "email_instances": 1698,
+         "mobile_instances": 17863,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 9009,
+         "rejected": 846,
+         "email_instances": 530,
+         "mobile_instances": 7003,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 2726,
+         "rejected": 183,
+         "email_instances": 120,
+         "mobile_instances": 2082,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 284,
+         "rejected": 24,
+         "email_instances": 9,
+         "mobile_instances": 214,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 16,
+         "rejected": 12,
+         "email_instances": 1,
+         "mobile_instances": 23,
+         "bucket": 11
+      }
+   ],
+   "Chhattisgarh": [
+      {
+         "enrollments_generated": 2597188,
+         "rejected": 296642,
+         "email_instances": 41606,
+         "mobile_instances": 656072,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 4520921,
+         "rejected": 253165,
+         "email_instances": 39762,
+         "mobile_instances": 1223886,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 4441414,
+         "rejected": 233207,
+         "email_instances": 84719,
+         "mobile_instances": 1608273,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 3275977,
+         "rejected": 164685,
+         "email_instances": 41281,
+         "mobile_instances": 1082295,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 2667489,
+         "rejected": 133143,
+         "email_instances": 24191,
+         "mobile_instances": 797851,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 1624961,
+         "rejected": 85791,
+         "email_instances": 13883,
+         "mobile_instances": 441959,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1032380,
+         "rejected": 68182,
+         "email_instances": 8273,
+         "mobile_instances": 233451,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 334320,
+         "rejected": 29471,
+         "email_instances": 3071,
+         "mobile_instances": 77632,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 71143,
+         "rejected": 7215,
+         "email_instances": 779,
+         "mobile_instances": 16588,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 7033,
+         "rejected": 1143,
+         "email_instances": 84,
+         "mobile_instances": 1574,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 352,
+         "rejected": 254,
+         "email_instances": 3,
+         "mobile_instances": 109,
+         "bucket": 11
+      }
+   ],
+   "Dadra and Nagar Haveli": [
+      {
+         "enrollments_generated": 24669,
+         "rejected": 2412,
+         "email_instances": 97,
+         "mobile_instances": 13306,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 62294,
+         "rejected": 4448,
+         "email_instances": 417,
+         "mobile_instances": 26911,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 70930,
+         "rejected": 6194,
+         "email_instances": 922,
+         "mobile_instances": 43265,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 52413,
+         "rejected": 5185,
+         "email_instances": 894,
+         "mobile_instances": 33253,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 31598,
+         "rejected": 2938,
+         "email_instances": 485,
+         "mobile_instances": 17015,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 16076,
+         "rejected": 1361,
+         "email_instances": 120,
+         "mobile_instances": 6666,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 8719,
+         "rejected": 732,
+         "email_instances": 25,
+         "mobile_instances": 2972,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 2701,
+         "rejected": 200,
+         "email_instances": 6,
+         "mobile_instances": 854,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 467,
+         "rejected": 44,
+         "email_instances": 0,
+         "mobile_instances": 173,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 39,
+         "rejected": 7,
+         "email_instances": 0,
+         "mobile_instances": 18,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 7,
+         "rejected": 4,
+         "email_instances": 0,
+         "mobile_instances": 4,
+         "bucket": 11
+      }
+   ],
+   "Daman and Diu": [
+      {
+         "enrollments_generated": 15959,
+         "rejected": 1818,
+         "email_instances": 107,
+         "mobile_instances": 7725,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 16066,
+         "rejected": 1626,
+         "email_instances": 204,
+         "mobile_instances": 8846,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 22655,
+         "rejected": 2350,
+         "email_instances": 576,
+         "mobile_instances": 15262,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 17406,
+         "rejected": 1949,
+         "email_instances": 401,
+         "mobile_instances": 11155,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 9963,
+         "rejected": 1222,
+         "email_instances": 177,
+         "mobile_instances": 6111,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 5435,
+         "rejected": 634,
+         "email_instances": 57,
+         "mobile_instances": 2803,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 3323,
+         "rejected": 422,
+         "email_instances": 36,
+         "mobile_instances": 1367,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1389,
+         "rejected": 159,
+         "email_instances": 9,
+         "mobile_instances": 484,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 366,
+         "rejected": 47,
+         "email_instances": 0,
+         "mobile_instances": 134,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 38,
+         "rejected": 5,
+         "email_instances": 0,
+         "mobile_instances": 15,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 2,
+         "rejected": 3,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "bucket": 11
+      }
+   ],
+   "Delhi": [
+      {
+         "enrollments_generated": 1967432,
+         "rejected": 665238,
+         "email_instances": 16051,
+         "mobile_instances": 1396767,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 2355299,
+         "rejected": 1522538,
+         "email_instances": 36424,
+         "mobile_instances": 1968911,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 2691938,
+         "rejected": 1289512,
+         "email_instances": 115702,
+         "mobile_instances": 2185879,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 2079690,
+         "rejected": 1180379,
+         "email_instances": 77463,
+         "mobile_instances": 1770799,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 1313838,
+         "rejected": 925756,
+         "email_instances": 36748,
+         "mobile_instances": 1212557,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 734492,
+         "rejected": 521416,
+         "email_instances": 22553,
+         "mobile_instances": 672176,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 497310,
+         "rejected": 392717,
+         "email_instances": 9449,
+         "mobile_instances": 433338,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 177771,
+         "rejected": 118133,
+         "email_instances": 2600,
+         "mobile_instances": 136546,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 41041,
+         "rejected": 19445,
+         "email_instances": 571,
+         "mobile_instances": 28514,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 3417,
+         "rejected": 1481,
+         "email_instances": 54,
+         "mobile_instances": 2470,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 514,
+         "rejected": 1392,
+         "email_instances": 1,
+         "mobile_instances": 1012,
+         "bucket": 11
+      }
+   ],
+   "Goa": [
+      {
+         "enrollments_generated": 125050,
+         "rejected": 24965,
+         "email_instances": 1008,
+         "mobile_instances": 51993,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 174389,
+         "rejected": 62382,
+         "email_instances": 3890,
+         "mobile_instances": 88704,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 183098,
+         "rejected": 54081,
+         "email_instances": 11862,
+         "mobile_instances": 113570,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 199436,
+         "rejected": 66360,
+         "email_instances": 8196,
+         "mobile_instances": 119018,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 166905,
+         "rejected": 63001,
+         "email_instances": 4740,
+         "mobile_instances": 96132,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 112510,
+         "rejected": 44919,
+         "email_instances": 2327,
+         "mobile_instances": 58522,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 76613,
+         "rejected": 31422,
+         "email_instances": 980,
+         "mobile_instances": 31606,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 30879,
+         "rejected": 11322,
+         "email_instances": 237,
+         "mobile_instances": 10477,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 6741,
+         "rejected": 1869,
+         "email_instances": 59,
+         "mobile_instances": 2200,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 524,
+         "rejected": 115,
+         "email_instances": 4,
+         "mobile_instances": 187,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 30,
+         "rejected": 44,
+         "email_instances": 0,
+         "mobile_instances": 22,
+         "bucket": 11
+      }
+   ],
+   "Gujarat": [
+      {
+         "enrollments_generated": 3700617,
+         "rejected": 386245,
+         "email_instances": 11387,
+         "mobile_instances": 1303223,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 7998409,
+         "rejected": 583406,
+         "email_instances": 65927,
+         "mobile_instances": 3297633,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 7920858,
+         "rejected": 431049,
+         "email_instances": 177497,
+         "mobile_instances": 3801986,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 7404487,
+         "rejected": 372777,
+         "email_instances": 87995,
+         "mobile_instances": 3267020,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 5863103,
+         "rejected": 308010,
+         "email_instances": 48426,
+         "mobile_instances": 2476725,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 3894288,
+         "rejected": 229094,
+         "email_instances": 29163,
+         "mobile_instances": 1584751,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2227688,
+         "rejected": 169687,
+         "email_instances": 13341,
+         "mobile_instances": 788566,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 758940,
+         "rejected": 68897,
+         "email_instances": 3230,
+         "mobile_instances": 250621,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 140665,
+         "rejected": 11918,
+         "email_instances": 548,
+         "mobile_instances": 45339,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 13658,
+         "rejected": 1216,
+         "email_instances": 33,
+         "mobile_instances": 4129,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 810,
+         "rejected": 542,
+         "email_instances": 4,
+         "mobile_instances": 456,
+         "bucket": 11
+      }
+   ],
+   "Haryana": [
+      {
+         "enrollments_generated": 3530944,
+         "rejected": 464447,
+         "email_instances": 21630,
+         "mobile_instances": 2315316,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 4714899,
+         "rejected": 400649,
+         "email_instances": 45240,
+         "mobile_instances": 2757871,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 4366984,
+         "rejected": 351255,
+         "email_instances": 123565,
+         "mobile_instances": 2881512,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 3428976,
+         "rejected": 236279,
+         "email_instances": 63024,
+         "mobile_instances": 2122263,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 2572363,
+         "rejected": 170735,
+         "email_instances": 31530,
+         "mobile_instances": 1515947,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 1622325,
+         "rejected": 109327,
+         "email_instances": 16860,
+         "mobile_instances": 919860,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1338964,
+         "rejected": 114796,
+         "email_instances": 8496,
+         "mobile_instances": 675874,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 516225,
+         "rejected": 41546,
+         "email_instances": 2741,
+         "mobile_instances": 248159,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 156932,
+         "rejected": 11862,
+         "email_instances": 847,
+         "mobile_instances": 81118,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 20084,
+         "rejected": 1569,
+         "email_instances": 122,
+         "mobile_instances": 11549,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 656,
+         "rejected": 203,
+         "email_instances": 7,
+         "mobile_instances": 460,
+         "bucket": 11
+      }
+   ],
+   "Himachal Pradesh": [
+      {
+         "enrollments_generated": 667816,
+         "rejected": 61183,
+         "email_instances": 1571,
+         "mobile_instances": 151411,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 883118,
+         "rejected": 71581,
+         "email_instances": 10867,
+         "mobile_instances": 234527,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 896966,
+         "rejected": 52760,
+         "email_instances": 44873,
+         "mobile_instances": 389988,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 797304,
+         "rejected": 36529,
+         "email_instances": 17786,
+         "mobile_instances": 303552,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 618204,
+         "rejected": 28143,
+         "email_instances": 6150,
+         "mobile_instances": 207317,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 419879,
+         "rejected": 19409,
+         "email_instances": 2859,
+         "mobile_instances": 118954,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 263389,
+         "rejected": 12845,
+         "email_instances": 886,
+         "mobile_instances": 55506,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 122276,
+         "rejected": 5660,
+         "email_instances": 167,
+         "mobile_instances": 21285,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 43500,
+         "rejected": 2195,
+         "email_instances": 37,
+         "mobile_instances": 7843,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 6327,
+         "rejected": 242,
+         "email_instances": 6,
+         "mobile_instances": 1270,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 392,
+         "rejected": 50,
+         "email_instances": 1,
+         "mobile_instances": 108,
+         "bucket": 11
+      }
+   ],
+   "Jammu and Kashmir": [
+      {
+         "enrollments_generated": 413660,
+         "rejected": 39246,
+         "email_instances": 525,
+         "mobile_instances": 125330,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 1363427,
+         "rejected": 109373,
+         "email_instances": 4143,
+         "mobile_instances": 426965,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 1215229,
+         "rejected": 101239,
+         "email_instances": 14688,
+         "mobile_instances": 488216,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 1010205,
+         "rejected": 82451,
+         "email_instances": 5875,
+         "mobile_instances": 396392,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 795380,
+         "rejected": 63193,
+         "email_instances": 2234,
+         "mobile_instances": 314780,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 510883,
+         "rejected": 41018,
+         "email_instances": 1249,
+         "mobile_instances": 203962,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 296177,
+         "rejected": 24834,
+         "email_instances": 508,
+         "mobile_instances": 104465,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 122552,
+         "rejected": 10668,
+         "email_instances": 140,
+         "mobile_instances": 39288,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 27184,
+         "rejected": 3461,
+         "email_instances": 27,
+         "mobile_instances": 8292,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 3096,
+         "rejected": 572,
+         "email_instances": 4,
+         "mobile_instances": 919,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 137,
+         "rejected": 35,
+         "email_instances": 0,
+         "mobile_instances": 45,
+         "bucket": 11
+      }
+   ],
+   "Jharkhand": [
+      {
+         "enrollments_generated": 4043172,
+         "rejected": 624365,
+         "email_instances": 4574,
+         "mobile_instances": 465277,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 5663945,
+         "rejected": 557984,
+         "email_instances": 32789,
+         "mobile_instances": 960968,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 4709949,
+         "rejected": 480729,
+         "email_instances": 78157,
+         "mobile_instances": 1060322,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 3306526,
+         "rejected": 309933,
+         "email_instances": 30064,
+         "mobile_instances": 660815,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 2443512,
+         "rejected": 221250,
+         "email_instances": 11911,
+         "mobile_instances": 421247,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 1544584,
+         "rejected": 140202,
+         "email_instances": 6429,
+         "mobile_instances": 250016,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1086730,
+         "rejected": 132015,
+         "email_instances": 2516,
+         "mobile_instances": 145689,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 359546,
+         "rejected": 41859,
+         "email_instances": 634,
+         "mobile_instances": 43777,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 78827,
+         "rejected": 10019,
+         "email_instances": 139,
+         "mobile_instances": 9131,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 8452,
+         "rejected": 1183,
+         "email_instances": 12,
+         "mobile_instances": 966,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 650,
+         "rejected": 258,
+         "email_instances": 2,
+         "mobile_instances": 129,
+         "bucket": 11
+      }
+   ],
+   "Karnataka": [
+      {
+         "enrollments_generated": 5265551,
+         "rejected": 850077,
+         "email_instances": 43101,
+         "mobile_instances": 3191413,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 7819270,
+         "rejected": 1071156,
+         "email_instances": 136996,
+         "mobile_instances": 4761627,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 8499844,
+         "rejected": 1214464,
+         "email_instances": 488960,
+         "mobile_instances": 6025056,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 7303994,
+         "rejected": 995305,
+         "email_instances": 344538,
+         "mobile_instances": 4968972,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 5526420,
+         "rejected": 752629,
+         "email_instances": 140864,
+         "mobile_instances": 3475762,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 3568789,
+         "rejected": 500396,
+         "email_instances": 73187,
+         "mobile_instances": 2077659,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2740384,
+         "rejected": 435447,
+         "email_instances": 35188,
+         "mobile_instances": 1338503,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1003106,
+         "rejected": 174066,
+         "email_instances": 9431,
+         "mobile_instances": 451798,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 221231,
+         "rejected": 39289,
+         "email_instances": 1628,
+         "mobile_instances": 97820,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 21508,
+         "rejected": 4490,
+         "email_instances": 98,
+         "mobile_instances": 9316,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 3519,
+         "rejected": 1930,
+         "email_instances": 7,
+         "mobile_instances": 1311,
+         "bucket": 11
+      }
+   ],
+   "Kerala": [
+      {
+         "enrollments_generated": 3399189,
+         "rejected": 668589,
+         "email_instances": 23603,
+         "mobile_instances": 1538568,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 4957247,
+         "rejected": 1638572,
+         "email_instances": 121741,
+         "mobile_instances": 2384368,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 4434030,
+         "rejected": 1107724,
+         "email_instances": 379209,
+         "mobile_instances": 2689690,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 4669909,
+         "rejected": 1281724,
+         "email_instances": 219967,
+         "mobile_instances": 2904194,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 4518953,
+         "rejected": 1414182,
+         "email_instances": 120944,
+         "mobile_instances": 2824832,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 3461747,
+         "rejected": 1183266,
+         "email_instances": 63331,
+         "mobile_instances": 2007956,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2256193,
+         "rejected": 829066,
+         "email_instances": 25606,
+         "mobile_instances": 1170880,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 993051,
+         "rejected": 319721,
+         "email_instances": 4549,
+         "mobile_instances": 444452,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 279732,
+         "rejected": 62986,
+         "email_instances": 791,
+         "mobile_instances": 112273,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 20837,
+         "rejected": 3175,
+         "email_instances": 56,
+         "mobile_instances": 8255,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 721,
+         "rejected": 302,
+         "email_instances": 12,
+         "mobile_instances": 388,
+         "bucket": 11
+      }
+   ],
+   "Lakshadweep": [
+      {
+         "enrollments_generated": 6306,
+         "rejected": 913,
+         "email_instances": 4,
+         "mobile_instances": 950,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 9838,
+         "rejected": 2077,
+         "email_instances": 35,
+         "mobile_instances": 1326,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 11057,
+         "rejected": 1842,
+         "email_instances": 228,
+         "mobile_instances": 3566,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 9301,
+         "rejected": 1705,
+         "email_instances": 129,
+         "mobile_instances": 2426,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 7156,
+         "rejected": 1332,
+         "email_instances": 43,
+         "mobile_instances": 1564,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 4870,
+         "rejected": 951,
+         "email_instances": 19,
+         "mobile_instances": 859,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2777,
+         "rejected": 556,
+         "email_instances": 3,
+         "mobile_instances": 290,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 814,
+         "rejected": 158,
+         "email_instances": 2,
+         "mobile_instances": 85,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 171,
+         "rejected": 20,
+         "email_instances": 0,
+         "mobile_instances": 23,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 16,
+         "rejected": 0,
+         "email_instances": 0,
+         "mobile_instances": 2,
+         "bucket": 10
+      }
+   ],
+   "Madhya Pradesh": [
+      {
+         "enrollments_generated": 0,
+         "rejected": 1,
+         "email_instances": 0,
+         "mobile_instances": 1,
+         "bucket": -1
+      },
+      {
+         "enrollments_generated": 7266740,
+         "rejected": 1389294,
+         "email_instances": 41231,
+         "mobile_instances": 1786886,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 11448757,
+         "rejected": 1524814,
+         "email_instances": 111184,
+         "mobile_instances": 3481239,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 10681820,
+         "rejected": 942284,
+         "email_instances": 257850,
+         "mobile_instances": 3965425,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 8333238,
+         "rejected": 631479,
+         "email_instances": 102124,
+         "mobile_instances": 2667817,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 6318938,
+         "rejected": 443854,
+         "email_instances": 51611,
+         "mobile_instances": 1810921,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 3797244,
+         "rejected": 269317,
+         "email_instances": 29802,
+         "mobile_instances": 1002671,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2537844,
+         "rejected": 217516,
+         "email_instances": 13657,
+         "mobile_instances": 530949,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 920256,
+         "rejected": 84352,
+         "email_instances": 4795,
+         "mobile_instances": 178039,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 202990,
+         "rejected": 20568,
+         "email_instances": 1166,
+         "mobile_instances": 40699,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 20242,
+         "rejected": 2306,
+         "email_instances": 98,
+         "mobile_instances": 4189,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1174,
+         "rejected": 480,
+         "email_instances": 9,
+         "mobile_instances": 363,
+         "bucket": 11
+      }
+   ],
+   "Maharashtra": [
+      {
+         "enrollments_generated": 1,
+         "rejected": 0,
+         "email_instances": 0,
+         "mobile_instances": 0,
+         "bucket": -1
+      },
+      {
+         "enrollments_generated": 11384398,
+         "rejected": 1158168,
+         "email_instances": 103081,
+         "mobile_instances": 4415777,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 14826842,
+         "rejected": 1448656,
+         "email_instances": 198101,
+         "mobile_instances": 5471767,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 14651622,
+         "rejected": 1407877,
+         "email_instances": 569295,
+         "mobile_instances": 6854206,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 12274143,
+         "rejected": 1115319,
+         "email_instances": 373965,
+         "mobile_instances": 5410226,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 9156527,
+         "rejected": 868158,
+         "email_instances": 183686,
+         "mobile_instances": 3638030,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 5776811,
+         "rejected": 565048,
+         "email_instances": 101952,
+         "mobile_instances": 2115654,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 5384357,
+         "rejected": 685603,
+         "email_instances": 49104,
+         "mobile_instances": 1410901,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 2085037,
+         "rejected": 272097,
+         "email_instances": 15488,
+         "mobile_instances": 501890,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 384854,
+         "rejected": 46685,
+         "email_instances": 3268,
+         "mobile_instances": 101326,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 32890,
+         "rejected": 4226,
+         "email_instances": 195,
+         "mobile_instances": 8981,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 2945,
+         "rejected": 2163,
+         "email_instances": 22,
+         "mobile_instances": 1112,
+         "bucket": 11
+      }
+   ],
+   "Manipur": [
+      {
+         "enrollments_generated": 90926,
+         "rejected": 7283,
+         "email_instances": 106,
+         "mobile_instances": 14993,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 244925,
+         "rejected": 15948,
+         "email_instances": 2155,
+         "mobile_instances": 63207,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 239048,
+         "rejected": 11609,
+         "email_instances": 8211,
+         "mobile_instances": 77476,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 212859,
+         "rejected": 10831,
+         "email_instances": 2828,
+         "mobile_instances": 58346,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 162044,
+         "rejected": 8696,
+         "email_instances": 667,
+         "mobile_instances": 37574,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 114497,
+         "rejected": 6314,
+         "email_instances": 366,
+         "mobile_instances": 24534,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 65535,
+         "rejected": 3922,
+         "email_instances": 88,
+         "mobile_instances": 10546,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 26409,
+         "rejected": 1619,
+         "email_instances": 23,
+         "mobile_instances": 3501,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 8653,
+         "rejected": 494,
+         "email_instances": 5,
+         "mobile_instances": 1182,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 687,
+         "rejected": 39,
+         "email_instances": 0,
+         "mobile_instances": 100,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 55,
+         "rejected": 6,
+         "email_instances": 0,
+         "mobile_instances": 2,
+         "bucket": 11
+      }
+   ],
+   "Meghalaya": [
+      {
+         "enrollments_generated": 3322,
+         "rejected": 55,
+         "email_instances": 9,
+         "mobile_instances": 2015,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 8065,
+         "rejected": 96,
+         "email_instances": 132,
+         "mobile_instances": 5325,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 10179,
+         "rejected": 385,
+         "email_instances": 785,
+         "mobile_instances": 8771,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 8003,
+         "rejected": 311,
+         "email_instances": 258,
+         "mobile_instances": 7053,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 5722,
+         "rejected": 215,
+         "email_instances": 120,
+         "mobile_instances": 4987,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 2788,
+         "rejected": 68,
+         "email_instances": 72,
+         "mobile_instances": 2334,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1098,
+         "rejected": 16,
+         "email_instances": 19,
+         "mobile_instances": 822,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 441,
+         "rejected": 4,
+         "email_instances": 4,
+         "mobile_instances": 291,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 100,
+         "rejected": 2,
+         "email_instances": 0,
+         "mobile_instances": 60,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 6,
+         "rejected": 0,
+         "email_instances": 0,
+         "mobile_instances": 4,
+         "bucket": 10
+      }
+   ],
+   "Mizoram": [
+      {
+         "enrollments_generated": 27674,
+         "rejected": 1113,
+         "email_instances": 2,
+         "mobile_instances": 11550,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 79952,
+         "rejected": 1808,
+         "email_instances": 60,
+         "mobile_instances": 37607,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 70526,
+         "rejected": 1925,
+         "email_instances": 369,
+         "mobile_instances": 40776,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 70962,
+         "rejected": 1809,
+         "email_instances": 144,
+         "mobile_instances": 38174,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 53451,
+         "rejected": 1759,
+         "email_instances": 45,
+         "mobile_instances": 28829,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 40746,
+         "rejected": 1701,
+         "email_instances": 28,
+         "mobile_instances": 20718,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 21764,
+         "rejected": 1439,
+         "email_instances": 5,
+         "mobile_instances": 9878,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 8938,
+         "rejected": 926,
+         "email_instances": 1,
+         "mobile_instances": 3630,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 2087,
+         "rejected": 323,
+         "email_instances": 1,
+         "mobile_instances": 859,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 120,
+         "rejected": 29,
+         "email_instances": 0,
+         "mobile_instances": 62,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 2,
+         "rejected": 1,
+         "email_instances": 0,
+         "mobile_instances": 2,
+         "bucket": 11
+      }
+   ],
+   "Nagaland": [
+      {
+         "enrollments_generated": 121778,
+         "rejected": 63713,
+         "email_instances": 11,
+         "mobile_instances": 39697,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 208771,
+         "rejected": 120551,
+         "email_instances": 222,
+         "mobile_instances": 88274,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 176885,
+         "rejected": 92164,
+         "email_instances": 1669,
+         "mobile_instances": 89807,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 145342,
+         "rejected": 81585,
+         "email_instances": 495,
+         "mobile_instances": 72478,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 104583,
+         "rejected": 59182,
+         "email_instances": 89,
+         "mobile_instances": 48468,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 64324,
+         "rejected": 36293,
+         "email_instances": 34,
+         "mobile_instances": 24127,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 36735,
+         "rejected": 21137,
+         "email_instances": 4,
+         "mobile_instances": 9745,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 17897,
+         "rejected": 10237,
+         "email_instances": 2,
+         "mobile_instances": 3104,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 5790,
+         "rejected": 3620,
+         "email_instances": 0,
+         "mobile_instances": 757,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 1037,
+         "rejected": 684,
+         "email_instances": 0,
+         "mobile_instances": 108,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 178,
+         "rejected": 94,
+         "email_instances": 0,
+         "mobile_instances": 26,
+         "bucket": 11
+      }
+   ],
+   "Odisha": [
+      {
+         "enrollments_generated": 2167116,
+         "rejected": 517925,
+         "email_instances": 2148,
+         "mobile_instances": 305660,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 5558068,
+         "rejected": 1236779,
+         "email_instances": 14887,
+         "mobile_instances": 828163,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 5046487,
+         "rejected": 1092883,
+         "email_instances": 59191,
+         "mobile_instances": 1098108,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 4546538,
+         "rejected": 1055806,
+         "email_instances": 26096,
+         "mobile_instances": 907519,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 3714599,
+         "rejected": 886704,
+         "email_instances": 8931,
+         "mobile_instances": 712649,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 2424247,
+         "rejected": 583662,
+         "email_instances": 4157,
+         "mobile_instances": 446239,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1565883,
+         "rejected": 397369,
+         "email_instances": 1397,
+         "mobile_instances": 221862,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 592438,
+         "rejected": 168298,
+         "email_instances": 350,
+         "mobile_instances": 76660,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 119618,
+         "rejected": 33439,
+         "email_instances": 66,
+         "mobile_instances": 15728,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 10748,
+         "rejected": 4036,
+         "email_instances": 7,
+         "mobile_instances": 1486,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1233,
+         "rejected": 1115,
+         "email_instances": 2,
+         "mobile_instances": 219,
+         "bucket": 11
+      }
+   ],
+   "Puducherry": [
+      {
+         "enrollments_generated": 76582,
+         "rejected": 27745,
+         "email_instances": 316,
+         "mobile_instances": 44681,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 88883,
+         "rejected": 59946,
+         "email_instances": 1148,
+         "mobile_instances": 69833,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 97722,
+         "rejected": 57868,
+         "email_instances": 4632,
+         "mobile_instances": 86443,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 98040,
+         "rejected": 58959,
+         "email_instances": 3059,
+         "mobile_instances": 89878,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 75760,
+         "rejected": 47118,
+         "email_instances": 1390,
+         "mobile_instances": 69366,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 49660,
+         "rejected": 31978,
+         "email_instances": 682,
+         "mobile_instances": 42154,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 32131,
+         "rejected": 21610,
+         "email_instances": 297,
+         "mobile_instances": 22624,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 14272,
+         "rejected": 9560,
+         "email_instances": 43,
+         "mobile_instances": 8766,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 4163,
+         "rejected": 2300,
+         "email_instances": 16,
+         "mobile_instances": 2282,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 416,
+         "rejected": 211,
+         "email_instances": 1,
+         "mobile_instances": 229,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 82,
+         "rejected": 79,
+         "email_instances": 2,
+         "mobile_instances": 64,
+         "bucket": 11
+      }
+   ],
+   "Punjab": [
+      {
+         "enrollments_generated": 3119515,
+         "rejected": 440667,
+         "email_instances": 41223,
+         "mobile_instances": 1072810,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 4058753,
+         "rejected": 455197,
+         "email_instances": 33531,
+         "mobile_instances": 1295478,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 4224327,
+         "rejected": 382171,
+         "email_instances": 76195,
+         "mobile_instances": 1613999,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 3406546,
+         "rejected": 251380,
+         "email_instances": 37939,
+         "mobile_instances": 1210403,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 2639326,
+         "rejected": 189593,
+         "email_instances": 17272,
+         "mobile_instances": 859964,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 1753298,
+         "rejected": 127057,
+         "email_instances": 10930,
+         "mobile_instances": 549512,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 1310893,
+         "rejected": 111769,
+         "email_instances": 6511,
+         "mobile_instances": 331324,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 533225,
+         "rejected": 43878,
+         "email_instances": 3237,
+         "mobile_instances": 125739,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 142506,
+         "rejected": 10852,
+         "email_instances": 1222,
+         "mobile_instances": 34249,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 17732,
+         "rejected": 1289,
+         "email_instances": 203,
+         "mobile_instances": 4454,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1012,
+         "rejected": 238,
+         "email_instances": 10,
+         "mobile_instances": 298,
+         "bucket": 11
+      }
+   ],
+   "Rajasthan": [
+      {
+         "enrollments_generated": 4432996,
+         "rejected": 793312,
+         "email_instances": 16628,
+         "mobile_instances": 1172709,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 10986979,
+         "rejected": 1252642,
+         "email_instances": 64282,
+         "mobile_instances": 3580508,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 10136257,
+         "rejected": 990120,
+         "email_instances": 147778,
+         "mobile_instances": 3875488,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 7529611,
+         "rejected": 635435,
+         "email_instances": 56966,
+         "mobile_instances": 2486436,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 5842275,
+         "rejected": 494502,
+         "email_instances": 26495,
+         "mobile_instances": 1735806,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 4005688,
+         "rejected": 373409,
+         "email_instances": 15207,
+         "mobile_instances": 1069435,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 2751042,
+         "rejected": 296226,
+         "email_instances": 7233,
+         "mobile_instances": 617155,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1075781,
+         "rejected": 118060,
+         "email_instances": 2886,
+         "mobile_instances": 241131,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 257506,
+         "rejected": 29556,
+         "email_instances": 944,
+         "mobile_instances": 67923,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 26218,
+         "rejected": 3604,
+         "email_instances": 123,
+         "mobile_instances": 7927,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1082,
+         "rejected": 602,
+         "email_instances": 8,
+         "mobile_instances": 453,
+         "bucket": 11
+      }
+   ],
+   "Sikkim": [
+      {
+         "enrollments_generated": 55125,
+         "rejected": 2742,
+         "email_instances": 75,
+         "mobile_instances": 5524,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 78259,
+         "rejected": 3127,
+         "email_instances": 223,
+         "mobile_instances": 6486,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 81877,
+         "rejected": 3078,
+         "email_instances": 1539,
+         "mobile_instances": 13550,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 60102,
+         "rejected": 1843,
+         "email_instances": 641,
+         "mobile_instances": 8083,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 38860,
+         "rejected": 1176,
+         "email_instances": 206,
+         "mobile_instances": 4098,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 24990,
+         "rejected": 762,
+         "email_instances": 82,
+         "mobile_instances": 2350,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 13974,
+         "rejected": 439,
+         "email_instances": 26,
+         "mobile_instances": 1247,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 6832,
+         "rejected": 237,
+         "email_instances": 3,
+         "mobile_instances": 671,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 1828,
+         "rejected": 69,
+         "email_instances": 0,
+         "mobile_instances": 295,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 177,
+         "rejected": 8,
+         "email_instances": 1,
+         "mobile_instances": 42,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 10,
+         "rejected": 4,
+         "email_instances": 0,
+         "mobile_instances": 0,
+         "bucket": 11
+      }
+   ],
+   "Tamil Nadu": [
+      {
+         "enrollments_generated": 3010887,
+         "rejected": 299332,
+         "email_instances": 8149,
+         "mobile_instances": 1890999,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 9155893,
+         "rejected": 1013995,
+         "email_instances": 67224,
+         "mobile_instances": 5495762,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 8867145,
+         "rejected": 977789,
+         "email_instances": 265756,
+         "mobile_instances": 5749337,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 9011713,
+         "rejected": 1036096,
+         "email_instances": 106642,
+         "mobile_instances": 5761892,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 7997563,
+         "rejected": 969866,
+         "email_instances": 44254,
+         "mobile_instances": 4996025,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 5691438,
+         "rejected": 750741,
+         "email_instances": 26187,
+         "mobile_instances": 3294395,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 3653374,
+         "rejected": 572698,
+         "email_instances": 12271,
+         "mobile_instances": 1835980,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1373609,
+         "rejected": 260346,
+         "email_instances": 3659,
+         "mobile_instances": 638721,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 285031,
+         "rejected": 54113,
+         "email_instances": 720,
+         "mobile_instances": 129495,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 20556,
+         "rejected": 4890,
+         "email_instances": 64,
+         "mobile_instances": 9640,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 10377,
+         "rejected": 3584,
+         "email_instances": 6,
+         "mobile_instances": 4469,
+         "bucket": 11
+      }
+   ],
+   "Telangana": [
+      {
+         "enrollments_generated": 817845,
+         "rejected": 63096,
+         "email_instances": 12569,
+         "mobile_instances": 650714,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 72129,
+         "rejected": 28602,
+         "email_instances": 2093,
+         "mobile_instances": 75347,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 125665,
+         "rejected": 40294,
+         "email_instances": 6278,
+         "mobile_instances": 133765,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 94435,
+         "rejected": 24919,
+         "email_instances": 6683,
+         "mobile_instances": 97155,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 49825,
+         "rejected": 14219,
+         "email_instances": 2652,
+         "mobile_instances": 49729,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 26384,
+         "rejected": 9283,
+         "email_instances": 1090,
+         "mobile_instances": 25864,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 25517,
+         "rejected": 11505,
+         "email_instances": 656,
+         "mobile_instances": 23119,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 15403,
+         "rejected": 4766,
+         "email_instances": 287,
+         "mobile_instances": 12319,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 6514,
+         "rejected": 1331,
+         "email_instances": 119,
+         "mobile_instances": 4994,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 1142,
+         "rejected": 180,
+         "email_instances": 15,
+         "mobile_instances": 876,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 37,
+         "rejected": 10,
+         "email_instances": 0,
+         "mobile_instances": 26,
+         "bucket": 11
+      }
+   ],
+   "Tripura": [
+      {
+         "enrollments_generated": 188853,
+         "rejected": 58855,
+         "email_instances": 111,
+         "mobile_instances": 44363,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 139161,
+         "rejected": 41353,
+         "email_instances": 331,
+         "mobile_instances": 32772,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 174328,
+         "rejected": 44062,
+         "email_instances": 2563,
+         "mobile_instances": 63088,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 132821,
+         "rejected": 31484,
+         "email_instances": 1041,
+         "mobile_instances": 46361,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 103501,
+         "rejected": 24973,
+         "email_instances": 349,
+         "mobile_instances": 31367,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 66109,
+         "rejected": 15802,
+         "email_instances": 181,
+         "mobile_instances": 18941,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 37351,
+         "rejected": 9324,
+         "email_instances": 61,
+         "mobile_instances": 9121,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 17464,
+         "rejected": 4395,
+         "email_instances": 7,
+         "mobile_instances": 4034,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 6648,
+         "rejected": 1291,
+         "email_instances": 2,
+         "mobile_instances": 1718,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 1327,
+         "rejected": 263,
+         "email_instances": 0,
+         "mobile_instances": 363,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 122,
+         "rejected": 77,
+         "email_instances": 0,
+         "mobile_instances": 27,
+         "bucket": 11
+      }
+   ],
+   "Uttar Pradesh": [
+      {
+         "enrollments_generated": 6227244,
+         "rejected": 807305,
+         "email_instances": 23041,
+         "mobile_instances": 2497562,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 30202639,
+         "rejected": 2532367,
+         "email_instances": 175326,
+         "mobile_instances": 12935948,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 27572236,
+         "rejected": 2416299,
+         "email_instances": 412423,
+         "mobile_instances": 14595782,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 20664861,
+         "rejected": 1774438,
+         "email_instances": 170589,
+         "mobile_instances": 9589236,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 15594652,
+         "rejected": 1356213,
+         "email_instances": 82575,
+         "mobile_instances": 6779538,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 9758037,
+         "rejected": 859453,
+         "email_instances": 48866,
+         "mobile_instances": 4058276,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 6374150,
+         "rejected": 646477,
+         "email_instances": 25883,
+         "mobile_instances": 2388645,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1822910,
+         "rejected": 213573,
+         "email_instances": 8187,
+         "mobile_instances": 689786,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 317898,
+         "rejected": 40711,
+         "email_instances": 1683,
+         "mobile_instances": 123985,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 29719,
+         "rejected": 6193,
+         "email_instances": 152,
+         "mobile_instances": 12208,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 1320,
+         "rejected": 1164,
+         "email_instances": 14,
+         "mobile_instances": 822,
+         "bucket": 11
+      }
+   ],
+   "Uttarakhand": [
+      {
+         "enrollments_generated": 445193,
+         "rejected": 43855,
+         "email_instances": 2081,
+         "mobile_instances": 212864,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 1492268,
+         "rejected": 129149,
+         "email_instances": 13183,
+         "mobile_instances": 785067,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 1365931,
+         "rejected": 109704,
+         "email_instances": 40171,
+         "mobile_instances": 866239,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 1105568,
+         "rejected": 88193,
+         "email_instances": 18121,
+         "mobile_instances": 675249,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 830857,
+         "rejected": 65725,
+         "email_instances": 8042,
+         "mobile_instances": 486957,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 545748,
+         "rejected": 42274,
+         "email_instances": 4344,
+         "mobile_instances": 306622,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 393412,
+         "rejected": 33834,
+         "email_instances": 2150,
+         "mobile_instances": 194397,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 141552,
+         "rejected": 12166,
+         "email_instances": 649,
+         "mobile_instances": 68036,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 30346,
+         "rejected": 2503,
+         "email_instances": 160,
+         "mobile_instances": 13959,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 2349,
+         "rejected": 296,
+         "email_instances": 16,
+         "mobile_instances": 1183,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 69,
+         "rejected": 50,
+         "email_instances": 1,
+         "mobile_instances": 59,
+         "bucket": 11
+      }
+   ],
+   "West Bengal": [
+      {
+         "enrollments_generated": 4847008,
+         "rejected": 820638,
+         "email_instances": 2435,
+         "mobile_instances": 393974,
+         "bucket": 1
+      },
+      {
+         "enrollments_generated": 13302289,
+         "rejected": 1413875,
+         "email_instances": 15960,
+         "mobile_instances": 1177513,
+         "bucket": 2
+      },
+      {
+         "enrollments_generated": 13471774,
+         "rejected": 1437025,
+         "email_instances": 75384,
+         "mobile_instances": 1700836,
+         "bucket": 3
+      },
+      {
+         "enrollments_generated": 10734293,
+         "rejected": 1206141,
+         "email_instances": 34572,
+         "mobile_instances": 1321689,
+         "bucket": 4
+      },
+      {
+         "enrollments_generated": 9789156,
+         "rejected": 1149705,
+         "email_instances": 14203,
+         "mobile_instances": 1145556,
+         "bucket": 5
+      },
+      {
+         "enrollments_generated": 6325221,
+         "rejected": 837859,
+         "email_instances": 8403,
+         "mobile_instances": 772309,
+         "bucket": 6
+      },
+      {
+         "enrollments_generated": 3401050,
+         "rejected": 579901,
+         "email_instances": 3490,
+         "mobile_instances": 398301,
+         "bucket": 7
+      },
+      {
+         "enrollments_generated": 1220437,
+         "rejected": 277893,
+         "email_instances": 886,
+         "mobile_instances": 141984,
+         "bucket": 8
+      },
+      {
+         "enrollments_generated": 230359,
+         "rejected": 56137,
+         "email_instances": 123,
+         "mobile_instances": 26192,
+         "bucket": 9
+      },
+      {
+         "enrollments_generated": 19874,
+         "rejected": 6764,
+         "email_instances": 5,
+         "mobile_instances": 2187,
+         "bucket": 10
+      },
+      {
+         "enrollments_generated": 4093,
+         "rejected": 1453,
+         "email_instances": 2,
+         "mobile_instances": 321,
+         "bucket": 11
+      }
+   ]
+}
