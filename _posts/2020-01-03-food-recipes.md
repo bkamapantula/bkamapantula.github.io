@@ -5,7 +5,7 @@ Learning from the masters of public learning ([swyx](https://www.swyx.io/writing
 ## Kicking it off
 Basecamp (a project management software) now has a free option for [personal](https://basecamp.com/personal) use. It offers three projects and supports up to 20 users.
 
-![basecamp](../basecamp.png)
+![basecamp](images/basecamp.png)
 
 First thoughts, love its ease-of-use with a guided setup for first-time users!
 
