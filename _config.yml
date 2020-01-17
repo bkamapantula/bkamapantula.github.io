@@ -14,8 +14,7 @@ github_username: bkamapantula
 email: 
 twitter_username: thoughtisdead
 
-header_pages:
-  - about.md
+header_pages: about.md
 show_excerpts: true
 
 # Set this to true to get LaTeX math equation support
