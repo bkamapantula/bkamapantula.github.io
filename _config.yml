@@ -14,8 +14,12 @@ github_username: bkamapantula
 email: 
 twitter_username: thoughtisdead
 
+header_pages:
+  - about.md
+show_excerpts: true
+
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math: false
 
 # Everything below here can be ignored, unless you want to change the theme entirely
 theme: minima
