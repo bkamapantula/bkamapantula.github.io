@@ -50,7 +50,7 @@ As *Ramya* taught participants about expressions, emotions, characters... they p
 
 Participants were invited to share their work and many happily obliged.
 
-https://twitter.com/priti_pg/status/1206243038911062016
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Who feels super confident showcasing what they made too the first time they make it? I can’t begin to fathom what level of planning it must have taken to create that environment of comfort in a workshop with 80 odd people <a href="https://twitter.com/priti_pg/status/1206243038911062016">December 15, 2019</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Part 2
 In second half of the day, participants were given datasets to find insights and narrate a story on. They roughly had 2.5 hrs to do so. Below are some of the final submissions.
