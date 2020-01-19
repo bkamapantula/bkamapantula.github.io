@@ -8,6 +8,7 @@ I share our experience of organizing a one of the kind data events.
 
 - [Background](#background)
 - [Workshop](#workshop)
+  - [Material](#material)
   - [Part 1](#part-1)
   - [Part 2](#part-2)
     - [Classroom](#classroom)
@@ -18,14 +19,16 @@ I share our experience of organizing a one of the kind data events.
   - [Participants](#participants)
   - [Venue](#venue)
 - [Volunteers](#volunteers)
-  
+
 ## Background
 To promote *data storytelling for business communication* within and outside the organization we started monthly data storytelling events first in Feb 2019 but became a regular practice from May to October (every second Friday of the month). Upon requests for a weekend event from the community we organized this workshop.
 
-The focus of all our events is learning and not competition. Hence, we don't award participants for their work but encourage discussion with everyone around.
+The focus of all our events is learning and not competition. Hence we don't award participants for their work, don't give away participation certificates but encourage discussion with everyone around.
 
 ## Workshop
-The workshop was carefully structured as follows:
+Tasting success with comic-based data storytelling with clients and internal communication, we created the workshop theme on data comics.
+
+The workshop was structured as follows:
 
 | Session Title | What | By |
 | ----- | ---- | -- |
@@ -38,8 +41,14 @@ The workshop was carefully structured as follows:
 
 The sessions are geared towards people who are interested to narrate stories through comic form.
 
+### Material
+
+The workshop material for four sessions can be accessed via [Google Drive](https://drive.google.com/drive/folders/1YxmsullIkCyHwNxr1i32eJhrQ4NnS6gV).
+
 ### Part 1
 As *Ramya* taught participants about expressions, emotions, characters... they practiced along. At the end of the hour, participants were asked to create a character of their own choice.
+
+Participants were requested to share their work .
 
 ### Part 2
 In second half of the day, participants were given datasets to find insights and narrate a story on. They roughly had 2.5 hrs to do so. Below are some of the final submissions.
