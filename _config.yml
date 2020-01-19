@@ -24,7 +24,6 @@ use_math: false
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-gist
 
 titles_from_headings:
   enabled:     true
