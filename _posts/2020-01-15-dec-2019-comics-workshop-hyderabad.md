@@ -48,9 +48,7 @@ The workshop material for four sessions can be accessed via [Google Drive](https
 ### Part 1
 As *Ramya* taught participants about expressions, emotions, characters... they practiced along. At the end of the hour, participants were asked to create a character of their own choice.
 
-Participants were invited to share their work and many happily obliged.
-
-{% twitter https://twitter.com/priti_pg/status/1206243038911062016 %}
+Participants were invited to share their work and several [happily obliged](https://twitter.com/priti_pg/status/1206243038911062016).
 
 ### Part 2
 In second half of the day, participants were given datasets to find insights and narrate a story on. They roughly had 2.5 hrs to do so. Below are some of the final submissions.
