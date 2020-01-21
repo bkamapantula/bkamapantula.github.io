@@ -1,6 +1,6 @@
 # Data art round 1
 
-After resolving to work on gifts last week, I spent time the past week in ideating on data-based gifts.
+After resolving to work on [gifts](https://bkamapantula.github.io/2020/01/15/gifts.html) last week, I spent time the past week in ideating on data-based gifts.
 
 I discovered [Vistaprint](https://www.vistaprint.in/) recently. It looked like a good service to order custom coffee mugs, posters, thank you cards etc.
 
