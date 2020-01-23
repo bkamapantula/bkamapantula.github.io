@@ -31,6 +31,6 @@ I'll be testing out few other formats in the upcoming weeks to discover the best
 
 The custom made coffee mug is here!
 
-![hyderabad city roads coffee mug](../../../../images/city-roads-hyderabad-mug.png)
+![hyderabad city roads coffee mug](../../../../images/city-roads-hyderabad-mug.jpg)
 
 Coffee mug is sturdy, good quality. The print on the mug looks beautiful although I would have preferred a darker shade of the print.
