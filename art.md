@@ -1,5 +1,14 @@
 # Data art
 
+### Life expectancy of countries
+
+Our world in data is a great initiative to show world's progress.
+
+I curated a specific indicator for some countries with a focus on India.
+
+ ![life expectancy front](../images/card-front-life-expectancy.png)
+
+ ![life expectancy back](../images/card-back-life-expectancy.png)
 
 ### Warming stripes
 
