@@ -26,3 +26,11 @@ Below is a snapshot of Hyderabad city roads. I wrapped it on a coffee mug.
 ![hyderabad city roads](../../../../images/city-roads-hyderabad.png)
 
 I'll be testing out few other formats in the upcoming weeks to discover the best formats.
+
+# Update - 23rd Jan
+
+The custom made coffee mug is here!
+
+![hyderabad city roads coffee mug](../../../../images/city-roads-hyderabad-mug.png)
+
+Coffee mug is sturdy, good quality. The print on the mug looks beautiful although I would have preferred a darker shade of the print.
