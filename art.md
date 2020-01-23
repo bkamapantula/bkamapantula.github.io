@@ -1,6 +1,13 @@
 # Data art
 
 
+### Warming stripes
+
+[Show your stripes](https://showyourstripes.info/) is an excellent way to introduce climate change topic. 
+
+Below is a warming stripe for India for the years 1901 to 2018.
+
+![India average temperature the past 100 years](../images/stripes-india.png)
 
 **Note**
 
