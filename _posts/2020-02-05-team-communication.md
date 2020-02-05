@@ -4,7 +4,7 @@ Many responded and I got interested in the invitation patterns within and across
 
 The result is the below:
 
-![team communication](../../../../images/team-communication.md)
+![team communication](../../../../images/team-communication.png)
 
 - thicker the circle circumference the more within-group communication
 - thicker the edge the more communication occurred between those two groups
