@@ -1,5 +1,9 @@
 # Data art
 
+### Team communication
+
+![team communication](../images/team-communication.png)
+
 ### Life expectancy of countries
 
 Our world in data is a great initiative to show world's progress.
