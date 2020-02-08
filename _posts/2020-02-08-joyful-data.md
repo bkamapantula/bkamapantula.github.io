@@ -25,6 +25,8 @@ This created interesting art! All from a JSON file, that's pretty neat.
 ![boxed parties](../../../../images/jd-states.jpg)
 *Source: https://tinyurl.com/jd-states*
 
+It can take some time to figure out the order of instructions to draw a shape.
+
 Joyful Data can be a great way:
 
 - to create small multiple visuals that convey insights 
