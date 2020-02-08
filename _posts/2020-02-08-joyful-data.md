@@ -23,7 +23,7 @@ Each Indian state is a box, size is the # of legislative constituencies in a sta
 This created interesting art! All from a JSON file, that's pretty neat.
 
 ![boxed parties](../../../../images/jd-states.jpg)
-*Source: https://tinyurl.com/jd-states*
+*Source: [https://tinyurl.com/jd-states](https://tinyurl.com/jd-states)*
 
 It can take some time to figure out the order of instructions to draw a shape.
 
