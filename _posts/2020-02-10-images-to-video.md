@@ -1,6 +1,6 @@
 # Images to Video
 
-*BehanBox* is covering women-led resistance through interviews, digital artifacts. I created a map of protests across India two weeks ago.
+*BehanBox* is covering women-led resistance through interviews, digital artifacts. I created a map of protests across India two weeks ago for an [article](https://www.behanbox.com/women-led-protest-map-against-citizenship-laws-in-india/).
 
 Post that we wanted to explore how the events unfolded from mid-December until now. The result is below series of maps:
 
