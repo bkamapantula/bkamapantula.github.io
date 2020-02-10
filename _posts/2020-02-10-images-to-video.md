@@ -15,7 +15,18 @@ I used the following toolkit to create the video:
 - `ffmpeg` for video creation -- spent good chunk of my time in figuring out right attributes
 
 ## Geopandas
-`geopandas` is a smart addition to one's workflow if dealing with geo-data (ex: addresses or latitude/longitude).
+`geopandas` is a smart addition to one's workflow if dealing with geo-data (ex: addresses or latitude/longitude). One can 
+
+```py
+import geopandas
+# df is a dataframe where each row has a latitude, longitude for a given data point
+gdf = geopandas.GeoDataFrame(
+    df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))
+
+# loop through each item and plot as a point
+for d, m in gdf.groupby(['Date']):
+    m.plot(ax=ax, color='navy')
+```
 
 ## Creating text annotations
 `matplotlib`'s annotate utility is useful to place custom text at arbitrary location on the plot
@@ -64,6 +75,8 @@ My fallback option was to use the ever reliable [CloudConvert](https://cloudconv
 Adding custom tiles to map looked intriguing and I found [`contextily`](https://github.com/darribas/contextily) support in `python`.
 
 ![contextily tile options](https://raw.githubusercontent.com/darribas/contextily/master/tiles.png)
+
+I deal with 4326 coordinate system (CRS) of geometric points in all of my work. Contextily seems to use a different CRS (3395) for adding tiles and so I had to convert the geometrical points to that CRS.
 
 The result was promising but needed additional work:
 
