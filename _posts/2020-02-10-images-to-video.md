@@ -7,6 +7,8 @@ Post that we wanted to explore how the events unfolded from mid-December until n
 ![sitins as of Feb 8th 2020](../../../../images/sitins.gif)
 *GIF converted from the video*
 
+Here, I write about the process of creating it, related experiments.
+
 I used the following toolkit to create the video:
 
 - `jupyter` notebook for interactive scripting
@@ -81,6 +83,14 @@ I deal with 4326 coordinate system (CRS) of geometric points in all of my work. 
 The result was promising (I used `Stamen.TonerBackground` option) but needed additional work:
 
 ![contextily output](../../../../images/sitins-contextily.gif)
+
+## Next attempt
+
+I'd have liked to create an inset map to expand on crowded contexts (Bihar, Delhi in this scenario) which makes it easier for text annotations.
+
+![qgis inset map](http://nyalldawson.net/wp-content/uploads/2014/01/demo_map.png)
+
+It seems an interesting enough problem for better narration.
 
 ## References
 
