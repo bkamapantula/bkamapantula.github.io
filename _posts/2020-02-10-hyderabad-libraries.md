@@ -4,27 +4,27 @@ As someone who loves libraries I haven't been to any in Hyderabad. I curated a l
 
 ## Libraries
 
-\1. Sri Krishna Devaraya Bhasha Nilayam
+- Sri Krishna Devaraya Bhasha Nilayam
 
 Location: Sultan Bazar, [Google Map](https://goo.gl/maps/34sSjpY4C8sKmFnd6)
 
-\2. City Central Library
+- City Central Library
 
 Location: Ashok Nagar, Chikkadpally, [Google Map](https://goo.gl/maps/M8zrMFXZPgxAEexm8)
 
-\3. Telangana State Central Library
+- Telangana State Central Library
 
 Location: Afzalgunj, [Google Map](https://goo.gl/maps/v2Ris2E58wW1xbPF8)
 
-\4. Telangana State Archives and Research Institute
+- Telangana State Archives and Research Institute
 
 Location: Tarnaka, [Google Map](https://goo.gl/maps/P6TcgiVdUxmnbBa86)
 
-\5. Telugu University Library
+- Telugu University Library
 
 Location: OU Campus, Main Entrance, [Google Map](https://goo.gl/maps/7kVg9inSGm9enFQq5)
 
-\6. Sundarayya Vignana Kendram
+- Sundarayya Vignana Kendram
 
 Location 1: Bagh Lingampally, [Google Map](https://goo.gl/maps/YF1tpqRDgecSctMA9)
 
