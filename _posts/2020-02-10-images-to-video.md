@@ -83,7 +83,7 @@ I deal with 4326 coordinate system (CRS) of geometric points in all of my work. 
 ```py
 import contextily as ctx
 # india is a geopandas object of India geojson shape
-india = india.to_crs(epsg=3857)  # transforms to epsg:3857 (mercator) projection
+india = india.to_crs(epsg=3857)  # transforms to epsg:3857 (elliptical mercator) projection
 
 # adds basemap with Stamen design's Toner Background tile
 ctx.add_basemap(ax, url=ctx.providers.Stamen.TonerBackground)
@@ -92,11 +92,15 @@ ctx.add_basemap(ax, url=ctx.providers.Stamen.TonerBackground)
 # set initial coordinate system
 gdf.crs = {'init': 'epsg:4326'} # without this the next step wouldn't work as it needs a base CRS
 gdf = gdf.to_crs({'init': 'epsg:3395'})
+
+# note that coordinates for all text annotations have to be updated to the adopted CRS. It's easy to do that if axis isn't turned off and by trial and error.
 ```
 
-The result was promising (I used `Stamen.TonerBackground` option) but needed additional work:
+The result was promising (I used `Stamen.TonerBackground` option)...
 
 ![contextily output](../../../../images/sitins-contextily.gif)
+
+...but needed additional work as I wanted to accurately understand different CRS before using any transformations.
 
 ## Next attempt
 
@@ -111,3 +115,4 @@ It seems an interesting enough problem for better narration.
 - Python script to draw day-wise maps, [Gist](https://gist.github.com/bkamapantula/fdeb9993e5944edfa6dff08763775418)
 - Contextily, tiles for matplotlib maps, [GitHub](https://github.com/darribas/contextily)
 - [Geopandas](https://geopandas.org/), [matplotlib](https://matplotlib.org/)
+- EPSG:3395 vs EPSG:3857 projection systems, [gis stackexchange](https://gis.stackexchange.com/questions/259121/transformation-functions-for-epsg3395-projection-vs-epsg3857)
