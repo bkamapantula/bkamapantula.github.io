@@ -78,7 +78,7 @@ Adding custom tiles to map looked intriguing and I found [`contextily`](https://
 
 I deal with 4326 coordinate system (CRS) of geometric points in all of my work. Contextily seems to use a different CRS (3395) for adding tiles and so I had to convert the geometrical points to that CRS.
 
-The result was promising but needed additional work:
+The result was promising (I used `Stamen.TonerBackground` option) but needed additional work:
 
 ![contextily output](../../../../images/sitins-contextily.gif)
 
