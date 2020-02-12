@@ -17,7 +17,7 @@ I used the following toolkit to create the video:
 - `ffmpeg` for video creation -- spent good chunk of my time in figuring out right attributes
 
 ## Geopandas
-`geopandas` is a smart addition to one's workflow if dealing with geo-data (ex: addresses or latitude/longitude). One can 
+`geopandas` is a smart addition to one's workflow if dealing with geo-data (ex: addresses or latitude/longitude). One can read an `excel`/`csv` file with location attributes and convert it to a geometrical dataframe.
 
 ```py
 import geopandas
@@ -31,7 +31,7 @@ for d, m in gdf.groupby(['Date']):
 ```
 
 ## Creating text annotations
-`matplotlib`'s annotate utility is useful to place custom text at arbitrary location on the plot
+`matplotlib`'s annotate utility is useful to place custom text at arbitrary location on the plot.
 
 ```py
 # xy refers to the actual position on the map that needs to be annotated
