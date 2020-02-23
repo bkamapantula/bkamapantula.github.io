@@ -7,7 +7,9 @@ I'm at [Gramener](https://gramener.com/) currently since mid-late-2016. I work o
 - I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
 - I volunteer my time with [BehanBox](https://www.behanbox.com/) whenever time permits.
 
-I'm good at software development, data visualization, data analysis, prototyping, technical writing. Reach out to me if you need assistance or to collaborate. Email - `talk2kish at google's email`.
+I'm good at software development, data visualization, data analysis, prototyping, technical writing, mentoring. Reach out to me if you need assistance or to collaborate. Email - `talk2kish at google's email`.
+
+If you'd like to know about me briefly, read: [Manager's Alphabet](https://github.com/bkamapantula/Managers-Alphabet/) (it's elaborate) that I compiled, [data science work](https://bkamapantula.github.io/2017/10/24/what-people-do-data-science.html), [2019 review](https://bkamapantula.github.io/2020/01/03/2019.html).
 
 Also view: [Visualizations](https://bkamapantula.github.io/viz/). [News](https://bkamapantula.github.io/news.html).
 
