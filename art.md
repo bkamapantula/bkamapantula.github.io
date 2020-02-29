@@ -1,7 +1,5 @@
 # Data art
 
-### Suggestions
-
 ### Team communication
 
 ![team communication](../images/team-communication.png)
