@@ -1,4 +1,4 @@
-
+# About
 
 1. Bhanu's current role is at Gramener as an associate principal data scientist with primary focus on building data-driven visual solutions, architecting technical solutions and data communication among other things.
 
