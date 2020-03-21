@@ -16,6 +16,7 @@ lang: en
 # Email and twitter are optional:
 email: 
 twitter_username: thoughtisdead
+rss: rss
 
 social:
   links:
