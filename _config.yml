@@ -23,7 +23,9 @@ social:
     - https://github.com/bkamapantula/
     - https://www.linkedin.com/in/bkamapantula/
 
-header_pages: about.md
+header_pages:
+  - about.md
+  - art.md
 show_excerpts: true
 
 # Set this to true to get LaTeX math equation support
