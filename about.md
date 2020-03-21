@@ -15,5 +15,4 @@ Also view: [Visualizations](https://bkamapantula.github.io/viz/). [News](https:/
 ### Past
 - After Ph.D., I did a short postdoc from February to June 2016 at UW, Madison.
 - I'm a 2015 Computer Science Ph.D. from [VCU](https://www.vcu.edu/). My work explored the structural robustness in biological and complex networks with applications to wireless sensor networks. Specifically, the objective of the research was to identify features responsible for biological robustness from a structural perspective.
-
-My interests used to be in systems biology apart from data science, visualization, and network science. [Research portfolio](https://bkamapantula.github.io/research/index.html) displays several of my past research projects and publication details between 2009-2016. [Visualization portfolio](https://bkamapantula.github.io/viz/index.html) mentions several interactive and static visuals developed by him since 2012.
+- My interests used to be in systems biology apart from data science, visualization, and network science. [Research portfolio](https://bkamapantula.github.io/research/index.html) displays several of my past research projects and publication details between 2009-2016. [Visualization portfolio](https://bkamapantula.github.io/viz/index.html) mentions several interactive and static visuals developed by him since 2012.
