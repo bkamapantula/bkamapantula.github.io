@@ -1,11 +1,20 @@
 # About
 
-1. Bhanu's current role is at Gramener as an associate principal data scientist with primary focus on building data-driven visual solutions, architecting technical solutions and data communication among other things.
+### Know
+- I'm with Gramener currently with primary focus on building data-driven visual solutions, architecting technical solutions and data communication among other things.
+- I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
+- I volunteer my time with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
 
-At Gramener apart from the client work, you can find him organizing regular [data storytelling events](https://www.meetup.com/meetup-group-EkjzkhLt/). He frequently blogs here.
+### Reach me
+I'm good at software development, data visualization, data analysis, prototyping, technical writing, mentoring. Reach out to me if you need assistance or to collaborate. Email - `talk2kish at google's email`.
 
+If you'd like to know about me briefly, read: [Manager's Alphabet](https://github.com/bkamapantula/Managers-Alphabet/) (it's elaborate) that I compiled, [data science work](https://bkamapantula.github.io/2017/10/24/what-people-do-data-science.html), [2019 review](https://bkamapantula.github.io/2020/01/03/2019.html).
+
+Also view: [Visualizations](https://bkamapantula.github.io/viz/). [News](https://bkamapantula.github.io/news.html).
+
+### Past
 2. After Ph.D., he did a short postdoc from February to June 2016 at UW, Madison.
 
 3. Bhanu is a 2015 Computer Science Ph.D. from [VCU](https://www.vcu.edu/). His work explored the structural robustness in biological and complex networks with applications to wireless sensor networks. Specifically, the objective of the research was to identify features responsible for biological robustness from a structural perspective.
 
-His interests are in systems biology apart from data science, visualization, and network science. [Research portfolio](https://bkamapantula.github.io/research/index.html) displays several of his research projects and publication details between 2009-2016. [Visualization portfolio](https://bkamapantula.github.io/viz/index.html) mentions several interactive and static visuals developed by him since 2012.
+My interests used to be in systems biology apart from data science, visualization, and network science. [Research portfolio](https://bkamapantula.github.io/research/index.html) displays several of my past research projects and publication details between 2009-2016. [Visualization portfolio](https://bkamapantula.github.io/viz/index.html) mentions several interactive and static visuals developed by him since 2012.
