@@ -6,13 +6,22 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Bhanu K
-description: Technology, People, Data, Society, Art
+title: Bhanu Kamapantula
+tagline: On software, management, technology, society
+description: I'm interested in the impact of Technology, People, Data, Society, Art on one another.
 github_username: bkamapantula
+url: https://bkamapantula.github.io/
+lang: en
 
 # Email and twitter are optional:
 email: 
 twitter_username: thoughtisdead
+
+social:
+  links:
+    - https://twitter.com/thoughtisdead
+    - https://github.com/bkamapantula/
+    - https://www.linkedin.com/in/bkamapantula/
 
 header_pages: about.md
 show_excerpts: true
