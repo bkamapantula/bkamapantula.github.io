@@ -17,7 +17,10 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 }
 ```
 
-Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity.
+## Key data aspects
+- Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity. 
+- Except Residential activity all activity is measured as change in number of visitors.
+- Residential activity is measured by the duration of time spent at homes.
 
 <div id="vis"></div>
 <script src="https://vega.github.io/vega/vega.min.js"></script>
