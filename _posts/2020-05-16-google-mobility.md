@@ -2,6 +2,23 @@
 
 Google released [mobility data](https://www.google.com/covid19/mobility/) for few key indicators based on activity levels (using location information) in grocery/pharmacy stores, workplaces, parks, residential places, retail/recreation and transit stations.
 
+The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2020 as reported in the [Help](https://support.google.com/covid19-mobility/answer/9824897?hl=en&ref_topic=9822927#baseline) page. Consider a data row:
+
+```json
+{
+  "sub_region_1": "India",
+  "date": "2020-03-10",
+  "retail_and_recreation_percent_change_from_baseline": -19,
+  "grocery_and_pharmacy_percent_change_from_baseline": -23,
+  "parks_percent_change_from_baseline": -4,
+  "transit_stations_percent_change_from_baseline": -22,
+  "workplaces_percent_change_from_baseline": -44,
+  "residential_percent_change_from_baseline": 11
+}
+```
+
+Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity.
+
 <div id="vis"></div>
 <script src="https://vega.github.io/vega/vega.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
