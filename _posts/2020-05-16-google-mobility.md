@@ -45,9 +45,9 @@ fetch(spec_url_wo_jk)
   .catch(err => console.error(err));
 
 function render(spec, el) {
-  spec.width = typeof window.orientation !== 'undefined' ? 400 : 700
-  spec.height = typeof window.orientation !== 'undefined' ? 400 : 700
-  spec.autosize = "fit"
+  // spec.width = typeof window.orientation !== 'undefined' ? 400 : 700
+  // spec.height = typeof window.orientation !== 'undefined' ? 400 : 700
+  // spec.autosize = "fit"
   view = new vega.View(vega.parse(spec), {
     renderer:  'svg',  // renderer (canvas or svg)
     container: el,   // parent DOM container
