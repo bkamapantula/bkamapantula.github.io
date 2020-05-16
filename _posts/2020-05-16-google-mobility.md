@@ -46,6 +46,7 @@ fetch(spec_url_wo_jk)
 
 function render(spec, el) {
   spec.width = 700
+  spec.autosize = "fit"
   view = new vega.View(vega.parse(spec), {
     renderer:  'svg',  // renderer (canvas or svg)
     container: el,   // parent DOM container
