@@ -25,7 +25,7 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 <div id="vis"></div>
 
 ## Without Jammu and Kashmir
-Jammu and Kashmir looks like an outlier in all its activities perhaps owing to prolonged lockdown since August 2019 following the removal of article 370. Below is the activity map without Jammu and Kashmir when changes are more striking.
+Jammu and Kashmir looks like an outlier in all its activities except residential perhaps owing to prolonged lockdown since August 2019 following the removal of article 370. Below is the activity map without Jammu and Kashmir when changes are more striking.
 
 <div id="vis-wo-jk"></div>
 <script src="https://vega.github.io/vega/vega.min.js"></script>
