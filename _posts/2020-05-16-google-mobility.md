@@ -31,7 +31,7 @@ Jammu and Kashmir looks like an outlier in all its activities perhaps owing to p
 <script src="https://vega.github.io/vega/vega.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
 <script type="text/javascript">
-var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/fc26a9cb4687269350f966e17d6c96f0e021f1fe/heatmap-google-mobility-spec.json" 
+var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/4c18d9be006059389895bb8e1f77ac802153438b/heatmap-google-mobility-spec.json" 
 var spec_url_wo_jk = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/fc26a9cb4687269350f966e17d6c96f0e021f1fe/heatmap-without-jk.json"
 
 fetch(spec_url)
