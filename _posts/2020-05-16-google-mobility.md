@@ -1,4 +1,6 @@
-testing vega chart
+# India Google Mobility Data
+
+Google released [mobility data](https://www.google.com/covid19/mobility/) for few key indicators based on activity levels (using location information) in grocery/pharmacy stores, workplaces, parks, residential places, retail/recreation and transit stations.
 
 <div id="vis"></div>
 <script src="https://vega.github.io/vega/vega.min.js"></script>
@@ -21,3 +23,9 @@ function render(spec) {
   return view.runAsync()
 }
 </script>
+
+## Notes
+
+- data cells (region on a date) with `null` values are ignored and will have empty cells in the heatmap.
+- Lakshadweep has data available for only parks and workplace activities.
+- Dadra and Nagar Haveli, Daman and Diu, Andaman and Nicobar Islands and Jammu & Kashmir have null values for certain days for different activities.
