@@ -46,3 +46,4 @@ function render(spec) {
 - data cells (region on a date) with `null` values are ignored and will have empty cells in the heatmap.
 - Lakshadweep has data available for only parks and workplace activities.
 - Dadra and Nagar Haveli, Daman and Diu, Andaman and Nicobar Islands and Jammu & Kashmir have null values for certain days for different activities.
+- Report data as on 2020-05-14 as reported by [Google Mobility reports](https://www.google.com/covid19/mobility/).
