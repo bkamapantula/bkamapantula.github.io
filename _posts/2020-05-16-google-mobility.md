@@ -26,7 +26,7 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 - Each row represents a region (ex: Kerala).
 - Each column represents a day (ex: April 15).
 - Each heatmap cell represents variation of an activity (ex: workplaces) on a single day captured by color.
-- As India enforced lockdown all activities fell except that of residential homes. People followed a janata curfew on 22nd March as a precursor to the lockdown on 25th March. Activity patterns began to chance since 22nd March.
+- As India enforced lockdown all activities fell except that of residential homes. People followed janata curfew as requested by the Prime Minister on 22nd March as a precursor to the lockdown on 25th March. Activity patterns began to change since 22nd March.
 
 <div id="vis"></div>
 
