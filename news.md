@@ -1,127 +1,46 @@
 #### 16th May - Google Mobility Data for India
 
-<div>
-
-I looked at Google [Mobility data for
-India](https://bkamapantula.github.io/2020/05/16/google-mobility.html)
+I looked at Google [Mobility data for India](https://bkamapantula.github.io/2020/05/16/google-mobility.html)
 which reports pre and post Covid-19 activity levels for different areas.
-
-</div>
 
 -----
 
 #### 4th March - Annual Leadership Summit
 
-<div>
-
-I attended my third annual Gramener leadership summit and [wrote about
-it](https://bkamapantula.github.io/2020/03/04/leadership-summit-2020.html).
-
-</div>
+I attended my third annual Gramener leadership summit and [wrote about it](https://bkamapantula.github.io/2020/03/04/leadership-summit-2020.html).
 
 -----
 
 #### 10th February - Hyderabad Libraries, Joyful Data
 
-<div>
+I wrote about visting [libaries](https://bkamapantula.github.io/2020/02/10/hyderabad-libraries.html) in Hyderabad.
 
-I wrote about visting
-[libaries](https://bkamapantula.github.io/2020/02/10/hyderabad-libraries.html)
-in Hyderabad.
+Joyful Data is a creative way to make data-driven graphics. I wrote on [my experience](https://bkamapantula.github.io/2020/02/08/joyful-data.html) using it.
 
-</div>
-
-  
-
-<div>
-
-Joyful Data is a creative way to make data-driven graphics. I wrote on
-[my
-experience](https://bkamapantula.github.io/2020/02/08/joyful-data.html)
-using it.
-
-</div>
-
------
 
 #### 5th February - Posts
 
-<div>
-
-I wrote about [team
-communication](https://bkamapantula.github.io/2020/02/05/team-communication.html)
-and mapping [family
-travels](https://bkamapantula.github.io/2020/02/05/travel-map.html).
-
-</div>
-
------
+I wrote about [team communication](https://bkamapantula.github.io/2020/02/05/team-communication.html) and mapping [family travels](https://bkamapantula.github.io/2020/02/05/travel-map.html).
 
 #### 24th January - Women protests map
 
-<div>
-
-I created a map highlighting women-led protests against NRC/NPR/CAA in
-India. Featured in [Behan Box
-article](https://www.behanbox.com/women-led-protest-map-against-citizenship-laws-in-india/).
-I tried Datawrapper map this time which turned out to be easy to use.
-Data can have multiple entries for a single city/state combination.
-Using addresses to map in Datawrapper will only retain the latest entry
-for a city/state that has multiple entries. Using Latitude/Longitude is
-a better option to address it.
-
-</div>
-
------
+I created a map highlighting women-led protests against NRC/NPR/CAA in India. Featured in [Behan Box article](https://www.behanbox.com/women-led-protest-map-against-citizenship-laws-in-india/). I tried Datawrapper map this time which turned out to be easy to use. Data can have multiple entries for a single city/state combination. Using addresses to map in Datawrapper will only retain the latest entry for a city/state that has multiple entries. Using Latitude/Longitude is a better option to address it.
 
 #### 21st January - Data art
 
-<div>
-
-I wrote about [data
-art](https://bkamapantula.github.io/2020/01/21/data-art-round-1.html)\!
-
-</div>
-
------
+I wrote about [data art](https://bkamapantula.github.io/2020/01/21/data-art-round-1.html)\!
 
 #### 15th January - Gifts
 
-<div>
-
-I wrote a new post on
-[gifts](https://bkamapantula.github.io/2020/01/15/gifts.html)\!
-
-</div>
-
------
+I wrote a new post on [gifts](https://bkamapantula.github.io/2020/01/15/gifts.html)!
 
 #### 13th January - Comics workshop @ Bangalore
 
-<div>
-
-We organized a [data comics
-workshop](https://www.meetup.com/meetup-group-EkjzkhLt/events/266798548/)
-in Bangalore on 11th Jan. Grofers graciously offered venue for the
-event. With [64
-participants](https://twitter.com/Gramener/status/1215851094032535552)
-attending the workshop, we had fun organizing and viewing everyone's
-work. Blog post soon\!
-
-</div>
-
------
+We organized a [data comics workshop](https://www.meetup.com/meetup-group-EkjzkhLt/events/266798548/) in Bangalore on 11th Jan. Grofers graciously offered venue for the event. With [64 participants](https://twitter.com/Gramener/status/1215851094032535552) attending the workshop, we had fun organizing and viewing everyone's work. Blog post soon!
 
 #### 3rd January - 2019 review
 
-<div>
-
-I reviewed how
-[my 2019](https://bkamapantula.github.io/2020/01/03/2019.html) went.
-
-</div>
-
------
+I reviewed how [my 2019](https://bkamapantula.github.io/2020/01/03/2019.html) went.
 
 #### 1st January 2020 - Break
 
