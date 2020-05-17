@@ -79,6 +79,8 @@ I replicated my writings at [Gramener blog](https://blog.gramener.com/?s=bhanu) 
 
 After year and half of building products, he switched to creating client-facing visual solutions in late Jan 2018.
 
+-----
+
 #### 30 October 2017 - TB Burden
 
 Short visual on [TB burden](https://bkamapantula.github.io/tb-burden/) in India using Vidya Krishnan's article.
