@@ -22,6 +22,11 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 - Except Residential activity all activity is measured as change in number of visitors.
 - Residential activity is measured by the duration of time spent at homes.
 
+## Visual
+- Each row represents a region (ex: Kerala).
+- Each column represents a day (ex: April 15).
+- Each heatmap cell represents variation of an activity (ex: workplaces) on a single day captured by color.
+
 <div id="vis"></div>
 
 ## Without Jammu and Kashmir
