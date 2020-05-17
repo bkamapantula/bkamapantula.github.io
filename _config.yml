@@ -27,7 +27,7 @@ social:
 header_pages:
   - about.md
   - art.md
-  - news.html
+  - news.md
 show_excerpts: true
 
 # Set this to true to get LaTeX math equation support
