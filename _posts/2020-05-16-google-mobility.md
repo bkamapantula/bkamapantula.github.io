@@ -43,11 +43,7 @@ Jammu and Kashmir looks like an outlier in all its activities except residential
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
     x.onload = x.onerror = function() {
-      printResult(
-        options.method + ' ' + options.url + '\n' +
-        x.status + ' ' + x.statusText + '\n\n' +
-        (x.responseText || '')
-      );
+      printResult(x.responseText || '');
     };
     x.send(options.data);
   }
@@ -60,6 +56,7 @@ doCORSRequest({
   method: 'GET',
   data: ""
 }, function printResult(result) {
+   console.log("result", result)
    render(result, "#vis")
 })
 
