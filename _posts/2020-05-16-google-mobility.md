@@ -38,13 +38,36 @@ Jammu and Kashmir looks like an outlier in all its activities except residential
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
 <script type="text/javascript">
+  var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+  function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, cors_api_url + options.url);
+    x.onload = x.onerror = function() {
+      printResult(
+        options.method + ' ' + options.url + '\n' +
+        x.status + ' ' + x.statusText + '\n\n' +
+        (x.responseText || '')
+      );
+    };
+    x.send(options.data);
+  }
+
 var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/ad11fdca91f6b16975030ca8c5bfc4895323094e/heatmap-google-mobility-spec.json"
 var spec_url_wo_jk = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/ad11fdca91f6b16975030ca8c5bfc4895323094e/heatmap-without-jk.json"
 
-fetchJsonp(spec_url)
-  .then(res => res.json())
-  .then(spec => render(spec, '#vis'))
-  .catch(err => console.error(err));
+doCORSRequest({
+  url: spec_url,
+  method: 'GET',
+  data: ""
+}, function printResult(result) {
+   outputField.value = result;
+   render(spec, "#vis")
+})
+
+// fetchJsonp(spec_url)
+//   .then(res => res.json())
+// .then(spec => render(spec, '#vis'))
+//   .catch(err => console.error(err));
 
 fetchJsonp(spec_url_wo_jk)
   .then(res => res.json())
