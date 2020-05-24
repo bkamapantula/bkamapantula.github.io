@@ -61,7 +61,7 @@ doCORSRequest({
    render(spec, "#vis")
 })
 
-var mobility_data = _.filter(spec.data, function(d) { return d.name == "mobility" })[0]
+var mobility_data = spec.data.filter(function(d) { return d.name == "mobility" })[0]
 mobility_data.transform.push({"type": "filter", "expr": "datum.sub_region_1 != 'Jammu and Kashmir'"})
 render(spec, "#vis-wo-jk")
 
