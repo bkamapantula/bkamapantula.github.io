@@ -79,3 +79,10 @@ function render(spec, el) {
 - Lakshadweep has data available for only parks and workplace activities.
 - Dadra and Nagar Haveli, Daman and Diu, Andaman and Nicobar Islands and Jammu & Kashmir have null values for certain days for different activities.
 - Report data as on 2020-05-14 as reported by [Google Mobility reports](https://www.google.com/covid19/mobility/).
+
+## Update
+
+### 24 May
+- Updated data from [May 21 reports](https://www.google.com/covid19/mobility/).
+- Either due to change in browser behavior or due to change in data size `fetch()` failed citing CORS issue. I now use [cors anywhere](https://cors-anywhere.herokuapp.com/) app to fetch JSONs hosted on github gists.
+- EVen with no change in date format, Vega seem to format date as epoch instead of the custom format. I changed `"format": {"parse": "auto", "type": "json"}` to `"format": {"parse": {"start": "date", "end": "date"}}` where `start`, `end` are annotation fields.
