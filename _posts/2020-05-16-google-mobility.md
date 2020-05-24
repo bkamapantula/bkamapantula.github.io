@@ -50,32 +50,20 @@ Jammu and Kashmir looks like an outlier in all its activities except residential
 
 var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/b2ff1f2b2ee56d22dfef70e1c8c60b98d521c641/heatmap-google-mobility-spec.json"
 var spec_url_wo_jk = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/b2ff1f2b2ee56d22dfef70e1c8c60b98d521c641/heatmap-without-jk.json"
+var spec = ""
 
 doCORSRequest({
   url: spec_url,
   method: 'GET',
   data: ""
 }, function printResult(result) {
-   render(JSON.parse(result), "#vis")
+   spec = JSON.parse(result)
+   render(spec, "#vis")
 })
 
-doCORSRequest({
-  url: spec_url_wo_jk,
-  method: 'GET',
-  data: ""
-}, function printResult(result) {
-   render(JSON.parse(result), "#vis-wo-jk")
-})
-
-// fetchJsonp(spec_url)
-//   .then(res => res.json())
-// .then(spec => render(spec, '#vis'))
-//   .catch(err => console.error(err));
-
-// fetchJsonp(spec_url_wo_jk)
-//  .then(res => res.json())
-//  .then(spec => render(spec, '#vis-wo-jk'))
-//  .catch(err => console.error(err));
+var mobility_data = _.filter(spec.data, function(d) { return d.name == "mobility" })[0]
+mobility_data.transform.push({"type": "filter", "expr": "datum.sub_region_1 != 'Jammu and Kashmir'"})
+render(spec, "#vis-wo-jk")
 
 function render(spec, el) {
   view = new vega.View(vega.parse(spec), {
