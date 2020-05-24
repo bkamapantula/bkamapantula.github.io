@@ -36,16 +36,17 @@ Jammu and Kashmir looks like an outlier in all its activities except residential
 <div id="vis-wo-jk"></div>
 <script src="https://vega.github.io/vega/vega.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
 <script type="text/javascript">
 var spec_url = "https://gist.github.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/439b9fdb310ada71bfc9a127eab62f32e9223d94/heatmap-google-mobility-spec.json"
 var spec_url_wo_jk = "https://gist.github.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/439b9fdb310ada71bfc9a127eab62f32e9223d94/heatmap-without-jk.json"
 
-fetch(spec_url)
+fetchJsonp(spec_url)
   .then(res => res.json())
   .then(spec => render(spec, '#vis'))
   .catch(err => console.error(err));
 
-fetch(spec_url_wo_jk)
+fetchJsonp(spec_url_wo_jk)
   .then(res => res.json())
   .then(spec => render(spec, '#vis-wo-jk'))
   .catch(err => console.error(err));
