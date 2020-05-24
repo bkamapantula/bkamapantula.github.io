@@ -34,7 +34,7 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 Jammu and Kashmir looks like an outlier in all its activities except residential perhaps owing to prolonged lockdown since August 2019 following the removal of article 370. Below is the activity map without Jammu and Kashmir when changes are more striking.
 
 <div id="vis-wo-jk"></div>
-<script src="https://vega.github.io/vega/vega.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/5.12.3/vega.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
 <script type="text/javascript">
@@ -56,8 +56,15 @@ doCORSRequest({
   method: 'GET',
   data: ""
 }, function printResult(result) {
-   console.log("result", result)
-   render(result, "#vis")
+   render(JSON.parse(result), "#vis")
+})
+
+doCORSRequest({
+  url: spec_url_wo_jk,
+  method: 'GET',
+  data: ""
+}, function printResult(result) {
+   render(JSON.parse(result), "#vis-wo-jk")
 })
 
 // fetchJsonp(spec_url)
@@ -65,10 +72,10 @@ doCORSRequest({
 // .then(spec => render(spec, '#vis'))
 //   .catch(err => console.error(err));
 
-fetchJsonp(spec_url_wo_jk)
-  .then(res => res.json())
-  .then(spec => render(spec, '#vis-wo-jk'))
-  .catch(err => console.error(err));
+// fetchJsonp(spec_url_wo_jk)
+//  .then(res => res.json())
+//  .then(spec => render(spec, '#vis-wo-jk'))
+//  .catch(err => console.error(err));
 
 function render(spec, el) {
   view = new vega.View(vega.parse(spec), {
