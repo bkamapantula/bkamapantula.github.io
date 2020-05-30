@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Non-virus deaths</title>
+  <link rel="stylesheet" href="https://gramener.com/ui/bootstraptheme.css">
+
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/tabletop/src/tabletop.min.js"></script>
+  <script src="https://unpkg.com/bootstrap@4.5.0/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/lodash,npm/g1"></script>
+  <style>
+    body {
+      font-family: monospace;
+    }
+    .intro {
+      white-space: pre;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+      <a class="nav-item nav-link" href="index.html">Who They Are<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="where.html">Where They Died</a>
+    </div>
+  </nav>
+  <div class="container">
+    <p class="text-muted">
+      During the Covid-19 driven lockdowns (different phases) there have been hundreds of reports of deaths related to starvation, exhaustion, police harassment, suicide from financial distress among many other reasons.
+    </p>
+    <p class="text-muted">
+      People died all over the country.
+    </p>
+    <h3 class="text-muted">About Map</h3>
+    <ul class="text-muted">
+      <li>Each dot represents an incident. Each incident can involve one or more deaths.</li>
+      <li>Dot size represents number of deaths in one incident.</li>
+      <li>Hover on dot or Click it to know more.</li>
+    </ul>
+    <div class="row text-center">
+      <iframe title="Non-virus deaths in India" aria-label="Map" id="datawrapper-chart-hjOsj" src="https://datawrapper.dwcdn.net/hjOsj/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="652"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+      </script>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="divider"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text text-lighten-4">
+            Non-virus deaths data is curated voluntarily by <a href="https://twitter.com/CB_Aman" target="_blank" rel="noopener">Aman</a> (Assistant Professor of Legal Practice at Jindal Global School of Law), <a href="https://twitter.com/_kanikas_" target="_blank" rel="noopener">Kanika Sharma</a> (PhD student at Emory University), <a href="https://twitter.com/anhsurk" target="_blank" rel="noopener">Krushna</a> (PhD student at Syracuse University) and <a href="https://twitter.com/thej" target="_blank" rel="noopener">Thejesh GN</a> (Public Interest Technologist). With support from <a href="https://twitter.com/roadscholarz" target="_blank" rel="noopener">Roadscholarz</a>.
+          </p>
+          <p>
+            Created by <a href="https://twitter.com/thoughtisdead">Bhanu K</a>. Inform him if you notice any errors.
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>Data source: <a href="https://github.com/datameet/covid19/" target="_blank" rel="noopener">Datameet GitHub</a></li>
+            <li><a href="https://thejeshgn.com/projects/covid19-india/non-virus-deaths/" target="_blank" rel="noopener">Introduction</a> to the dataset by Thej.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
