@@ -9,6 +9,12 @@ While there are over 611 (as of 22nd May) such [reported deaths](https://twitter
 <iframe title="Non-virus deaths in India" aria-label="Map" id="datawrapper-chart-hjOsj" src="https://datawrapper.dwcdn.net/hjOsj/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="652"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
 </script>
 
+## Update
+
+### 31st May
+- We published the names of all those who died on BehanBox at http://covid19indiaresponse.behanbox.com/
+- I cross-posted this on my personal blog: https://bkamapantula.github.io/nonvirusdeaths/
+
 ## Notes
 
 - [Source data](https://github.com/datameet/covid19/blob/master/data/non_virus_deaths.json) from datameet.
