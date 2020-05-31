@@ -14,6 +14,7 @@ While there are over 611 (as of 22nd May) such [reported deaths](https://twitter
 ### 31st May
 - We published the names of all those who died on BehanBox at [http://covid19indiaresponse.behanbox.com/](http://covid19indiaresponse.behanbox.com/) including the map.
 - I cross-posted this on my personal blog: [https://bkamapantula.github.io/nonvirusdeaths/](https://bkamapantula.github.io/nonvirusdeaths/)
+- updated data here reflecting the data updated on datameet
 
 ## Notes
 
