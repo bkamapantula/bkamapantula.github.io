@@ -1,0 +1,20 @@
+body {
+  font-family: monospace;
+}
+.intro {
+  white-space: pre;
+  height: 380px;
+}
+.row .col-sm-12 {
+  white-space: break-spaces;
+  font-size: 16px;
+}
+.s7 {
+  font-weight: bolder;
+}
+.card .card-title {
+  font-size: 20px;
+}
+.state-card {
+  font-family: 'Lato', sans-serif;
+}
