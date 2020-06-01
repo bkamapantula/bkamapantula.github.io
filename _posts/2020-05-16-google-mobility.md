@@ -82,6 +82,9 @@ function render(spec, el) {
 
 ## Update
 
+### 1 June
+- Updated data from [May 29 reports](https://www.google.com/covid19/mobility/).
+
 ### 24 May
 - Updated data from [May 21 reports](https://www.google.com/covid19/mobility/).
 - Either due to change in browser behavior or due to change in data size `fetch()` failed citing CORS issue. I now use [cors anywhere](https://cors-anywhere.herokuapp.com/) app to fetch JSONs hosted on github gists.
