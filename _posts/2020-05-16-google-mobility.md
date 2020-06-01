@@ -48,7 +48,7 @@ Jammu and Kashmir looks like an outlier in all its activities except residential
     x.send(options.data);
   }
 
-var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/d708297eacfeb052e0715e351a727ec7c5d9c0ab/heatmap-google-mobility-spec.json"
+var spec_url = "https://gist.githubusercontent.com/bkamapantula/30a39e134578c7b5bbd5e2f3786c90c6/raw/e79068a4b30828c469169e0e0a43c5ed16264efa/heatmap-google-mobility-spec.json"
 
 doCORSRequest({
   url: spec_url,
