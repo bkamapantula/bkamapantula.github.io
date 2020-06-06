@@ -94,6 +94,24 @@ function render(spec, el) {
 ### 6 June
 - Updated data from [June 3 reports](https://www.google.com/covid19/mobility/).
 - Added a [Place Cateogries](#place-categories) section.
+- Jammu and Kashmir
+  - Grocery activity levels seem to have gone back to pre-lockdown levels
+  - Retail/Recreation and Transit station activities are picking up; not yet near pre-lockdown levels
+  - people continue to stay longer durations at home
+- Rest regions
+  - Retail/Recreation continues to have lower levels of activity than in Jan-Feb (baseline).
+  - Grocery/Pharmacy
+    - from May 11, Kerala has seen better activity levels in Grocery and Pharmacy barring Sundays.
+    - regions with closer to or higher than pre-lockdown activity levels include Bihar, Chhattisgarh, Dadra and Nagar Haveli, Rajasthan.
+    - regions with improved activity levels but not as close as pre-lockdown levels include Punjab, Tamil Nadu, Uttar Pradesh, Uttarakhand.
+  - Parks continues to have lower levels of activity than in Jan-Feb (baseline).
+  - Transit stations
+    - Himachal Pradesh and Mizoram have seen slight improvement but not near pre-lockdown activity levels.
+  - Workplaces
+    - Last week, Lakshadweep was the closest to baseline in the past two months.
+    - Arunachal Pradesh and Sikkim show improvement in activity levels.
+  - Residential
+    - Arunachal Pradesh, Bihar, Himachal Pradesh and Mizoram have seen reduced duration of time spent in residential places.
 
 ### 1 June
 - Updated data from [May 29 reports](https://www.google.com/covid19/mobility/).
