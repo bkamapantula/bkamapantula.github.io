@@ -17,6 +17,15 @@ The baseline day is the median value from the 5‑week period Jan 3 – Feb 6, 2
 }
 ```
 
+## Place categories
+Place categories as [reported](https://www.google.com/covid19/mobility/data_documentation.html?hl=en) in documentation are as follows:
+
+- Grocery & Pharmacy: places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, pharmacies.
+- Parks: local parks, national parks, public beaches, marinas, dog parks, plazas, public gardens
+- Transit stations: subway, bus, train stations
+- Retail & recreation: restaurants, cafes, shopping centres, theme parks, libraries, museums, movie theatres.
+
+
 ## Key data aspects
 - Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity. 
 - Except Residential activity all activity is measured as change in number of visitors.
@@ -81,6 +90,10 @@ function render(spec, el) {
 - Report data as on 2020-05-14 as reported by [Google Mobility reports](https://www.google.com/covid19/mobility/).
 
 ## Update
+
+### 6 June
+- Updated data from [June 3 reports](https://www.google.com/covid19/mobility/).
+- Added a [Place Cateogries](#place-categories) section.
 
 ### 1 June
 - Updated data from [May 29 reports](https://www.google.com/covid19/mobility/).
