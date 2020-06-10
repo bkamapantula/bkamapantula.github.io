@@ -37,11 +37,13 @@ Place categories as [reported](https://www.google.com/covid19/mobility/data_docu
 - Each heatmap cell represents variation of an activity (ex: workplaces) on a single day captured by color.
 - As India enforced lockdown all activities fell except that of residential homes. People followed janata curfew as requested by the Prime Minister on 22nd March as a precursor to the lockdown on 25th March. Activity patterns began to change since 22nd March.
 
+<div id="vis-options"></div>
 <div id="vis"></div>
 
 ## Without Jammu and Kashmir
 Jammu and Kashmir looks like an outlier in all its activities except residential perhaps owing to prolonged lockdown since August 2019 following the removal of article 370. Below is the activity map without Jammu and Kashmir when changes are more striking.
 
+<div id="vis-wo-jk-options"></div>
 <div id="vis-wo-jk"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/5.12.3/vega.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.23.0/vega-tooltip.min.js"></script>
@@ -65,16 +67,17 @@ doCORSRequest({
   data: ""
 }, function printResult(result) {
     var spec = JSON.parse(result)
-    render(spec, "#vis")
+    render(spec, "#vis", "#vis-options")
     var mobility_data = spec.data.filter(function(d) { return d.name == "mobility" })[0]
     mobility_data.transform.push({"type": "filter", "expr": "datum.sub_region_1 != 'Jammu and Kashmir'"})
-    render(spec, "#vis-wo-jk")
+    render(spec, "#vis-wo-jk", "#vis-wo-jk-options")
 })
 
 function render(spec, el) {
   view = new vega.View(vega.parse(spec), {
     renderer:  'svg',  // renderer (canvas or svg)
     container: el,   // parent DOM container
+    bind: bel,
     hover:     true,       // enable hover processing
     tooltip: new vegaTooltip.Handler().call
   })
