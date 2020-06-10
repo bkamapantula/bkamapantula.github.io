@@ -73,7 +73,7 @@ doCORSRequest({
     render(spec, "#vis-wo-jk", "#vis-wo-jk-options")
 })
 
-function render(spec, el) {
+function render(spec, el, bel) {
   view = new vega.View(vega.parse(spec), {
     renderer:  'svg',  // renderer (canvas or svg)
     container: el,   // parent DOM container
