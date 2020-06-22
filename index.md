@@ -1,7 +1,7 @@
 <link rel="me" href="https://twitter.com/thoughtisdead" />
 <link rel="me" href="https://github.com/bkamapantula" />
 <div class="h-card">
-  <img class="u-photo" src="https://pbs.twimg.com/profile_images/518408193223823360/RlI4mv9C_400x400.jpeg"/>
+  <img class="u-photo" src="images/pic.jpeg" alt="personal picture"/>
   <a class="u-url u-uid" href="https://bkamapantula.github.io">Bhanu Kamapantula</a>
 </div>
 
