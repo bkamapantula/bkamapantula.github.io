@@ -1,5 +1,9 @@
 <link rel="me" href="https://twitter.com/thoughtisdead" />
 <link rel="me" href="https://github.com/bkamapantula" />
+<div class="h-card">
+  <img class="u-photo" src="https://pbs.twimg.com/profile_images/518408193223823360/RlI4mv9C_400x400.jpeg"/>
+  <a class="u-url u-uid" href="https://bkamapantula.github.io">Bhanu Kamapantula</a>
+</div>
 
 My interests are in technology, people, data, society, art. I'm keen on community building in technology, public communication of data.
 
