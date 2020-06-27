@@ -12,6 +12,8 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 
 ## What next?
 
+RPi still has lot of computing power available and so I'm exploring the below ideas:
+
 - Expand pi-hole to other devices
 - Enable DoH aka DNS-over-HTTPS
 - Explore hardware project ideas
