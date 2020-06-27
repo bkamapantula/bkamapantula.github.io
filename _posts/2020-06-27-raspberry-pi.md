@@ -20,8 +20,8 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 - [1] has good screenshots against each step which I found useful to update DNS settings in individual devices.
 - I added hostnames against the static IPs in Rpi's `/etc/hosts`
 
-![router active client table settings](images/router-act.png)
-![router active client table wireless settings](images/router-act-wireless.png)
+![router active client table settings](../../../../images/router-act.png)
+![router active client table wireless settings](../../../../images/router-act-wireless.png)
 
 ## What next?
 
