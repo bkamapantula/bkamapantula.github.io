@@ -25,7 +25,7 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 
 ## Notes
 
-- If you are at a place where power cuts happen infrequently you need to plan in advance and ensure RPi has continuous power supply.
+- If you are at a place where power cuts happen infrequently you need to plan in advance and ensure RPi has continuous power supply. Otherwise the connected devices won't have WiFi!
 - Keep it away from extreme temperatures, water.
 - Get a case, micro HDMI (RPi 4 has two micro HDMI slots) to HDMI cable or convertor if you'd like to view RPi on an external monitor.
 
