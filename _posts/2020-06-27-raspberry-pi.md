@@ -33,5 +33,5 @@ RPi still has lot of computing power available and so I'm exploring the below id
 
 # References
 
-1. How to setup pi-hole on raspberry pi? by Techwiser, https://techwiser.com/how-to-set-up-pi-hole-on-raspberry-pi-4/
-2. Pi-hole setup by Pi my life up, https://pimylifeup.com/raspberry-pi-pi-hole/
+1. How to setup pi-hole on raspberry pi? by Techwiser. [Link](https://techwiser.com/how-to-set-up-pi-hole-on-raspberry-pi-4/).
+2. Pi-hole setup by Pi my life up. [Link](https://pimylifeup.com/raspberry-pi-pi-hole/)
