@@ -23,6 +23,12 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 ![router active client table settings](../../../../images/router-act.png)
 ![router active client table wireless settings](../../../../images/router-act-wireless.png)
 
+## Notes
+
+- If you are at a place where power cuts happen infrequently you need to plan in advance and ensure RPi has continuous power supply.
+- Keep it away from extreme temperatures, water.
+- Get a case, micro HDMI (RPi 4 has two micro HDMI slots) to HDMI cable or convertor if you'd like to view RPi on an external monitor.
+
 ## What next?
 
 RPi still has lot of computing power available and so I'm exploring the below ideas:
