@@ -14,14 +14,17 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 
 ## Steps
 
-- Before you begin monitor the active client table list on your router on browser. It'll give you a sense of the current devices. If hostnames are shown as `Unknown`, use MAC addresses as reference to set static IP addresses for devices (that is, use different addresses).
+- Before you begin, monitor the active client table list on your router on browser. It'll give you a sense of the current devices. If hostnames are shown as `Unknown`, use MAC addresses as reference to set static IP addresses for devices (that is, use different addresses).
 - In step 5 [2] ensure the IP address is different from the router's IP address. Otherwise it'll prompt a warning in the next step.
 - I followed [2] as a visual guide for the setup. I picked Cloudflare for DNS in Step 6.
-- [1] has good screenshots against each step which I found useful to update DNS settings in individual devices.
-- I added hostnames against the static IPs in Rpi's `/etc/hosts`
+- ~~[1] has good screenshots against each step which I found useful to update DNS settings in individual devices.~~
+- ~~I added hostnames against the static IPs in RPi's `/etc/hosts`~~
+- While I originally set static IPs with DNS on individual devices, I updated the router DNS configuration. This is easier to maintain. You should constantly monitor since any disruptions will impact regular experience.
 
 ![router active client table settings](../../../../images/router-act.png)
 ![router active client table wireless settings](../../../../images/router-act-wireless.png)
+
+DNS lookups were briefly lost on the Pi-hole and after debugging an hour I realized I improperly configured `ufw` (uncomplicated firewall). I defined the rules from Pi-hole's [Firewall docs](https://docs.pi-hole.net/main/prerequisites/#firewalls) and things got back to normal.
 
 ## Notes
 
@@ -33,11 +36,12 @@ Pi-hole also comes with a GUI panel to monitor the requests along with a range o
 
 RPi still has lot of computing power available and so I'm exploring the below ideas:
 
-- Expand pi-hole to other devices
-- Enable DoH aka DNS-over-HTTPS
+- ~~Expand pi-hole to other devices~~ All devices now use Pi-hole.
+- ~~Enable DoH aka DNS-over-HTTPS~~ I configured Cloudflared for DoH.
 - Explore hardware project ideas
 
 # References
 
 1. How to setup pi-hole on raspberry pi? by Techwiser. [Link](https://techwiser.com/how-to-set-up-pi-hole-on-raspberry-pi-4/).
 2. Pi-hole setup by Pi my life up. [Link](https://pimylifeup.com/raspberry-pi-pi-hole/)
+3. Official documentation by Pi-hole, [Link](https://docs.pi-hole.net/)
