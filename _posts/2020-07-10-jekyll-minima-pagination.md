@@ -32,7 +32,7 @@ This will make 5 posts appear on the home page and subsequent posts under `/post
 
 I stumbled on [2] while reading about paginating posts. The referenced code is picked from [3]. [3] has the documentation on available attributes.
 
-```ruby
+```bash
 <!-- This loops through the paginated posts -->
 <ul class="post-list">
 {% for post in paginator.posts %}
