@@ -1,3 +1,8 @@
+---
+layout: post
+tags: team
+---
+
 # Leadership summit 2020
 
 I took two days off from my current break to attend Gramener's annual leadership summit. It's an annual two-day event with day 1 for leadership training by Navgati, a leadership coaching organization followed by internal team ideation on day 2 (my third such training program in as many years). This year's theme was `Winning Together`.

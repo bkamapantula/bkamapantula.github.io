@@ -1,9 +1,14 @@
+---
+layout: post
+tags: dataviz
+---
+
 # Joyful data
 [Joyful Data](https://gramener.com/joyfuldata/) is a creative tool for making data-driven graphics.
 
 When [Priti](https://twitter.com/priti_pg/) first shared it with me I couldn't figure out head or tail of it except that it would be a good way to create data art.
 
-I revisited it after two weeks and realized it was the syntax that was unusual for me. 
+I revisited it after two weeks and realized it was the syntax that was unusual for me.
 
 Two days ago I revisited it again with a better clarity and wanted to play with Indian political data. I created a simple dataset as follows (single item from the `JSON` object):
 
@@ -29,7 +34,7 @@ It can take some time to figure out the order of instructions to draw a shape.
 
 Joyful Data can be a great way:
 
-- to create small multiple visuals that convey insights 
+- to create small multiple visuals that convey insights
 - to create data art/cards*
 - to incrementally teach data visualization properties
 
@@ -43,4 +48,4 @@ Joyful Data can be a great way:
 ## Recipes
 I created [Joyful Data Recipes](https://github.com/bkamapantula/joyful-data-recipes) as a way to collect recipes for data art. Submit yours!
 
-If you've any feedback share on [DVS Slack](https://datavizsociety.slack.com/archives/CGANSD3MX/p1580929398078700) or with [Priti](https://twitter.com/priti_pg/). 
+If you've any feedback share on [DVS Slack](https://datavizsociety.slack.com/archives/CGANSD3MX/p1580929398078700) or with [Priti](https://twitter.com/priti_pg/).

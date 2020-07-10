@@ -1,3 +1,8 @@
+---
+layout: post
+tags: datascience
+---
+
 What do people do in data science
 ----------------------------------
 

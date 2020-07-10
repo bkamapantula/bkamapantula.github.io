@@ -1,3 +1,8 @@
+---
+layout: post
+tags: rpi ubuntu
+---
+
 # Raspberry Pi
 
 I got my hands on a Raspberry Pi (RPi, hereafter) to experiment a bit.
@@ -6,7 +11,7 @@ I got my hands on a Raspberry Pi (RPi, hereafter) to experiment a bit.
 
 I realized configuring [pi-hole](https://pi-hole.net/) to improve my internet experience should be the first thing to do. Official [RPi](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) and Pi-hole documentation to set it up was a breeze. While I did install VNCServer for remote desktop I ended up not using it much. Headless configuration was fairly straightforward.
 
-For those unfamiliar with command-line interface, once you login to RPi from VNC Viewer change the password. 
+For those unfamiliar with command-line interface, once you login to RPi from VNC Viewer change the password.
 
 For devices to use Pi-hole, I had to update DHCP/DNS settings with RPi's details ([how-to-guide](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)). Configuring static IP addresses for the devices led me to read and re-discover how internet works. I thoroughly enjoyed it.
 

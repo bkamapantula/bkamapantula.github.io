@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz team
+---
+
 Few months ago at work there was a email thread where whoever is invited to respond with a challenge has to nominate few others.
 
 Many responded and I got interested in the invitation patterns within and across groups responders belonged to.

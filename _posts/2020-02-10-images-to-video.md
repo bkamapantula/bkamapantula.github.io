@@ -1,3 +1,8 @@
+---
+layout: post
+tags: ubuntu technology opensource
+---
+
 # Images to Video
 
 *BehanBox* is covering women-led resistance through interviews, digital artifacts. I created a map of protests across India two weeks ago for an [article](https://www.behanbox.com/women-led-protest-map-against-citizenship-laws-in-india/).
@@ -59,7 +64,7 @@ cat *.png | ffmpeg -f image2pipe -framerate 1 -i - -c:v libx264 -vf format=yuv42
 
 > You may need to use -vf format=yuv420p (or the alias -pix_fmt yuv420p) for your output to work in QuickTime and most other players.
 > These players only support the YUV planar color space with 4:2:0 chroma subsampling for H.264 video.
-> Otherwise, depending on your source, ffmpeg may output to a pixel format that may be incompatible with these players. 
+> Otherwise, depending on your source, ffmpeg may output to a pixel format that may be incompatible with these players.
 
 I wasn't able to convert the `mp4` video to `GIF` via `ImageMagick` after it threw below error:
 

@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz
+---
+
 Along with the storylabs team (Richie, Ramya, Priti) at Gramener, I organized a dataroom exhibit at the [Agami Data Summit](https://agami.in). The audience at the summit is tilted towards legal domain: lawyers, startups, researchers, fellows, policymakers, open data practitioners.
 
 Given the audience mix, we picked the recently released India Justice Report data on infrastructure, human resources, diversity among other aspects by Tata Trusts. We picked gender diversity data (a subset of the entire data) and exhibited two data properties: 1) physical data visualization aka Let's Pin It, 2) interactive data comic with augmented reality.

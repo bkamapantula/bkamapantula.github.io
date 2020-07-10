@@ -1,3 +1,8 @@
+---
+layout: post
+tags: food
+---
+
 I'm taking off from work between Jan-Mar 2020 to focus on curating food recipes. The focus will be on the dishes made at home by my mother and grandmother (used to).
 
 Learning from the masters of public learning ([swyx](https://www.swyx.io/writing/learn-in-public), [Julia Evans](https://jvns.ca/), [Amit Patel](https://www.redblobgames.com/)) I'll be sharing my progress publicly, periodically.

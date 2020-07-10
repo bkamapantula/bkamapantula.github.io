@@ -1,3 +1,8 @@
+---
+layout: post
+tags: ubuntu
+---
+
 # Ubuntu, linux kernel, missing wifi adapter
 
 As it has been a while, I restarted Ubuntu this morning. Wi-Fi wouldn't connect and its panel displays "No Wi-Fi adapter found".

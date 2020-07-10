@@ -1,3 +1,7 @@
+---
+tags: data
+---
+
 # Non-virus related deaths in India
 
 During the Covid-19 driven lockdowns (different phases) there have been hundreds of reports of deaths related to starvation, exhaustion (due to walking), alcohol withdrawal among other reasons.
@@ -20,7 +24,7 @@ While there are over 611 (as of 22nd May) such [reported deaths](https://twitter
 
 - [Source data](https://github.com/datameet/covid19/blob/master/data/non_virus_deaths.json) from datameet.
 - [Version](https://docs.google.com/spreadsheets/d/14t01Pia4A6KoyVZx38M7j9T0z9jFnohSCrnT8uOm4EE/edit#gid=876948547) used for the map maintained by me with the below changes:
-  - create address column as a combination of these columns: `value_location`, `value_district`, `value_state` using Google Sheets. 
+  - create address column as a combination of these columns: `value_location`, `value_district`, `value_state` using Google Sheets.
   - derive latitude, longitude (from `address` column) using Geocode by Awesome Table Google Sheets plugin.
   - derive age column (from `value__name_age` column) using REGEXEXTRACT function in Google Sheets.
   - remove instances such as "his brother", "his wife" etc. before a person's name. specific instances:

@@ -1,3 +1,8 @@
+---
+layout: post
+tags: opensource qgis
+---
+
 Division level map creation workshop
 ------------------------------------
 
@@ -35,5 +40,5 @@ We ran into few challenges making qGIS work on Windows machines. qGIS v2.18 down
 
 It was an engaging and good learning experience for everyone involved. We hope to organize more such events. If you use these maps to create a solution or visualize your interest set of data please let us know!
 
-Note: This post is written and presented by Bhanu Kishore Kamapantula, Senior Data Scientist at Gramener. 
+Note: This post is written and presented by Bhanu Kishore Kamapantula, Senior Data Scientist at Gramener.
 
