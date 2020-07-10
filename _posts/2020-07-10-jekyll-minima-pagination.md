@@ -32,7 +32,8 @@ This will make 5 posts appear on the home page and subsequent posts under `/post
 
 I stumbled on [2] while reading about paginating posts. The referenced code is picked from [3]. [3] has the documentation on available attributes.
 
-```bash
+{%raw%}
+```
 <!-- This loops through the paginated posts -->
 <ul class="post-list">
 {% for post in paginator.posts %}
@@ -59,6 +60,7 @@ I stumbled on [2] while reading about paginating posts. The referenced code is p
   {% endif %}
 </div>
 ```
+{%endraw%}
 
 - I changed `post.content` to `post.excerpt` as I only wanted to display the excerpt with links to the actual posts.
 - After comparing the output against existing version, I made the following changes:
