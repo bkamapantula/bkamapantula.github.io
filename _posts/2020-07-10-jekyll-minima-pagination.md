@@ -79,7 +79,7 @@ Initially, I was skeptical about changing Ruby-based Jekyll configuration as I w
 
 ## Tags
 
-Similarly, to enable tags for posts I followed the steps laid out on [4]
+Similarly, to enable tags for posts I followed the steps laid out on [4]. Few of the current tags: [ubuntu](https://bkamapantula.github.io/tag/ubuntu), [dataviz](https://bkamapantula.github.io/tag/dataviz), [hyderabad](https://bkamapantula.github.io/tag/hyderabad), [team](https://bkamapantula.github.io/tag/team).
 
 ## References
 
