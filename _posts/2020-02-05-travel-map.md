@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz hyderabad
+---
+
 I realized that everyone in my family (other than me) travel a lot. I wanted to create a map of all their travels.
 
 After curating several attributes initially I finalized the below:
@@ -31,4 +36,4 @@ For next iteration of the map I'd love to:
 - capture stories from each travel on the map
 - create better quality map hopefully with linen fabric
 - explore custom styled map printing
-- explore alternatives to push pins as it's easy to get hurt while pinning 
+- explore alternatives to push pins as it's easy to get hurt while pinning

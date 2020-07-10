@@ -1,3 +1,8 @@
+---
+layout: post
+tags: ubuntu
+---
+
 How to make a GIF and Videos in Ubuntu for free
 ------------------------------------------------
 
@@ -54,5 +59,5 @@ After multiple recommendations, I tried zoom.us. This isn’t a video or GIF cre
 
 Do you have other recommendations on how to make a GIF and other videos using free tools online that we should try? Please write in!
 
-Note: This post is written and presented by Bhanu Kishore Kamapantula, Senior Data Scientist at Gramener. 
+Note: This post is written and presented by Bhanu Kishore Kamapantula, Senior Data Scientist at Gramener.
 

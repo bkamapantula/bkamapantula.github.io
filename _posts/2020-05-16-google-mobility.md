@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz
+---
+
 # India Google Mobility Data
 
 Google released [mobility data](https://www.google.com/covid19/mobility/) for few key indicators based on activity levels (using location information) in grocery/pharmacy stores, workplaces, parks, residential places, retail/recreation and transit stations.
@@ -27,7 +32,7 @@ Place categories as [reported](https://www.google.com/covid19/mobility/data_docu
 
 
 ## Key data aspects
-- Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity. 
+- Numbers represent the rate of change of activity on 10th March 2020 against the baseline day's activity.
 - Except Residential activity all activity is measured as change in number of visitors.
 - Residential activity is measured by the duration of time spent at homes.
 

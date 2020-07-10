@@ -1,3 +1,8 @@
+---
+layout: post
+tags: design software
+---
+
 Dark Patterns
 ------------------
 

@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz
+---
+
 # Data comics workshop in Hyderabad
 
 We, at Gramener, organized a [data comics workshop](https://www.meetup.com/meetup-group-EkjzkhLt/events/266798098/) at ISB on 14th December, 2019. The event was free for participants and was open for 75 slots.
@@ -60,9 +65,9 @@ This was a perfect example of how one could narrate a story (female child litera
 This submission combined different data properties for a perfect narration: real images, news media relevancy, antenatal checks for pregnant women, literacy. Expressions of the characters vary from panel to panel with important text highlighted (numbers, indicators, diseases).
 
 #### Literacy disparity
-This submission is topical in talking about literacy disparity rate between men and women and highlight . 
+This submission is topical in talking about literacy disparity rate between men and women and highlight .
 
-#### 
+####
 
 ## Logistics
 ### Registrations
@@ -74,7 +79,7 @@ To ensure participants turned up we telephoned the registrants, emailed/SMSed th
 The mix of participants was just right. We had people with different backgrounds: business, data analysts, students, data enthusiasts.
 
 ### Stickers, takeaways
-We planned for three kinds of stickers/takeaways: one as a participant name tag, one as a takeaway, Gramener stickers. 
+We planned for three kinds of stickers/takeaways: one as a participant name tag, one as a takeaway, Gramener stickers.
 
 A data art was planned as a takeaway. Note the sample below:
 
@@ -82,7 +87,7 @@ A data art was planned as a takeaway. Note the sample below:
 
 ![how to read](../workshop-takeaway-how-to-read.jpg)
 
-Many people were curious to know how it was created. Thanks to Priti for making it! 
+Many people were curious to know how it was created. Thanks to Priti for making it!
 
 ### Venue
 ISB turned out to be perfect host for the event. The lecture hall had a great setup for multiple boards, audio-video, microphones, seats. It was more than what we requested for. Giri (from ISB) took great care of the setup and us.

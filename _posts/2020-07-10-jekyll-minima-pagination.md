@@ -1,11 +1,16 @@
-# Pagination in personal blog
+---
+layout: post
+tags: jekyll
+---
+
+# Posts layout update
 
 The home page of my blog as a short introduction about me followed by a list of posts. The items I wanted to improve:
 
 - paginate posts
 - show excerpt for each post
 
-As I didn't have jekyll/ruby configured on my machine, the first step was to configure it using [1]. I had to ensure jekyll and its dependencies for github-pages were installed fine.
+As I didn't have Jekyll/Ruby configured on my machine, the first step was to configure it using [1]. I had to ensure Jekyll and its dependencies for github-pages were installed fine.
 
 Using a cloned copy of my [blog](https://github.com/bkamapantula/bkamapantula.github.io/), I made the next set of changes using [3]:
 
@@ -72,8 +77,13 @@ I stumbled on [2] while reading about paginating posts. The referenced code is p
 
 Initially, I was skeptical about changing Ruby-based Jekyll configuration as I wasn't familiar with it. I realized the templating looked exactly like in Python's Tornado and eased in to it.
 
-# References
+## Tags
 
-1. How to install Jekyll on Ubuntu by Computing for Geeks. [Link](https://computingforgeeks.com/how-to-install-jekyll-on-ubuntu-18-04/)
-2. Where does index.html go? on jekyllrb talk. [Link](https://talk.jekyllrb.com/t/pagination-question-where-does-index-html-go/262/2)
-3. Official Jekyll Pagination docs. [Link](https://jekyllrb.com/docs/pagination/)
+Similarly, to enable tags for posts I followed the steps laid out on [4]
+
+## References
+
+1. How to install Jekyll on Ubuntu by Computing for Geeks. [Link](https://computingforgeeks.com/how-to-install-jekyll-on-ubuntu-18-04/).
+2. Where does index.html go? on jekyllrb talk. [Link](https://talk.jekyllrb.com/t/pagination-question-where-does-index-html-go/262/2).
+3. Official Jekyll Pagination docs. [Link](https://jekyllrb.com/docs/pagination/).
+4. Jekyll Tags on Github Pages. [Link](http://longqian.me/2017/02/09/github-jekyll-tag/).

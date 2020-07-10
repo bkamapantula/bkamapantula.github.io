@@ -1,3 +1,8 @@
+---
+layout: post
+tags: technology opensource
+---
+
 Contributing to OpenStreetMaps
 -------------------------------
 

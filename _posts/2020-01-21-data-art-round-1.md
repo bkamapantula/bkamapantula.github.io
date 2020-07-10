@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz team
+---
+
 # Data art round 1
 
 After resolving to work on [gifts](https://bkamapantula.github.io/2020/01/15/gifts.html) last week, I spent time the past week in ideating on data-based gifts.

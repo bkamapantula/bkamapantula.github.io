@@ -1,3 +1,8 @@
+---
+layout: post
+tags: dataviz
+---
+
 # On non-virus deaths
 
 Last few weeks I've been tracking [Google Mobility data](https://bkamapantula.github.io/2020/05/16/google-mobility.html) and [non-virus deaths](https://bkamapantula.github.io/2020/05/25/non-virus-deaths.html).

@@ -1,3 +1,8 @@
+---
+layout: post
+tags: design
+---
+
 The Power of Default Settings
 -----------------------------
 
@@ -5,7 +10,7 @@ The Power of Default Settings
 
 ![default iphone email signature](https://blog.gramener.com/wp-content/uploads/2017/06/2012.05.30_power_of_default_settings.png)
 
-Image Courtesy: http://theartofdoing.com/the-google-doodler/ 
+Image Courtesy: http://theartofdoing.com/the-google-doodler/
 
 Why does your favorite toothpaste advertisement show a brush full of paste when a fraction of it will solve the purpose?
 

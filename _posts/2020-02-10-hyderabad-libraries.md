@@ -1,3 +1,8 @@
+---
+layout: post
+tags: hyderabad
+---
+
 # Hyderabad libraries
 
 As someone who loves libraries I haven't been to any in Hyderabad. I curated a list of libraries last month to read cooking related books.
