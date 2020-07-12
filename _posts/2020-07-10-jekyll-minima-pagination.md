@@ -1,6 +1,7 @@
 ---
 layout: post
 tags: jekyll
+comments: true
 ---
 
 # Posts layout update
@@ -87,3 +88,8 @@ Similarly, to enable tags for posts I followed the steps laid out on [4]. Few of
 2. Where does index.html go? on jekyllrb talk. [Link](https://talk.jekyllrb.com/t/pagination-question-where-does-index-html-go/262/2).
 3. Official Jekyll Pagination docs. [Link](https://jekyllrb.com/docs/pagination/).
 4. Jekyll Tags on Github Pages. [Link](http://longqian.me/2017/02/09/github-jekyll-tag/).
+
+{% if page.comments == true %}
+  {% include comments.html %}
+{% endif %}
+
