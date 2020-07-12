@@ -71,6 +71,7 @@ staticman_url: https://staticman-bkamapantula-github.herokuapp.com/v2/entry/bkam
 
 reCaptcha:
     enabled: true
-    siteKey: 6LfMkbAZAAAAAKsfFV43mFV8b6ajwW9ma7HqXNgv
+    # v2
+    siteKey: 6Lf2lbAZAAAAAFiJXzDQ8SB783VWRDDKjpaflLbN
     secret: Iv6I9TYLULu88UmmevAKID/5MBX3BrcC/cFPLNWRnYGdelmx/9DSm1GQXxRn3q4zo7Go0ZL6BNAA9ib2DsRNGvUClMhDDczagwLHiVyFfiMC6uh3r8LkleLxzWe77njrpS8j0C4QkvGL7RSS/QrZJhUFqEvaXxtOlZkbXFlHoDvJBcJBYbNl5Pzdn/+8U8vU3J5Wo1C/789rNYG+n5gWy4VbpO4kMa1FlNNHIl7H8o31hE+SG48G/wx2LY6pGWaNohHrq4J4bZ4yrZ0yXUt6Y2MeYfLB7ad8RzODnkjmDVBOaQWu7V0TRScfHDR1egMeOZ8PxkpLiDdO7MQgpPt9CUovlN9Pq6QT24+/62lO3hgJw/GTdVSCAaDlMvJwLeY8NdksvFhxaRFg4im31EJfQmUAp/HgqXiz/IwajtVPAOuJ/+0F3R9syAqal9fK7fT4Gp/xgbmJge+LZ27fdKgjnCWQRzFuh65k4Qt6ItP1emkX4LvY/pGtMjwJVLppwAVBAprY1rvCSTbQyWgZPW3pI5znr50w8JmAh5U6/MkGK2Up8osPMTMaaP4dR19fQlN687m86wQf8P7kXxuotARgz4vUmbb7Z/T+b66wD7l/HDX7tny8JzJLFTZLTNAhJoGJcGim4L0tCCiXMKh16fN7Gcwcrch8fh96Bs0nNna3L0w=
     
