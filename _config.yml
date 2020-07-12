@@ -68,6 +68,7 @@ paginate_path: posts/page:num/
 # file all under different keys
 # https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
 staticman_url: https://staticman-bkamapantula-github.herokuapp.com/v2/entry/bkamapantula/bkamapantula.github.io/master/comments
+comments: true
 
 reCaptcha:
     enabled: true
