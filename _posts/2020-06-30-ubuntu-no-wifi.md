@@ -11,7 +11,7 @@ Multiple answers online suggested to upgrade Ubuntu, update Broadcom driver, boo
 
 After window shopping for a bit I realized I've an USB-C to ethernet adapter I ordered months ago. Plugged it in for updating the drivers. To know the right network adapter name, I punched in some commands (`lspci`, `lshw`).
 
-One Unix Stack Exchange [1] answer was enlightening. Suggestion one was to re-build the kernel modules and suggestion one was to change the kernel to older version in grub.
+One Unix Stack Exchange [1] answer was enlightening. Suggestion one was to re-build the kernel modules and suggestion two was to change the kernel to older version in grub.
 
 I run Ubuntu 18.04 which uses 5.3.0-1026-gke linux kernel and its respective directory `/lib/modules/5.3.0-1026-gke/build` didn't exist. Older kernel versions had this. I then realized kernel updates must have broken. I then opted for the second suggestion which is to change the underlying linux kernel.
 
