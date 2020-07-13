@@ -6,7 +6,7 @@ comments: true
 
 # Posts layout update
 
-The home page of my blog as a short introduction about me followed by a list of posts. The items I wanted to improve:
+The home page of my blog has a short introduction about me followed by a list of posts. The items I wanted to improve:
 
 - paginate posts
 - show excerpt for each post
@@ -20,7 +20,7 @@ Using a cloned copy of my [blog](https://github.com/bkamapantula/bkamapantula.gi
 
 ### Update index.html
 - Move contents of index.md to index.html, as jekyll-paginate uses `index.html` for pagination.
-- This is invoked as the first content before anything.
+- This is invoked as the first content before any other text.
 
 ### Update _config.yml
 - Update `_config.yml` with:
@@ -88,6 +88,8 @@ Similarly, to enable tags for posts I followed the steps laid out on [4]. Few of
 2. Where does index.html go? on jekyllrb talk. [Link](https://talk.jekyllrb.com/t/pagination-question-where-does-index-html-go/262/2).
 3. Official Jekyll Pagination docs. [Link](https://jekyllrb.com/docs/pagination/).
 4. Jekyll Tags on Github Pages. [Link](http://longqian.me/2017/02/09/github-jekyll-tag/).
+
+Comments section below is experimental and is in WIP.
 
 {% if page.comments == true %}
   {% include comments.html %}
