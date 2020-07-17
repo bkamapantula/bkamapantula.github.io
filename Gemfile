@@ -16,7 +16,7 @@ gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 # https://github.com/jekyll/minima/pull/150#commitcomment-23340591
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.15"
   gem "jekyll-paginate"
 end
 
