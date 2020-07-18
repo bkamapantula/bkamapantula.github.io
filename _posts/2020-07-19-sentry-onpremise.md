@@ -45,16 +45,19 @@ Once installed, create an entry for Google client key and secret at the end of [
 ## Missing aspects
 
 1. SSL configuration
-We installed SSL using EFF's [certbot](https://certbot.eff.org/) and configured to work with the endpoint. Redo the Sentry integration test and make sure everything works well.
+W
+e installed SSL using EFF's [certbot](https://certbot.eff.org/) and configured to work with the endpoint. Redo the Sentry integration test and make sure everything works well.
 
 Testing from a secure application will be tricky as endpoints from unsecured (self-hosted sentry, in this case) won't load.
 
 There is a [WIP pull request](https://github.com/getsentry/onpremise/pull/558) to document this behavior. So, we should expect smoother SSL configuration sooner or later.
 
 2. Better README
+
 Personally, I think the [Setup section](https://github.com/getsentry/onpremise#setup) in the README can be structured better with sub-sections on the recommended changes to each of the files: `config.yml`, `sentry.conf.py` and `.env`
 
 3. sentry-cli vs onpremise
+
 Our infrastructure specialist, Sagar, had questions on the differences between sentry-cli vs onpremise. While I skimmed through the docs several months ago, we couldn't precisely find them on the docs.
 
 # Next steps
