@@ -89,9 +89,3 @@ Similarly, to enable tags for posts I followed the steps laid out on [4]. Few of
 3. Official Jekyll Pagination docs. [Link](https://jekyllrb.com/docs/pagination/).
 4. Jekyll Tags on Github Pages. [Link](http://longqian.me/2017/02/09/github-jekyll-tag/).
 
-Comments section below is experimental and is in WIP.
-
-{% if page.comments == true %}
-  {% include comments.html %}
-{% endif %}
-
