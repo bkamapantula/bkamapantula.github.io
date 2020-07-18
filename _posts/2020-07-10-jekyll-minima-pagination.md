@@ -1,7 +1,6 @@
 ---
 layout: post
 tags: jekyll
-comments: true
 ---
 
 # Posts layout update
