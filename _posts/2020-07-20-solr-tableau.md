@@ -5,7 +5,7 @@ tags: technology
 
 # Connecting Apache Solr with Tableau
 
-Over the last few days we put up a demo to expose a sample dataset (indexed on Apache Solr) and to be imported in Tableau.
+Over the last few days we put up a demo to expose a sample dataset (indexed on `Apache Solr`) and to be imported in `Tableau`.
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
 
@@ -21,16 +21,18 @@ Over the last few days we put up a demo to expose a sample dataset (indexed on A
       Hyper_Extract-->Tableau;
 </div>
 
+The objective is to setup a pipeline: upload data to `Solr`, serve it via `Gramex ProxyHandler` (+caching) and import in `Tableau`. 
+
 ## Apache Solr
-Using Solr after having tried lunr (super dev friendly) and ElasticSearch/Kibana (more UI friendly) feels archaic.
+Using `Solr` after having tried `lunr` (dev friendly) and `ElasticSearch`/`Kibana` (more UI friendly) feels archaic.
 
 ### Indexing and re-indexing
-Uploading a file as a document and having it indexed in Solr works OK after two tries. a) First, uploading a file crashed the workflow. b) After asking around, I then picked the file type and copy-pasted the content. 
+Uploading a file as a document and having it indexed in `Solr` works OK after two tries. a) First, uploading a file crashed the workflow. b) After asking around, I then picked the file type and copy-pasted the content. 
 
 The trouble is with updating existing document. Read through to know more.
 
 ### multiValues by default
-For the uploaded document in a core, Solr uses multiValues by default which creates a JSON item as below:
+For the uploaded document in a core, `Solr` uses a field named multiValues by default which creates a `JSON` item as below:
 
 ```json
 {
@@ -51,9 +53,9 @@ note the values in array (it can have multiple values for each attribute). This 
 
 | ISO3 | Name | Year | (more cols) |
 | --- | --- | --- | --- |
-| ["CHN"] | ["China"] | 2014 | ... |
+| ["CHN"] | ["China"] | 2014 | (more vals) |
 
-Writing this object to a Hyper extract would fail due to the data structure within each dataframe cell. It took us few moments of debugging to realize the issue. Since the data source is Apache Solr, it was tricky to figure out a fix for us (both of us were working with Solr the first time).
+Writing this object to a Hyper extract would fail due to the data structure within each dataframe cell. It took us few moments of debugging to realize the issue. Since the data source is `Solr`, it was tricky to figure out a fix for us (both of us were working with `Solr` the first time).
 
 Turns out, we had to update the document related schema. 
 
@@ -65,7 +67,7 @@ I updated the uploaded document's `managed-schema`, `schema.xml` and `solrconfig
 - copy `managed-schema` to `schema.xml`
 - add `<schemaFactory class="ClassicIndexSchemaFactory"/>` to `schema.xml` and `solrconfig.xml`
 
-and our target JSON item is as below:
+and our target `JSON` item is as below:
 
 ```json
 {
@@ -86,28 +88,28 @@ This results in a `Pandas` dataframe object as below:
 
 | ISO3 | Name | Year | (more cols) |
 | --- | --- | --- | --- |
-| "CHN" | "China" | 2014 | ...|
+| "CHN" | "China" | 2014 | (more values) |
 
 ## ProxyHandler in Gramex
 
-Gramex's [ProxyHandler](https://learn.gramener.com/guide/proxyhandler/) is straightforward. Give it an API endpoint with any attributes and it fetches data. We used Solr's document query as input here. As Gramex supports [caching](https://learn.gramener.com/guide/cache/) out of the box I configured it.
+`Gramex`'s [ProxyHandler](https://learn.gramener.com/guide/proxyhandler/) is straightforward. Give it an API endpoint with any attributes and it fetches data. We used `Solr`'s document query as input here. As `Gramex` supports [caching](https://learn.gramener.com/guide/cache/) out of the box I configured it.
 
 ## Connecting data to Tableau
 
-We tried two approaches to integrate ProxyHandler endpoint with Tableau:
+We tried two approaches to integrate `ProxyHandler` endpoint with `Tableau`:
 
 - via WDC, web data connector and
 - using Hyper extract
 
 ### WDC approach
 
-[Web Data Connector](https://help.tableau.com/current/pro/desktop/en-us/examples_web_data_connector.htm) in Tableau needs a HTML file that makes a connection to remote endpoint. We create a custom connector using JavaScript and fetch the remote data source.
+[Web Data Connector](https://help.tableau.com/current/pro/desktop/en-us/examples_web_data_connector.htm) in `Tableau` needs a HTML file that makes a connection to remote endpoint. We create a custom connector using `JavaScript` and fetch the remote data source.
 
-Once *ready* Tableau should recognize the data table within the WDC and show data rows. However, that didn't happen. Tableau showed one column (`id`) and showed the rest columns as empty. It was perplexing with no error messages. After spending some time on it we tried the next approach.
+Once *ready* `Tableau` should recognize the data table within the WDC and show data rows. However, that didn't happen. Tableau showed one column (`id`) and showed the rest columns as empty. It was perplexing with no error messages. After spending some time on it we tried the next approach.
 
 ### Hyper approach
 
-Tableau supports *importing* using its [Hyper API](https://help.tableau.com/current/api/hyper_api/en-us/docs/hyper_api_create_update.html). The default example is useful in creating a Hyper extract.
+`Tableau` supports *importing* using its [Hyper API](https://help.tableau.com/current/api/hyper_api/en-us/docs/hyper_api_create_update.html). The default example is useful in creating a Hyper extract.
 
 There are a few gotchas:
 
@@ -179,5 +181,5 @@ print("The connection to the Hyper file is closed.")
 
 ## Notes
 
-I worked with [Prashant PK](https://www.linkedin.com/in/prashant-kuruamparambatta-16404849/) [LinkedIn], a colleague at Gramener on this. He took care of the WDC, Hyper configurations and Tableau. I created Solr and Gramex ProxyHandler endpoints and assisted with debugging. [Sagar](https://www.linkedin.com/in/sagar-yellina-4356368b/) [LinkedIn], our infrastructure specialist, helped install Solr on the server.
+I worked with [Prashant PK](https://www.linkedin.com/in/prashant-kuruamparambatta-16404849/) [LinkedIn], a colleague at Gramener on this. He took care of the WDC, Hyper configurations and `Tableau`. I created `Solr` and `Gramex ProxyHandler` endpoints and assisted with debugging. [Sagar](https://www.linkedin.com/in/sagar-yellina-4356368b/) [LinkedIn], our infrastructure specialist, helped install `Solr` on the server.
 
