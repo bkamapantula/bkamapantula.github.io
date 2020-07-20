@@ -61,11 +61,11 @@ Turns out, we had to update the document related schema.
 
 ### Updating schema
 
-I updated the uploaded document's `managed-schema`, `schema.xml` and `solrconfig.xml` using the most helpful [StackOverflow thread](https://stackoverflow.com/questions/44281922/how-to-turn-off-multivalue-in-solr).
+I updated the uploaded document's `managed-schema`, `schema.xml` ~~and `solrconfig.xml`~~ (see below) using the most helpful [StackOverflow thread](https://stackoverflow.com/questions/44281922/how-to-turn-off-multivalue-in-solr).
 
 - in `managed-schema` file, find all instances of `multiValued="true"` and replace with `multiValued="false"`
 - copy `managed-schema` to `schema.xml`
-- add `<schemaFactory class="ClassicIndexSchemaFactory"/>` to `schema.xml` and `solrconfig.xml`
+- ~~add `<schemaFactory class="ClassicIndexSchemaFactory"/>` to `schema.xml` and `solrconfig.xml`~~ Prashant (see below) confirms this step isn't needed as it'll create a new schema via dataloadhandler.
 
 and our target `JSON` item is as below:
 
@@ -105,7 +105,7 @@ We tried two approaches to integrate `ProxyHandler` endpoint with `Tableau`:
 
 [Web Data Connector](https://help.tableau.com/current/pro/desktop/en-us/examples_web_data_connector.htm) in `Tableau` needs a HTML file that makes a connection to remote endpoint. We create a custom connector using `JavaScript` and fetch the remote data source.
 
-Once *ready* `Tableau` should recognize the data table within the WDC and show data rows. However, that didn't happen. Tableau showed one column (`id`) and showed the rest columns as empty. It was perplexing with no error messages. After spending some time on it we tried the next approach.
+Once *ready* `Tableau` should recognize the data table within the WDC and show data rows. However, that didn't happen. Tableau showed one column (`id`) and showed the rest columns as empty. It was perplexing with no error messages. After spending some time on it we tried the next approach. That said, we're looking for approaches to handle this as it gives the benefit of caching via `ProxyHandler`.
 
 ### Hyper approach
 
@@ -178,6 +178,12 @@ with HyperProcess(Telemetry.SEND_USAGE_DATA_TO_TABLEAU, 'myapp' ) as hyper:
 print("The HyperProcess has shut down.")
 print("The connection to the Hyper file is closed.")
 ```
+
+### Conclusion
+
+I added this section after a note from [Pratap](https://twitter.com/pratapvardhan).
+
+To clarify, since WDC isn't being used currently (in preference to Hyper extracts) due to an integration bug, adding a layer of `Gramex ProxyHandler` is unnecessary as Hyper extract isn't a live connection.
 
 ## Notes
 
