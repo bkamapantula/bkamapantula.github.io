@@ -49,11 +49,9 @@ For the uploaded document in a core, Solr uses multiValues by default which crea
 
 note the values in array (it can have multiple values for each attribute). This is perfectly fine for lookups within Solr where each attribute supports multiple values. As we convert this object to a `Pandas` dataframe it results in an object as below:
 
-```py
 | ISO3 | Name | Year | id | Start_date | Event_Name | Hazard_Category | Hazard_Type | New_Displacements | _version_ |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | ---: |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ["CHN"] | ["China"] | 2014 | ["9de7a2fa-75bf-4f72-8a4c-460e56b96ad4"] | ["2014-05-08T00:00:00Z"] | ["100 year storm"] | ["Weather related"] | ["Storm"] | 447000 | 1672372223938134016 |
-```
 
 Writing this object to a Hyper extract would fail due to the data structure within each dataframe cell. It took us few moments of debugging to realize the issue. Since the data source is Apache Solr, it was tricky to figure out a fix for us (both of us were working with Solr the first time).
 
@@ -86,11 +84,9 @@ and our target JSON item is as below:
 
 This results in a `Pandas` dataframe object as below:
 
-```py
 | ISO3 | Name | Year | id | Start_date | Event_Name | Hazard_Category | Hazard_Type | New_Displacements | _version_ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | "CHN" | "China" | 2014 | "9de7a2fa-75bf-4f72-8a4c-460e56b96ad4" | "2014-05-08T00:00:00Z" | "100 year storm" | "Weather related" | "Storm" | 447000 | 1672372223938134016 |
-```
 
 ## ProxyHandler in Gramex
 
