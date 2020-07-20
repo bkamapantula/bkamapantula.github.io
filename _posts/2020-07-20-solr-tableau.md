@@ -51,7 +51,7 @@ note the values in array (it can have multiple values for each attribute). This 
 
 ```py
 | ISO3 | Name | Year | id | Start_date | Event_Name | Hazard_Category | Hazard_Type | New_Displacements | _version_ |
-| :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | --: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | ---: |
 | ["CHN"] | ["China"] | 2014 | ["9de7a2fa-75bf-4f72-8a4c-460e56b96ad4"] | ["2014-05-08T00:00:00Z"] | ["100 year storm"] | ["Weather related"] | ["Storm"] | 447000 | 1672372223938134016 |
 ```
 
@@ -88,7 +88,7 @@ This results in a `Pandas` dataframe object as below:
 
 ```py
 | ISO3 | Name | Year | id | Start_date | Event_Name | Hazard_Category | Hazard_Type | New_Displacements | _version_ |
-| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | "CHN" | "China" | 2014 | "9de7a2fa-75bf-4f72-8a4c-460e56b96ad4" | "2014-05-08T00:00:00Z" | "100 year storm" | "Weather related" | "Storm" | 447000 | 1672372223938134016 |
 ```
 
