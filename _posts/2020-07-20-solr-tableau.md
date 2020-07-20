@@ -13,10 +13,10 @@ Over the last few days we put up a demo to expose a sample dataset (indexed on A
 
 <div class="mermaid">
   graph TD;
-      Data-->Solr;
+      Data-->Solr_Document;
       Solr_Document-->Solr_Query;
       Solr_Query-->Gramex_ProxyHandler;
-      GramexProxyHandler-->Pandas_DataFrame;
+      Gramex_ProxyHandler-->Pandas_DataFrame;
       Pandas_DataFrame-->Hyper_Extract;
       Hyper_Extract-->Tableau;
 </div>
@@ -115,10 +115,71 @@ Tableau supports *importing* using its [Hyper API](https://help.tableau.com/curr
 
 There are a few gotchas:
 
-- it expects us to create the data schema upfront
+- it expects us to create the data schema upfront.
 - it's not a live connection. Any time data gets updated, Hyper file needs to be updated.
+- ensure you define the Hyper schema in the same order of columns as in the dataframe.
+- Hyper API needs `pip >= 19.3` for installation, so create your conda environment to ensure dependencies don't clash.
 
 This approach worked as expected, we were able to fetch data into Tableau.
+
+#### Import Tableau Hyper dependencies
+```py
+from tableauhyperapi import HyperProcess, Connection, TableDefinition, SqlType, Telemetry, Inserter, CreateMode, TableName
+from tableauhyperapi import escape_string_literal
+
+PATH_TO_HYPER = "my_hyper_file.hyper"
+```
+
+#### Create Hyper file
+
+```py
+# Step 1: Start a new private local Hyper instance
+with HyperProcess(Telemetry.SEND_USAGE_DATA_TO_TABLEAU, 'myapp' ) as hyper:
+    print("The HyperProcess has started.")
+
+# Step 2:  Create the the .hyper file, replace it if it already exists
+    with Connection(hyper.endpoint,
+                    PATH_TO_HYPER,
+                    create_mode=CreateMode.CREATE_AND_REPLACE,
+                    ) as connection:
+        print("The connection to the .hyper file is open.")
+
+# Step 3: Create the schema
+        connection.catalog.create_schema('Extract')
+
+#Step 4: Create the table definition
+
+        # ensure columns are added in the same order as the dataframe
+        schema = TableDefinition(table_name=TableName('Extract','Extract'),
+            columns=[
+            TableDefinition.Column('ISO3', SqlType.text()),
+            TableDefinition.Column('Name', SqlType.text()),
+            TableDefinition.Column('Year', SqlType.int()),
+            TableDefinition.Column('id', SqlType.text()),
+            TableDefinition.Column('Start_Date', SqlType.text()),
+            TableDefinition.Column('Event_Name', SqlType.text()),
+            TableDefinition.Column('Hazard_Category', SqlType.text()),
+            TableDefinition.Column('Hazard_Type', SqlType.text()),
+            TableDefinition.Column('New_Displacements', SqlType.int()),
+            TableDefinition.Column('_version_', SqlType.big_int())
+         ])
+    
+        print("The table is defined.")
+
+# Step 5: Create the table in the connection catalog
+        connection.catalog.create_table(schema)
+        
+        with Inserter(connection, schema) as inserter:
+            # df is a dataframe of rows from proxyhandler endpoint (JSON)
+            for index, row in df.iterrows():
+                print(row)
+                inserter.add_row(row)
+            inserter.execute()
+            
+        print("The data was added to the table.")
+print("The HyperProcess has shut down.")
+print("The connection to the Hyper file is closed.")
+```
 
 ## Notes
 
