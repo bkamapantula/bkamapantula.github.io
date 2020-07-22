@@ -37,6 +37,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
 titles_from_headings:
   enabled:     true
@@ -51,9 +52,6 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
-
-gems:
-  - jekyll-paginate
 
 paginate: 5
 paginate_path: posts/page:num/
@@ -73,4 +71,4 @@ reCaptcha:
     # v2
     siteKey: 6Lf2lbAZAAAAAFiJXzDQ8SB783VWRDDKjpaflLbN
     secret: s7JDeFxoz+4OxxNknABrpoXGa0BzIJ50Rp3RmOTg6iwWe/ue/mEonEGPbjJVv4LMyaEYVqTGyks9C+AYlcqYgbbJ9n1AuiK+gtcPW0b4X45X2RPbYPOAfH6/q+gERU+9lDqBdpuquKl/IAyjI3I4gB7JI7pbis56f8J+0ePEmw59TUhqoC8iBUu3wJqvgcsXYKB1yvHaRfHPQRcRJRki1qhMKTNZnNMZ2UtS3OI2WyTwva2DwO7CIXrCd6ler2im0FsQKptZpFy1kzqI7JtKJuL1LnG4RhSr0PgUH8+xCtQZEt1LFFMHqy2O885r56fynpVV1Q2/+2fOurU0zt3NfGJ7PpyTXbvQP1Kmt9bm/v4zRY5q0BOt1AHeDyldI5G70aafOxW3ysw7ZEgBjBLmu0LIlWlRYIUOJ9iXCNbWmZhTFPNmsFbEDqjZc+AP4cILwgnDiygwGxq1oZ1ho6NtJ38cwMmOBJZ8uBN8rmqKzWoLNVjJP+53bG2bOu/qnGgVFfxjqxhnif0WsVXIXrIm7apdcb4I9mI5N5n2po8Vafhowyf9sD0Ar9A7WwSCCn0JiGvCfPpCAY/8yomHl/DyDO6588paZVADqRLdW9cqqgXC60zWDIdmCqovt7ARu8FTnbCtGwSk2WppXgb9o4hSchZ7E51XW/mzi9t7P1skf6Y=
-    
+
