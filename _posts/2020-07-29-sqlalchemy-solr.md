@@ -10,10 +10,10 @@ Following my [previous post](https://bkamapantula.github.io/2020/07/20/solr-tabl
 ## sqlalchemy-solr
 [sqlalchemy-solr](https://github.com/aadel/sqlalchemy-solr/) is an [external](https://docs.sqlalchemy.org/en/13/dialects/index.html#external-dialects) `sqlalchemy` dialect to connect with Solr.
 
-After debugging couple of days to integrate here are quite a few important learnings:
+After debugging couple of days to test Solr connection, here are quite a few important learnings:
 
 - `sqlachemy-solr` uses `/sql` handler in Solr. You can review all available handlers in your collection at: `http://localhost:8983/solr/techproducts/config`
-- for `/sql` handler to work, Solr must be configured in cloud mode.
+- for `/sql` handler to work, Solr must be configured in cloud mode [1].
   - Use `./bin/solr -e cloud` to setup 2 shards, 2 replicas (in each shard) setup for demonstration purposes. This uses example configuration.
   - Use `./bin/post -c techproducts example/exampledocs/*.xml` to index data. Here, `techproducts` is the collection name I created.
 - columns cannot be arbitrarily picked for querying. The underlying schema needs to support it. For example, columns that have `docValues=true` attribute can be queried.
@@ -34,7 +34,7 @@ engine = sqlalchemy.create_engine(conn_str)
 conn = engine.connect()
 ```
 
-Installing `sqlalchemy-solr` registers `solr://` (beginning of the connection string above) as a valid `sqlalchemy` dialect.
+Installing `sqlalchemy-solr` registers `solr://` (beginning of the connection string above) as a valid `sqlalchemy` dialect. Read [2] to understand SQL handler.
 
 We can now query the data.
 
@@ -62,7 +62,6 @@ table: sales
 
 url: 'sqlite:///D:/path/to/file.db'             # Reads from SQLite
 table: sales
-
 ```
 
 We can connect to Solr endpoint as below
@@ -77,3 +76,12 @@ handler.args can be any combination of URL params
 ?_c=id&_limit=10   -- show only id column, limit by 10 records
 """
 ```
+
+I'll continue to explore Solr in coming weeks and months.
+
+Thanks for reading!
+
+# References
+
+1. Solr Cloud tutorial, by Apache. [Link](https://lucene.apache.org/solr/guide/8_5/solr-tutorial.html)
+2. Parallel SQL interface, by Apache. [Link](https://lucene.apache.org/solr/guide/8_5/parallel-sql-interface.html)
