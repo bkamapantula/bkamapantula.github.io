@@ -2,6 +2,8 @@
 
 We made [Gramex Charts](https://gramener.com/gramexcharts/) open for public use. It lets you update charts from the UI and provides an option to export chart as a PNG, SVG or as code. Designers can import SVG into Sketch and make further chagnes. Try it out!
 
+-----
+
 #### July - Solr, Tableau
 
 I wrote about the challenges in [connecting Tableau to Apache Solr](https://bkamapantula.github.io/2020/07/20/solr-tableau.html) as a live connection and subsequently making an extract connection via [sqlalchemy-solr](https://bkamapantula.github.io/2020/07/29/sqlalchemy-solr.html).
@@ -10,9 +12,13 @@ I updated my blog layout to add pagination for posts and [wrote](https://bkamapa
 
 Post that I attempted to add comments for posts via staticman but failed to integrate successfully. I'll attempt again in few months.
 
+-----
+
 #### June - Raspberry Pi
 
-I got my hands on Raspberry Pi and [wrote about](https://bkamapantula.github.io/2020/06/27/raspberry-pi.html) using it as Pi-hole
+I got my hands on Raspberry Pi and [wrote about](https://bkamapantula.github.io/2020/06/27/raspberry-pi.html) using it as Pi-hole.
+
+-----
 
 #### 16th May - Google Mobility Data for India
 
