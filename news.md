@@ -1,3 +1,7 @@
+#### August - Gramex Charts
+
+We made [Gramex Charts](https://gramener.com/gramexcharts/) open for public use. It lets you update charts from the UI and provides an option to export chart as a PNG, SVG or as code. Designers can import SVG into Sketch and make further chagnes. Try it out!
+
 #### July - Solr, Tableau
 
 I wrote about the challenges in [connecting Tableau to Apache Solr](https://bkamapantula.github.io/2020/07/20/solr-tableau.html) as a live connection and subsequently making an extract connection via [sqlalchemy-solr](https://bkamapantula.github.io/2020/07/29/sqlalchemy-solr.html).
