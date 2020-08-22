@@ -1,3 +1,15 @@
+#### July - Solr, Tableau
+
+I wrote about the challenges in [connecting Tableau to Apache Solr](https://bkamapantula.github.io/2020/07/20/solr-tableau.html) as a live connection and subsequently making an extract connection via [sqlalchemy-solr](https://bkamapantula.github.io/2020/07/29/sqlalchemy-solr.html).
+
+I updated my blog layout to add pagination for posts and [wrote](https://bkamapantula.github.io/2020/07/10/jekyll-minima-pagination.html) about it.
+
+Post that I attempted to add comments for posts via staticman but failed to integrate successfully. I'll attempt again in few months.
+
+#### June - Raspberry Pi
+
+I got my hands on Raspberry Pi and [wrote about](https://bkamapantula.github.io/2020/06/27/raspberry-pi.html) using it as Pi-hole
+
 #### 16th May - Google Mobility Data for India
 
 I looked at Google [Mobility data for India](https://bkamapantula.github.io/2020/05/16/google-mobility.html)
