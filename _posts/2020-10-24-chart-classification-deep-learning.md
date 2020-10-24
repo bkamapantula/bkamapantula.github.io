@@ -39,7 +39,7 @@ We allowed the users to write free form text to label the charts. It resulted in
 Due to the custom nature of solutions Gramener creates, some charts tend to be combinations of multiple chart types (ex: bars + area in one chart). This prompted us, during the labelling phase, to also solve for the multi-label classification. This wasn't well thought of and complicated the data to be classified as other than the actual label. Only consolation was that this could be useful as noisy data to avoid overfitting.
 
 ### Validation
-Here, for all the labelled images I validated the labels and corrected them. This took me few days.
+Here, for all the labelled images I validated the labels and corrected them. This took me a few days.
 
 ### Training
 We picked `VGG16` model [using Keras](https://keras.io/api/applications/vgg/#vgg16-function) which is pre-trained on ImageNet dataset.
@@ -57,6 +57,8 @@ Below donut chart is interpreted as a bar chart possibly due to the background d
 Below donut chart is interpreted as a bar chart possibly due to the blocky nature of the legend labels.
 
 ![donut interpreted as bar chart](../../../images/design2code-donut-bar-2.png)
+
+Some charts with heavy text are interpreted as bar charts. We'll increase the training data and document our learnings in the future.
 
 ## Design2Code
 
@@ -76,9 +78,9 @@ In the coming week, we will release a model for public use trained on publicly a
 
 4. Charts are one of the components in our data solutions. It'll be interesting to try this approach for other components (navigation, filters, cards etc.).
 
-5. There are other promising approaches that go from design to code including [uizard](https://uizard.io/), [Screenshot to code](https://github.com/emilwallner/Screenshot-to-code), Microsoft's [Sketch2Code](https://sketch2code.azurewebsites.net/), Airbnb's [Sketch2Code]()
+5. There are other promising approaches that go from design to code including [uizard](https://uizard.io/), [Screenshot to code](https://github.com/emilwallner/Screenshot-to-code), Microsoft's [Sketch2Code](https://sketch2code.azurewebsites.net/), Airbnb's [Sketch2Code](https://airbnb.design/sketching-interfaces/).
 
-We have [open sourced](https://github.com/jaidevd/chart-ann) [GitHub] the code to train the model. Hope you find it useful! Write to us on ideas or suggestions to take this further.
+We have [open sourced](https://github.com/jaidevd/chart-ann) [GitHub] the code to train the model. Hope you find it useful! Write to us ([Bhanu](mailto:bhanu.kamapantula@gramener.com?subject:Design2Code), [Jaidev](mailto:jaidev.deshpande@gramener.com?subject:Design2Code)) on ideas or suggestions to take this further.
 
 ## Notes
 
