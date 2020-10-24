@@ -35,7 +35,7 @@ The labels chosen for this exercise are URL slugs from Gramex Charts which might
 #### Mistake 2
 We allowed the users to write free form text to label the charts. It resulted in some creative labels for charts and necessitated a prolonged validation phase.
 
-### Mistake 3
+#### Mistake 3
 Due to the custom nature of solutions Gramener creates, some charts tend to be combinations of multiple chart types (ex: bars + area in one chart). This prompted us, during the labelling phase, to also solve for the multi-label classification. This wasn't well thought of and complicated the data to be classified as other than the actual label. Only consolation was that this could be useful as noisy data to avoid overfitting.
 
 ### Validation
