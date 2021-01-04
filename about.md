@@ -1,10 +1,10 @@
 # About
 
 ### Know
-- I'm with *Gramener* currently with primary focus on building developer tools. At Gramener, in the past, I focused on building data-driven visual solutions, architecting technical solutions and data communication among other things.
-- I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
-- I volunteer my time with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
-- I'm an [OSM contributor](https://wiki.openstreetmap.org/wiki/User:Thoughtisdead). Largely, I'm interested in neighborhood mapping and making OSM accessible in Telugu. I use OSM's in-browser iD editor and [StreetComplete](https://github.com/westnordost/StreetComplete/) to contribute. I track the progress of our colony mapping at a [community site](https://talk.southendpark.org/t/mapping-our-colony/11) I maintain.
+1. I'm with *Gramener* currently (since Aug 2016) with primary focus on building developer tools. At Gramener, in the past, I focused on building data-driven visual solutions, architecting technical solutions and data communication among other things.
+2. I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
+3. I volunteer my time (not too actively) with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
+4. I'm an [OSM contributor](https://wiki.openstreetmap.org/wiki/User:Thoughtisdead). Largely, I'm interested in neighborhood mapping and making OSM accessible in Telugu. I use OSM's in-browser iD editor and [StreetComplete](https://github.com/westnordost/StreetComplete/) to contribute. I track the progress of our colony mapping at a [community site](https://talk.southendpark.org/t/mapping-our-colony/11) I maintain.
 
 ### Devices
 
