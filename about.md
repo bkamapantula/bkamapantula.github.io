@@ -1,14 +1,28 @@
 # About
 
 ### Know
-- I'm with *Gramener* currently with primary focus on building data-driven visual solutions, architecting technical solutions and data communication among other things.
+- I'm with *Gramener* currently with primary focus on building developer tools. At Gramener, in the past, I focused on building data-driven visual solutions, architecting technical solutions and data communication among other things.
 - I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
 - I volunteer my time with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
+- I'm an [OSM contributor](https://wiki.openstreetmap.org/wiki/User:Thoughtisdead). Largely, I'm interested in neighborhood mapping and making OSM accessible in Telugu. I use OSM's in-browser iD editor and [StreetComplete](https://github.com/westnordost/StreetComplete/) to contribute. I track the progress of our colony mapping at a [community site](https://talk.southendpark.org/t/mapping-our-colony/11) I maintain.
+
+### Devices
+
+1. My personal machine is a 13 inch Dell XPS that runs Ubuntu. It's lightweight and the smallest form factor laptop I've used so far. A [Gizga bag](https://www.amazon.in/dp/B01AY8OS46/) wraps it nicely.
+2. I use a Pixel 3a. I love it, it's lightweight and has enough power and access control for apps.
+3. I use a Amazon Kindle Fire to read ebooks. Most of my reading is on it.
+4. A Raspberry Pi 4 helps us keep advertisements in check using [pi-hole](https://pi-hole.net/). Very soon I'll get hold of a Raspberry Pi 400 for more experiments.
+
+My primary browser is Mozilla Firefox and secondary one is Google Chrome. My preferred OS is Ubuntu.
 
 ### Talks, workshops
 
 | When | Where | What | Title | Link | Audience |
 | ---- | ----- | ---- | ----- | ---- | -------- |
+| Upcoming | [BelPy](https://belpy.in/) | Talk | Building a charts classifier with deep learning | Public, with [Jaidev](https://twitter.com/jaidevd/) |
+| 5 December 2020 | [Pyjamas](https://pyjamas.live/) | Talk | Discover, a personal code search engine | [YouTube](https://youtu.be/6FnAweNRBcg?t=11888) | Public |
+| 5 December 2020 | [PyConf Hyderabad](https://pyconf.hydpy.org/2020/) | Lightning Talk | QGIS and Python | [YouTube](https://youtu.be/Yc1_iGboniE?t=62) | Public | 
+| October 2020 | [PyCon India](https://in.pycon.org/2020/) | Lightning Talk | How to Build a Personal Code Search Engine | [YouTube](https://www.youtube.com/watch?v=RfbUN9SDQ7A) | Public |
 | 11 January 2020 | Grofers, Bangalore | Workshop | Data comics workshop | [Meetup](https://www.meetup.com/meetup-group-EkjzkhLt/events/266798548/) | Public. Co-organizer. |
 | 14 December 2019 | ISB Hyderabad | Workshop | Data comics workshop | [Meetup](https://www.meetup.com/meetup-group-EkjzkhLt/events/266798098/) | Public. Co-organizer. |
 | 7 December 2019 | IIIT Hyderabad | Workshop | Building a ML classification application with Gramex | [Material](https://github.com/gramexrecipes/gramex-ml-workshop/tree/a800f4a97d89081c691fcb964ddce28511f7a355) | Public |
