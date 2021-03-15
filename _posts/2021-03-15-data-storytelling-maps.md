@@ -9,6 +9,8 @@ tags: review
 
 Since maps fascinate me, I'm interested to tryout few example datasets and try to narrate few important aspects from them. Consider the obesity rate (%) in Virginia state counties across the years 2019 and 2020.
 
+## Virginia Obesity Rates
+
 ![virginia obesity rate 2019](https://i.postimg.cc/6pRpmwP0/virginia-obesity-2019.png)
 
 *Virginia Obesity rate 2019. Each county is colored using its Obesity Rate in 2019.*
@@ -17,15 +19,29 @@ Since maps fascinate me, I'm interested to tryout few example datasets and try t
 
 *Virginia Obesity rate 2020. Each county is colored using its Obesity Rate in 2020.*
 
-## Juxtaposing
+### Juxtaposing
 
-[Knightlab](https://knightlab.northwestern.edu/)'s [Juxtapose](https://juxtapose.knightlab.com/) allows us to create juxtapositions easily and lets users swipe to notice the difference. This is an intuitive format that works well at the most granular level. Below is a representation of the same images from above.
+[Knightlab](https://knightlab.northwestern.edu/)'s [Juxtapose](https://juxtapose.knightlab.com/) allows us to create juxtapositions easily and lets users swipe to notice the difference. This is an intuitive format that works well at the lowest granular level. Below is a representation of the same images from above.
 
 <iframe frameborder="0" class="juxtapose" width="100%" height="511" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=56c8ed98-8556-11eb-83c8-ebb5d6f907df"></iframe>
 
 *Swipe the slider to right or left to view 2019 or 2020 map*.
 
-Notes
-------
+The images are hand crafted. Here, only two regions are annotated.
+
+The intention here is not to automate the image creation but to discover possibilities in bringing out details well.
+
+Arguably, each static image could be an interactive. Hovering on each county could get respective values but it supersedes the original intention of juxtaposing regions for immediate comparison.
+
+### Relative change
+
+Mapping relative Obesity rate of change reveals the necessary information and is crucial to drive home the point on the extreme performing counties.
+
+![Obesity rate change from 2019 to 2020](https://i.postimg.cc/J0wNsFxx/obesity-change-rate-from-2019-to-2020-counties.png)
+
+*Change in Obesity rate from 2019 to 2020 in Virginia counties*.
+
+## Notes
+
 1. Data is sourced from the [County Health Rankings Project](https://www.countyhealthrankings.org/).
 2. Images are created using Datawrapper, Google Drawings.
