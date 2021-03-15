@@ -9,6 +9,12 @@ tags: review
 
 Since maps fascinate me, I'm interested to tryout few example datasets and try to narrate few important aspects from them. Consider the obesity rate (%) in Virginia state counties across the years 2019 and 2020.
 
+### Definitions
+
+BMI is calculated as the ratio of weight in kilograms to the square of height in meters.
+
+Obesity rate is defined as the ratio of number of patients with obesity (BMI>= 30 kg/m<sup>2</sup>) to the number of patients in the survey.
+
 ## Virginia Obesity Rates
 
 ![virginia obesity rate 2019](https://i.postimg.cc/6pRpmwP0/virginia-obesity-2019.png)
