@@ -21,7 +21,7 @@ Since maps fascinate me, I'm interested to tryout few example datasets and try t
 
 Knightlab's Juxtapose allows us to create juxtapositions easily and lets users swipe to notice the difference. This is an intuitive format that works well at the most granular level. Below is a representation of the same images from above.
 
-<iframe frameborder="0" class="juxtapose" width="100%" height="604" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=ce713249-8541-11eb-83c8-ebb5d6f907df"></iframe>
+<iframe frameborder="0" class="juxtapose" width="100%" height="511" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=56c8ed98-8556-11eb-83c8-ebb5d6f907df"></iframe>
 
 Notes
 ------
