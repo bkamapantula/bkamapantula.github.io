@@ -47,15 +47,15 @@ Arguably, each static image could be an interactive. Hovering on each county cou
 
 #### Scale drift
 
-Scale changes from 2019 to 2020 owing to the changes in minimum and maximum Obesity rate values. Comparing these values by juxtaposing next to one another is tricky since underlying color is no longer the same. Further, human vision can't pick subtle color change that's mapped to data, easily.
+Scale changes from 2019 to 2020 owing to the changes in minimum and maximum Obesity Rate values. Comparing these values by juxtaposing next to one another is tricky since underlying color is no longer the same. Further, human vision can't pick subtle color change that's mapped to data, easily.
 
 An alternative approach is mapping relative change and using a single visual. 
 
 ### Relative change
 
-Mapping relative Obesity rate of change reveals the necessary information and is crucial to drive home the point on the extreme performing counties. Below table shows a subset of data rows (note that the rate values are rounded off for 2019, 2020 columns):
+Mapping relative Obesity Rate of change reveals the necessary information and is crucial to drive home the point on the extreme performing counties. Below table shows a subset of data rows (note that the rate values are rounded off for 2019, 2020 columns):
 
-| State | County | Obesity rate 2019 | Obesity rate 2020 | difference |
+| State | County | Obesity Rate 2019 | Obesity Rate 2020 | difference |
 | ----- | ------ | -------------- | -------------- | ---------- |
 | Virginia | Falls Church City | 28 | 20 | -8.7
 | Virginia | Surry | 34 | 26 | -7.7 |
@@ -71,7 +71,7 @@ In the below illustration, we use the `difference` column from the data table to
 
 Interactive version of the earlier illustration is below.
 
-<iframe title="Obesity rate change in Virginia counties from 2019 to 2020" aria-label="Map" id="datawrapper-chart-aIN3l" src="https://datawrapper.dwcdn.net/aIN3l/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="464"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+<iframe title="Obesity Rate change in Virginia counties from 2019 to 2020" aria-label="Map" id="datawrapper-chart-aIN3l" src="https://datawrapper.dwcdn.net/aIN3l/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="464"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
 </script>
 
 I picked a color scale that highlights the extremes well. This illustration will be useful for policy makers, researchers to understand the underlying changes better. A regular user (ex: a citizen) may be more interested in understanding their neighborhood and may prefer a different representation.
