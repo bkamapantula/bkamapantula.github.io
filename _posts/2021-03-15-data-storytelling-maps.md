@@ -7,27 +7,27 @@ tags: data dataviz
 
 [Story Labs](https://gramener.com/storylabs/) at Gramener is working on a [Data Storytelling Framework](https://gramener.com/storylabs-publications/defining-data-storytelling). One of the formats is narration through [Map Stories](https://gramener.com/storylabs-publications/map-stories).
 
-Since maps fascinate me, I'm interested to tryout few example datasets and try to narrate few important aspects from them. Consider the Obesity rate (%) in Virginia state counties across the years 2019 and 2020.
+Since maps fascinate me, I'm interested to tryout few example datasets and try to narrate few important aspects from them. Consider the Obesity Rate (%) in Virginia state counties across the years 2019 and 2020.
 
-I was curious to know the Obesity rate in the county I stayed for over four years and realized that the rate of change (difference) from 2019 to 2020 isn't high (+0.8%). Although, in raw numbers it could still be high. That prompted me to look for the counties that witnessed high rate of change (on this, more towards the end).
+I was curious to know the Obesity Rate in the county I stayed for over four years and realized that the rate of change (difference) from 2019 to 2020 isn't high (+0.8%). Although, in raw numbers it could still be high. That prompted me to look for the counties that witnessed high rate of change (on this, more towards the end).
 
 ### Definitions
 
 BMI is calculated as the ratio of weight in kilograms to the square of height in meters.
 
-Obesity rate is defined as the ratio of number of patients with obesity (BMI>= 30 kg/m<sup>2</sup>) to the number of patients in the survey.
+Obesity Rate is defined as the ratio of number of patients with obesity (BMI>= 30 kg/m<sup>2</sup>) to the number of patients in the survey.
 
-Unfortunately, I couldn't find the distribution of demographics data to know the survey numbers per year. Hence, the change in Obesity rate is hard to explain from this data source alone.
+Unfortunately, I couldn't find the distribution of demographics data to know the survey numbers per year. Hence, the change in Obesity Rate is hard to explain from this data source alone.
 
 ## Virginia Obesity Rates
 
-![virginia obesity rate 2019](https://i.postimg.cc/6pRpmwP0/virginia-obesity-2019.png)
+![Virginia Obesity Rate 2019](https://i.postimg.cc/6pRpmwP0/virginia-obesity-2019.png)
 
-*Virginia Obesity rate 2019. Each county is colored using its Obesity Rate in 2019.*
+*Virginia Obesity Rate 2019. Each county is colored using its Obesity Rate in 2019.*
 
-![virginia obesity rate 2020](https://i.postimg.cc/wTnB23wM/virginia-obesity-2020.png)
+![Virginia Obesity Rate 2020](https://i.postimg.cc/wTnB23wM/virginia-obesity-2020.png)
 
-*Virginia Obesity rate 2020. Each county is colored using its Obesity Rate in 2020.*
+*Virginia Obesity Rate 2020. Each county is colored using its Obesity Rate in 2020.*
 
 ### Juxtaposing
 
@@ -51,24 +51,23 @@ An alternative approach is mapping relative change and using a single visual.
 
 ### Relative change
 
-Mapping relative Obesity rate of change reveals the necessary information and is crucial to drive home the point on the extreme performing counties. Below table shows a subset of data rows:
+Mapping relative Obesity rate of change reveals the necessary information and is crucial to drive home the point on the extreme performing counties. Below table shows a subset of data rows (note that the rate values are rounded off for 2019, 2020 columns):
 
-| State | County | Obesity % 2019 | Obesity % 2020 | difference |
+| State | County | Obesity rate 2019 | Obesity rate 2020 | difference |
 | ----- | ------ | -------------- | -------------- | ---------- |
 | Virginia | Falls Church City | 28 | 20 | -8.7
 | Virginia | Surry | 34 | 26 | -7.7 |
 | Virginia | Lexington City | 27 | 19 | -7.7 |
 
-
 In the below illustration, we use the `difference` column from the data table to color the county.
 
-![obesity rate change from 2019 to 2020](https://user-images.githubusercontent.com/1143687/111248307-a54ffe00-862f-11eb-99dd-834fcbf21264.png)
+![Obesity Rate change from 2019 to 2020](https://user-images.githubusercontent.com/1143687/111248307-a54ffe00-862f-11eb-99dd-834fcbf21264.png)
 
-*Change in Obesity rate from 2019 to 2020 in Virginia counties*.
+*Change in Obesity Rate from 2019 to 2020 in Virginia counties*.
 
 #### Interactive
 
-Interactive version of the illustration is below:
+Interactive version of the earlier illustration is below:
 
 <iframe title="Obesity rate change in Virginia counties from 2019 to 2020" aria-label="Map" id="datawrapper-chart-aIN3l" src="https://datawrapper.dwcdn.net/aIN3l/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="464"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
 </script>
