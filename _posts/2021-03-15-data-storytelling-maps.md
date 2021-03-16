@@ -69,10 +69,14 @@ In the below illustration, we use the `difference` column from the data table to
 
 #### Interactive
 
-Interactive version of the earlier illustration is below:
+Interactive version of the earlier illustration is below.
 
 <iframe title="Obesity rate change in Virginia counties from 2019 to 2020" aria-label="Map" id="datawrapper-chart-aIN3l" src="https://datawrapper.dwcdn.net/aIN3l/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="464"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
 </script>
+
+I picked a color scale that highlights the extremes well. This illustration will be useful for policy makers, researchers to understand the underlying changes better. A regular user (ex: a citizen) may be more interested in understanding their neighborhood and may prefer a different representation.
+
+I'll be exploring other Data Storytelling Structure and Sequence formats using different datasets soon.
 
 ## Notes
 
