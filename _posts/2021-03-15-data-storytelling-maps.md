@@ -5,7 +5,7 @@ tags: data dataviz
 
 # Data storytelling with maps
 
-[Story Labs](https://gramener.com/storylabs/) at Gramener is working on a [Data Storytelling Framework](https://gramener.com/storylabs-publications/defining-data-storytelling). One of the formats is narration through [Map Stories](https://gramener.com/storylabs-publications/map-stories).
+[Story Labs](https://gramener.com/storylabs/) at Gramener is working on a [Data Storytelling Framework](https://gramener.com/storylabs-publications/defining-data-storytelling). In total, there are nine explanation structures and eight sequences. One of the formats is narration through [Map Stories](https://gramener.com/storylabs-publications/map-stories).
 
 Since maps fascinate me, I'm interested to tryout few example datasets and try to narrate few important aspects from them. Consider the Obesity Rate (%) in Virginia state counties across the years 2019 and 2020.
 
@@ -31,7 +31,9 @@ Unfortunately, I couldn't find the distribution of demographics data to know the
 
 ### Juxtaposing
 
-[Knightlab](https://knightlab.northwestern.edu/)'s [Juxtapose](https://juxtapose.knightlab.com/) allows us to create juxtapositions easily and lets users swipe to notice the difference. This is an intuitive format that works well at the lowest granular level. Below is a representation of the same images from above.
+[Knightlab](https://knightlab.northwestern.edu/)'s [Juxtapose](https://juxtapose.knightlab.com/) allows us to create juxtapositions easily and lets users swipe to notice the difference. This is an intuitive format that works well at the lowest granular level.
+
+Below is a representation of the same images from above. It follows the _Then and Now_ explanation structure and _Swipe_ sequence format (E4S7) as described by [Story Labs](https://gramener.com/storylabs-publications/defining-data-storytelling).
 
 <iframe frameborder="0" class="juxtapose" width="100%" height="511" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=56c8ed98-8556-11eb-83c8-ebb5d6f907df"></iframe>
 
