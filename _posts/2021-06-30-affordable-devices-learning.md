@@ -74,7 +74,7 @@ RPi 4 meets all three criteria.
 
 Raspberry Pi based device is the most viable option among the listed options.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOFFb7BOisSORRMjvTCMqO5Ye1USDFxyvlZnKKJDCjUTQX4jB20YhnbASfeNOWsdMPV8KOOx590ISM/pubhtml?widget=true&amp;headers=false" width="90%" height="50%"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOFFb7BOisSORRMjvTCMqO5Ye1USDFxyvlZnKKJDCjUTQX4jB20YhnbASfeNOWsdMPV8KOOx590ISM/pubhtml?widget=true&amp;headers=false" width="100%" height="100%"></iframe>
 
 Source: [Affordable devices](https://docs.google.com/spreadsheets/d/1Z4MFptwNGtMCAcJtvRU2ly91f6Dvyt0E1oUQBj0xE5w/edit?usp=sharing)
 
