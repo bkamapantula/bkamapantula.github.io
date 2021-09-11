@@ -6,6 +6,8 @@ tags: technology
 Affordable devices for learning
 ----------------------------------
 
+*Update - 11th September: a friend added several devices to the list that I'm reproducing below.*
+
 ## Background
 
 Pandemic induced lockdowns have worsened the teaching and learning experience for educators and students. The transition to the online learning was/is extremely hard given the challenges in internet connectivity, change in communication modes, infrastructure, availability of time for families.
@@ -77,6 +79,24 @@ Raspberry Pi based device is the most viable option among the listed options.
 <iframe frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="652" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOFFb7BOisSORRMjvTCMqO5Ye1USDFxyvlZnKKJDCjUTQX4jB20YhnbASfeNOWsdMPV8KOOx590ISM/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 Source: [Affordable devices](https://docs.google.com/spreadsheets/d/1Z4MFptwNGtMCAcJtvRU2ly91f6Dvyt0E1oUQBj0xE5w/edit?usp=sharing)
+
+### Other devices
+
+I haven't used any of the ones below but adding from a friend's recommendation. Most of the devices are over ~ 12k (that's more than twice the price of RPi 4) and with necessary accessories the price is bumped up by another 8-10k.
+
+- Odroid H2, Asus Tinker Board
+- Jetson Nano
+  - [Amazon.in](https://www.amazon.in/Jetson-Nano-Development-Kit-Cortex®-A57/dp/B07QWLMR24/) has a listing price of ~12k INR.
+- Udoo series
+  - [Robu.in](https://robu.in/?s=udoo&product_cat=0&post_type=product) lists them although none are available currently. [Amazon.in](https://www.amazon.in/UDOO-SA69-0200-1000-C0-NEO-Extended-Educational/dp/B01JJ61Z2W/) has one available at ~5k INR.
+- Up board series
+  - [Robu.in](https://robu.in/?s=up+board&product_cat=0&post_type=product) lists couple of models although they aren't available currently. With a starting price of ~15k, it won't be as affordable as I'd like.
+- Beaglebone
+  - The beaglebone devices are quite useful. [Robu.in](https://robu.in/?s=beaglebone&product_cat=0&post_type=product) has a few models available.
+- Intel NUC [Amazon](https://www.amazon.in/Intel-BOXNUC7CJYH1-Celeron-NUC-NUC7CJYH/dp/B07C67X1BP/)
+  - This looks promising and is currently priced at ~13.5k INR.
+
+[Here's a handy list](https://gist.github.com/anujdeshpande/5e9475a0c4cefebe1c5288576171a6ca) of Indian e-commerce stores that sell electronic components, curated by Anuj Deshpande and others.
 
 ## Out in the wild
 For Collab Place, I bought:
