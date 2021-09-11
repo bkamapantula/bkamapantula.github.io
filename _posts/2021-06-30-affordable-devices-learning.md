@@ -6,7 +6,7 @@ tags: technology
 Affordable devices for learning
 ----------------------------------
 
-*Update - 11th September: a friend added several devices to the list that I'm reproducing below.*
+*Update - 11th September: a friend added several devices to the list that I'm reproducing [below](#other-devices).*
 
 ## Background
 
