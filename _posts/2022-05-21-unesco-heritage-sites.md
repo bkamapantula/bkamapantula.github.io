@@ -29,3 +29,10 @@ Once pair-wise distances are determined, they are passed to the utility function
 
 ![heritage-sites](https://user-images.githubusercontent.com/1143687/169645074-fe7e2c13-f0b2-469b-8786-e1f3b05ab67b.gif)
 
+## Next
+
+Using actual directions as paths between the sites will be more intuitive. Since, Directions API is different from Distance Matrix API pair-wise directions need to be looked up again.
+
+I tried annotating the lines between sites with the respective distances. As it took a long time to render, I discarded the idea. I'll revisit it sometime later.
+
+What else are you interested to do with this data? Let me know on Twitter (DM [@thoughtisdead](https://twitter.com/thoughtisdead/))
