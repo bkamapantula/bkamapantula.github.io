@@ -6,7 +6,6 @@ tags: technology travel
 Let's visit UNESCO heritage sites
 ----------------------------------
 
-
 ## Background
 India has 40 UNESCO heritage sites [UNESCO](https://whc.unesco.org/en/statesparties/in) categorized under natural, cultural and mixed sections. Naturally, I would like to visit them.
 
@@ -21,7 +20,10 @@ For the keen observers, this falls right into the alley of travelling salesman p
 
 There are sub-optimal solutions for this problem but no perfect solution.
 
-MLRose [Documentation](https://mlrose.readthedocs.io/en/stable/index.html) offers genetic algorithms that solve for sub-optimal solutions for TSP. It requires pair-wise distances in an array of tuple format and solves for maximization or a minimization problem.
+MLRose [Documentation](https://mlrose.readthedocs.io/en/stable/index.html), a `Python` library, offers genetic algorithms that solve for sub-optimal solutions for TSP. It requires pair-wise distances in an array of tuple format and solves for maximization or a minimization problem.
 
 To determine the pair-wise distances between every two sites, Distance Matrix API [Documentation](https://developers.google.com/maps/documentation/distance-matrix/) is quite handy. It could find distances between most pairs except when three sites (Khangchendzonga National Park, 
 Sundarban National Park, Valley of Flowers National Park) were involved.
+
+Once pair-wise distances are determined, they are passed to the utility function that optimizes for the shortest distance. The resultant order of sites are mapped out in the visual.
+
