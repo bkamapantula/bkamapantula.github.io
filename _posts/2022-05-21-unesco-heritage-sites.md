@@ -27,9 +27,5 @@ Sundarban National Park, Valley of Flowers National Park) were involved.
 
 Once pair-wise distances are determined, they are passed to the utility function that optimizes for the shortest distance. The resultant order of sites are mapped out in the visual.
 
-
-
-<!-- [![Demo CountPages alpha](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=ek1j272iAmc) -->
-
-[![Shortest path to visit heritage sites]()](https://user-images.githubusercontent.com/1143687/169642906-361e9c79-85c5-47e1-a873-135ebeaa3e76.mp4)
+![heritage-sites](https://user-images.githubusercontent.com/1143687/169645074-fe7e2c13-f0b2-469b-8786-e1f3b05ab67b.gif)
 
