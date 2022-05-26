@@ -11,7 +11,7 @@ India has 40 UNESCO heritage sites ([website](https://whc.unesco.org/en/statespa
 
 I got interested in identifying the time it would take me to visit them. Then I got interested in mapping out the places on an interactive map.
 
-<iframe src="https://www.google.com/maps/d/embed?mid=1BDAmWg_y5pETZ2qKlYXsd5g0tx8XIomD&ehbc=2E312F" width="100%" height="100%"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=1BDAmWg_y5pETZ2qKlYXsd5g0tx8XIomD&ehbc=2E312F" width="640" height="480"></iframe>
 
 Since there are a lot of them, assuming one has a car, how would one visit all the sites without visting any site more than once?
 
