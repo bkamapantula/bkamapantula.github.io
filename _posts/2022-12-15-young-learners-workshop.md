@@ -35,5 +35,5 @@ I'd like to thank Anand Chitipothu for the initial ideation and his inputs on th
 The workshop wouldn't be possible without the team effort. I'd like to thank:
 - the co-organizers of PyConf Hyderabad, EPAM Systems for their generous support in organizing the workshop.
 - the participating schools and students for being part of the pilot edition workshop.
-- the volunteers who made a lot possible for the workshop including ensuring working laptops, organized handouts as material and doing the two dry-runs prior to the workshop.
-- a few volunteers who contributed by taking preparatory sessions by visiting
+- the volunteers who made a lot possible for the workshop including ensuring working laptops, organized handouts as material and doing the two dry-runs prior to the workshop: Harsh, Shivan, ShantiSai, Pragnya, Roy.
+- a few volunteers who contributed by taking preparatory sessions by visiting the schools.
