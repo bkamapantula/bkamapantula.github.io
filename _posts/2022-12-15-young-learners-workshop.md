@@ -18,12 +18,15 @@ Students had a blast during the workshop. They kept the workshop volunteers on t
 ### Schools
 Not all schools were at the same level. First school had a functioning computer lab but no faculty to teach. Second school was the most equipped with a functioning lab and faculty to teach students. Third school didn't have a computer lab as it was impacted post COVID to upgrade the infrastructure.
 
+Our task was to ensure students had the necessary initial awareness and information regarding computing, logic, via paper-and-pen exercises along with videos. For the school without computing infrastructure, we drove them to ZPHS (with permission and thanks to the most generous HM Vidyavathi madam) for the two preparatory sessions.
+
 This was a pilot program of YLW. In the next iteration, we would like to onboard more schools and get supportive sponsors.
 
 ### Format
 The format of the entire workshop is as follows:
 - 2 preparatory sessions
   - We visited schools to cover material during the preparatory sessions including introduction to computing, logic, programming etc.
+  - This included paper-and-pen exercises on bitmap, an Internet awareness quiz, binary to decimal conversion (and vice-versa).
 - YLW on 10th December
   - Introduced micro:bit devices to students. They programmed the devices to control it via different sensors during the workshop.
 - 2 follow-up sessions
