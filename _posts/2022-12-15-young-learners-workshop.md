@@ -9,7 +9,7 @@ Pilot edition of Young Learners Workshop
 While teaching Computing courses to grade 8 and 9 at a local ZPHS, we recognized an opportunity to introduce students to hands-on learning with Python programming language. Young Learners Workshop is an opportunity that translated into reality.
 
 ### Overview
-As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized the Young Learners Workshop (YLW) for 18 students from four schools. It was an enriching experience to have all the students visit and engage actively in the micro:bit-based workshop. Cherry on the top was students interacting with the keynote speaker, **Sebastian Ramirez**, [FastAPI](https://fastapi.tiangolo.com/) creator.
+As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized the Young Learners Workshop (YLW) for 18 students from four schools. It was an enriching experience to have all the students visit and engage actively in the micro:bit-based workshop. Cherry on the top was students interacting with the keynote speaker, **Sebastián Ramírez**, [FastAPI](https://fastapi.tiangolo.com/) creator.
 
 **EPAM Systems** was a generous host to allow school students access to their corporate premises and offer them food assistance.
 
