@@ -9,7 +9,7 @@ Pilot edition of Young Learners Workshop
 While teaching Computing courses to grade 8 and 9 at a local ZPHS, we recognized an opportunity to introduce students to hands-on learning with Python programming language. Young Learners Workshop is an opportunity that translated into reality.
 
 ### Overview
-As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized the Young Learners Workshop (YLW) for 18 students from four schools. It was an enriching experience to have all the students visit and engage actively in the microbit-based workshop. Cherry on the top was students interacting with the keynote speaker, **Sebastian Ramirez**, [FastAPI](https://fastapi.tiangolo.com/) creator.
+As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized the Young Learners Workshop (YLW) for 18 students from four schools. It was an enriching experience to have all the students visit and engage actively in the micro:bit-based workshop. Cherry on the top was students interacting with the keynote speaker, **Sebastian Ramirez**, [FastAPI](https://fastapi.tiangolo.com/) creator.
 
 **EPAM Systems** was a generous host to allow school students access to their corporate premises and offer them food assistance.
 
@@ -20,7 +20,7 @@ Not all schools were at the same level. First school had a functioning computer 
 
 Our task was to ensure students had the necessary initial awareness and information regarding computing, logic, via paper-and-pen exercises along with videos. For the school without computing infrastructure, we drove them to ZPHS (with permission and thanks to the most generous **HM Vidyavathi** madam) for the two preparatory sessions.
 
-This was a pilot program of YLW. In the next iteration, we would like to onboard more schools and get supportive sponsors.
+This was a pilot program of YLW. In the next iteration, we would like to onboard more schools and get supportive sponsors. One of the challenges is to ensure infrastructure access to schools wihout access to machines as part of the curriculum. This is the primary reason why we started [Collab Place](https://www.collab.place/).
 
 ### Format
 The format of the entire workshop is as follows:
@@ -28,7 +28,7 @@ The format of the entire workshop is as follows:
   - We visited schools to cover material during the preparatory sessions including introduction to computing, logic, programming etc.
   - This included paper-and-pen exercises on bitmap, an Internet awareness quiz, binary to decimal conversion (and vice-versa).
 - YLW on 10th December
-  - Introduced micro:bit devices to students. They programmed the devices to control it via different sensors during the workshop.
+  - Introduced [micro:bit](https://microbit.org/) devices to students. They programmed the devices to control it via different sensors during the workshop.
 - 2 follow-up sessions
   - While two schools participated in the follow-up sessions, the other two couldn't due to their academic schedules.
 
