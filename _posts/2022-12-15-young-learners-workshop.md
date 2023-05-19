@@ -11,14 +11,14 @@ While teaching Computing courses to grade 8 and 9 at a local ZPHS, we recognized
 ### Overview
 As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized the Young Learners Workshop (YLW) for 18 students from four schools. It was an enriching experience to have all the students visit and engage actively in the microbit-based workshop. Cherry on the top was students interacting with the keynote speaker, Sebastian Ramirez, FastAPI creator.
 
-EPAM Systems was a generous host to allow school students access to their corporate premises and offer them food assistance.
+**EPAM Systems** was a generous host to allow school students access to their corporate premises and offer them food assistance.
 
 Students had a blast during the workshop. They kept the workshop volunteers on their toes with their participation and questions.
 
 ### Schools
 Not all schools were at the same level. First school had a functioning computer lab but no faculty to teach. Second school was the most equipped with a functioning lab and faculty to teach students. Third school didn't have a computer lab as it was impacted post COVID to upgrade the infrastructure.
 
-Our task was to ensure students had the necessary initial awareness and information regarding computing, logic, via paper-and-pen exercises along with videos. For the school without computing infrastructure, we drove them to ZPHS (with permission and thanks to the most generous HM Vidyavathi madam) for the two preparatory sessions.
+Our task was to ensure students had the necessary initial awareness and information regarding computing, logic, via paper-and-pen exercises along with videos. For the school without computing infrastructure, we drove them to ZPHS (with permission and thanks to the most generous **HM Vidyavathi** madam) for the two preparatory sessions.
 
 This was a pilot program of YLW. In the next iteration, we would like to onboard more schools and get supportive sponsors.
 
@@ -37,6 +37,6 @@ I'd like to thank Anand Chitipothu for the initial ideation and his inputs on th
 
 The workshop wouldn't be possible without the team effort. I'd like to thank:
 - the co-organizers of PyConf Hyderabad, EPAM Systems for their generous support in organizing the workshop.
-- the participating schools and students for being part of the pilot edition workshop.
+- the participating schools (Zilla Parishad High School Mansoorabad, Viswa Bharathi High School, Tejasvi Vidyaranya Jodimetla) and students for being part of the pilot edition workshop. We had a solitary student from another school from our neighborhood who was interested to participate.
 - the volunteers who made a lot possible for the workshop including ensuring working laptops, organized handouts as material and doing the two dry-runs prior to the workshop: Harsh, Shivan, ShantiSai, Pragnya, Roy, Kalyan.
 - a few volunteers who contributed by taking preparatory sessions by visiting the schools.
