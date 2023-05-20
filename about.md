@@ -1,10 +1,18 @@
 # About
 
-### Know
-1. I'm with *Gramener* currently (since Aug 2016) with primary focus on building developer tools. At Gramener, in the past, I focused on building data-driven visual solutions, architecting technical solutions and data communication among other things.
-2. I co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter.
-3. I volunteer my time (not too actively) with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
-4. I'm an [OSM contributor](https://wiki.openstreetmap.org/wiki/User:Thoughtisdead). Largely, I'm interested in neighborhood mapping and making OSM accessible in Telugu. I use OSM's in-browser iD editor and [StreetComplete](https://github.com/westnordost/StreetComplete/) to contribute. I track the progress of our colony mapping at a [community site](https://talk.southendpark.org/t/mapping-our-colony/11) I maintain.
+## Know
+### Now
+1. I work at _Memorang_ currently since April 2021 solving content creation, organization problems apart from alogrithmic study material recommendations for students.
+2. I teach Computing concepts to the students at the Zilla Parishad High School (ZPHS), Mansoorabad. For the academic year 2022-23, we taught grade 8 and 9 students.
+3. I volunteer for the [Hyderabad Python User Group](https://www.meetup.com/HydPyGroup/) (HydPy).
+4. I am a co-organizer for the upcoming [PyCon India](https://in.pycon.org/2023/) conference in September 2023.
+
+### Recent (~2 years)
+1. I was working at *Gramener* between Aug 2016 and April 2021 with primary focus on building developer tools. At Gramener, in the past, I focused on building data-driven visual solutions, architecting technical solutions and data communication among other things.
+2. I used to co-organize data storytelling events regularly ([meetup](https://www.meetup.com/meetup-group-EkjzkhLt/)). Explore [#datastoryday](https://twitter.com/hashtag/datastoryday?src=hashtag_click) or [#comicsworkshop](https://twitter.com/hashtag/comicsworkshop?src=hashtag_click) on Twitter. We have since dissolved the meet-up group.
+3. I used to volunteer my time (not too actively) with [BehanBox](https://www.behanbox.com/) on creating data stories, data projects. Follow [BehanBox](https://twitter.com/behanbox) for updates.
+4. I used to be an [OSM contributor](https://wiki.openstreetmap.org/wiki/User:Thoughtisdead). Largely, I'm interested in neighborhood mapping and making OSM accessible in Telugu. I use OSM's in-browser iD editor and [StreetComplete](https://github.com/westnordost/StreetComplete/) to contribute. I track the progress of our colony mapping at a [community site](https://talk.southendpark.org/t/mapping-our-colony/11) I maintain.
+5. I helped organize the regional Python conference, [PyConf Hyderabad](https://pyconf.hydpy.org/2022/) 2022.
 
 ### Devices
 
@@ -19,7 +27,7 @@ My primary browser is Mozilla Firefox and secondary one is Google Chrome. My pre
 
 | When | Where | What | Title | Link | Audience |
 | ---- | ----- | ---- | ----- | ---- | -------- |
-| Upcoming | [BelPy](https://belpy.in/) | Talk | Building a charts classifier with deep learning | Public, with [Jaidev](https://twitter.com/jaidevd/) |
+| 30 Jan 2021 | [BelPy](https://belpy.in/) | Talk | Building a charts classifier with deep learning | Public, with [Jaidev](https://twitter.com/jaidevd/) |
 | 5 December 2020 | [Pyjamas](https://pyjamas.live/) | Talk | Discover, a personal code search engine | [YouTube](https://youtu.be/6FnAweNRBcg?t=11888) | Public |
 | 5 December 2020 | [PyConf Hyderabad](https://pyconf.hydpy.org/2020/) | Lightning Talk | QGIS and Python | [YouTube](https://youtu.be/Yc1_iGboniE?t=62) | Public | 
 | October 2020 | [PyCon India](https://in.pycon.org/2020/) | Lightning Talk | How to Build a Personal Code Search Engine | [YouTube](https://www.youtube.com/watch?v=RfbUN9SDQ7A) | Public |
