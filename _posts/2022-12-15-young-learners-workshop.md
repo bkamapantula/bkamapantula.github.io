@@ -15,6 +15,9 @@ As part of [PyConf Hyderabad 2022](https://pyconf.hydpy.org/2022/), we organized
 
 Students had a blast during the workshop. They kept the workshop volunteers on their toes with their participation and questions.
 
+![Students in the micro:bit workshop](https://github.com/bkamapantula/bkamapantula.github.io/assets/1143687/e275235a-38f6-4bbc-b904-7eb777f26ede)
+*Credit: [EPAM India](https://twitter.com/EPAM_India/status/1601450147288080389)*
+
 ### Schools
 Not all schools were at the same level. First school had a functioning computer lab but no faculty to teach. Second school was the most equipped with a functioning lab and faculty to teach students. Third school didn't have a computer lab as it was impacted post COVID to upgrade the infrastructure.
 
@@ -40,3 +43,11 @@ The workshop wouldn't be possible without the team effort. I'd like to thank:
 - the participating schools (**Zilla Parishad High School Mansoorabad**, **Viswa Bharathi High School**, **Tejasvi Vidyaranya Jodimetla**) and students for being part of the pilot edition workshop. We had a solitary student from another school from our neighborhood who was interested to participate.
 - the volunteers who made a lot possible for the workshop including ensuring working laptops are available, organized handouts as material and doing the two dry-runs prior to the workshop: Harsh, Shivan, ShantiSai, Pragnya, Roy, Kalyan.
 - a few volunteers who contributed by taking preparatory sessions by visiting the schools.
+
+### What's next?
+
+The next edition of YLW will be held in September 2023. This time, we plan to involve a lot more students; not only from Hyderabad but also from other cities. We are scouting for partners to collaborate on the inter-city YLW initiative.
+
+Interested to volunteer? Please join [Zulip](https://pyconindia.zulipchat.com/) and subscribe to [R&D workgroup stream](https://pyconindia.zulipchat.com/#narrow/stream/389199-wg.2Fr.26d).
+
+Interested to sponsor? Please email talk2kish@gmail.com or drop me a message in WhatsApp (8142650099) with your interest to sponsor.
