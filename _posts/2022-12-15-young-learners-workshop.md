@@ -46,8 +46,16 @@ The workshop wouldn't be possible without the team effort. I'd like to thank:
 
 ### What's next?
 
+#### YLW
+
 The next edition of YLW will be held in September 2023. This time, we plan to involve a lot more students; not only from Hyderabad but also from other cities. We are scouting for partners to collaborate on the inter-city YLW initiative.
 
 Interested to volunteer? Please join [Zulip](https://pyconindia.zulipchat.com/) and subscribe to [R&D workgroup stream](https://pyconindia.zulipchat.com/#narrow/stream/389199-wg.2Fr.26d).
 
 Interested to sponsor? Please email talk2kish@gmail.com or drop me a message in WhatsApp (8142650099) with your interest to sponsor.
+
+#### Python Express
+
+I'm working with [Anand Chitipothu](https://anandology.com/about/) to revive Python Express, an initiative to bring Python learners and trainers together via a platform. Educational institutions such as colleges and schools, corporate organizations or any organization can sign-up to host the workshops. We aim to bring curated content, trained mentors together for a holistic learning experience.
+
+Follow our website for more details: https://pythonexpress.org/
