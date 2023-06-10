@@ -58,4 +58,4 @@ Interested to sponsor? Please email talk2kish@gmail.com or drop me a message in 
 
 I'm working with [Anand Chitipothu](https://anandology.com/about/) to revive Python Express, an initiative to bring Python learners and trainers together via a platform. Educational institutions such as colleges and schools, corporate organizations or any organization can sign-up to host the workshops. We aim to bring curated content, trained mentors together for a holistic learning experience.
 
-Follow our website for more details: https://pythonexpress.org/
+Follow our website for more details: [https://pythonexpress.org/](https://pythonexpress.org/)
