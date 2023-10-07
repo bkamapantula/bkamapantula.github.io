@@ -15,6 +15,8 @@ Objective of YLW: promote Python code literacy via hardware based programming. T
 
 We received great response from students all over including several from registrations outside of Hyderabad. We capped the participation per school so that more schools can participate and left 10 slots open for individual registrations.
 
+Harsh Mittal, an experienced educator, hosted the workshop.
+
 ### Statistics
 
 The participation was distributed from nine schools. The participation ratio of the students was 54% boys to 46% girls.
@@ -26,6 +28,10 @@ We planned the workshop for 50 students and shortlisted 54 students in case a fe
 YLW kit comprises the following: monitor with HDMI cable support, Raspberry Pi 4 model B (2 GB RAM), SD card loaded with Raspbian OS, HDMI to micro-HDMI cable and power adapter for the RPi device. This kit is shared among two students.
 
 Additionally, during the workshop RPi device was connected to the monitor, keyboard and mouse.
+
+![set of raspberry pi 4 devices](https://github.com/bkamapantula/bkamapantula.github.io/assets/1143687/c5451ac9-768c-4284-a446-fc8adc54ed10)
+![raspberry pi 4 model B 2 GB](https://github.com/bkamapantula/bkamapantula.github.io/assets/1143687/2663b871-77b5-4f8c-a5ee-c0ccbc01e457)
+
 
 If you are interested, check out the [workshop material](https://docs.google.com/document/d/1tS-cVH2u79V1S-rN0kpKRIYEI5D5hTEYudaEOwjp6YU/edit?usp=sharing).
 
