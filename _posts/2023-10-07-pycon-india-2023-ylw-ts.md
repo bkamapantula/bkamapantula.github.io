@@ -77,7 +77,7 @@ Anuvrat and a few other volunteers offered necessary support on the Track day.
 
 As we fell short of a few monitors, cumulatively volunteers (Ashok, Ananyo, Ram, Sanchit, Snehith) lent seven monitors so the workshop could run smoothly.
 
-Manav shared his experience in working with numerous devices to help us judge which devices to finalize the device.
+Manav shared his experience in working with different hardware to help us pick a final device.
 
 Harsh was instrumental in designing the material and delivering the workshop.
 
