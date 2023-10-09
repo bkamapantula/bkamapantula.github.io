@@ -109,7 +109,7 @@ We took, what was then, a hard decision to move the Track from indoors to hallwa
 
 ### Volunteers
 
-Thanks to Revant, Rajat for ensuring sufficient infrastructure and logistics support is available for the Track.
+Thanks to Revant, Rajat, Praveen for ensuring sufficient infrastructure and logistics support is available for the Track.
 
 Tinkering Space required less on-the-day coordination compared to YLW because it didn't rely on a wider range of equipment.
 
